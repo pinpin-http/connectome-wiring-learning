@@ -1,5 +1,7 @@
 # What wiring determines: a fruit-fly connectome as a learning network
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23898968.svg)](https://doi.org/10.5281/zenodo.23898968)
+
 Code, dated protocols and aggregated results for the preprint
 
 > S. Bouazzaoui, *L'agencement des connexions d'un système nerveux aide-t-il à apprendre ?*,

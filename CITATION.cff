@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or its results, please cite the preprint and this repository."
-title: "SMB_Flywire_Speedrun: code, protocols and aggregated results for 'L'agencement des connexions d'un système nerveux aide-t-il à apprendre ?'"
+title: "Code, protocols and aggregated results for 'L'agencement des connexions d'un système nerveux aide-t-il à apprendre ?'"
 type: software
 authors:
   - family-names: Bouazzaoui
@@ -17,7 +17,7 @@ keywords:
   - spiking neural network
   - reward learning
   - null models
-# doi: 10.5281/zenodo.XXXXXXX   <- add once Zenodo has minted it
+doi: 10.5281/zenodo.23898968   # concept DOI (all versions); v1.0.0-preprint: 10.5281/zenodo.23898969
 preferred-citation:
   type: article
   title: "L'agencement des connexions d'un système nerveux aide-t-il à apprendre ?"
