@@ -62,7 +62,8 @@ def test_emulator_runs_headless():
 
 
 def _rom_present() -> bool:
-    return any((INTEGRATIONS / "SuperMarioBros-Nes").glob("rom.*"))
+    # rom.sha (the expected hash) is committed; the ROM itself (rom.nes) is imported by the user and never committed.
+    return any(p.suffix != ".sha" for p in (INTEGRATIONS / "SuperMarioBros-Nes").glob("rom.*"))
 
 
 @pytest.mark.skipif(not _rom_present(), reason="needs the game ROM")

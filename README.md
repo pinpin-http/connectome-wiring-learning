@@ -121,7 +121,7 @@ make check-env
 | `src/flymario/` | the library: connectome adapters and null models, spiking dynamics, learning rules, environment, per-campaign code |
 | `scripts/` | entry points: graph build, `diagnostics/` (experiments 1 and 7, analyses), one folder per campaign, `gates/` |
 | `configs/` | base configuration and one config per campaign |
-| `docs/` | protocols and study declarations, frozen before the runs |
+| `docs/` | protocols and study declarations, frozen before the runs ([index](docs/README.md)) |
 | `scripts/figures/` | the scripts that draw the preprint's computed figures (`make figures` -> `artifacts/figures/`) |
 | `artifacts/` | run outputs: aggregated results are versioned, checkpoints and caches are not |
 | `results/` | SHA-256 records of result files and frozen protocols |

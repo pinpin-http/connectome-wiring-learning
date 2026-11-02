@@ -57,7 +57,7 @@ and one output folder.
 | - | Statistical calibration | do the rank / max-\|z\| tools hold their error rate? | `docs/STATISTICAL_AUDIT_20261019.md` | `tools/audits/statistical_20261019.py` | `artifacts/statistical_audit_20261019/` |
 
 The early gates (A-G: closed loop, operating point, interface, learning-rule validation) that set up the model are
-declared in `docs/PROTOCOL.md` and `docs/GATE_G_PLAN.md`; their scripts are in `scripts/gates/`.
+declared in `docs/PROTOCOL.md`; their scripts are in `scripts/gates/`.
 
 ## 4. Declared criteria
 
