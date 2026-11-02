@@ -1,0 +1,1372 @@
+{
+ "what": "Experiments `flydeploy run` may start. Each is declared in the study documents before it runs; parameters are passed as --param key=value. {gtag} is the graph without the colon. Outputs that already exist block a start unless --resume (resumable ones) or --force.",
+ "experiments": {
+  "cs-scripted": {
+   "declared_in": "RL_STUDY \u00a76.1 / \u00a712.2 (scripted common stream). On NVIDIA: the same-procedure rerun for the platform comparison (compare common-stream), and the scripted arm of \u00a714.; RL_STUDY \u00a727 (nulllat:3-39)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/common_stream.py",
+    "--graphs",
+    "{graph}",
+    "--save"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2",
+     "nulllat:3",
+     "nulllat:4",
+     "nulllat:5",
+     "nulllat:6",
+     "nulllat:7",
+     "nulllat:8",
+     "nulllat:9",
+     "nulllat:10",
+     "nulllat:11",
+     "nulllat:12",
+     "nulllat:13",
+     "nulllat:14",
+     "nulllat:15",
+     "nulllat:16",
+     "nulllat:17",
+     "nulllat:18",
+     "nulllat:19",
+     "nulllat:20",
+     "nulllat:21",
+     "nulllat:22",
+     "nulllat:23",
+     "nulllat:24",
+     "nulllat:25",
+     "nulllat:26",
+     "nulllat:27",
+     "nulllat:28",
+     "nulllat:29",
+     "nulllat:30",
+     "nulllat:31",
+     "nulllat:32",
+     "nulllat:33",
+     "nulllat:34",
+     "nulllat:35",
+     "nulllat:36",
+     "nulllat:37",
+     "nulllat:38",
+     "nulllat:39"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_{gtag}.pt",
+    "artifacts/runs/common_stream-{gtag}-20261009.json"
+   ],
+   "seeds": "noise 8300+i; readouts block_seeds(3); stream 20261073; order 20261074; test frames 20261075/20261076",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "cs-permuted": {
+   "declared_in": "RL_STUDY \u00a712 (negative reference: permuted labels, connectome)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/common_stream.py",
+    "--graphs",
+    "connectome",
+    "--save",
+    "--permuted"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_perm_connectome.pt",
+    "artifacts/runs/common_stream-perm-connectome-20261009.json"
+   ],
+   "seeds": "as cs-scripted; label permutation 20261077",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "cs-expert": {
+   "declared_in": "RL_STUDY \u00a714 (expert stream; stream check must give blocked share <= 0.35); RL_STUDY \u00a724 (nulllat:3-39); RL_STUDY \u00a726 (nullin:0-39)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/common_stream.py",
+    "--graphs",
+    "{graph}",
+    "--save",
+    "--stream",
+    "expert"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2",
+     "nulllat:3",
+     "nulllat:4",
+     "nulllat:5",
+     "nulllat:6",
+     "nulllat:7",
+     "nulllat:8",
+     "nulllat:9",
+     "nulllat:10",
+     "nulllat:11",
+     "nulllat:12",
+     "nulllat:13",
+     "nulllat:14",
+     "nulllat:15",
+     "nulllat:16",
+     "nulllat:17",
+     "nulllat:18",
+     "nulllat:19",
+     "nulllat:20",
+     "nulllat:21",
+     "nulllat:22",
+     "nulllat:23",
+     "nulllat:24",
+     "nulllat:25",
+     "nulllat:26",
+     "nulllat:27",
+     "nulllat:28",
+     "nulllat:29",
+     "nulllat:30",
+     "nulllat:31",
+     "nulllat:32",
+     "nulllat:33",
+     "nulllat:34",
+     "nulllat:35",
+     "nulllat:36",
+     "nulllat:37",
+     "nulllat:38",
+     "nulllat:39",
+     "nullin:0",
+     "nullin:1",
+     "nullin:2",
+     "nullin:3",
+     "nullin:4",
+     "nullin:5",
+     "nullin:6",
+     "nullin:7",
+     "nullin:8",
+     "nullin:9",
+     "nullin:10",
+     "nullin:11",
+     "nullin:12",
+     "nullin:13",
+     "nullin:14",
+     "nullin:15",
+     "nullin:16",
+     "nullin:17",
+     "nullin:18",
+     "nullin:19",
+     "nullin:20",
+     "nullin:21",
+     "nullin:22",
+     "nullin:23",
+     "nullin:24",
+     "nullin:25",
+     "nullin:26",
+     "nullin:27",
+     "nullin:28",
+     "nullin:29",
+     "nullin:30",
+     "nullin:31",
+     "nullin:32",
+     "nullin:33",
+     "nullin:34",
+     "nullin:35",
+     "nullin:36",
+     "nullin:37",
+     "nullin:38",
+     "nullin:39"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_expert_{gtag}.pt",
+    "artifacts/runs/common_stream-expert-{gtag}-20261009.json"
+   ],
+   "seeds": "as cs-scripted (same stream seed, expert generator)",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "probe-merge": {
+   "declared_in": "RL_STUDY \u00a712 (scripted-stream brains merged for frozen play)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "probe-merge-expert": {
+   "declared_in": "RL_STUDY \u00a714",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}",
+    "--stream",
+    "expert"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_expert_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_expert_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "probe-play-training": {
+   "declared_in": "RL_STUDY \u00a713.1 (scripted-stream brains, threshold rule, valid training suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 1.5
+  },
+  "probe-play-training-expert": {
+   "declared_in": "RL_STUDY \u00a714 (i) (expert-stream brains, threshold rule, valid training suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "expert"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_expert_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2x-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 1.5
+  },
+  "probe-play-unseen-hold6": {
+   "declared_in": "RL_STUDY \u00a713.3 (scripted-stream brains, hold6, unseen suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "unseen",
+    "--rule",
+    "hold6"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2-unseen-hold6-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 1.5
+  },
+  "probe-play-unseen-hold6-expert": {
+   "declared_in": "RL_STUDY \u00a714 (ii) (expert-stream brains, hold6, unseen suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "unseen",
+    "--rule",
+    "hold6",
+    "--stream",
+    "expert"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_expert_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2x-unseen-hold6-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 1.5
+  },
+  "probe-fixed-training": {
+   "declared_in": "RL_STUDY \u00a713.1 (S_fixed on the training levels, scripted-stream brains)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "fixed",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/fixedv2-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.5
+  },
+  "probe-fixed-training-expert": {
+   "declared_in": "RL_STUDY \u00a714 (S_fixed on the training levels, expert-stream brains)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "fixed",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "expert"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_expert_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/fixedv2x-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.5
+  },
+  "probe-report": {
+   "declared_in": "RL_STUDY \u00a712-\u00a714 (declared reading: references first, then classes). suite=training|unseen; rule='' or hold6; stream='' or expert",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "report",
+    "--suite",
+    "{suite}"
+   ],
+   "defaults": {
+    "suite": "training",
+    "rule": "",
+    "stream": ""
+   },
+   "choices": {
+    "suite": [
+     "training",
+     "unseen"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/frozen_probe/reportv2{x}-{suite}{rule_suffix}-20261009.json"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.05
+  },
+  "harness-check": {
+   "declared_in": "RL_STUDY \u00a713 (emulator only): the validation rerun must equal the transferred reference (compare harness)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/play_harness_v2.py",
+    "validate",
+    "--out",
+    "artifacts/runs/harness_v2/validation-rerun-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/harness_v2/validation-rerun-20261009.json"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.1
+  },
+  "stageD": {
+   "declared_in": "PERCEPTION_CREDIT_STUDY \u00a717 / \u00a721 (Stage D, 20,000 decisions). graph=connectome|nulllat:<s>. A fresh NVIDIA run: never mix ROCm and NVIDIA arms in one comparison.",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/train_mario_sweep.py",
+    "--version",
+    "13",
+    "--graph",
+    "{graph}",
+    "--max-decisions",
+    "20000"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/{runname}.pt"
+   ],
+   "runctl_name": "{runname}",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 3.0
+  },
+  "stageD-eval": {
+   "declared_in": "RL_STUDY \u00a711.1 (frozen competence, >= 100 episodes; references must pass first). ckpt = a Stage D checkpoint path, graph = its graph",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/train_mario_sweep.py",
+    "--version",
+    "19",
+    "--graph",
+    "{graph}",
+    "--eval-from",
+    "{ckpt}",
+    "--max-decisions",
+    "15000"
+   ],
+   "defaults": {
+    "graph": "connectome",
+    "ckpt": "artifacts/rocm_reference/checkpoints/mario_stageD.pt"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "null:0",
+     "null:1",
+     "null:2",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "{ckpt}"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/{evalname}.pt"
+   ],
+   "runctl_name": "{evalname}",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 1.5
+  },
+  "selftest": {
+   "declared_in": "deployment check only (no science): detached start, heartbeat, logs, clean stop, max duration",
+   "cmd": [
+    ".venv/bin/python",
+    "-c",
+    "import signal,sys,time,pathlib;p=pathlib.Path('artifacts/runs/deploy_selftest/selftest-{tag}.txt');p.parent.mkdir(parents=True,exist_ok=True);signal.signal(signal.SIGTERM,lambda *a:(p.write_text('stopped cleanly'),sys.exit(75)));[print('tick',i,flush=True) or time.sleep(1) for i in range(int('{seconds}'))];p.write_text('finished')"
+   ],
+   "defaults": {
+    "tag": "a",
+    "seconds": "20"
+   },
+   "outputs": [
+    "artifacts/runs/deploy_selftest/selftest-{tag}.txt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "grace_s": 30,
+   "expected_hours": 0.01
+  },
+  "cs-noise-spread": {
+   "declared_in": "RL_STUDY \u00a717 N4 (noise-realisation spread of the cs-scripted curve; recalibrated cross-platform criterion)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/cs_noise_spread.py",
+    "--sets",
+    "9",
+    "--tag",
+    "nvidia"
+   ],
+   "outputs": [
+    "artifacts/runs/platform/cs_noise_spread-nvidia.json"
+   ],
+   "seeds": "noise 8300+100s+i (s=0..8); eta/2 and permuted (20261077) on set 0; stream/order/test as cs-scripted",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "dagger": {
+   "declared_in": "RL_STUDY \u00a719 (G-DAgger-v1)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/dagger_stream.py",
+    "--graph",
+    "{graph}"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_expert_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_dagger_{gtag}.pt"
+   ],
+   "seeds": "collection starts 20261500+; draws 20261600+r; control expert streams 20261573+r / 20261580+r",
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.25
+  },
+  "dagger-control": {
+   "declared_in": "RL_STUDY \u00a719 (G-DAgger-v1, exposure-matched control)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/dagger_stream.py",
+    "--graph",
+    "{graph}",
+    "--control"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_expert_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_daggerctl_{gtag}.pt"
+   ],
+   "seeds": "collection starts 20261500+; draws 20261600+r; control expert streams 20261573+r / 20261580+r",
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.25
+  },
+  "probe-merge-dagger": {
+   "declared_in": "RL_STUDY \u00a719",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}",
+    "--stream",
+    "dagger"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_dagger_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_dagger_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "probe-play-training-dagger": {
+   "declared_in": "RL_STUDY \u00a719 (threshold rule, valid training suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "dagger"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_dagger_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2d-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "probe-fixed-training-dagger": {
+   "declared_in": "RL_STUDY \u00a719 (S_fixed)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "fixed",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "dagger"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_dagger_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/fixedv2d-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.3
+  },
+  "probe-merge-daggerctl": {
+   "declared_in": "RL_STUDY \u00a719",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}",
+    "--stream",
+    "daggerctl"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/common_stream_daggerctl_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_daggerctl_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "probe-play-training-daggerctl": {
+   "declared_in": "RL_STUDY \u00a719 (threshold rule, valid training suite)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "daggerctl"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_daggerctl_{gtag}.pt",
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2c-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.5
+  },
+  "probe-fixed-training-daggerctl": {
+   "declared_in": "RL_STUDY \u00a719 (S_fixed)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "fixed",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "training",
+    "--stream",
+    "daggerctl"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/checkpoints/frozen_probe_daggerctl_{gtag}.pt"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/fixedv2c-training-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.3
+  },
+  "probe-play-rule": {
+   "declared_in": "RL_STUDY \u00a720 (exploratory, interface: hold-k; k* = 2 chosen on scripted references) \u2014 frozen play under a decision rule; stream '' = scripted",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "play",
+    "--graph",
+    "{graph}",
+    "--suite",
+    "{suite}",
+    "--rule",
+    "{rule}"
+   ],
+   "defaults": {
+    "graph": "connectome",
+    "suite": "training",
+    "rule": "hold2",
+    "stream": ""
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ],
+    "suite": [
+     "training",
+     "unseen"
+    ],
+    "rule": [
+     "hold2",
+     "hold3",
+     "hold4",
+     "hold6",
+     "hold2f05"
+    ],
+    "stream": [
+     "",
+     "expert",
+     "dagger",
+     "daggerctl",
+     "all",
+     "expertb1"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/harness_v2/starts-20261009.json"
+   ],
+   "outputs": [
+    "artifacts/runs/frozen_probe/playv2{x}-{suite}-{rule}-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.4
+  },
+  "probe-merge-all": {
+   "declared_in": "RL_STUDY \u00a720.2 / \u00a722 (every stream's brains of a graph in one batch)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}",
+    "--stream",
+    "all"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_all_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "cs-expert-b1": {
+   "declared_in": "RL_STUDY \u00a723 (independent block 1: new readouts and noise seeds, expert stream)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/common_stream.py",
+    "--graphs",
+    "{graph}",
+    "--save",
+    "--stream",
+    "expert",
+    "--block",
+    "1"
+   ],
+   "defaults": {
+    "graph": "connectome"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_expertb1_{gtag}.pt",
+    "artifacts/runs/common_stream-expertb1-{gtag}-20261009.json"
+   ],
+   "seeds": "readouts block_seeds(6)[3:6]; noise 9300+i; stream/order/test as cs-expert",
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.15
+  },
+  "probe-merge-stream": {
+   "declared_in": "RL_STUDY \u00a723 (merge any stream's brains for frozen play)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/gates/frozen_play_probe.py",
+    "merge",
+    "--graph",
+    "{graph}",
+    "--stream",
+    "{stream}"
+   ],
+   "defaults": {
+    "graph": "connectome",
+    "stream": "expertb1"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2"
+    ],
+    "stream": [
+     "expertb1"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/checkpoints/frozen_probe_{stream}_{gtag}.pt"
+   ],
+   "gpu": false,
+   "resumable": false,
+   "expected_hours": 0.02
+  },
+  "graph-activity": {
+   "declared_in": "RL_STUDY \u00a724 secondary (a): untrained motor activity per graph",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/graph_activity.py",
+    "connectome",
+    "nulllat:0",
+    "nulllat:1",
+    "nulllat:2",
+    "nulllat:3",
+    "nulllat:4",
+    "nulllat:5",
+    "nulllat:6",
+    "nulllat:7",
+    "nulllat:8",
+    "nulllat:9",
+    "nulllat:10",
+    "nulllat:11",
+    "nulllat:12",
+    "nulllat:13",
+    "nulllat:14",
+    "nulllat:15",
+    "nulllat:16",
+    "nulllat:17",
+    "nulllat:18",
+    "nulllat:19",
+    "nulllat:20",
+    "nulllat:21",
+    "nulllat:22",
+    "nulllat:23",
+    "nulllat:24",
+    "nulllat:25",
+    "nulllat:26",
+    "nulllat:27",
+    "nulllat:28",
+    "nulllat:29",
+    "nulllat:30",
+    "nulllat:31",
+    "nulllat:32",
+    "nulllat:33",
+    "nulllat:34",
+    "nulllat:35",
+    "nulllat:36",
+    "nulllat:37",
+    "nulllat:38",
+    "nulllat:39"
+   ],
+   "outputs": [
+    "artifacts/runs/mission/graph_activity.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.4
+  },
+  "match-gain": {
+   "declared_in": "RL_STUDY \u00a725 (gain per null matching the connectome's motor activity)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/match_gain.py",
+    "nulllat:0",
+    "nulllat:1",
+    "nulllat:2",
+    "nulllat:3",
+    "nulllat:4",
+    "nulllat:5",
+    "nulllat:6",
+    "nulllat:7",
+    "nulllat:8",
+    "nulllat:9",
+    "nulllat:10",
+    "nulllat:11",
+    "nulllat:12",
+    "nulllat:13",
+    "nulllat:14",
+    "nulllat:15",
+    "nulllat:16",
+    "nulllat:17",
+    "nulllat:18",
+    "nulllat:19",
+    "nulllat:20",
+    "nulllat:21",
+    "nulllat:22",
+    "nulllat:23",
+    "nulllat:24",
+    "nulllat:25",
+    "nulllat:26",
+    "nulllat:27",
+    "nulllat:28",
+    "nulllat:29",
+    "nulllat:30",
+    "nulllat:31",
+    "nulllat:32",
+    "nulllat:33",
+    "nulllat:34",
+    "nulllat:35",
+    "nulllat:36",
+    "nulllat:37",
+    "nulllat:38",
+    "nulllat:39"
+   ],
+   "outputs": [
+    "artifacts/runs/mission/matched_gains.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 2.0
+  },
+  "cs-expert-rm": {
+   "declared_in": "RL_STUDY \u00a725 (expert stream at the matched gain)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/common_stream.py",
+    "--graphs",
+    "{graph}",
+    "--save",
+    "--stream",
+    "expert",
+    "--gain-file",
+    "artifacts/runs/mission/matched_gains.json"
+   ],
+   "defaults": {
+    "graph": "nulllat:0"
+   },
+   "choices": {
+    "graph": [
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2",
+     "nulllat:3",
+     "nulllat:4",
+     "nulllat:5",
+     "nulllat:6",
+     "nulllat:7",
+     "nulllat:8",
+     "nulllat:9",
+     "nulllat:10",
+     "nulllat:11",
+     "nulllat:12",
+     "nulllat:13",
+     "nulllat:14",
+     "nulllat:15",
+     "nulllat:16",
+     "nulllat:17",
+     "nulllat:18",
+     "nulllat:19",
+     "nulllat:20",
+     "nulllat:21",
+     "nulllat:22",
+     "nulllat:23",
+     "nulllat:24",
+     "nulllat:25",
+     "nulllat:26",
+     "nulllat:27",
+     "nulllat:28",
+     "nulllat:29",
+     "nulllat:30",
+     "nulllat:31",
+     "nulllat:32",
+     "nulllat:33",
+     "nulllat:34",
+     "nulllat:35",
+     "nulllat:36",
+     "nulllat:37",
+     "nulllat:38",
+     "nulllat:39"
+    ]
+   },
+   "needs": [
+    "artifacts/runs/mission/matched_gains.json"
+   ],
+   "outputs": [
+    "artifacts/runs/checkpoints/common_stream_expertrm_{gtag}.pt",
+    "artifacts/runs/common_stream-expertrm-{gtag}-20261009.json"
+   ],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.12
+  },
+  "graph-activity-in": {
+   "declared_in": "RL_STUDY \u00a726 (untrained motor activity of the in-strength nulls)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/graph_activity.py",
+    "nullin:0",
+    "nullin:1",
+    "nullin:2",
+    "nullin:3",
+    "nullin:4",
+    "nullin:5",
+    "nullin:6",
+    "nullin:7",
+    "nullin:8",
+    "nullin:9",
+    "nullin:10",
+    "nullin:11",
+    "nullin:12",
+    "nullin:13",
+    "nullin:14",
+    "nullin:15",
+    "nullin:16",
+    "nullin:17",
+    "nullin:18",
+    "nullin:19",
+    "nullin:20",
+    "nullin:21",
+    "nullin:22",
+    "nullin:23",
+    "nullin:24",
+    "nullin:25",
+    "nullin:26",
+    "nullin:27",
+    "nullin:28",
+    "nullin:29",
+    "nullin:30",
+    "nullin:31",
+    "nullin:32",
+    "nullin:33",
+    "nullin:34",
+    "nullin:35",
+    "nullin:36",
+    "nullin:37",
+    "nullin:38",
+    "nullin:39"
+   ],
+   "outputs": [],
+   "gpu": true,
+   "resumable": true,
+   "expected_hours": 0.3
+  },
+  "study-s": {
+   "declared_in": "docs/STUDY_S.md (\u00a73-\u00a76, A1; T and eta frozen by the \u00a77 pilot)",
+   "cmd": [
+    ".venv/bin/python",
+    "scripts/diagnostics/study_s.py",
+    "run",
+    "--graph",
+    "{graph}",
+    "--trials",
+    "{trials}",
+    "--eta",
+    "{eta}"
+   ],
+   "defaults": {
+    "graph": "connectome",
+    "trials": "3000",
+    "eta": "0.001"
+   },
+   "choices": {
+    "graph": [
+     "connectome",
+     "nulllat:0",
+     "nulllat:1",
+     "nulllat:2",
+     "nulllat:3",
+     "nulllat:4",
+     "nulllat:5",
+     "nulllat:6",
+     "nulllat:7",
+     "nulllat:8",
+     "nulllat:9",
+     "nulllat:10",
+     "nulllat:11",
+     "nulllat:12",
+     "nulllat:13",
+     "nulllat:14",
+     "nulllat:15",
+     "nulllat:16",
+     "nulllat:17",
+     "nulllat:18",
+     "nulllat:19",
+     "nulllat:20",
+     "nulllat:21",
+     "nulllat:22",
+     "nulllat:23",
+     "nulllat:24",
+     "nulllat:25",
+     "nulllat:26",
+     "nulllat:27",
+     "nulllat:28",
+     "nulllat:29",
+     "nulllat:30",
+     "nulllat:31",
+     "nulllat:32",
+     "nulllat:33",
+     "nulllat:34",
+     "nulllat:35",
+     "nulllat:36",
+     "nulllat:37",
+     "nulllat:38",
+     "nulllat:39",
+     "nulllat:100",
+     "nulllat:101",
+     "nullin:0",
+     "nullin:1",
+     "nullin:2",
+     "nullin:3",
+     "nullin:4",
+     "nullin:5",
+     "nullin:6",
+     "nullin:7",
+     "nullin:8",
+     "nullin:9",
+     "nullin:10",
+     "nullin:11",
+     "nullin:12",
+     "nullin:13",
+     "nullin:14",
+     "nullin:15",
+     "nullin:16",
+     "nullin:17",
+     "nullin:18",
+     "nullin:19",
+     "nullin:20",
+     "nullin:21",
+     "nullin:22",
+     "nullin:23",
+     "nullin:24",
+     "nullin:25",
+     "nullin:26",
+     "nullin:27",
+     "nullin:28",
+     "nullin:29",
+     "nullin:30",
+     "nullin:31",
+     "nullin:32",
+     "nullin:33",
+     "nullin:34",
+     "nullin:35",
+     "nullin:36",
+     "nullin:37",
+     "nullin:38",
+     "nullin:39"
+    ]
+   },
+   "outputs": [
+    "artifacts/runs/study_s/{gtag}.json"
+   ],
+   "gpu": true,
+   "resumable": false,
+   "expected_hours": 0.12
+  }
+ }
+}

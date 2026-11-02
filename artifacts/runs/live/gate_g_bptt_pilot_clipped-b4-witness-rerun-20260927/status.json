@@ -1,0 +1,81 @@
+{
+  "name": "gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927",
+  "state": "complete",
+  "pid": 8015,
+  "unit": "model",
+  "completed": 8,
+  "total": 8,
+  "started": "2026-09-27T13:06:34+00:00",
+  "heartbeat": "2026-09-27T14:01:08+00:00",
+  "heartbeat_unix": 1790517668.2293236,
+  "seconds_per_step": 409.25047701597214,
+  "eta_seconds": 0.0,
+  "eta_note": null,
+  "seconds_per_kind": {},
+  "current": null,
+  "sub_progress": null,
+  "step_elapsed": null,
+  "checkpoints": 0,
+  "last_checkpoint": null,
+  "last_results": [
+    {
+      "label": "pilot lr=0.0001",
+      "at": "2026-09-27T13:20:04+00:00",
+      "lr": 0.0001,
+      "accuracy_last_100": 0.47999998927116394
+    },
+    {
+      "label": "pilot lr=0.001",
+      "at": "2026-09-27T13:33:40+00:00",
+      "lr": 0.001,
+      "accuracy_last_100": 0.5199999809265137
+    },
+    {
+      "label": "pilot lr=0.01",
+      "at": "2026-09-27T13:47:12+00:00",
+      "lr": 0.01,
+      "accuracy_last_100": 0.46000000834465027
+    },
+    {
+      "label": "staged witness mapping=1",
+      "at": "2026-09-27T14:00:45+00:00",
+      "mapping": 1,
+      "train_accuracy_last100": 0.49000000953674316
+    },
+    {
+      "label": "staged heldout candidate mapping=0",
+      "at": "2026-09-27T14:00:51+00:00",
+      "mapping": 0,
+      "heldout_candidate": 0.5199999809265137
+    },
+    {
+      "label": "staged heldout frozen mapping=0",
+      "at": "2026-09-27T14:00:57+00:00",
+      "mapping": 0,
+      "heldout_frozen": 0.5
+    },
+    {
+      "label": "staged heldout candidate mapping=1",
+      "at": "2026-09-27T14:01:02+00:00",
+      "mapping": 1,
+      "heldout_candidate": 0.4950000047683716
+    },
+    {
+      "label": "staged heldout frozen mapping=1",
+      "at": "2026-09-27T14:01:08+00:00",
+      "mapping": 1,
+      "heldout_frozen": 0.5
+    }
+  ],
+  "meta": {
+    "question": "Can the fixed-readout task be controlled by training exactly the allowed motor edges?",
+    "method": "Hard-spike forward dynamics with surrogate BPTT and projected Adam; same fixed readout and incoming-motor-edge mask as Gate G."
+  },
+  "charts": {},
+  "tasks": {},
+  "images": [],
+  "control": {
+    "stop": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/STOP",
+    "checkpoint": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/CHECKPOINT"
+  }
+}

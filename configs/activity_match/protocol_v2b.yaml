@@ -1,0 +1,117 @@
+# ACTIVITY_MATCH_V2B protocol configuration: ACTIVITY_MATCH_V2 with the family-b nulls (owner's complement,
+# docs/activity_match/MISSION_V2B.md; frozen in docs/activity_match/PROTOCOL_FROZEN_V2B.md). Run with `scripts/activity_match/run_am.py --config
+# configs/activity_match/protocol_v2b.yaml <command>`. Unlisted choices are those of ACTIVITY_MATCH_V1 (protocol.yaml).
+study:
+  id: ACTIVITY_MATCH_V2B
+  protocol_status: frozen                       # docs/activity_match/PROTOCOL_FROZEN_V2B.md, 2026-10-21T01:02Z
+  t0_utc: "2026-10-20T17:37:34Z"
+  final_reserve_utc: "2026-10-21T10:30:00Z"     # inside EXPERIENCE_COMMUNE's window (owner's limit 11:32Z)
+  hard_end_utc: "2026-10-21T11:32:26Z"
+  previous: {id: ACTIVITY_MATCH_V2, commit: 3c5d904, config: configs/activity_match/protocol_v2.yaml}
+
+graphs:
+  connectome: connectome
+  null_family: b                                # nulllat:<s> = depth_stratified_lateral (out-strength kept)
+  null_prefix: nulllat
+  # the 20 family-b graphs drawn for EXPERIENCE_COMMUNE_V1 (seeded, score-independent; built and validated there)
+  null_seeds: [39, 21, 29, 30, 26, 20, 14, 5, 9, 34, 24, 13, 16, 33, 17, 32, 10, 18, 19, 27]
+  pilot_null_seeds: [100]                       # development only (unused: the V2 pipeline is reused as validated)
+
+simulation:
+  base_gain_key: dynamics.gain                  # 0.18452; gain = gamma x base, multiplies W @ s only
+  steps: 16
+  dt_ms: 3.33
+  reset_state_each_image: true
+  plasticity_enabled: false
+  input_mapping: ordered
+  readout: datasets.motor_index                 # 2,227 neurons
+  feature_source: spike_counts_before_action_projection
+  count_dtype: uint8
+  batch: 128
+  main_noise_seeds: [61001, 61002]
+  pilot_noise_seeds: [61101, 61102]
+  noise_pairing_key: [study_seed 20261019, noise seed, example uid]
+
+calibration:
+  mode: match_reference                         # the reference keeps its gamma; the others are calibrated to its rate
+  dir: calibration_v2b
+  reference: {graph: connectome, gamma: 1.0}
+  pilot_reference: {graph: "nulllat:100", gamma: 0.3}
+  gamma_grid: [0.05, 0.075, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 0.75, 1.00]   # b runs hotter than c
+  fit_bank: [am3_cal_fit, 8, 62201]             # 128 images, new
+  check_bank: [am3_cal_check, 8, 62202]         # 128 images, new, independent
+  pilot_fit_bank: [am3_devcal_fit, 8, 62301]
+  pilot_check_bank: [am3_devcal_check, 8, 62302]
+  noise_seeds: [62001, 62002]
+  pilot_noise_seeds: [62101, 62102]
+  use_labels: false
+  fit_tolerance: 0.02
+  relative_rate_tolerance: 0.10                 # CAL_CHECK: |r_null - r_connectome| / r_connectome, same images
+  max_refinement_evaluations_per_graph: 9
+  refinement_evaluations_per_target: 9          # one target
+  minimum_active_fraction: 0.01
+  maximum_saturation_fraction: 0.05
+  saturation_threshold_fraction_of_max_spikes: 0.90
+  selected_gains_manifest: artifacts/activity_match/calibration_v2b/selection.json   # sha256 3d316356...
+  verification_passed: true                    # CAL_CHECK: 20 nulls, max error 1.71 %
+
+dataset:
+  tasks: [orientation_4way, luminance_4way]
+  generator:                                    # RETINO_ALIGN_V1 setting C, unchanged
+    lum_centres: [0.35, 0.45, 0.55, 0.65]
+    lum_jitter: 0.065
+    amp_range: [0.15, 0.20]
+    period_range: [24.0, 40.0]
+    noise: 0.02
+    r0: 60.0
+    r1: 92.0
+    pos_jitter: 8.0
+    centre: [135.38, 124.16]
+  banks:
+    train: [am3_train, 64, 63101]               # 1,024
+    val: [am3_val, 32, 63102]                   # 512
+    test: [am3_test, 160, 63103]                # 2,560
+  pilot_banks:
+    train: [am3_pilot_train, 64, 63201]
+    val: [am3_pilot_val, 32, 63202]
+    test: [am3_pilot_test, 64, 63203]
+  dev_bank: [am_dev, 16, 21401]
+  balance_joint_labels: true
+
+conditions: [C0, CN]                            # C0: gamma 1 for all; CN: connectome 1, each null calibrated
+
+decoder:
+  type: multiclass_ridge
+  budgets_per_class: [8, 16, 32, 64, 128]
+  per_combination: [2, 4, 8, 16, 32]
+  subset_draws: 10
+  subset_draw_seeds: [8401, 8402, 8403, 8404, 8405, 8406, 8407, 8408, 8409, 8410]
+  nested_subsets: true
+  scale_fit_on_training_subset_only: true
+  normalized_loss_lambda_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+  validation_tie_break: largest_lambda
+  refit_on_train_plus_validation: false
+
+analysis:
+  matched_condition: CN
+  interpretation: v2
+  primary_contrast: G_CN_orient
+  practical_margin: 0.02
+  informative_accuracy_threshold: 0.27          # chance + delta (PROTOCOL_FROZEN_V2.md §8); 0.30 reported descriptively
+  confidence_level: 0.95
+  interval_method: percentile
+  bootstrap_replicates: 5000
+  bootstrap_seed: 63001
+  bootstrap_test_examples: joint_label_stratified_and_paired
+  bootstrap_null_graphs: whole_graph_blocks_all_conditions
+  refit_decoder_in_bootstrap: false
+  refit_calibration_in_bootstrap: false
+  secondary_intervals: descriptive
+  rank_status: descriptive
+
+execution:
+  resume: true
+  save_predictions_per_example: true
+  atomic_outputs: true
+  stop_new_long_jobs_before_final_reserve: true
+  technical_retry: {max_attempts: 2, on: [cuda_error, out_of_memory, io_error]}

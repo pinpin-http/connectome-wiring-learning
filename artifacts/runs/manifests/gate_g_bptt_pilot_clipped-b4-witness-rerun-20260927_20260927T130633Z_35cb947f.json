@@ -1,0 +1,280 @@
+{
+  "manifest_version": 1,
+  "run_id": "gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927",
+  "study": "Gate G",
+  "phase": "surrogate BPTT controllability pilot",
+  "status": "complete",
+  "started_at_utc": "2026-09-27T13:06:33+00:00",
+  "host": {
+    "hostname": "omarchy",
+    "machine": "x86_64"
+  },
+  "git": {
+    "commit": "9b29e851a0acb1348c1c801d02ab55e58f3b6142",
+    "dirty": true,
+    "worktree_status": "?? gpucore.87935\n?? media/"
+  },
+  "runtime": {
+    "python": "3.11.16",
+    "implementation": "CPython",
+    "platform": "Linux-7.2.5-3-omarchy-x86_64-with-glibc2.44",
+    "os_release": "NAME=\"Omarchy\"\nPRETTY_NAME=\"Omarchy\"\nID=omarchy\nID_LIKE=arch\nBUILD_ID=\"4.0.4\"\nVERSION_ID=\"4.0.4\"\nANSI_COLOR=\"38;2;158;206;106\"\nHOME_URL=\"https://omarchy.org/\"\nDOCUMENTATION_URL=\"https://learn.omacom.io/2/the-omarchy-manual\"\nSUPPORT_URL=\"https://discord.gg/tXFUdasqhY\"\nBUG_REPORT_URL=\"https://github.com/basecamp/omarchy/issues\"\nLOGO=omarchy\n",
+    "packages": {
+      "numpy": "2.1.3",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+rocm6.4",
+      "pyarrow": "25.0.1",
+      "scikit-learn": "1.9.1",
+      "PyYAML": "6.0.3",
+      "polars": "1.44.2",
+      "gymnasium": "1.0.0",
+      "stable-retro": "1.0.1"
+    },
+    "accelerator": {
+      "configured_backend": "gpu",
+      "torch_device": "cuda",
+      "torch_hip": "6.4.43484-123eb5128",
+      "torch_cuda": null,
+      "device_name": "AMD Radeon Graphics",
+      "rocm_smi_product": "Card Series: \t\tAMD Radeon RX 9060 XT"
+    },
+    "base_config": {
+      "seed": 0,
+      "connectome": {
+        "dataset": "malecns",
+        "min_syn": 1,
+        "nt_conf_floor": 0.5
+      },
+      "topology": "connectome",
+      "null_primary": "depth_stratified",
+      "null_secondary": [
+        "degree_preserving",
+        "shuffled_weights",
+        "shuffled_edges"
+      ],
+      "swap_multiplier": 10,
+      "strata_key": "both",
+      "env": {
+        "game": "SuperMarioBros-Nes",
+        "state": "Level1-1",
+        "frame_skip": 4,
+        "integration_dir": "integrations"
+      },
+      "dynamics": {
+        "calibration_drive": "interface",
+        "warmup_ticks": 150,
+        "measure_ticks": 60,
+        "target_rate": 0.07,
+        "gain": 0.18452,
+        "bias": 0.0,
+        "noise_std": 0.02,
+        "weight_transform": {
+          "log1p": false,
+          "normalize_in_degree": false
+        },
+        "backend": "gpu"
+      },
+      "timing": {
+        "ticks_per_decision": 16,
+        "frame_skip": 4
+      },
+      "readout": {
+        "category": "fixed",
+        "trace_beta": 0.5,
+        "implementation": "flymario.policy.readout.FixedRandomProjection",
+        "distribution": "gaussian",
+        "scale_mode": "inv_sqrt_features",
+        "centre_rows": true,
+        "trainable": false,
+        "seed_scope": "per_block"
+      }
+    },
+    "base_config_file": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/configs/base.yaml",
+      "sha256": "e1ef0ebf6c4053ae46fa3812aa5c6286f3303b266ecac743d9f85feb66aca3c0"
+    }
+  },
+  "dataset": "malecns",
+  "configuration": {
+    "arguments": {
+      "mode": "pilot",
+      "device": "cuda",
+      "gpu_memory_fraction": 0.5,
+      "gpu_duty": 1.0,
+      "block_len": 4,
+      "smoke_trials": 1,
+      "smoke_block_len": 1,
+      "run_tag": "clipped-b4-witness-rerun-20260927",
+      "no_optimizer_step": false,
+      "diagnose_gradients": false,
+      "detect_anomaly": false,
+      "state_grad_clip_norm": 1000000000.0,
+      "report_path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927.json",
+      "manifest_path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927_20260927T130633Z_35cb947f.json"
+    },
+    "learning_rates": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "runtime_debug": {
+      "HIP_LAUNCH_BLOCKING": "0"
+    },
+    "gpu_memory_fraction": 0.5,
+    "burn_in_gradient": "detached before first scored decision",
+    "n_train": 500,
+    "n_test_per_mapping": 200,
+    "block_len": 4,
+    "smoke_trials": null,
+    "optimizer_step_applied": null,
+    "diagnose_gradients": false,
+    "detect_anomaly": false,
+    "state_grad_clip_norm": 1000000000.0,
+    "checkpoint_granularity": "one simulation tick",
+    "gpu_duty_target": 1.0,
+    "warmup_ticks": 150,
+    "ticks_per_decision": 16,
+    "fixed_readout": true,
+    "trainable_subset": "incoming motor edges"
+  },
+  "seed_registry": {
+    "master": 20260923,
+    "train_seed_set": 1,
+    "readout_seed": 1610069010,
+    "mapping": 0,
+    "stream_derivation": "SeedSequence([MASTER, seed_set, purpose]); spawn noise, cue, shuffled"
+  },
+  "inputs": {
+    "raw_weights": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/data/raw/connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather",
+      "exists": true,
+      "size_bytes": 508025642,
+      "sha256": "9b3beab17bad5f618be3f2c02d3139a8d07b822565919c013f1e5506d93e604b"
+    },
+    "raw_annotations": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/data/raw/body-annotations-male-cns-v1.0-minconf-0.5.feather",
+      "exists": true,
+      "size_bytes": 14483314,
+      "sha256": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2"
+    },
+    "raw_neurotransmitters": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/data/raw/body-neurotransmitters-male-cns-v1.0.feather",
+      "exists": true,
+      "size_bytes": 43282834,
+      "sha256": "95c9289220663abeb3409f3ad9e5a7f8a53f8093f5139d15502cd08da8879621"
+    },
+    "derived_graph_cache": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/data/connectome/malecns.npz",
+      "exists": true,
+      "size_bytes": 105100903,
+      "sha256": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f"
+    },
+    "bptt_script": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/scripts/gates/gate_g_bptt_control.py",
+      "exists": true,
+      "size_bytes": 29260,
+      "sha256": "00848219689e84d5d0c729e5132eeb9d605fdf775e8077db1b979f5bc89756d3"
+    },
+    "bptt_implementation": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/src/flymario/training/bptt.py",
+      "exists": true,
+      "size_bytes": 17931,
+      "sha256": "13d6abb33137be12ec459e2a16b9e6f4ccd56512be5cbdbf755bb6547eeb8eeb"
+    },
+    "gate_task": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/scripts/gates/gate_g_task.py",
+      "exists": true,
+      "size_bytes": 37518,
+      "sha256": "918095baba64024dc63f077f247a68459875484c51785d53eca63c51901d29a3"
+    },
+    "two_cue": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/src/flymario/training/two_cue.py",
+      "exists": true,
+      "size_bytes": 15131,
+      "sha256": "aa8f1e67a45670e53c929de5a0672f88b825e75fb25d0dc57440a8d841a6df76"
+    },
+    "plastic_brain": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/src/flymario/training/plastic.py",
+      "exists": true,
+      "size_bytes": 9292,
+      "sha256": "4628cb450a7c954f22388055c70583319f350412cc84f12a526854e1c37aab05"
+    },
+    "base_config": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/configs/base.yaml",
+      "exists": true,
+      "size_bytes": 8705,
+      "sha256": "e1ef0ebf6c4053ae46fa3812aa5c6286f3303b266ecac743d9f85feb66aca3c0"
+    },
+    "gate_plan": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/docs/GATE_G_PLAN.md",
+      "exists": true,
+      "size_bytes": 47861,
+      "sha256": "40abf25dfa0ff141de94130acc48adc5034134e685deb7a19020c65ba07de56e"
+    },
+    "gate_pair": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/gate_g_pair.json",
+      "exists": true,
+      "size_bytes": 7438,
+      "sha256": "9de3f8a1db48df8fb27f170d8b094ee035d514f001d0000e45671bd487198e35"
+    },
+    "run_manifest_implementation": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/src/flymario/run_manifest.py",
+      "exists": true,
+      "size_bytes": 7492,
+      "sha256": "09cc3bdc13a78831c10f352099d8a305861ce29c89b9d59596e975666a542205"
+    }
+  },
+  "expected_outputs": {
+    "report": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927.json",
+    "pilot_lr_0.0001": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.0001.pt",
+    "pilot_lr_0.001": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.001.pt",
+    "pilot_lr_0.01": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.01.pt",
+    "staged_witness_map1": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/staged_witness_map1.pt",
+    "live_status": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/status.json",
+    "live_series": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/series.jsonl"
+  },
+  "finished_at_utc": "2026-09-27T14:01:08+00:00",
+  "runtime_seconds": 3274.833,
+  "outputs": {
+    "report": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927.json",
+      "exists": true,
+      "size_bytes": 2939,
+      "sha256": "f594218ef2fab5a969efdf1fad09ef7c1903ad4a0bd12018baddbe5497d5cbcd"
+    },
+    "pilot_lr_0.0001": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.0001.pt",
+      "exists": true,
+      "size_bytes": 3079073,
+      "sha256": "cad0380c3363d1a2082746182807b73e369a74b6c6fa18e17c7f374cd931b62c"
+    },
+    "pilot_lr_0.001": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.001.pt",
+      "exists": true,
+      "size_bytes": 3079002,
+      "sha256": "e1ce11d04e68af1655aea2a8e739eabff93f09b988b5a51280e3cb0040d620c1"
+    },
+    "pilot_lr_0.01": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.01.pt",
+      "exists": true,
+      "size_bytes": 3078995,
+      "sha256": "abc317fceb157ded347bd910c9d29de6b57bfc146d0f0373832b66456efb1bbf"
+    },
+    "staged_witness_map1": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/staged_witness_map1.pt",
+      "exists": true,
+      "size_bytes": 3079101,
+      "sha256": "4abf4d5684bf7834b37ceca07e8041a98b77fe0391d674f512492ff06cc6ef06"
+    },
+    "live_status": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/status.json",
+      "exists": true,
+      "size_bytes": 2402,
+      "sha256": "4f2b7f5f185e30f9fdd87e93b4c39295bfb7f7590b1e70a7c83869de8d6cc164"
+    },
+    "live_series": {
+      "path": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927/series.jsonl",
+      "exists": false
+    }
+  }
+}

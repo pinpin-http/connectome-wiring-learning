@@ -1,0 +1,21 @@
+{
+ "full": {
+  "spikes_outside_lamina": 231524.7,
+  "motor_spikes": 4545.6,
+  "L1_spikes": 5951.8,
+  "driven_cells": 3571.1
+ },
+ "on_only": {
+  "spikes_outside_lamina": 216403.6,
+  "motor_spikes": 4595.6,
+  "L1_spikes": 6553.6,
+  "driven_cells": 1786.1
+ },
+ "off_only": {
+  "spikes_outside_lamina": 220967.2,
+  "motor_spikes": 4477.6,
+  "L1_spikes": 951.0,
+  "driven_cells": 1785.0
+ },
+ "what": "untrained connectome, 60 held-out frames, mean per sweep (3 noise seeds)"
+}

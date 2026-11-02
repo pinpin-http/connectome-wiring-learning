@@ -1,0 +1,10 @@
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+A nullin:100 {"orient_8": 0.25, "orient_128": 0.234, "lum_8": 0.756, "lum_128": 0.773}
+A nullin:101 {"orient_8": 0.251, "orient_128": 0.281, "lum_8": 0.759, "lum_128": 0.778}
+B nullin:100 {"orient_8": 0.266, "orient_128": 0.316, "lum_8": 0.784, "lum_128": 0.803}
+B nullin:101 {"orient_8": 0.263, "orient_128": 0.322, "lum_8": 0.765, "lum_128": 0.807}
+C nullin:100 {"orient_8": 0.287, "orient_128": 0.416, "lum_8": 0.732, "lum_128": 0.784}
+C nullin:101 {"orient_8": 0.286, "orient_128": 0.398, "lum_8": 0.698, "lum_128": 0.785}
+D nullin:100 {"orient_8": 0.313, "orient_128": 0.502, "lum_8": 0.671, "lum_128": 0.753}
+D nullin:101 {"orient_8": 0.303, "orient_128": 0.479, "lum_8": 0.645, "lum_128": 0.76}

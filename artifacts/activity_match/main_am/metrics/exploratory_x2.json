@@ -1,0 +1,27 @@
+{
+ "X2_accuracy_vs_activity": {
+  "label": "EXPLORATORY (decided after the main result)",
+  "per_family": {
+   "connectome": {
+    "orient": {
+     "corr_M_rate": 0.3545551127853518,
+     "corr_M_log_gamma": 0.5152705051118962
+    },
+    "lum": {
+     "corr_M_rate": -0.46757171280725424,
+     "corr_M_log_gamma": -0.3913944128951891
+    }
+   },
+   "nulls": {
+    "orient": {
+     "corr_M_rate": 0.9105323330584477,
+     "corr_M_log_gamma": 0.9779882824196011
+    },
+    "lum": {
+     "corr_M_rate": 0.802088657839244,
+     "corr_M_log_gamma": 0.7152234307691331
+    }
+   }
+  }
+ }
+}

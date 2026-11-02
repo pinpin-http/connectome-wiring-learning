@@ -1,0 +1,20 @@
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[G5@1200] G5 0.744/0.50/4of12
+[G8@1200] FROZEN 0.500/0.33/0of12  G8 0.959/0.91/12of12  SHUFFLED 0.500/0.39/0of12  SUPERVISED 0.989/0.97/12of12
+selection {"ranking": [{"variant": "G8", "gamma": 0.8, "mean": 0.9591666807730993, "min": 0.9100000262260437}, {"variant": "G5", "gamma": 0.5, "mean": 0.7441666672627131, "min": 0.5}], "selected": "G8"}
+controls {"mean_shuffled_minus_frozen": 0.0, "se": 0.019886037364364176, "pass": true}
+selected gamma variant: G8
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[confirm@1200] FROZEN 0.500/0.27/0of12  G8 0.921/0.76/12of12  SHUFFLED 0.500/0.24/1of12  SUPERVISED 0.987/0.97/12of12
+pass false
+informative true
+controls {"mean_shuffled_minus_frozen": -3.725290298461914e-09, "se": 0.0661981654456382, "pass": true}
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[phase1@mapping] FROZEN 0.500/0.35/0of12  FROZEN2 0.963/0.94/12of12  RULE 0.963/0.94/12of12  SHUF2 0.963/0.94/12of12  SUPERVISED 0.981/0.94/12of12
+[phase2@start(reversed)] FROZEN 0.500/0.35/0of12  FROZEN2 0.037/0.00/0of12  RULE 0.037/0.00/0of12  SHUF2 0.037/0.00/0of12  SUPERVISED 0.019/0.00/0of12

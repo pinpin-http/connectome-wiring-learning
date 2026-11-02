@@ -1,0 +1,449 @@
+{
+  "what": "audit of the stopped Mario pilot (sweep regime)",
+  "run": "mario_sweep_pilot",
+  "decisions": 6681,
+  "episodes": 579,
+  "per_fly": {
+    "learner_ro1": {
+      "episodes": 134,
+      "median_x_first20": 454.5,
+      "median_x_last50": 312.0,
+      "max_x": 681.0,
+      "deaths": 125,
+      "action_mix_last50": {
+        "NOOP": 0.0,
+        "RIGHT": 0.0,
+        "RIGHT+B": 1.0,
+        "RIGHT+A": 0.0,
+        "RIGHT+A+B": 0.0,
+        "A": 0.0,
+        "LEFT": 0.0,
+        "DOWN": 0.0
+      },
+      "return_per_episode_last50": 246.3399999999999,
+      "decisions_per_episode_last50": 33.0
+    },
+    "frozen_ro1": {
+      "episodes": 15,
+      "median_x_first20": 594.0,
+      "median_x_last50": 594.0,
+      "max_x": 722.0,
+      "deaths": 5,
+      "action_mix_last50": {
+        "NOOP": 0.204,
+        "RIGHT": 0.037,
+        "RIGHT+B": 0.104,
+        "RIGHT+A": 0.255,
+        "RIGHT+A+B": 0.015,
+        "A": 0.054,
+        "LEFT": 0.227,
+        "DOWN": 0.103
+      },
+      "return_per_episode_last50": 462.10000000000474,
+      "decisions_per_episode_last50": 441.6666666666667
+    },
+    "shuffled_ro1": {
+      "episodes": 33,
+      "median_x_first20": 40.0,
+      "median_x_last50": 41.0,
+      "max_x": 598.0,
+      "deaths": 1,
+      "action_mix_last50": {
+        "NOOP": 0.063,
+        "RIGHT": 0.062,
+        "RIGHT+B": 0.046,
+        "RIGHT+A": 0.06,
+        "RIGHT+A+B": 0.014,
+        "A": 0.068,
+        "LEFT": 0.383,
+        "DOWN": 0.303
+      },
+      "return_per_episode_last50": 40.40666666666708,
+      "decisions_per_episode_last50": 202.3939393939394
+    },
+    "learner_ro2": {
+      "episodes": 178,
+      "median_x_first20": 313.0,
+      "median_x_last50": 312.0,
+      "max_x": 670.0,
+      "deaths": 175,
+      "action_mix_last50": {
+        "NOOP": 0.0,
+        "RIGHT": 0.0,
+        "RIGHT+B": 1.0,
+        "RIGHT+A": 0.0,
+        "RIGHT+A+B": 0.0,
+        "A": 0.0,
+        "LEFT": 0.0,
+        "DOWN": 0.0
+      },
+      "return_per_episode_last50": 246.3399999999999,
+      "decisions_per_episode_last50": 33.0
+    },
+    "frozen_ro2": {
+      "episodes": 20,
+      "median_x_first20": 722.0,
+      "median_x_last50": 722.0,
+      "max_x": 1250.0,
+      "deaths": 9,
+      "action_mix_last50": {
+        "NOOP": 0.148,
+        "RIGHT": 0.047,
+        "RIGHT+B": 0.202,
+        "RIGHT+A": 0.017,
+        "RIGHT+A+B": 0.093,
+        "A": 0.375,
+        "LEFT": 0.016,
+        "DOWN": 0.101
+      },
+      "return_per_episode_last50": 595.4580000000044,
+      "decisions_per_episode_last50": 332.1
+    },
+    "shuffled_ro2": {
+      "episodes": 28,
+      "median_x_first20": 716.5,
+      "median_x_last50": 722.0,
+      "max_x": 1252.0,
+      "deaths": 19,
+      "action_mix_last50": {
+        "NOOP": 0.038,
+        "RIGHT": 0.018,
+        "RIGHT+B": 0.323,
+        "RIGHT+A": 0.015,
+        "RIGHT+A+B": 0.106,
+        "A": 0.432,
+        "LEFT": 0.005,
+        "DOWN": 0.062
+      },
+      "return_per_episode_last50": 587.5157142857171,
+      "decisions_per_episode_last50": 233.14285714285714
+    },
+    "learner_ro3": {
+      "episodes": 124,
+      "median_x_first20": 297.0,
+      "median_x_last50": 297.0,
+      "max_x": 595.0,
+      "deaths": 121,
+      "action_mix_last50": {
+        "NOOP": 0.0,
+        "RIGHT": 1.0,
+        "RIGHT+B": 0.0,
+        "RIGHT+A": 0.0,
+        "RIGHT+A+B": 0.0,
+        "A": 0.0,
+        "LEFT": 0.0,
+        "DOWN": 0.0
+      },
+      "return_per_episode_last50": 231.03999999999985,
+      "decisions_per_episode_last50": 48.0
+    },
+    "frozen_ro3": {
+      "episodes": 23,
+      "median_x_first20": 594.5,
+      "median_x_last50": 594.0,
+      "max_x": 898.0,
+      "deaths": 11,
+      "action_mix_last50": {
+        "NOOP": 0.05,
+        "RIGHT": 0.196,
+        "RIGHT+B": 0.114,
+        "RIGHT+A": 0.163,
+        "RIGHT+A+B": 0.057,
+        "A": 0.121,
+        "LEFT": 0.251,
+        "DOWN": 0.048
+      },
+      "return_per_episode_last50": 472.2243478260902,
+      "decisions_per_episode_last50": 275.7391304347826
+    },
+    "shuffled_ro3": {
+      "episodes": 24,
+      "median_x_first20": 594.0,
+      "median_x_last50": 594.0,
+      "max_x": 722.0,
+      "deaths": 9,
+      "action_mix_last50": {
+        "NOOP": 0.027,
+        "RIGHT": 0.439,
+        "RIGHT+B": 0.032,
+        "RIGHT+A": 0.045,
+        "RIGHT+A+B": 0.056,
+        "A": 0.068,
+        "LEFT": 0.243,
+        "DOWN": 0.09
+      },
+      "return_per_episode_last50": 404.8066666666695,
+      "decisions_per_episode_last50": 272.1666666666667
+    }
+  },
+  "collapse": {
+    "learner_ro1": {
+      "entropy_per_1000": [
+        1.3648,
+        1.1295,
+        0.8189,
+        0.0151,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_update_rms_per_1000": [
+        0.0008409035379268061,
+        0.00030612358794769535,
+        0.00018382564914801947,
+        2.423955736104524e-06,
+        5.162914877153597e-11,
+        2.25420702104459e-11,
+        2.8206111373464708e-11
+      ]
+    },
+    "frozen_ro1": {
+      "entropy_per_1000": [
+        1.7858,
+        1.7898,
+        1.7933,
+        1.7944,
+        1.7942,
+        1.7922,
+        1.7863
+      ],
+      "raw_update_rms_per_1000": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "shuffled_ro1": {
+      "entropy_per_1000": [
+        1.6959,
+        1.7631,
+        0.9997,
+        1.3227,
+        1.3327,
+        1.2964,
+        1.302
+      ],
+      "raw_update_rms_per_1000": [
+        0.00046397867462974316,
+        0.0003696006794228879,
+        6.24490285504864e-06,
+        1.2604224390088348e-05,
+        8.763621053617499e-05,
+        3.1766984659725494e-05,
+        2.8779138908679945e-05
+      ]
+    },
+    "learner_ro2": {
+      "entropy_per_1000": [
+        0.8489,
+        0.2922,
+        0.0093,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_update_rms_per_1000": [
+        0.0009041471624991573,
+        0.00016123482153368462,
+        7.100012662827615e-07,
+        4.007801926814657e-10,
+        9.156444867684105e-11,
+        7.930131434331911e-11,
+        9.307006335002522e-11
+      ]
+    },
+    "frozen_ro2": {
+      "entropy_per_1000": [
+        1.6776,
+        1.6672,
+        1.6817,
+        1.6808,
+        1.6728,
+        1.6667,
+        1.6733
+      ],
+      "raw_update_rms_per_1000": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "shuffled_ro2": {
+      "entropy_per_1000": [
+        1.5199,
+        1.4484,
+        1.336,
+        1.0341,
+        1.1229,
+        1.1061,
+        1.1854
+      ],
+      "raw_update_rms_per_1000": [
+        0.0013629525433385083,
+        0.0005202097515578998,
+        0.00046446931907883027,
+        0.0002333842020566408,
+        0.0002394105920166112,
+        0.0004155497879519885,
+        0.00024220362077431625
+      ]
+    },
+    "learner_ro3": {
+      "entropy_per_1000": [
+        0.7444,
+        0.0476,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_update_rms_per_1000": [
+        0.0006612585108496205,
+        1.4098975731197644e-05,
+        1.403342006804577e-10,
+        9.17622575103902e-12,
+        7.5689500490762e-12,
+        2.671857785030169e-11,
+        3.491308354130128e-11
+      ]
+    },
+    "frozen_ro3": {
+      "entropy_per_1000": [
+        1.8917,
+        1.8995,
+        1.8864,
+        1.8926,
+        1.905,
+        1.8946,
+        1.8988
+      ],
+      "raw_update_rms_per_1000": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "shuffled_ro3": {
+      "entropy_per_1000": [
+        1.7145,
+        1.5832,
+        1.407,
+        1.5709,
+        1.528,
+        1.4286,
+        1.1632
+      ],
+      "raw_update_rms_per_1000": [
+        0.0012446079641045174,
+        0.0004144900761377244,
+        0.00041027843366788375,
+        0.0002573873635537842,
+        0.00031461713109780476,
+        0.00015786921492866668,
+        6.728124355379033e-05
+      ]
+    }
+  },
+  "share_past_first_goomba": {
+    "learner": 0.0389908256880734,
+    "frozen": 0.6896551724137931,
+    "shuffled": 0.43529411764705883
+  },
+  "chronology_learner_ro1": [
+    {
+      "episodes": [
+        0,
+        9
+      ],
+      "at_decision": 336,
+      "run_right_b": 0.574,
+      "any_jump": 0.171,
+      "median_x": 594.0
+    },
+    {
+      "episodes": [
+        10,
+        19
+      ],
+      "at_decision": 2054,
+      "run_right_b": 0.728,
+      "any_jump": 0.075,
+      "median_x": 315.0
+    },
+    {
+      "episodes": [
+        20,
+        29
+      ],
+      "at_decision": 2946,
+      "run_right_b": 0.991,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    },
+    {
+      "episodes": [
+        30,
+        39
+      ],
+      "at_decision": 3281,
+      "run_right_b": 1.0,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    },
+    {
+      "episodes": [
+        40,
+        49
+      ],
+      "at_decision": 3611,
+      "run_right_b": 1.0,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    },
+    {
+      "episodes": [
+        50,
+        59
+      ],
+      "at_decision": 3941,
+      "run_right_b": 1.0,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    },
+    {
+      "episodes": [
+        60,
+        69
+      ],
+      "at_decision": 4271,
+      "run_right_b": 1.0,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    },
+    {
+      "episodes": [
+        70,
+        79
+      ],
+      "at_decision": 4601,
+      "run_right_b": 1.0,
+      "any_jump": 0.0,
+      "median_x": 312.0
+    }
+  ],
+  "reward_definition": "per decision: forward progress (px) past the best point - 0.02; -25 on death, +100 at the flag (src/flymario/env/retro_env.py)"
+}

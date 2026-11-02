@@ -1,0 +1,295 @@
+{
+  "what": "Exploratory sensitivity analysis: v2 calibration with selected direction separated",
+  "interpretation": "Not a replacement verdict; descriptive OLS intervals treat x as fixed and omit Monte Carlo uncertainty in both axes.",
+  "sources": [
+    "artifacts/runs/gate_g_estimator_check_v2.json",
+    "artifacts/runs/gate_g_estimator_power_v2.json",
+    "artifacts/runs/gate_g_estimator_verdict_v2.json"
+  ],
+  "configurations": {
+    "no_feedback_s0.1": {
+      "source": "power rerun",
+      "finite_difference_reference": {
+        "random_only": {
+          "n": 20,
+          "slope": 0.9705553795183013,
+          "slope_ci95": [
+            0.9037152899361184,
+            1.037395469100484
+          ],
+          "r": 0.990467400694815,
+          "intercept": -4.870595833910649e-05
+        },
+        "with_selected_direction": {
+          "n": 21,
+          "slope": 0.9951427750725395,
+          "slope_ci95": [
+            0.9867393273109614,
+            1.0035462228341174
+          ],
+          "r": 0.9998453967344549,
+          "intercept": -3.902413159384338e-05
+        }
+      },
+      "rules": {
+        "node_perturbation": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.9343499088930444,
+            "slope_ci95": [
+              0.7994737897575598,
+              1.069226028028529
+            ],
+            "r": 0.9600407011472386,
+            "intercept": 9.798742743748461e-05
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.9571400695193162,
+            "slope_ci95": [
+              0.9409240715317495,
+              0.9733560675068829
+            ],
+            "r": 0.9993781204598157,
+            "intercept": 0.00011083424906118138
+          }
+        },
+        "node_perturbation_full_trajectory": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.8494473495626456,
+            "slope_ci95": [
+              0.6233345452251184,
+              1.0755601539001727
+            ],
+            "r": 0.8808077857088468,
+            "intercept": 0.0001630224792104148
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.9444153020255238,
+            "slope_ci95": [
+              0.9156777711073225,
+              0.9731528329437251
+            ],
+            "r": 0.9979980999402964,
+            "intercept": 0.00022900317912024314
+          }
+        }
+      }
+    },
+    "feedback_s0.1": {
+      "source": "power rerun",
+      "finite_difference_reference": {
+        "random_only": {
+          "n": 20,
+          "slope": 1.0486210289116997,
+          "slope_ci95": [
+            0.9622981975282698,
+            1.1349438602951296
+          ],
+          "r": 0.9864622196635704,
+          "intercept": 5.439477063650248e-05
+        },
+        "with_selected_direction": {
+          "n": 21,
+          "slope": 1.0010140518410195,
+          "slope_ci95": [
+            0.990971454044754,
+            1.011056649637285
+          ],
+          "r": 0.9997818049981463,
+          "intercept": 5.9343593823314635e-05
+        }
+      },
+      "rules": {
+        "node_perturbation": {
+          "random_only": {
+            "n": 20,
+            "slope": 1.0104370658774156,
+            "slope_ci95": [
+              0.9099867789433379,
+              1.1108873528114933
+            ],
+            "r": 0.9804379028644696,
+            "intercept": -5.0609683456505626e-05
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.8467205406490101,
+            "slope_ci95": [
+              0.8340581765571496,
+              0.8593829047408706
+            ],
+            "r": 0.9995153716982618,
+            "intercept": -1.5086153328143677e-05
+          }
+        },
+        "node_perturbation_full_trajectory": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.9274009649090189,
+            "slope_ci95": [
+              0.7867706221624937,
+              1.068031307655544
+            ],
+            "r": 0.9561730412857905,
+            "intercept": -0.0001294574800335838
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.8658722254709067,
+            "slope_ci95": [
+              0.850837816853982,
+              0.8809066340878314
+            ],
+            "r": 0.9993468474985562,
+            "intercept": -0.00010977312250849084
+          }
+        }
+      }
+    },
+    "no_feedback_s0.02": {
+      "source": "power rerun",
+      "finite_difference_reference": {
+        "random_only": {
+          "n": 20,
+          "slope": 1.0079786060872724,
+          "slope_ci95": [
+            0.957517660688371,
+            1.0584395514861737
+          ],
+          "r": 0.9949287231276677,
+          "intercept": 9.714271793501443e-05
+        },
+        "with_selected_direction": {
+          "n": 21,
+          "slope": 1.0023710673595558,
+          "slope_ci95": [
+            0.9949236521814058,
+            1.009818482537706
+          ],
+          "r": 0.9998803118162369,
+          "intercept": 9.377315372574926e-05
+        }
+      },
+      "rules": {
+        "node_perturbation": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.6179407118538649,
+            "slope_ci95": [
+              0.26711669820301553,
+              0.9687647255047143
+            ],
+            "r": 0.657321632156048,
+            "intercept": -0.000344514935828904
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.872171933471105,
+            "slope_ci95": [
+              0.8202177945189744,
+              0.9241260724232356
+            ],
+            "r": 0.9923926499919754,
+            "intercept": -0.0002859061319042972
+          }
+        },
+        "node_perturbation_full_trajectory": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.3660662878305802,
+            "slope_ci95": [
+              0.18939619884753658,
+              0.5427363768136239
+            ],
+            "r": 0.716140736088195,
+            "intercept": -0.0010017071072564972
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.6893829119718154,
+            "slope_ci95": [
+              0.6241847775162194,
+              0.7545810464274115
+            ],
+            "r": 0.9811501444791054,
+            "intercept": -0.0014196148096412837
+          }
+        }
+      }
+    },
+    "feedback_s0.02": {
+      "source": "power rerun",
+      "finite_difference_reference": {
+        "random_only": {
+          "n": 20,
+          "slope": 1.0054399488251915,
+          "slope_ci95": [
+            0.9768544758204373,
+            1.0340254218299458
+          ],
+          "r": 0.9983558968505565,
+          "intercept": 5.016672595019528e-05
+        },
+        "with_selected_direction": {
+          "n": 21,
+          "slope": 1.0064836912285777,
+          "slope_ci95": [
+            1.0012911825537838,
+            1.0116761999033717
+          ],
+          "r": 0.9999422863495022,
+          "intercept": 5.099225498748092e-05
+        }
+      },
+      "rules": {
+        "node_perturbation": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.8488069266051247,
+            "slope_ci95": [
+              0.6830184012076422,
+              1.0145954520026073
+            ],
+            "r": 0.9302521163272999,
+            "intercept": 3.604486610515477e-05
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.5760552980249121,
+            "slope_ci95": [
+              0.5513547645810053,
+              0.6007558314688188
+            ],
+            "r": 0.9960365667477963,
+            "intercept": -0.00019489260078111225
+          }
+        },
+        "node_perturbation_full_trajectory": {
+          "random_only": {
+            "n": 20,
+            "slope": 0.6915440924900911,
+            "slope_ci95": [
+              0.48059094830512195,
+              0.9024972366750602
+            ],
+            "r": 0.8514180382545536,
+            "intercept": -0.00034736993775880885
+          },
+          "with_selected_direction": {
+            "n": 21,
+            "slope": 0.5946077779789076,
+            "slope_ci95": [
+              0.5650233391313211,
+              0.6241922168264942
+            ],
+            "r": 0.9946744974924019,
+            "intercept": -0.00039546486826525515
+          }
+        }
+      }
+    }
+  }
+}

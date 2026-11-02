@@ -1,0 +1,3841 @@
+{
+  "run_id": "gate_g_stage1_reversal-adaptive-20261001",
+  "stage": "reversal-adaptive",
+  "pair": [
+    "1-1_jumping",
+    "1-1_open"
+  ],
+  "seed_sets": [
+    281,
+    282
+  ],
+  "readouts": [
+    1610069010,
+    673228719,
+    1093961226
+  ],
+  "tasks": {
+    "phase1": {
+      "rule": {
+        "tau": 2.0,
+        "tau_adapt": 0.5,
+        "psi_width": 0.5,
+        "baseline_rate": 0.1,
+        "rms_decay": 0.95,
+        "ebar_rate": 0.05,
+        "block": 1,
+        "delay": 0,
+        "trace_gamma": 0.0
+      },
+      "purpose": "confirm",
+      "trials": 800,
+      "learners": [
+        {
+          "name": "RULE|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "SUPERVISED|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        }
+      ],
+      "training_greedy_by_100": {
+        "FROZEN": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "FROZEN2": [
+          0.7,
+          0.845,
+          0.9192,
+          0.9642,
+          0.9517,
+          0.9608,
+          0.96,
+          0.9492
+        ],
+        "RULE": [
+          0.7,
+          0.845,
+          0.9192,
+          0.9642,
+          0.9517,
+          0.9608,
+          0.96,
+          0.9492
+        ],
+        "SHUF2": [
+          0.7,
+          0.845,
+          0.9192,
+          0.9642,
+          0.9517,
+          0.9608,
+          0.96,
+          0.9492
+        ],
+        "SUPERVISED": [
+          0.7533,
+          0.9067,
+          0.945,
+          0.9658,
+          0.9567,
+          0.9733,
+          0.9683,
+          0.9725
+        ]
+      },
+      "seconds": 1147.8,
+      "gpu_temps_c": {
+        "mem": 57.0,
+        "edge": 46.0,
+        "junction": 57.0
+      }
+    },
+    "phase2": {
+      "rule": {
+        "tau": 2.0,
+        "tau_adapt": 0.5,
+        "psi_width": 0.5,
+        "baseline_rate": 0.1,
+        "rms_decay": 0.95,
+        "ebar_rate": 0.05,
+        "block": 1,
+        "delay": 0,
+        "trace_gamma": 0.0
+      },
+      "purpose": "phase2",
+      "trials": 800,
+      "learners": [
+        {
+          "name": "RULE|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "RULE|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "true",
+          "kappa": 0.2
+        },
+        {
+          "name": "FROZEN2|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN2|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "SHUF2|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SHUF2|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "shuffled",
+          "kappa": 0.2
+        },
+        {
+          "name": "SUPERVISED|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "SUPERVISED|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.001,
+          "reward": "supervised",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1610069010|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1610069010|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r673228719|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r673228719|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1093961226|m0",
+          "seed_set": 281,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s281|r1093961226|m1",
+          "seed_set": 281,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1610069010|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1610069010|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1610069010,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r673228719|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r673228719|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 673228719,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1093961226|m0",
+          "seed_set": 282,
+          "mapping": 1,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        },
+        {
+          "name": "FROZEN|s282|r1093961226|m1",
+          "seed_set": 282,
+          "mapping": 0,
+          "readout_seed": 1093961226,
+          "eta": 0.0,
+          "reward": "true",
+          "kappa": 1.0
+        }
+      ],
+      "training_greedy_by_100": {
+        "FROZEN": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "FROZEN2": [
+          0.01,
+          0.065,
+          0.05,
+          0.015,
+          0.03,
+          0.0492,
+          0.04,
+          0.04
+        ],
+        "RULE": [
+          0.3308,
+          0.5092,
+          0.54,
+          0.5508,
+          0.5858,
+          0.6458,
+          0.665,
+          0.7183
+        ],
+        "SHUF2": [
+          0.0192,
+          0.1533,
+          0.2,
+          0.2242,
+          0.2417,
+          0.325,
+          0.3017,
+          0.3142
+        ],
+        "SUPERVISED": [
+          0.1867,
+          0.6408,
+          0.8167,
+          0.9175,
+          0.9333,
+          0.9258,
+          0.9433,
+          0.9575
+        ]
+      },
+      "seconds": 1157.0,
+      "gpu_temps_c": {
+        "mem": 58.0,
+        "edge": 46.0,
+        "junction": 60.0
+      }
+    }
+  },
+  "evaluations": {
+    "phase1@mapping": {
+      "n_test": 200,
+      "rows": [
+        {
+          "learner": "RULE|s281|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "RULE|s281|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "RULE|s281|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "RULE|s281|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "RULE|s282|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "RULE|s282|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03564024716615677
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03204890340566635
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0328490324318409
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03360294923186302
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03360588848590851
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.032758038491010666
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 1.0,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.035757631063461304
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 1.0,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03208378702402115
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.9950000047683716,
+          "left_given_cue0": 0.009999999776482582,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03269365429878235
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 1.0,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03472745791077614
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 1.0,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03408743441104889
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.9850000143051147,
+          "left_given_cue0": 0.9700000286102295,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03346595540642738
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.3149999976158142,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.6850000023841858,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 0,
+          "accuracy": 0.3199999928474426,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 1,
+          "accuracy": 0.6800000071525574,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        }
+      ],
+      "summary": {
+        "FROZEN": {
+          "mean": 0.5,
+          "min": 0.315,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "FROZEN2": {
+          "mean": 0.9725,
+          "min": 0.965,
+          "n>=.75": 12,
+          "n": 12
+        },
+        "RULE": {
+          "mean": 0.9725,
+          "min": 0.965,
+          "n>=.75": 12,
+          "n": 12
+        },
+        "SHUF2": {
+          "mean": 0.9725,
+          "min": 0.965,
+          "n>=.75": 12,
+          "n": 12
+        },
+        "SUPERVISED": {
+          "mean": 0.9883,
+          "min": 0.98,
+          "n>=.75": 12,
+          "n": 12
+        }
+      },
+      "frame_pool": null
+    },
+    "phase2@start(reversed)": {
+      "n_test": 200,
+      "rows": [
+        {
+          "learner": "RULE|s281|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "RULE|s281|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "RULE|s281|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "RULE|s281|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "RULE|s282|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "RULE|s282|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03564024716615677
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03204890340566635
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0328490324318409
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03360294923186302
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03360588848590851
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.032758038491010666
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.0,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.035757631063461304
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.0,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03208378702402115
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.004999999888241291,
+          "left_given_cue0": 0.009999999776482582,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03269365429878235
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.0,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03472745791077614
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.0,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03408743441104889
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.014999999664723873,
+          "left_given_cue0": 0.9700000286102295,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03346595540642738
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.6850000023841858,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.3149999976158142,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.6800000071525574,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.3199999928474426,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        }
+      ],
+      "summary": {
+        "FROZEN": {
+          "mean": 0.5,
+          "min": 0.315,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "FROZEN2": {
+          "mean": 0.0275,
+          "min": 0.02,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "RULE": {
+          "mean": 0.0275,
+          "min": 0.02,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "SHUF2": {
+          "mean": 0.0275,
+          "min": 0.02,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "SUPERVISED": {
+          "mean": 0.0117,
+          "min": 0.0,
+          "n>=.75": 0,
+          "n": 12
+        }
+      },
+      "frame_pool": null
+    },
+    "phase2@end(reversed)": {
+      "n_test": 200,
+      "rows": [
+        {
+          "learner": "RULE|s281|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.8600000143051147,
+          "left_given_cue0": 0.9700000286102295,
+          "left_given_cue1": 0.25,
+          "relative_rms_weight_change": 0.04494357854127884
+        },
+        {
+          "learner": "RULE|s281|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04587594047188759
+        },
+        {
+          "learner": "RULE|s281|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.042540062218904495
+        },
+        {
+          "learner": "RULE|s281|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04371098056435585
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.04396676644682884
+        },
+        {
+          "learner": "RULE|s281|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04669960215687752
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9599999785423279,
+          "left_given_cue0": 0.9200000166893005,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04696895554661751
+        },
+        {
+          "learner": "RULE|s282|r1610069010|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.04934481158852577
+        },
+        {
+          "learner": "RULE|s282|r673228719|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04752883315086365
+        },
+        {
+          "learner": "RULE|s282|r673228719|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9399999976158142,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 0.949999988079071,
+          "relative_rms_weight_change": 0.04661823436617851
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m0",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04921983927488327
+        },
+        {
+          "learner": "RULE|s282|r1093961226|m1",
+          "condition": "RULE",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9449999928474426,
+          "left_given_cue0": 0.07999999821186066,
+          "left_given_cue1": 0.9700000286102295,
+          "relative_rms_weight_change": 0.045488785952329636
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03769655525684357
+        },
+        {
+          "learner": "FROZEN2|s281|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.038442403078079224
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03544348478317261
+        },
+        {
+          "learner": "FROZEN2|s281|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037543587386608124
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.037208441644907
+        },
+        {
+          "learner": "FROZEN2|s281|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.019999999552965164,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03735915943980217
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03799938037991524
+        },
+        {
+          "learner": "FROZEN2|s282|r1610069010|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03684559464454651
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.03487277030944824
+        },
+        {
+          "learner": "FROZEN2|s282|r673228719|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.037366241216659546
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m0",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.036122582852840424
+        },
+        {
+          "learner": "FROZEN2|s282|r1093961226|m1",
+          "condition": "FROZEN2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.03500000014901161,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.03611651062965393
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.04384941607713699
+        },
+        {
+          "learner": "SHUF2|s281|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.30000001192092896,
+          "left_given_cue0": 0.4000000059604645,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.046876173466444016
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.07999999821186066,
+          "left_given_cue0": 0.07999999821186066,
+          "left_given_cue1": 0.9200000166893005,
+          "relative_rms_weight_change": 0.04283909872174263
+        },
+        {
+          "learner": "SHUF2|s281|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04629648104310036
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.05000000074505806,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 0.9399999976158142,
+          "relative_rms_weight_change": 0.044171515852212906
+        },
+        {
+          "learner": "SHUF2|s281|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.12999999523162842,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.2199999988079071,
+          "relative_rms_weight_change": 0.045620907098054886
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5049999952316284,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 0.029999999329447746,
+          "relative_rms_weight_change": 0.04741866514086723
+        },
+        {
+          "learner": "SHUF2|s282|r1610069010|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.33000001311302185,
+          "left_given_cue0": 0.3400000035762787,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.044193901121616364
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.27000001072883606,
+          "left_given_cue0": 0.05999999865889549,
+          "left_given_cue1": 0.5199999809265137,
+          "relative_rms_weight_change": 0.04356091469526291
+        },
+        {
+          "learner": "SHUF2|s282|r673228719|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.08500000089406967,
+          "left_given_cue0": 0.8299999833106995,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04424204304814339
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m0",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.4950000047683716,
+          "left_given_cue0": 0.9900000095367432,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.04545583203434944
+        },
+        {
+          "learner": "SHUF2|s282|r1093961226|m1",
+          "condition": "SHUF2",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04280519112944603
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0469602532684803
+        },
+        {
+          "learner": "SUPERVISED|s281|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.042883459478616714
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04221644252538681
+        },
+        {
+          "learner": "SUPERVISED|s281|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0444568395614624
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.9599999785423279,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.046190015971660614
+        },
+        {
+          "learner": "SUPERVISED|s281|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9800000190734863,
+          "left_given_cue0": 0.03999999910593033,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.044427309185266495
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04542830213904381
+        },
+        {
+          "learner": "SUPERVISED|s282|r1610069010|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.043733611702919006
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.04298773407936096
+        },
+        {
+          "learner": "SUPERVISED|s282|r673228719|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.045316167175769806
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m0",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.9649999737739563,
+          "left_given_cue0": 0.9300000071525574,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0451294407248497
+        },
+        {
+          "learner": "SUPERVISED|s282|r1093961226|m1",
+          "condition": "SUPERVISED",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.9599999785423279,
+          "left_given_cue0": 0.07000000029802322,
+          "left_given_cue1": 0.9900000095367432,
+          "relative_rms_weight_change": 0.04462529346346855
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.6850000023841858,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s281|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 281,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.3149999976158142,
+          "left_given_cue0": 0.8399999737739563,
+          "left_given_cue1": 0.4699999988079071,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1610069010|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1610069010,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 1.0,
+          "left_given_cue1": 1.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r673228719|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 673228719,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.5,
+          "left_given_cue0": 0.0,
+          "left_given_cue1": 0.0,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m0",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 0,
+          "task_mapping": 1,
+          "accuracy": 0.6800000071525574,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        },
+        {
+          "learner": "FROZEN|s282|r1093961226|m1",
+          "condition": "FROZEN",
+          "seed_set": 282,
+          "readout": 1093961226,
+          "mapping": 1,
+          "task_mapping": 0,
+          "accuracy": 0.3199999928474426,
+          "left_given_cue0": 0.7699999809265137,
+          "left_given_cue1": 0.4099999964237213,
+          "relative_rms_weight_change": 0.0
+        }
+      ],
+      "summary": {
+        "FROZEN": {
+          "mean": 0.5,
+          "min": 0.315,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "FROZEN2": {
+          "mean": 0.0275,
+          "min": 0.02,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "RULE": {
+          "mean": 0.7583,
+          "min": 0.5,
+          "n>=.75": 7,
+          "n": 12
+        },
+        "SHUF2": {
+          "mean": 0.3121,
+          "min": 0.05,
+          "n>=.75": 0,
+          "n": 12
+        },
+        "SUPERVISED": {
+          "mean": 0.9721,
+          "min": 0.96,
+          "n>=.75": 12,
+          "n": 12
+        }
+      },
+      "frame_pool": null
+    }
+  },
+  "complete": true,
+  "started_utc": "2026-10-02T19:27:19+00:00",
+  "design": {
+    "stage": "reversal-adaptive",
+    "n_train": 800,
+    "n_test": 200,
+    "variant": null,
+    "tag": "20261001",
+    "delay": 2,
+    "gammas": {
+      "G5": 0.5,
+      "G8": 0.8
+    },
+    "rule_B": {
+      "eta": 0.001,
+      "kappa": 0.2
+    },
+    "ticks_per_decision": 16
+  },
+  "reference_supervised": {
+    "condition": "SUPERVISED",
+    "controls": [
+      "FROZEN2",
+      "SHUF2"
+    ],
+    "pass": true,
+    "i": true,
+    "ii": true,
+    "cells": [
+      {
+        "readout": 1610069010,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.5,
+        "u": 0.0377,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.5049999952316284,
+        "u": 0.0377,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.30000001192092896,
+        "u": 0.0357,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.33000001311302185,
+        "u": 0.0357,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.07999999821186066,
+        "u": 0.034,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.27000001072883606,
+        "u": 0.034,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.5,
+        "u": 0.0367,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.08500000089406967,
+        "u": 0.0367,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.05000000074505806,
+        "u": 0.0377,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.4950000047683716,
+        "u": 0.0377,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.9800000190734863,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.12999999523162842,
+        "u": 0.038,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9599999785423279,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.5,
+        "u": 0.038,
+        "i": true,
+        "ii": true
+      }
+    ]
+  },
+  "criterion": {
+    "condition": "RULE",
+    "controls": [
+      "FROZEN2",
+      "SHUF2"
+    ],
+    "pass": false,
+    "i": false,
+    "ii": false,
+    "cells": [
+      {
+        "readout": 1610069010,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.8600000143051147,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.5,
+        "u": 0.05,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9599999785423279,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.5049999952316284,
+        "u": 0.05,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.5,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.30000001192092896,
+        "u": 0.2325,
+        "i": false,
+        "ii": false
+      },
+      {
+        "readout": 1610069010,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.33000001311302185,
+        "u": 0.2325,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.5,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.07999999821186066,
+        "u": 0.2325,
+        "i": false,
+        "ii": false
+      },
+      {
+        "readout": 673228719,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.27000001072883606,
+        "u": 0.2325,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 673228719,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.5,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.5,
+        "u": 0.22,
+        "i": false,
+        "ii": false
+      },
+      {
+        "readout": 673228719,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9399999976158142,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.08500000089406967,
+        "u": 0.22,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 0,
+        "seed_set": 281,
+        "acc": 0.5,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.05000000074505806,
+        "u": 0.2325,
+        "i": false,
+        "ii": false
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 0,
+        "seed_set": 282,
+        "acc": 0.9649999737739563,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.4950000047683716,
+        "u": 0.2325,
+        "i": true,
+        "ii": true
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 1,
+        "seed_set": 281,
+        "acc": 0.5,
+        "FROZEN2": 0.019999999552965164,
+        "SHUF2": 0.12999999523162842,
+        "u": 0.2225,
+        "i": false,
+        "ii": false
+      },
+      {
+        "readout": 1093961226,
+        "mapping": 1,
+        "seed_set": 282,
+        "acc": 0.9449999928474426,
+        "FROZEN2": 0.03500000014901161,
+        "SHUF2": 0.5,
+        "u": 0.2225,
+        "i": true,
+        "ii": false
+      }
+    ]
+  },
+  "controls": {
+    "mean_shuffled_minus_frozen": 0.28458333605279523,
+    "se": 0.05347209106526104,
+    "pass": false
+  },
+  "informative": true,
+  "pass": false,
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_stage1_reversal-adaptive-20261001_20261002T192719Z_aad73eca.json",
+  "finished_utc": "2026-10-02T20:16:25+00:00"
+}

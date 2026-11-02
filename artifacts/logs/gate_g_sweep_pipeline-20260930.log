@@ -1,0 +1,27 @@
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[default] trial 200: A_reinforce 0.940/0.50/11of12  B_centred 0.952/0.70/11of12  FROZEN 0.500/0.38/0of12  SHUFFLED 0.500/0.24/1of12  SUPERVISED 0.990/0.96/12of12
+[default] trial 400: A_reinforce 0.975/0.74/11of12  B_centred 0.978/0.74/11of12  FROZEN 0.500/0.38/0of12  SHUFFLED 0.500/0.42/0of12  SUPERVISED 1.000/1.00/12of12
+[default] trial 600: A_reinforce 1.000/1.00/12of12  B_centred 0.998/0.98/12of12  FROZEN 0.500/0.38/0of12  SHUFFLED 0.500/0.50/0of12  SUPERVISED 1.000/1.00/12of12
+[default] trial 800: A_reinforce 0.987/0.95/12of12  B_centred 0.990/0.99/12of12  FROZEN 0.500/0.35/0of12  SHUFFLED 0.500/0.50/0of12  SUPERVISED 0.991/0.99/12of12
+[tau_adapt] trial 200: C_adaptive_tau 0.880/0.50/9of12  D_centred_adaptive 0.953/0.50/11of12
+[tau_adapt] trial 400: C_adaptive_tau 0.958/0.50/11of12  D_centred_adaptive 0.963/0.56/11of12
+[tau_adapt] trial 600: C_adaptive_tau 0.998/0.98/12of12  D_centred_adaptive 0.975/0.74/11of12
+[tau_adapt] trial 800: C_adaptive_tau 0.990/0.99/12of12  D_centred_adaptive 0.990/0.99/12of12
+selection {"ranking": [{"variant": "B_centred", "mean": 0.9900000095367432, "min": 0.9900000095367432, "n>=.75": 12, "options": 1}, {"variant": "C_adaptive_tau", "mean": 0.9900000095367432, "min": 0.9900000095367432, "n>=.75": 12, "options": 1}, {"variant": "D_centred_adaptive", "mean": 0.9900000095367432, "min": 0.9900000095367432, "n>=.75": 12, "options": 2}, {"variant": "A_reinforce", "mean": 0.9866666744152705, "min": 0.949999988079071, "n>=.75": 12, "options": 0}], "selected": "B_centred"}
+controls {"mean_shuffled_minus_frozen": 2.483526865641276e-09, "se": 0.02525626034374248, "pass": true, "values": [0.0, 0.0, 0.0, 0.0, 0.15, -0.15, 0.0, 0.0, 0.0, 0.0, 0.14, -0.14]}
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[references] trial 800: ANTI 0.055/0.05/0of12  FROZEN 0.500/0.32/0of12  SHUFFLED 0.500/0.50/0of12  SUPERVISED 0.975/0.94/12of12
+criterion_validated true
+controls {"mean_shuffled_minus_frozen": 0.0, "se": 0.028557490360811306, "pass": true, "values": [0.0, 0.0, 0.0, 0.0, 0.185, -0.185, 0.0, 0.0, 0.0, 0.0, 0.14, -0.14]}
+criterion validated on references: True; selected variant: B_centred
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[confirm] trial 800: B_centred 0.963/0.96/12of12  FROZEN 0.500/0.33/0of12  SHUFFLED 0.500/0.50/0of12  SUPERVISED 0.990/0.96/12of12
+criterion {"pass": true, "i": true, "ii": true}
+controls {"mean_shuffled_minus_frozen": -4.967053731282552e-09, "se": 0.02916125562922445, "pass": true, "values": [0.0, 0.0, 0.0, 0.0, 0.17, -0.17, 0.0, 0.0, 0.0, 0.0, 0.165, -0.165]}
+gate_g_pass true

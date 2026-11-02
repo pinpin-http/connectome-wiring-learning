@@ -1,0 +1,4 @@
+2026-10-20T12:19:58+00:00 start nulllat:100 learners=12 blocks=['b0', 'b1', 'b2'] kinds=main stop_at=300
+2026-10-20T12:20:53+00:00 nulllat:100 k=0 eval 39.1s
+2026-10-20T12:22:27+00:00 nulllat:100 k=250 eval 31.0s
+2026-10-20T12:22:38+00:00 end k=300 complete=False wall=158.0s train_step_median=0.2314460277557373

@@ -1,0 +1,931 @@
+{
+ "run": "main_am2b",
+ "pilot": false,
+ "created_utc": "2026-10-21T01:02:32+00:00",
+ "config": {
+  "study": {
+   "id": "ACTIVITY_MATCH_V2B",
+   "protocol_status": "frozen",
+   "t0_utc": "2026-10-20T17:37:34Z",
+   "final_reserve_utc": "2026-10-21T10:30:00Z",
+   "hard_end_utc": "2026-10-21T11:32:26Z",
+   "previous": {
+    "id": "ACTIVITY_MATCH_V2",
+    "commit": "3c5d904",
+    "config": "configs/activity_match/protocol_v2.yaml"
+   }
+  },
+  "graphs": {
+   "connectome": "connectome",
+   "null_family": "b",
+   "null_prefix": "nulllat",
+   "null_seeds": [
+    39,
+    21,
+    29,
+    30,
+    26,
+    20,
+    14,
+    5,
+    9,
+    34,
+    24,
+    13,
+    16,
+    33,
+    17,
+    32,
+    10,
+    18,
+    19,
+    27
+   ],
+   "pilot_null_seeds": [
+    100
+   ]
+  },
+  "simulation": {
+   "base_gain_key": "dynamics.gain",
+   "steps": 16,
+   "dt_ms": 3.33,
+   "reset_state_each_image": true,
+   "plasticity_enabled": false,
+   "input_mapping": "ordered",
+   "readout": "datasets.motor_index",
+   "feature_source": "spike_counts_before_action_projection",
+   "count_dtype": "uint8",
+   "batch": 128,
+   "main_noise_seeds": [
+    61001,
+    61002
+   ],
+   "pilot_noise_seeds": [
+    61101,
+    61102
+   ],
+   "noise_pairing_key": [
+    "study_seed 20261019",
+    "noise seed",
+    "example uid"
+   ]
+  },
+  "calibration": {
+   "mode": "match_reference",
+   "dir": "calibration_v2b",
+   "reference": {
+    "graph": "connectome",
+    "gamma": 1.0
+   },
+   "pilot_reference": {
+    "graph": "nulllat:100",
+    "gamma": 0.3
+   },
+   "gamma_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "fit_bank": [
+    "am3_cal_fit",
+    8,
+    62201
+   ],
+   "check_bank": [
+    "am3_cal_check",
+    8,
+    62202
+   ],
+   "pilot_fit_bank": [
+    "am3_devcal_fit",
+    8,
+    62301
+   ],
+   "pilot_check_bank": [
+    "am3_devcal_check",
+    8,
+    62302
+   ],
+   "noise_seeds": [
+    62001,
+    62002
+   ],
+   "pilot_noise_seeds": [
+    62101,
+    62102
+   ],
+   "use_labels": false,
+   "fit_tolerance": 0.02,
+   "relative_rate_tolerance": 0.1,
+   "max_refinement_evaluations_per_graph": 9,
+   "refinement_evaluations_per_target": 9,
+   "minimum_active_fraction": 0.01,
+   "maximum_saturation_fraction": 0.05,
+   "saturation_threshold_fraction_of_max_spikes": 0.9,
+   "selected_gains_manifest": "artifacts/activity_match/calibration_v2b/selection.json",
+   "verification_passed": true
+  },
+  "dataset": {
+   "tasks": [
+    "orientation_4way",
+    "luminance_4way"
+   ],
+   "generator": {
+    "lum_centres": [
+     0.35,
+     0.45,
+     0.55,
+     0.65
+    ],
+    "lum_jitter": 0.065,
+    "amp_range": [
+     0.15,
+     0.2
+    ],
+    "period_range": [
+     24.0,
+     40.0
+    ],
+    "noise": 0.02,
+    "r0": 60.0,
+    "r1": 92.0,
+    "pos_jitter": 8.0,
+    "centre": [
+     135.38,
+     124.16
+    ]
+   },
+   "banks": {
+    "train": [
+     "am3_train",
+     64,
+     63101
+    ],
+    "val": [
+     "am3_val",
+     32,
+     63102
+    ],
+    "test": [
+     "am3_test",
+     160,
+     63103
+    ]
+   },
+   "pilot_banks": {
+    "train": [
+     "am3_pilot_train",
+     64,
+     63201
+    ],
+    "val": [
+     "am3_pilot_val",
+     32,
+     63202
+    ],
+    "test": [
+     "am3_pilot_test",
+     64,
+     63203
+    ]
+   },
+   "dev_bank": [
+    "am_dev",
+    16,
+    21401
+   ],
+   "balance_joint_labels": true
+  },
+  "conditions": [
+   "C0",
+   "CN"
+  ],
+  "decoder": {
+   "type": "multiclass_ridge",
+   "budgets_per_class": [
+    8,
+    16,
+    32,
+    64,
+    128
+   ],
+   "per_combination": [
+    2,
+    4,
+    8,
+    16,
+    32
+   ],
+   "subset_draws": 10,
+   "subset_draw_seeds": [
+    8401,
+    8402,
+    8403,
+    8404,
+    8405,
+    8406,
+    8407,
+    8408,
+    8409,
+    8410
+   ],
+   "nested_subsets": true,
+   "scale_fit_on_training_subset_only": true,
+   "normalized_loss_lambda_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+   ],
+   "validation_tie_break": "largest_lambda",
+   "refit_on_train_plus_validation": false
+  },
+  "analysis": {
+   "matched_condition": "CN",
+   "interpretation": "v2",
+   "primary_contrast": "G_CN_orient",
+   "practical_margin": 0.02,
+   "informative_accuracy_threshold": 0.27,
+   "confidence_level": 0.95,
+   "interval_method": "percentile",
+   "bootstrap_replicates": 5000,
+   "bootstrap_seed": 63001,
+   "bootstrap_test_examples": "joint_label_stratified_and_paired",
+   "bootstrap_null_graphs": "whole_graph_blocks_all_conditions",
+   "refit_decoder_in_bootstrap": false,
+   "refit_calibration_in_bootstrap": false,
+   "secondary_intervals": "descriptive",
+   "rank_status": "descriptive"
+  },
+  "execution": {
+   "resume": true,
+   "save_predictions_per_example": true,
+   "atomic_outputs": true,
+   "stop_new_long_jobs_before_final_reserve": true,
+   "technical_retry": {
+    "max_attempts": 2,
+    "true": [
+     "cuda_error",
+     "out_of_memory",
+     "io_error"
+    ]
+   }
+  }
+ },
+ "env": {
+  "utc": "2026-10-21T01:02:33+00:00",
+  "commit": "2bda6dfd74816292d5ff0983a717b584de761f4d",
+  "branch": "activity-match-v1",
+  "dirty": false,
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "code_sha256": {
+   "src/flymario/retino_align/simulate.py": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+   "src/flymario/retino_align/stimuli.py": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+   "src/flymario/retino_align/decode.py": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+   "src/flymario/activity_match/calibrate.py": "df8266939998c19eb81142aea37b19f5532a8f2c4c2a96513d2de7134a7fec71",
+   "src/flymario/activity_match/analysis.py": "db8e3ef84586637b0c09081cf628c0a1a069f8a022a0399fa5b05adec7f360c6",
+   "scripts/activity_match/run_am.py": "ef3c2660c33ec93bcaef1773bbb2bd1bb62906552b7bdacc3c315cf8b08a5810"
+  },
+  "config_sha256": "47a9869cc68a92f7873ed2bc3162392af833c4061c26fe0bf55c7791809a9099"
+ },
+ "graphs": [
+  "connectome",
+  "nulllat:39",
+  "nulllat:21",
+  "nulllat:29",
+  "nulllat:30",
+  "nulllat:26",
+  "nulllat:20",
+  "nulllat:14",
+  "nulllat:5",
+  "nulllat:9",
+  "nulllat:34",
+  "nulllat:24",
+  "nulllat:13",
+  "nulllat:16",
+  "nulllat:33",
+  "nulllat:17",
+  "nulllat:32",
+  "nulllat:10",
+  "nulllat:18",
+  "nulllat:19",
+  "nulllat:27"
+ ],
+ "graph_sha256": {
+  "connectome": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f",
+  "nulllat:39": "3b6a5b0345c526dd1d504937f6e420e521f76405a1d46f95f2401db9e360cf80",
+  "nulllat:21": "ede9e9b333df55f424fb3be0baa05965331b4a82dfe719b3c48cdd3a023bac6d",
+  "nulllat:29": "4d9a619e19a300a17b7927da65a783f4bcea5ebbf8c9de8c69fa50c44846d5c1",
+  "nulllat:30": "ee737de82609f67d3dca9d590aa5c250ff423e01b2d24e2d3dd155b282d6b9ce",
+  "nulllat:26": "ed81843500b9300179c1b5026b8c38ea43362d3fc51cd38454b1a9249e66f720",
+  "nulllat:20": "0bb3d58a0b2d37dac924986adb91bc98844e9d80d24f6480be10d9693cd92721",
+  "nulllat:14": "bda7435445036ad2b00c9e55ef290f09543387e12a5524a23337543b8bf3949d",
+  "nulllat:5": "2539e27ee13fe95bdcb46742dc26d427a6f8bdc54e27c7d7925da656cb8bfc31",
+  "nulllat:9": "7042a88465a1fc79d57cbbd185b8944f4d605ec2ea4da2561139707e2bd3a112",
+  "nulllat:34": "aa818fdb5c2e5fe5af3e05aa20aba6f8b4bdd28f07b81595f92e8e33c46bc67b",
+  "nulllat:24": "5b7c3dcefc079ee64d6c6b6ac7993c493201848823f55cfafaf37ec813d79400",
+  "nulllat:13": "dfa2e556a2b60dac8252e15b40738cd8e79110f2548a485bd8f653a419691ce9",
+  "nulllat:16": "a33cc088977cabb781be13af9c5b3725e499ffba52cddee99d518ddf56313ed3",
+  "nulllat:33": "caeafb61a397a60e94519ebeaf40640b6ec6804682a366b394366ec5c43a74dc",
+  "nulllat:17": "4ced015f025dbb50ef457af4e00338032d154450c044a7c5b24091e0a8fa8c92",
+  "nulllat:32": "6871aaa9497cc695165b2e6f8cb9733ca85eb23a02caa6210d976eedb4d853d6",
+  "nulllat:10": "dc426283b4e2992068cab02bb44fbdc78edd629fdb508dba63391b2e77a3080d",
+  "nulllat:18": "59af45e36f8bb061810e6a2d2becbb88b4ecb7c3cf8908efe738b94cce51ede7",
+  "nulllat:19": "743e70c912c926659ed00df220c2e96e7980ed0c22b884079dfcf7895fe6064b",
+  "nulllat:27": "180bf9867c119d738a4124d2e56c118641ef8bdf9d731f6601a858825316456c"
+ },
+ "conditions": [
+  "C0",
+  "CN"
+ ],
+ "noise_seeds": [
+  61001,
+  61002
+ ],
+ "lots": [
+  [
+   "nulllat:20",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:20",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:20",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:20",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:24",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:24",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:24",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:24",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:34",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:34",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:34",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:34",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:9",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:9",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:9",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:9",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:10",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:10",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:10",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:10",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:30",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:30",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:30",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:30",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:29",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:29",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:29",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:29",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:26",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:26",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:26",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:26",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:39",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:39",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:39",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:39",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:32",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:32",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:32",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:32",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:17",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:17",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:17",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:17",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:21",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:21",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:21",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:21",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:13",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:13",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:13",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:13",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:14",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:14",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:14",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:14",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:27",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:27",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:27",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:27",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:5",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:5",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:5",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:5",
+   "CN",
+   61001
+  ],
+  [
+   "connectome",
+   "C0",
+   61001
+  ],
+  [
+   "connectome",
+   "CN",
+   61001
+  ],
+  [
+   "connectome",
+   "CN",
+   61002
+  ],
+  [
+   "connectome",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:18",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:18",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:18",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:18",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:19",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:19",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:19",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:19",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:16",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:16",
+   "C0",
+   61002
+  ],
+  [
+   "nulllat:16",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:16",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:33",
+   "C0",
+   61001
+  ],
+  [
+   "nulllat:33",
+   "CN",
+   61001
+  ],
+  [
+   "nulllat:33",
+   "CN",
+   61002
+  ],
+  [
+   "nulllat:33",
+   "C0",
+   61002
+  ]
+ ],
+ "gammas": {
+  "connectome": {
+   "C0": 1.0,
+   "CN": 1.0
+  },
+  "nulllat:39": {
+   "C0": 1.0,
+   "CN": 0.06329
+  },
+  "nulllat:21": {
+   "C0": 1.0,
+   "CN": 0.066063
+  },
+  "nulllat:29": {
+   "C0": 1.0,
+   "CN": 0.061819
+  },
+  "nulllat:30": {
+   "C0": 1.0,
+   "CN": 0.066035
+  },
+  "nulllat:26": {
+   "C0": 1.0,
+   "CN": 0.062865
+  },
+  "nulllat:20": {
+   "C0": 1.0,
+   "CN": 0.065996
+  },
+  "nulllat:14": {
+   "C0": 1.0,
+   "CN": 0.061551
+  },
+  "nulllat:5": {
+   "C0": 1.0,
+   "CN": 0.065199
+  },
+  "nulllat:9": {
+   "C0": 1.0,
+   "CN": 0.067803
+  },
+  "nulllat:34": {
+   "C0": 1.0,
+   "CN": 0.063422
+  },
+  "nulllat:24": {
+   "C0": 1.0,
+   "CN": 0.062528
+  },
+  "nulllat:13": {
+   "C0": 1.0,
+   "CN": 0.066431
+  },
+  "nulllat:16": {
+   "C0": 1.0,
+   "CN": 0.06468
+  },
+  "nulllat:33": {
+   "C0": 1.0,
+   "CN": 0.0611
+  },
+  "nulllat:17": {
+   "C0": 1.0,
+   "CN": 0.061886
+  },
+  "nulllat:32": {
+   "C0": 1.0,
+   "CN": 0.069815
+  },
+  "nulllat:10": {
+   "C0": 1.0,
+   "CN": 0.064548
+  },
+  "nulllat:18": {
+   "C0": 1.0,
+   "CN": 0.064668
+  },
+  "nulllat:19": {
+   "C0": 1.0,
+   "CN": 0.063004
+  },
+  "nulllat:27": {
+   "C0": 1.0,
+   "CN": 0.064389
+  }
+ },
+ "targets_hz": {
+  "CN": 38.685763003967146
+ },
+ "reference": {
+  "graph": "connectome",
+  "gamma": 1.0
+ },
+ "selection_file": "artifacts/activity_match/calibration_v2b/selection.json",
+ "selection_sha256": "3d3163569b7a52a2688998ed9051548c99ce52719ebad9b7a53612842b772ba7",
+ "base_gain": 0.18452,
+ "n_images": {
+  "train": 1024,
+  "val": 512,
+  "test": 2560
+ },
+ "inputs_sha256": "4157f97d737705d907877a76068647bd1e9021b412014b3a7a4c436e70e15ba5",
+ "readout_n": 2227,
+ "readout_node_index_sha256": "95e80de210dadcc7bc9b76d419af5d5844f66af7379d8711248c2d094ac37b26",
+ "readout_body_ids_sha256": "0e3492fee2a8664e57a22d1cdf4e858d64f70040134cb4cbdcb6165f1c399bab",
+ "retina_digest": "9955446c01ed4157a697bed9d511a92d50641ae8a9960fe5f0c0f8f1c6c7a372",
+ "generator": {
+  "lum_centres": [
+   0.35,
+   0.45,
+   0.55,
+   0.65
+  ],
+  "lum_jitter": 0.065,
+  "amp_range": [
+   0.15,
+   0.2
+  ],
+  "period_range": [
+   24.0,
+   40.0
+  ],
+  "noise": 0.02,
+  "r0": 60.0,
+  "r1": 92.0,
+  "pos_jitter": 8.0,
+  "centre": [
+   135.38,
+   124.16
+  ]
+ },
+ "banks": {
+  "train": [
+   "am3_train",
+   64,
+   63101
+  ],
+  "val": [
+   "am3_val",
+   32,
+   63102
+  ],
+  "test": [
+   "am3_test",
+   160,
+   63103
+  ]
+ },
+ "prepare_s": 19.3
+}

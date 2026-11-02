@@ -1,0 +1,10 @@
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+2026-10-20T07:46:36+00:00 grid nullin:100 {'0.5': 48.29, '0.75': 50.78, '1.0': 51.83, '1.5': 53.7, '2.0': 54.01}
+2026-10-20T07:46:50+00:00 grid nullin:101 {'0.5': 47.93, '0.75': 50.0, '1.0': 51.66, '1.5': 53.58, '2.0': 54.5}
+2026-10-20T07:46:57+00:00 search nullin:100 {'CL': (0.631309, 0.0041), 'CM': (1.0, 0.0133), 'CH': (1.0, 0.0142)} extra evaluations used: 1 of 9
+2026-10-20T07:47:02+00:00 search nullin:101 {'CL': (0.75, 0.0056), 'CM': (1.0, 0.01), 'CH': (1.0, 0.0174)} extra evaluations used: 0 of 9
+2026-10-20T07:47:14+00:00 check nullin:100 {'CL': 0.0041, 'CM': 0.0128, 'CH': 0.0147}
+2026-10-20T07:47:27+00:00 check nullin:101 {'CL': 0.0049, 'CM': 0.0113, 'CH': 0.0162}
+targets {'CL': 49.721, 'CM': 51.149, 'CH': 52.577} check passed {'CL': True, 'CM': True, 'CH': True}
+calib rc=0

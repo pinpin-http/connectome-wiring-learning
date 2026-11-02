@@ -1,0 +1,74 @@
+{
+ "lot": [
+  "nullin:0",
+  "CL",
+  31001
+ ],
+ "complete": true,
+ "utc": "2026-10-20T08:47:15+00:00",
+ "seconds": 10.48,
+ "graph_load_s": 5.29,
+ "attempt": 1,
+ "sha256": "f8c4702a44497fe8708fcc0aac638dc3ccb7c7735b2a83a78304a47bcc9f9fb4",
+ "gamma": 0.086065,
+ "gain": 0.015880713799999998,
+ "noise_seed": 31001,
+ "finite": true,
+ "graph_file": "malecns_6befb67a0278_depth_stratified_lateral_instrength_s0.npz",
+ "graph_sha256": "cb8eeb7b70d716a31580ce667161a56c5dfd1de49744d182ae768d54c4b3ac33",
+ "operator_digest": "2d7d33cbf2ce74dc17c2d6b61ee19a87dc4d29c3f4c2f9fd217ebbeddfffed8b",
+ "inputs_sha256": "ed9d92fb1f4c117eb64223c046cd3b8482b618245c4627292986ccb41b94ece6",
+ "readout_node_index_sha256": "95e80de210dadcc7bc9b76d419af5d5844f66af7379d8711248c2d094ac37b26",
+ "config_sha256": "1d4f24573c9844d0dbf9d4036c5a1317ded43cb22b79cb2d7014255bed6b31ca",
+ "code_sha256": {
+  "src/flymario/retino_align/simulate.py": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+  "src/flymario/retino_align/stimuli.py": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+  "src/flymario/retino_align/decode.py": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+  "src/flymario/activity_match/calibrate.py": "df8266939998c19eb81142aea37b19f5532a8f2c4c2a96513d2de7134a7fec71",
+  "src/flymario/activity_match/analysis.py": "b949d22129f932367a333e72f483757d06a6b184097faa48daf87263f160b6e4",
+  "scripts/activity_match/run_am.py": "e96341ffb75b338ee7e5c8dc8d5f282d41f11bcd13bd8db4e4a8c6fb2978d0a3"
+ },
+ "gpu_peak_mem_mb": 2165.0,
+ "activity": {
+  "all": {
+   "rate_hz": 16.018003276564972,
+   "rate_hz_sd_over_images": 1.2173111955198206,
+   "active_frac_mean": 0.4153805524177705,
+   "active_frac_min": 0.35788055680287384,
+   "saturated_frac_mean": 0.0,
+   "saturated_frac_max": 0.0,
+   "ge7_frac_mean": 0.0023691616734957343,
+   "count_hist": [
+    5332777,
+    1911398,
+    819751,
+    454110,
+    293584,
+    185314,
+    103247,
+    21611,
+    0
+   ],
+   "n_constant_features": 618,
+   "max_count": 7
+  },
+  "train": {
+   "rate_hz": 16.024515500605286,
+   "active_frac_mean": 0.4155407183149977,
+   "saturated_frac_mean": 0.0,
+   "n_constant_features": 674
+  },
+  "val": {
+   "rate_hz": 16.003733995768894,
+   "active_frac_mean": 0.41548239644140095,
+   "saturated_frac_mean": 0.0,
+   "n_constant_features": 701
+  },
+  "test": {
+   "rate_hz": 16.018252243108062,
+   "active_frac_mean": 0.4152961172541535,
+   "saturated_frac_mean": 0.0,
+   "n_constant_features": 640
+  }
+ }
+}

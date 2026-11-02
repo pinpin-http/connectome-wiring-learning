@@ -1,0 +1,23 @@
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[phase2@end(reversed)] FROZEN 0.500/0.35/0of12  FROZEN2 0.037/0.00/0of12  RULE 0.751/0.50/6of12  SHUF2 0.237/0.02/0of12  SUPERVISED 0.958/0.93/12of12
+pass false
+informative true
+controls {"mean_shuffled_minus_frozen": 0.19958333671092987, "se": 0.05646954955198661, "pass": false}
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[train_frames] FROZEN 0.500/0.39/0of12  RULE 0.807/0.76/12of12  SHUFFLED 0.500/0.48/0of12  SUPERVISED 0.842/0.77/12of12
+[heldout_frames] FROZEN 0.500/0.41/0of12  RULE 0.598/0.43/0of12  SHUFFLED 0.500/0.48/0of12  SUPERVISED 0.645/0.53/0of12
+pass false
+informative false
+controls {"mean_shuffled_minus_frozen": 0.0, "se": 0.012522705253586279, "pass": true}
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[confirm@2400] FROZEN 0.500/0.30/0of12  G8 0.944/0.89/12of12  SHUFFLED 0.500/0.30/0of12  SUPERVISED 1.000/1.00/12of12
+pass true
+informative true
+controls {"mean_shuffled_minus_frozen": 0.0, "se": 0.05368962120591575, "pass": true}
+stage-1 resume complete

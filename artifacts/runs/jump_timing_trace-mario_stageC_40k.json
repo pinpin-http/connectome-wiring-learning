@@ -1,0 +1,143 @@
+{
+ "what": "closed-loop jump timing of frozen learners (exploratory)",
+ "checkpoint": "mario_stageC_40k.pt",
+ "levels": [
+  "Level5-1",
+  "Level8-1"
+ ],
+ "delays": [
+  0,
+  6,
+  12,
+  18
+ ],
+ "summary": {
+  "tko_ro1": {
+   "onsets_per_100": 12.36,
+   "onsets": 57,
+   "share_in_takeoff_window": 0.246,
+   "share_without_reason": 0.386,
+   "enemy_dx_at_onset_median": 42.0,
+   "enemy_dx_at_onset_q25_q75": [
+    20.0,
+    68.0
+   ],
+   "mean_hold": 3.98,
+   "deaths_enemy_near": 7,
+   "deaths_other": 0,
+   "mean_best_x": 459.4
+  },
+  "tkoshuf_ro1": {
+   "onsets_per_100": 0.0,
+   "onsets": 0,
+   "share_in_takeoff_window": 0.0,
+   "share_without_reason": 0.0,
+   "enemy_dx_at_onset_median": null,
+   "enemy_dx_at_onset_q25_q75": null,
+   "mean_hold": null,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 200.5
+  },
+  "tko_ro2": {
+   "onsets_per_100": 7.09,
+   "onsets": 19,
+   "share_in_takeoff_window": 0.211,
+   "share_without_reason": 0.421,
+   "enemy_dx_at_onset_median": 55.0,
+   "enemy_dx_at_onset_q25_q75": [
+    30.0,
+    79.0
+   ],
+   "mean_hold": 5.84,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 311.9
+  },
+  "tkoshuf_ro2": {
+   "onsets_per_100": 3.41,
+   "onsets": 7,
+   "share_in_takeoff_window": 0.143,
+   "share_without_reason": 0.857,
+   "enemy_dx_at_onset_median": 86.0,
+   "enemy_dx_at_onset_q25_q75": [
+    72.0,
+    98.0
+   ],
+   "mean_hold": 1.0,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 237.4
+  },
+  "tko_ro3": {
+   "onsets_per_100": 0.0,
+   "onsets": 0,
+   "share_in_takeoff_window": 0.0,
+   "share_without_reason": 0.0,
+   "enemy_dx_at_onset_median": null,
+   "enemy_dx_at_onset_q25_q75": null,
+   "mean_hold": null,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 200.5
+  },
+  "tkoshuf_ro3": {
+   "onsets_per_100": 0.0,
+   "onsets": 0,
+   "share_in_takeoff_window": 0.0,
+   "share_without_reason": 0.0,
+   "enemy_dx_at_onset_median": null,
+   "enemy_dx_at_onset_q25_q75": null,
+   "mean_hold": null,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 200.5
+  },
+  "untrained_ro1": {
+   "onsets_per_100": 20.76,
+   "onsets": 229,
+   "share_in_takeoff_window": 0.131,
+   "share_without_reason": 0.69,
+   "enemy_dx_at_onset_median": 96.0,
+   "enemy_dx_at_onset_q25_q75": [
+    41.5,
+    155.75
+   ],
+   "mean_hold": 1.61,
+   "deaths_enemy_near": 5,
+   "deaths_other": 0,
+   "mean_best_x": 190.0
+  },
+  "untrained_ro2": {
+   "onsets_per_100": 0.99,
+   "onsets": 8,
+   "share_in_takeoff_window": 0.0,
+   "share_without_reason": 1.0,
+   "enemy_dx_at_onset_median": 202.0,
+   "enemy_dx_at_onset_q25_q75": [
+    190.0,
+    210.0
+   ],
+   "mean_hold": 101.0,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 40.0
+  },
+  "untrained_ro3": {
+   "onsets_per_100": 0.21,
+   "onsets": 2,
+   "share_in_takeoff_window": 0.0,
+   "share_without_reason": 0.5,
+   "enemy_dx_at_onset_median": 116.0,
+   "enemy_dx_at_onset_q25_q75": [
+    89.0,
+    143.0
+   ],
+   "mean_hold": 1.0,
+   "deaths_enemy_near": 8,
+   "deaths_other": 0,
+   "mean_best_x": 40.0
+  }
+ },
+ "utc": "2026-10-05T16:54:58+00:00"
+}

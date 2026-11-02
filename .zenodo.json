@@ -1,0 +1,15 @@
+{
+  "title": "SMB_Flywire_Speedrun: code, protocols and aggregated results for \"L'agencement des connexions d'un système nerveux aide-t-il à apprendre ?\"",
+  "upload_type": "software",
+  "description": "Spiking network built from the MaleCNS v1.0 connectome, compared with rewired null graphs on reward-learned visual tasks and on Super Mario Bros. Code (MIT), dated protocols, aggregated results and the scripts that produce every table and figure of the preprint (CC BY 4.0). The game ROM and the raw connectome tables are not included.",
+  "creators": [
+    {"name": "Bouazzaoui, Soheib", "orcid": "0009-0008-7098-0741"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": ["connectome", "MaleCNS", "Drosophila", "spiking neural network", "reward learning", "null models"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/pinpin-http/connectome-wiring-learning", "relation": "isSupplementTo", "scheme": "url"}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "what": "continuous frozen motor cue observability",
+  "complete": true,
+  "gate_g_pass": false,
+  "scope": "cheating decoder, no updates, training-purpose streams",
+  "configuration": {
+    "seed_sets": [
+      3,
+      4
+    ],
+    "purpose": "train",
+    "readout_seed": 1610069010,
+    "decisions": 200,
+    "warmup_ticks": 150,
+    "ticks_per_decision": 64,
+    "permutation_seed": 20260927999,
+    "decoder": "StandardScaler + LogisticRegression(C=.05, random_state=0)",
+    "gpu_memory_fraction": 0.5,
+    "gpu_duty": 0.6
+  },
+  "cue_decode_train": 1.0,
+  "cue_decode_independent": 0.55,
+  "shuffled_label_decode_independent": 0.46,
+  "motor_trace_variance_mean_train": 0.07239038087429761,
+  "fixed_readout": {
+    "set3": {
+      "mapping0": 0.51,
+      "mapping1": 0.49
+    },
+    "set4": {
+      "mapping0": 0.49,
+      "mapping1": 0.51
+    }
+  },
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_continuous_decode_seed3to4-t64-20260927_20260927T184755Z_41925ff1.json",
+  "traces_checkpoint": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_continuous_decode_seed3to4-t64-20260927.pt",
+  "utc": "2026-09-27T18:49:32+00:00"
+}

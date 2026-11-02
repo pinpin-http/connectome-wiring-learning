@@ -1,0 +1,88 @@
+{
+ "utc": "2026-10-20T07:45:57+00:00",
+ "env": {
+  "utc": "2026-10-20T07:45:57+00:00",
+  "commit": "dc5cd6a386310d6ce8a9fd887cb0057cba0dffa7",
+  "branch": "activity-match-v1",
+  "dirty": true,
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "code_sha256": {
+   "src/flymario/retino_align/simulate.py": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+   "src/flymario/retino_align/stimuli.py": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+   "src/flymario/retino_align/decode.py": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+   "src/flymario/activity_match/calibrate.py": "df8266939998c19eb81142aea37b19f5532a8f2c4c2a96513d2de7134a7fec71",
+   "src/flymario/activity_match/analysis.py": "b949d22129f932367a333e72f483757d06a6b184097faa48daf87263f160b6e4",
+   "scripts/activity_match/run_am.py": "0094e92ed7168c7737ea5128b0c0c45afd6135e7e12d012fb927d681e8b05999"
+  },
+  "config_sha256": "10293c6c4fc24e396cd26a78144a7956901aec3922fd58fb2546c4971e47b0ec"
+ },
+ "gamma1_reproduces_v1": {
+  "connectome": {
+   "gamma1_equals_v1_features": true,
+   "gain_at_gamma1": 0.18452,
+   "v1_gain": 0.18452,
+   "gamma2_differs": true,
+   "gamma2_mean_count": 2.2474882128423888,
+   "gamma1_mean_count": 2.0574518691064214,
+   "operator_unchanged": true
+  },
+  "nullin:0": {
+   "gamma1_equals_v1_features": true,
+   "gain_at_gamma1": 0.18452,
+   "v1_gain": 0.18452,
+   "gamma2_differs": true,
+   "gamma2_mean_count": 2.8603520010103276,
+   "gamma1_mean_count": 2.7724184019982037,
+   "operator_unchanged": true
+  }
+ },
+ "gain_multiplies_recurrent_input_once": {
+  "cases": {
+   "0.5": {
+    "v1_after_tick1": 0.09226000308990479,
+    "expected": 0.09226
+   },
+   "1.0": {
+    "v1_after_tick1": 0.18452000617980957,
+    "expected": 0.18452
+   },
+   "2.0": {
+    "v1_after_tick1": 0.36904001235961914,
+    "expected": 0.36904
+   },
+   "1.0_again": {
+    "v1_after_tick1": 0.18452000617980957,
+    "expected": 0.18452
+   }
+  },
+  "pass": true
+ },
+ "max_spikes": {
+  "simulated": 8,
+  "formula": 8,
+  "refractory_steps": 1,
+  "ticks": 16
+ },
+ "no_plasticity": {
+  "simulator_has_no_weight_update": true,
+  "note": "FrozenNet holds W as a read-only CSR tensor; the device digest equals the file operator's after every run (item 1, operator_unchanged)"
+ },
+ "reset_between_images": {
+  "alone_equals_after_two_others_sequential": true,
+  "alone_equals_same_batch": true,
+  "identical": true
+ },
+ "positive_control_oriented_energy": {
+  "bank": "am_dev",
+  "n": 256,
+  "accuracy": 1.0,
+  "chance": 0.25,
+  "pass": true
+ },
+ "pass": true
+}

@@ -1,0 +1,47 @@
+{
+ "lot": [
+  "nullin:37",
+  "perm3",
+  1
+ ],
+ "complete": true,
+ "utc": "2026-10-19T18:56:04+00:00",
+ "seconds": 10.8,
+ "graph_load_s": 5.28,
+ "attempt": 1,
+ "sha256": "811e238a393db9d6ac150255d2c9aa706ef3daa44be40d03b8116023d2e75d3c",
+ "graph_file": "malecns_6befb67a0278_depth_stratified_lateral_instrength_s37.npz",
+ "graph_sha256": "2fa03f952a2f0bd929e6f7fe40559a46352ca927e16243f001d5c47e0bbd9c6c",
+ "operator_digest": "c8ab02819b105f2e63d1675264c5c8302568f543543ccbf5f122d5cdb11934c2",
+ "inputs_sha256": "a035ef6de0990a021d467c0427db1b8efe7c79551d58e841ef480bceaa6baf5a",
+ "permutation_sha256": "d9e5e0da6f91bc3169b5f0325a15b9442e79c7ef966a044670d88ac2446a5ade",
+ "config_sha256": "0e554d7b231d6ada9d34feaa8c4f86ae4861b81267da8c58df6578d21516040a",
+ "simulator": {
+  "commit": "a345820c9c923b749e6a171a2a85fa7970c3f9a1",
+  "simulate_py_sha256": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9"
+ },
+ "activity": {
+  "mean_count": 2.767102889432252,
+  "sd_count": 2.6729075778505633,
+  "frac_silent_entries": 0.26451151265014594,
+  "frac_neurons_silent_on_all_images": 0.1450381679389313,
+  "frac_near_ceiling_entries_ge7": 0.15901941197519084,
+  "max_count": 8,
+  "mean_count_by_orient": [
+   2.766473078973956,
+   2.766852390407499,
+   2.768381475920521,
+   2.766704612427032
+  ],
+  "mean_count_by_lum": [
+   2.768121877806466,
+   2.7714431550291874,
+   2.7624501852267627,
+   2.766396339666592
+  ],
+  "rate_all": 0.10518065471965146,
+  "rate_input": 0.15378194315450175,
+  "v_readout_mean": -69.13213348388672,
+  "v_readout_sd": 130.90817260742188
+ }
+}

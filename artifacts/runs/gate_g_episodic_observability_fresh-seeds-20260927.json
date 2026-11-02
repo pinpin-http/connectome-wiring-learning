@@ -1,0 +1,131 @@
+{
+  "what": "episodic visual two-cue observability on fresh seeds",
+  "complete": true,
+  "gate_g_pass": false,
+  "design": {
+    "task": "episodic reset before each visual cue",
+    "pair": [
+      "1-1_jumping",
+      "1-1_open"
+    ],
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124
+    ],
+    "purpose": "train",
+    "fit_seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112
+    ],
+    "probe_seeds": [
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124
+    ],
+    "warmup_ticks": 150,
+    "ticks_per_decision": 16,
+    "readout_seed": 1610069010,
+    "decoder": "float64 StandardScaler + logistic C=.05; full and one-feature",
+    "shuffle_seed": 20260927999,
+    "gpu_memory_fraction": 0.5,
+    "gpu_duty": 0.6
+  },
+  "results": {
+    "trace": {
+      "full_decoder": {
+        "accuracy": 0.625,
+        "mean_true_probability": 0.625,
+        "n": 24
+      },
+      "full_shuffled": {
+        "accuracy": 0.375,
+        "mean_true_probability": 0.375,
+        "n": 24
+      },
+      "one_feature": {
+        "accuracy": 1.0,
+        "mean_true_probability": 0.6138026160107833,
+        "coordinate": 0,
+        "n": 24
+      },
+      "one_feature_shuffled": {
+        "accuracy": 0.375,
+        "mean_true_probability": 0.48916718041568,
+        "coordinate": 1525,
+        "n": 24
+      },
+      "fixed_readout_mapping0": 0.4583333333333333,
+      "fixed_readout_mapping1": 0.5416666666666666
+    },
+    "spike_count": {
+      "full_decoder": {
+        "accuracy": 1.0,
+        "mean_true_probability": 0.9458277654369166,
+        "n": 24
+      },
+      "full_shuffled": {
+        "accuracy": 0.375,
+        "mean_true_probability": 0.387597410564352,
+        "n": 24
+      },
+      "one_feature": {
+        "accuracy": 1.0,
+        "mean_true_probability": 0.6138026160107833,
+        "coordinate": 0,
+        "n": 24
+      },
+      "one_feature_shuffled": {
+        "accuracy": 0.25,
+        "mean_true_probability": 0.4860242014919571,
+        "coordinate": 598,
+        "n": 24
+      },
+      "fixed_readout_mapping0": 0.375,
+      "fixed_readout_mapping1": 0.625
+    }
+  },
+  "scope": "no learning; task candidate only",
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_episodic_observability_fresh-seeds-20260927_20260927T190150Z_ed203689.json",
+  "utc": "2026-09-27T19:02:08+00:00"
+}

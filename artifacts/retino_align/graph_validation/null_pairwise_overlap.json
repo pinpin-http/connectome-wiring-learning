@@ -1,0 +1,8 @@
+{
+ "nullin:0-nullin:1": 0.0572,
+ "nullin:2-nullin:3": 0.0572,
+ "nullin:4-nullin:5": 0.0572,
+ "nullin:10-nullin:20": 0.0572,
+ "nullin:30-nullin:39": 0.0572,
+ "note": "fraction of edges (src,dst pairs) of the first null present in the second; connectome-null overlap 0.0535"
+}

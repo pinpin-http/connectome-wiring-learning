@@ -1,0 +1,4 @@
+{
+  "done": { "variables": { "lives": { "op": "less-than", "reference": 2 } } },
+  "reward": { "variables": {} }
+}

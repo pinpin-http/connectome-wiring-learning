@@ -1,0 +1,217 @@
+{
+ "label": "EXPLORATORY (decided after EXPERIENCE_COMMUNE_V1's result)",
+ "graphs": [
+  "connectome",
+  "nulllat:39",
+  "nullin:6",
+  "nulllat:21",
+  "nullin:3",
+  "nulllat:29",
+  "nullin:32",
+  "nulllat:30",
+  "nullin:28",
+  "nulllat:26",
+  "nullin:24",
+  "nulllat:20",
+  "nullin:7",
+  "nulllat:14",
+  "nullin:35",
+  "nulllat:5",
+  "nullin:39",
+  "nulllat:9",
+  "nullin:12",
+  "nulllat:34",
+  "nullin:22"
+ ],
+ "gammas": {
+  "nulllat:39": 0.06329,
+  "nullin:6": 0.2,
+  "nulllat:21": 0.066063,
+  "nullin:3": 0.2,
+  "nulllat:29": 0.061819,
+  "nullin:32": 0.2,
+  "nulllat:30": 0.066035,
+  "nullin:28": 0.2,
+  "nulllat:26": 0.062865,
+  "nullin:24": 0.175255,
+  "nulllat:20": 0.065996,
+  "nullin:7": 0.2,
+  "nulllat:14": 0.061551,
+  "nullin:35": 0.2,
+  "nulllat:5": 0.065199,
+  "nullin:39": 0.2,
+  "nulllat:9": 0.067803,
+  "nullin:12": 0.212735,
+  "nulllat:34": 0.063422,
+  "nullin:22": 0.187021
+ },
+ "note": "mode index 0 = nulls at gamma 1 (campaign runs), 1 = nulls at their matched gamma; the connectome is at gamma 1 in both",
+ "contrasts": {
+  "where/b": {
+   "G_common": [
+    0.1823337131076389,
+    0.12541578504774326,
+    0.23252020941840285
+   ],
+   "G_matched": [
+    0.12313096788194455,
+    0.06552280002170134,
+    0.176296149359809
+   ],
+   "L_connectome": 0.6119384765625,
+   "L_nulls_common": 0.4296047634548611,
+   "L_nulls_matched": 0.48880750868055545,
+   "final_connectome": 0.8694661458333334,
+   "final_nulls_common": 0.5420735677083334,
+   "final_nulls_matched": 0.6735677083333333,
+   "A0_nulls_common": 0.12174479166666667,
+   "A0_nulls_matched": 0.12389322916666667
+  },
+  "where/c": {
+   "G_common": [
+    0.1143798828125,
+    0.07631167941623265,
+    0.14437703450520842
+   ],
+   "G_matched": [
+    0.17172580295138895,
+    0.12185584174262164,
+    0.21780792236328106
+   ],
+   "L_connectome": 0.6119384765625,
+   "L_nulls_common": 0.49755859375,
+   "L_nulls_matched": 0.44021267361111105,
+   "final_connectome": 0.8694661458333334,
+   "final_nulls_common": 0.6584798177083334,
+   "final_nulls_matched": 0.5826009114583333,
+   "A0_nulls_common": 0.1287109375,
+   "A0_nulls_matched": 0.13268229166666667
+  },
+  "loom/b": {
+   "G_common": [
+    0.1656168619791667,
+    0.09486365424262154,
+    0.2403023952907987
+   ],
+   "G_matched": [
+    0.13199869791666674,
+    0.08359225802951399,
+    0.18006751166449667
+   ],
+   "L_connectome": 0.6358100043402778,
+   "L_nulls_common": 0.4701931423611111,
+   "L_nulls_matched": 0.503811306423611,
+   "final_connectome": 0.83056640625,
+   "final_nulls_common": 0.59658203125,
+   "final_nulls_matched": 0.6828287760416667,
+   "A0_nulls_common": 0.1306640625,
+   "A0_nulls_matched": 0.1349609375
+  },
+  "loom/c": {
+   "G_common": [
+    0.1513237847222222,
+    0.11267235649956604,
+    0.1913160875108508
+   ],
+   "G_matched": [
+    0.1770629882812501,
+    0.13129967583550356,
+    0.22310268825954852
+   ],
+   "L_connectome": 0.6358100043402778,
+   "L_nulls_common": 0.4844862196180556,
+   "L_nulls_matched": 0.4587470160590277,
+   "final_connectome": 0.83056640625,
+   "final_nulls_common": 0.6059244791666667,
+   "final_nulls_matched": 0.587646484375,
+   "A0_nulls_common": 0.13196614583333335,
+   "A0_nulls_matched": 0.12447916666666667
+  }
+ },
+ "rates_hz_b0_untrained": {
+  "connectome": {
+   "where": 38.534967466694916,
+   "loom": 38.518243499238466
+  },
+  "nulllat:39": {
+   "where": 33.03559693576041,
+   "loom": 34.387193089123585
+  },
+  "nullin:6": {
+   "where": 39.00358422803135,
+   "loom": 38.877084533245075
+  },
+  "nulllat:21": {
+   "where": 35.73633661340112,
+   "loom": 36.31272090912477
+  },
+  "nullin:3": {
+   "where": 39.332697422248245,
+   "loom": 39.32254123334999
+  },
+  "nulllat:29": {
+   "where": 33.67810345320905,
+   "loom": 34.51293559640691
+  },
+  "nullin:32": {
+   "where": 38.03899319166494,
+   "loom": 38.08001300160735
+  },
+  "nulllat:30": {
+   "where": 34.13781503108688,
+   "loom": 35.323290830542035
+  },
+  "nullin:28": {
+   "where": 38.73198436284286,
+   "loom": 38.78699568099195
+  },
+  "nulllat:26": {
+   "where": 31.497222378137003,
+   "loom": 33.33498229018758
+  },
+  "nullin:24": {
+   "where": 38.35049354613932,
+   "loom": 38.490030034454634
+  },
+  "nulllat:20": {
+   "where": 34.231558136071634,
+   "loom": 35.336920205595135
+  },
+  "nullin:7": {
+   "where": 39.30084616533068,
+   "loom": 39.12371367143412
+  },
+  "nulllat:14": {
+   "where": 34.951824517953625,
+   "loom": 35.66647783595506
+  },
+  "nullin:35": {
+   "where": 38.543987874338754,
+   "loom": 38.73978668624282
+  },
+  "nulllat:5": {
+   "where": 32.71731481495528,
+   "loom": 33.92703707510272
+  },
+  "nullin:39": {
+   "where": 37.73601942689771,
+   "loom": 37.76829865936042
+  },
+  "nulllat:9": {
+   "where": 36.63417992532272,
+   "loom": 36.74611199097615
+  },
+  "nullin:12": {
+   "where": 38.424483933655814,
+   "loom": 38.38766157617541
+  },
+  "nulllat:34": {
+   "where": 34.07182449414502,
+   "loom": 34.62302407509665
+  },
+  "nullin:22": {
+   "where": 38.6725616044592,
+   "loom": 38.69721958009873
+  }
+ }
+}

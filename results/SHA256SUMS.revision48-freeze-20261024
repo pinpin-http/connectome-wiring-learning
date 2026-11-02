@@ -1,0 +1,4 @@
+# REVISION48 frozen protocol and sealed tuning selection (hashes cited in the manuscript, annex C).
+# The sealed selection (artifacts/revision48/tuning/selection.json) is reported MISSING until added.
+f26cfcb97577e1eebf2b758211942b2676110610c515498489c31d2d6d8e5d70  docs/revision48/PROTOCOL_FROZEN.md
+70adb9644b4996ed06e8368ba4086d0641a1f7c8c79fc383416f21ca89346353  artifacts/revision48/tuning/selection.json

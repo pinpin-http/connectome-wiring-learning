@@ -1,0 +1,9 @@
+{
+ "utc": "2026-10-20T07:58:02+00:00",
+ "lots_expected": 16,
+ "lots_done": 16,
+ "lot_seconds_median": 8.45,
+ "eta_extract_s": 0,
+ "decoders_expected": 8,
+ "decoders_done": 8
+}

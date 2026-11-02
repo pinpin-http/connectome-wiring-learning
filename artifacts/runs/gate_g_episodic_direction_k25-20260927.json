@@ -1,0 +1,491 @@
+{
+  "what": "supervised episodic internal-weight direction pilot",
+  "complete": true,
+  "gate_g_pass": false,
+  "design": {
+    "task": "episodic reset before each cue",
+    "gradient_seeds": [
+      101,
+      102
+    ],
+    "selection_seeds": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+    ],
+    "probe_seeds": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160
+    ],
+    "purpose": "train",
+    "surrogate_slope": 25,
+    "detach_reset": true,
+    "state_gradient_cap": 1000000000.0,
+    "relative_rms_steps": [
+      0.0,
+      0.03,
+      0.1,
+      0.3,
+      1.0
+    ],
+    "readout_seed": 1610069010,
+    "warmup_ticks": 150,
+    "ticks_per_decision": 16,
+    "gpu_memory_fraction": 0.5,
+    "gpu_duty": 0.6
+  },
+  "stages": {
+    "gradient": {
+      "episodes": [
+        {
+          "seed": 101,
+          "cue": 0,
+          "loss": 0.9399749040603638,
+          "relative_gradient_rms": 0.00011573324377611198
+        },
+        {
+          "seed": 101,
+          "cue": 1,
+          "loss": 0.5981889963150024,
+          "relative_gradient_rms": 6.253374593623373e-05
+        },
+        {
+          "seed": 102,
+          "cue": 0,
+          "loss": 0.7245432734489441,
+          "relative_gradient_rms": 0.0002581998975844451
+        },
+        {
+          "seed": 102,
+          "cue": 1,
+          "loss": 0.5590238571166992,
+          "relative_gradient_rms": 2.9022503373551772e-05
+        }
+      ],
+      "direction_sum_rms": 1.978452444076538
+    },
+    "selection": {
+      "scores": {
+        "m0_step0": {
+          "accuracy": 0.20833333333333334,
+          "loss": 0.823993444442749,
+          "mean_target_margin": -0.21271425485610962,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 2,
+              "left": 10
+            },
+            "1": {
+              "n": 12,
+              "correct": 3,
+              "left": 3
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.0,
+            "realized_relative_rms": 0.0
+          }
+        },
+        "m0_step0.03": {
+          "accuracy": 0.5416666666666666,
+          "loss": 0.7170429825782776,
+          "mean_target_margin": 0.007138475775718689,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 3,
+              "left": 9
+            },
+            "1": {
+              "n": 12,
+              "correct": 10,
+              "left": 10
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.03,
+            "realized_relative_rms": 0.018243520381057216,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.00013518045307137072,
+            "unchanged_fraction": 0.7074733972549438
+          }
+        },
+        "m0_step0.1": {
+          "accuracy": 0.5,
+          "loss": 0.7652179598808289,
+          "mean_target_margin": 0.027494171634316444,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 0,
+              "left": 12
+            },
+            "1": {
+              "n": 12,
+              "correct": 12,
+              "left": 12
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.1,
+            "realized_relative_rms": 0.034619509227785075,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.0006330084870569408,
+            "unchanged_fraction": 0.6780950427055359
+          }
+        },
+        "m0_step0.3": {
+          "accuracy": 0.5,
+          "loss": 0.7878946661949158,
+          "mean_target_margin": 0.18015159666538239,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 0,
+              "left": 12
+            },
+            "1": {
+              "n": 12,
+              "correct": 12,
+              "left": 12
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.3,
+            "realized_relative_rms": 0.05481482864897136,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.0019055245211347938,
+            "unchanged_fraction": 0.6610506176948547
+          }
+        },
+        "m0_step1": {
+          "accuracy": 0.5,
+          "loss": 0.7979829907417297,
+          "mean_target_margin": 0.1812427043914795,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 0,
+              "left": 12
+            },
+            "1": {
+              "n": 12,
+              "correct": 12,
+              "left": 12
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 1.0,
+            "realized_relative_rms": 0.08034792945375806,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.004650727845728397,
+            "unchanged_fraction": 0.6503232717514038
+          }
+        },
+        "m1_step0": {
+          "accuracy": 0.7916666666666666,
+          "loss": 0.6112791895866394,
+          "mean_target_margin": 0.21271425485610962,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 10,
+              "left": 10
+            },
+            "1": {
+              "n": 12,
+              "correct": 9,
+              "left": 3
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.0,
+            "realized_relative_rms": 0.0
+          }
+        },
+        "m1_step0.03": {
+          "accuracy": 0.7916666666666666,
+          "loss": 0.523963987827301,
+          "mean_target_margin": 0.42746102809906006,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 12,
+              "left": 12
+            },
+            "1": {
+              "n": 12,
+              "correct": 7,
+              "left": 5
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.03,
+            "realized_relative_rms": 0.01824352041076309,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.00013518045307137072,
+            "unchanged_fraction": 0.7074006199836731
+          }
+        },
+        "m1_step0.1": {
+          "accuracy": 0.75,
+          "loss": 0.541782557964325,
+          "mean_target_margin": 0.4447830617427826,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 7,
+              "left": 7
+            },
+            "1": {
+              "n": 12,
+              "correct": 11,
+              "left": 1
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.1,
+            "realized_relative_rms": 0.034619509206929154,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.0006330084870569408,
+            "unchanged_fraction": 0.677945613861084
+          }
+        },
+        "m1_step0.3": {
+          "accuracy": 0.6666666666666666,
+          "loss": 0.6093683838844299,
+          "mean_target_margin": 0.3146194517612457,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 6,
+              "left": 6
+            },
+            "1": {
+              "n": 12,
+              "correct": 10,
+              "left": 2
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.3,
+            "realized_relative_rms": 0.05481482868796871,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.0019055245211347938,
+            "unchanged_fraction": 0.6608153581619263
+          }
+        },
+        "m1_step1": {
+          "accuracy": 0.5,
+          "loss": 0.6754577159881592,
+          "mean_target_margin": 0.28079453110694885,
+          "cue_counts": {
+            "0": {
+              "n": 12,
+              "correct": 2,
+              "left": 2
+            },
+            "1": {
+              "n": 12,
+              "correct": 10,
+              "left": 2
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 1.0,
+            "realized_relative_rms": 0.0803479294003107,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.004650727845728397,
+            "unchanged_fraction": 0.650351881980896
+          }
+        }
+      },
+      "chosen": {
+        "0": "m0_step0.03",
+        "1": "m1_step0.03"
+      }
+    },
+    "probe": {
+      "scores": {
+        "m0_candidate": {
+          "accuracy": 0.4791666666666667,
+          "loss": 0.7853004336357117,
+          "mean_target_margin": -0.08775103837251663,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 2,
+              "left": 22
+            },
+            "1": {
+              "n": 24,
+              "correct": 21,
+              "left": 21
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.03,
+            "realized_relative_rms": 0.018243520381057216,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.00013518045307137072,
+            "unchanged_fraction": 0.7074733972549438
+          }
+        },
+        "m0_frozen": {
+          "accuracy": 0.3125,
+          "loss": 0.8382288813591003,
+          "mean_target_margin": -0.2279750257730484,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 3,
+              "left": 21
+            },
+            "1": {
+              "n": 24,
+              "correct": 12,
+              "left": 12
+            }
+          },
+          "movement": {
+            "realized_relative_rms": 0.0
+          }
+        },
+        "m0_random": {
+          "accuracy": 0.375,
+          "loss": 0.8264737725257874,
+          "mean_target_margin": -0.2004615217447281,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 4,
+              "left": 20
+            },
+            "1": {
+              "n": 24,
+              "correct": 14,
+              "left": 14
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.018243520381057216,
+            "realized_relative_rms": 0.018243521798464304,
+            "realized_relative_max_abs": 0.018243608898996615,
+            "projected_fraction": 0.0,
+            "unchanged_fraction": 0.0
+          }
+        },
+        "m1_candidate": {
+          "accuracy": 0.7916666666666666,
+          "loss": 0.5711846351623535,
+          "mean_target_margin": 0.3270268738269806,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 20,
+              "left": 20
+            },
+            "1": {
+              "n": 24,
+              "correct": 18,
+              "left": 6
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.03,
+            "realized_relative_rms": 0.01824352041076309,
+            "realized_relative_max_abs": 1.0,
+            "projected_fraction": 0.00013518045307137072,
+            "unchanged_fraction": 0.7074006199836731
+          }
+        },
+        "m1_frozen": {
+          "accuracy": 0.6875,
+          "loss": 0.6102538108825684,
+          "mean_target_margin": 0.2279750257730484,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 21,
+              "left": 21
+            },
+            "1": {
+              "n": 24,
+              "correct": 12,
+              "left": 12
+            }
+          },
+          "movement": {
+            "realized_relative_rms": 0.0
+          }
+        },
+        "m1_random": {
+          "accuracy": 0.7916666666666666,
+          "loss": 0.5870798230171204,
+          "mean_target_margin": 0.2708647549152374,
+          "cue_counts": {
+            "0": {
+              "n": 24,
+              "correct": 20,
+              "left": 20
+            },
+            "1": {
+              "n": 24,
+              "correct": 18,
+              "left": 6
+            }
+          },
+          "movement": {
+            "requested_relative_rms": 0.01824352041076309,
+            "realized_relative_rms": 0.018243521797149612,
+            "realized_relative_max_abs": 0.018243608898996615,
+            "projected_fraction": 0.0,
+            "unchanged_fraction": 0.0
+          }
+        }
+      },
+      "largest_binomial_se": 0.07210610992116384,
+      "checks": {
+        "both_mappings_at_least_0.75": false,
+        "beats_frozen_by_2se": false,
+        "beats_random_by_2se": false
+      },
+      "provisional_pass": false
+    }
+  },
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_episodic_direction_k25-20260927_20260927T190619Z_6c2e4100.json",
+  "utc": "2026-09-27T19:06:19+00:00",
+  "peak_allocated_mib": 2070.12060546875
+}

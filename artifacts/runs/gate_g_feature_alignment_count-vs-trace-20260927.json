@@ -1,0 +1,42 @@
+{
+  "what": "paired continuous cue observability by motor feature",
+  "complete": true,
+  "gate_g_pass": false,
+  "scope": "no update, training-purpose streams; decoder is cheating",
+  "design": {
+    "training_seed": 3,
+    "probe_seed": 4,
+    "purpose": "train",
+    "decisions": 200,
+    "ticks_per_decision": 16,
+    "warmup_ticks": 150,
+    "readout_seed": 1610069010,
+    "shuffle_seed": 20260927999,
+    "decoder": "StandardScaler(float64), LogisticRegression(C=.05, random_state=0)",
+    "gpu_duty": 0.6,
+    "gpu_memory_fraction": 0.5
+  },
+  "trace": {
+    "true_labels": {
+      "train_accuracy": 1.0,
+      "probe_accuracy": 0.5
+    },
+    "shuffled_labels": {
+      "train_accuracy": 1.0,
+      "probe_accuracy": 0.505
+    }
+  },
+  "spike_count": {
+    "true_labels": {
+      "train_accuracy": 1.0,
+      "probe_accuracy": 0.5
+    },
+    "shuffled_labels": {
+      "train_accuracy": 1.0,
+      "probe_accuracy": 0.5
+    }
+  },
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_feature_alignment_count-vs-trace-20260927_20260927T185100Z_4443f0ed.json",
+  "checkpoint": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_feature_alignment_count-vs-trace-20260927.pt",
+  "utc": "2026-09-27T18:51:27+00:00"
+}

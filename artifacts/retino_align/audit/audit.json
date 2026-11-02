@@ -1,0 +1,465 @@
+{
+ "utc": "2026-10-19T17:51:33+00:00",
+ "repo": {
+  "branch": "retino-align-v1",
+  "commit": "9223c4ac7476d13db3513fe634eba45cb2876a60",
+  "status_short": "M scripts/retino_align/audit.py\n M scripts/retino_align/pilot.py\n M src/flymario/retino_align/decode.py\n?? artifacts/retino_align/\n?? artifacts/retino_align_prep/logs/\n?? artifacts/retino_align_prep/nullin_hashes_server.json\n?? configs/retino_align/\n?? docs/retino_align/AUDIT.md\n?? docs/retino_align/DECISIONS.md\n?? scripts/retino_align/make_figures.py\n?? scripts/retino_align/run_study.py",
+  "last_commits": [
+   "9223c4a RETINO_ALIGN_V1: retina columns and permutations, frozen simulator (row-major, keyed noise), stimuli, ridge decoder, analysis, audit script, tests; pilot P0-P1 (amplitude U(0.15, 0.20) by the declared rule)",
+   "98e9205 RETINO_ALIGN_V1: run log with T0 and deadlines",
+   "f678541 RETINO_ALIGN_V1: sha256 of the 42 family-c null graphs built on the owner's PC (nullin:0-39, 100, 101)",
+   "044e3f4 Watchdog: detect Claude among the pane's descendant processes (tmux reports the bash wrapper), save state before a restart",
+   "197b59f Watchdog: read the screen above the pane's empty rows; never type into the session before the mission has started; ignore server-only files",
+   "be38395 Watchdog for the 72-hour mission: restart, resume after usage limits, idle nudge, phone notifications (ntfy)",
+   "27d2fe2 RETINO_ALIGN_V1: Drive backup of decoder weights, activities, predictions and rebuilt nulls (owner, 5 TB); this machine's facts in the handoff",
+   "21ce570 Server for RETINO_ALIGN_V1 rented (Vast 56757376): monitor reads cgroup v1 too; manifest with core = the graph"
+  ]
+ },
+ "environment": {
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "torch_cuda": "12.8",
+  "cudnn": 91002,
+  "igraph": "1.0.0",
+  "opencv": "5.0.0",
+  "pyyaml": "6.0.3",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39"
+ },
+ "hardware": {
+  "gpu": {
+   "name": "NVIDIA GeForce RTX 3090",
+   "memory_gb": 25.3,
+   "capability": "8.6",
+   "driver": "595.91.07",
+   "memory_used_mb_now": "4 MiB"
+  },
+  "cpus_visible": 48,
+  "cpu_quota_cores": 5.76,
+  "ram_limit_gb": 91.7,
+  "disk_total_gb": 55.8,
+  "disk_free_gb": 42.9
+ },
+ "connectome": {
+  "file": "data/connectome/malecns.npz",
+  "sha256": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f",
+  "bytes": 105100903,
+  "source": "malecns-v1.0",
+  "n_nodes": 169984,
+  "n_edges": 25563197,
+  "duplicate_pairs": 0,
+  "autapses": 101,
+  "sign_counts": {
+   "-1.0": 9802165,
+   "0.0": 1023493,
+   "1.0": 14737539
+  },
+  "weights_integer": true,
+  "weight_min_max": [
+   1.0,
+   2591.0
+  ],
+  "synapses_total": 124025046.0,
+  "operator_nnz": 24539704,
+  "operator_max_abs": 2591.0,
+  "operator_max_abs_row_sum": 114020.0,
+  "node_ids_sha256": "0b4afaa30f617952ac3a59545036321a273e1383a4424a4bff3026583563944d",
+  "stats_file": {
+   "n_nodes": 169984,
+   "n_edges": 25563197
+  }
+ },
+ "readout": {
+  "n": 2227,
+  "by_class": {
+   "cb_motor": 107,
+   "descending_neuron": 1314,
+   "efferent_descending": 4,
+   "vnc_efferent": 94,
+   "vnc_motor": 708
+  },
+  "node_index_sha256": "95e80de210dadcc7bc9b76d419af5d5844f66af7379d8711248c2d094ac37b26",
+  "body_ids_sha256": "0e3492fee2a8664e57a22d1cdf4e858d64f70040134cb4cbdcb6165f1c399bab",
+  "ordered_ascending": true
+ },
+ "retina": {
+  "eye": "R",
+  "coverage": {
+   "eye": "R",
+   "on_cells": 1790,
+   "on_positions": 892,
+   "off_cells": 1785,
+   "off_positions": 892
+  },
+  "n_injected": 3575,
+  "n_columns": 892,
+  "types": {
+   "L1": 892,
+   "L2": 893,
+   "L3": 892,
+   "L5": 898
+  },
+  "signatures": {
+   "L1:1|L2:1|L3:1|L5:1": 886,
+   "L1:1|L2:1|L3:1|L5:2": 5,
+   "L1:1|L2:2|L3:1|L5:2": 1
+  },
+  "lattice_neighbour_degree_hist": {
+   "2": 2,
+   "3": 36,
+   "4": 37,
+   "5": 34,
+   "6": 783
+  },
+  "lamina_cells_in_graph_by_side": {
+   "L": 3539,
+   "R": 3575
+  },
+  "lamina_cells_mapped_by_side": {
+   "L": 2624,
+   "R": 3575
+  },
+  "injected_in_degree_mean": 23.73202797202797,
+  "retina_digest": "9955446c01ed4157a697bed9d511a92d50641ae8a9960fe5f0c0f8f1c6c7a372",
+  "encoder": {
+   "hud_rows": 32,
+   "on_gain": 14.0,
+   "off_gain": 14.0,
+   "static_gain": 2.0,
+   "blur_sigma": 1.0
+  },
+  "permutable_fraction": 0.9913286713286713
+ },
+ "simulator": {
+  "tau_ms": 20.0,
+  "dt_ms": 3.33,
+  "decay": 0.8466228169354396,
+  "threshold": 1.0,
+  "v_reset": 0.0,
+  "refractory_ms": 2.0,
+  "refractory_steps": 1,
+  "gain": 0.18452,
+  "noise_std": 0.02,
+  "bias": 0.0,
+  "ticks_per_decision": 16,
+  "weight_transform": {
+   "log1p": false,
+   "normalize_in_degree": false
+  },
+  "backend_config": "gpu",
+  "max_count_per_window": 8
+ },
+ "nulls": {
+  "kind": "depth_stratified_lateral_instrength",
+  "graphs": {
+   "nullin:0": {
+    "present": true,
+    "sha256_local_pc": "cb8eeb7b70d716a31580ce667161a56c5dfd1de49744d182ae768d54c4b3ac33",
+    "sha256_server": "cb8eeb7b70d716a31580ce667161a56c5dfd1de49744d182ae768d54c4b3ac33",
+    "build_s_server": 200.6,
+    "identical": true
+   },
+   "nullin:1": {
+    "present": true,
+    "sha256_local_pc": "2291f353e8ec1e3c384b780ce54adc62dcc04892d5bd56c82bee128773c01d2e",
+    "sha256_server": "2291f353e8ec1e3c384b780ce54adc62dcc04892d5bd56c82bee128773c01d2e",
+    "build_s_server": 201.9,
+    "identical": true
+   },
+   "nullin:2": {
+    "present": true,
+    "sha256_local_pc": "eb623d2f71092685eeef854d057885d590d6f7f3ae6e16ca6bf25503126224fa",
+    "sha256_server": "eb623d2f71092685eeef854d057885d590d6f7f3ae6e16ca6bf25503126224fa",
+    "build_s_server": 201.6,
+    "identical": true
+   },
+   "nullin:3": {
+    "present": true,
+    "sha256_local_pc": "f9fe02d63b56a1dbd61ae97732df912ba0d0177748959c3a42fc22621a68a40b",
+    "sha256_server": "f9fe02d63b56a1dbd61ae97732df912ba0d0177748959c3a42fc22621a68a40b",
+    "build_s_server": 194.9,
+    "identical": true
+   },
+   "nullin:4": {
+    "present": true,
+    "sha256_local_pc": "62d2875f797977a320c1e4b5b848a7c2e7262541186bdc1e04b7eba28a4eef55",
+    "sha256_server": "62d2875f797977a320c1e4b5b848a7c2e7262541186bdc1e04b7eba28a4eef55",
+    "build_s_server": 200.3,
+    "identical": true
+   },
+   "nullin:5": {
+    "present": true,
+    "sha256_local_pc": "371494f5cd8eb9a3b9122d4f701e71bf86a2673265f09ca1cf384cd6b38cc629",
+    "sha256_server": "371494f5cd8eb9a3b9122d4f701e71bf86a2673265f09ca1cf384cd6b38cc629",
+    "build_s_server": 200.1,
+    "identical": true
+   },
+   "nullin:6": {
+    "present": true,
+    "sha256_local_pc": "6ec6ed2e9b3777f3725f029fd30f8dc0ea1d683de3ce28c34391dcaf836ac4ab",
+    "sha256_server": "6ec6ed2e9b3777f3725f029fd30f8dc0ea1d683de3ce28c34391dcaf836ac4ab",
+    "build_s_server": 199.5,
+    "identical": true
+   },
+   "nullin:7": {
+    "present": true,
+    "sha256_local_pc": "6ac23e292971e0e781fb3c789394a935523e382dd09ea51a345ea38f84d91476",
+    "sha256_server": "6ac23e292971e0e781fb3c789394a935523e382dd09ea51a345ea38f84d91476",
+    "build_s_server": 191.5,
+    "identical": true
+   },
+   "nullin:8": {
+    "present": true,
+    "sha256_local_pc": "532a9b3202216679036159febc96eac65edde3b241a037e9d3c967d8ee623d51",
+    "sha256_server": "532a9b3202216679036159febc96eac65edde3b241a037e9d3c967d8ee623d51",
+    "build_s_server": 191.9,
+    "identical": true
+   },
+   "nullin:9": {
+    "present": true,
+    "sha256_local_pc": "30c84df3acf7685537215b3c6e312bd823aa289aa222596cbc5e830c6d8ffb9b",
+    "sha256_server": "30c84df3acf7685537215b3c6e312bd823aa289aa222596cbc5e830c6d8ffb9b",
+    "build_s_server": 193.9,
+    "identical": true
+   },
+   "nullin:10": {
+    "present": true,
+    "sha256_local_pc": "bf16a81d89ca711ce06e4fcfdcbf54077e55264790f247e65829ffcce250f8d7",
+    "sha256_server": "bf16a81d89ca711ce06e4fcfdcbf54077e55264790f247e65829ffcce250f8d7",
+    "build_s_server": 194.9,
+    "identical": true
+   },
+   "nullin:11": {
+    "present": true,
+    "sha256_local_pc": "50bf0a01a41e1de33730c08a335365e6eb1a5274135e91a417e34a7767c6dc2d",
+    "sha256_server": "50bf0a01a41e1de33730c08a335365e6eb1a5274135e91a417e34a7767c6dc2d",
+    "build_s_server": 191.3,
+    "identical": true
+   },
+   "nullin:12": {
+    "present": true,
+    "sha256_local_pc": "be1aee37916c5a84cd4df852fc7388192e8d2f8f21c30f3be2287798cdb50cff",
+    "sha256_server": "be1aee37916c5a84cd4df852fc7388192e8d2f8f21c30f3be2287798cdb50cff",
+    "build_s_server": 189.1,
+    "identical": true
+   },
+   "nullin:13": {
+    "present": true,
+    "sha256_local_pc": "c3aa0e03a6e05111b21417e0b1a7c0dda40165c6c92742c501aba427080d4607",
+    "sha256_server": "c3aa0e03a6e05111b21417e0b1a7c0dda40165c6c92742c501aba427080d4607",
+    "build_s_server": 189.8,
+    "identical": true
+   },
+   "nullin:14": {
+    "present": true,
+    "sha256_local_pc": "8ba38ea38e43f9d38cb7be45267442a1cbb8931359583280a6b6fcfdc86e9c82",
+    "sha256_server": "8ba38ea38e43f9d38cb7be45267442a1cbb8931359583280a6b6fcfdc86e9c82",
+    "build_s_server": 192.2,
+    "identical": true
+   },
+   "nullin:15": {
+    "present": true,
+    "sha256_local_pc": "255aa446cdbe8aaad12838974eeaf8ff4c994fe16ccd7d9dccf326c650648fbb",
+    "sha256_server": "255aa446cdbe8aaad12838974eeaf8ff4c994fe16ccd7d9dccf326c650648fbb",
+    "build_s_server": 186.7,
+    "identical": true
+   },
+   "nullin:16": {
+    "present": true,
+    "sha256_local_pc": "6a2089101ba773d181b77064e67d522dce03366a41dc1f23748a807f5c886079",
+    "sha256_server": "6a2089101ba773d181b77064e67d522dce03366a41dc1f23748a807f5c886079",
+    "build_s_server": 188.2,
+    "identical": true
+   },
+   "nullin:17": {
+    "present": true,
+    "sha256_local_pc": "c696c837a93c60a0b87141c8855d5232775f795f82f593e80cf4461ff180fdb2",
+    "sha256_server": "c696c837a93c60a0b87141c8855d5232775f795f82f593e80cf4461ff180fdb2",
+    "build_s_server": 188.3,
+    "identical": true
+   },
+   "nullin:18": {
+    "present": true,
+    "sha256_local_pc": "0a2b21580ad76ec36e2f92db805c7aad28bd5d58e27696ea9d15840c79f114dd",
+    "sha256_server": "0a2b21580ad76ec36e2f92db805c7aad28bd5d58e27696ea9d15840c79f114dd",
+    "build_s_server": 185.7,
+    "identical": true
+   },
+   "nullin:19": {
+    "present": true,
+    "sha256_local_pc": "b525a375e12a646adb06f84c1936e1e7d088f845edac04d059b4fab3f43d6d6e",
+    "sha256_server": "b525a375e12a646adb06f84c1936e1e7d088f845edac04d059b4fab3f43d6d6e",
+    "build_s_server": 183.2,
+    "identical": true
+   },
+   "nullin:20": {
+    "present": true,
+    "sha256_local_pc": "8c7f0d916d23e81ba10831ef5a42f1201df2df38bf2b235de4fae3555aaf1311",
+    "sha256_server": "8c7f0d916d23e81ba10831ef5a42f1201df2df38bf2b235de4fae3555aaf1311",
+    "build_s_server": 185.7,
+    "identical": true
+   },
+   "nullin:21": {
+    "present": true,
+    "sha256_local_pc": "aa0706248367f78423328c69775cb734fb681bcf82877fefe4f223a1c3174c2b",
+    "sha256_server": "aa0706248367f78423328c69775cb734fb681bcf82877fefe4f223a1c3174c2b",
+    "build_s_server": 187.4,
+    "identical": true
+   },
+   "nullin:22": {
+    "present": true,
+    "sha256_local_pc": "6634a66180cae98bc92113b16de967b20c9518dab6a5d7b98932236db92f2469",
+    "sha256_server": "6634a66180cae98bc92113b16de967b20c9518dab6a5d7b98932236db92f2469",
+    "build_s_server": 181.1,
+    "identical": true
+   },
+   "nullin:23": {
+    "present": true,
+    "sha256_local_pc": "0e54ee5daea8c80470134ea1a74b5df1e0fdf2790344b275d2efb08278baa5a4",
+    "sha256_server": "0e54ee5daea8c80470134ea1a74b5df1e0fdf2790344b275d2efb08278baa5a4",
+    "build_s_server": 197.4,
+    "identical": true
+   },
+   "nullin:24": {
+    "present": true,
+    "sha256_local_pc": "c19880e35f50bde161a5c1684f7b6cfca116a4297622518773347354891c08eb",
+    "sha256_server": "c19880e35f50bde161a5c1684f7b6cfca116a4297622518773347354891c08eb",
+    "build_s_server": 203.5,
+    "identical": true
+   },
+   "nullin:25": {
+    "present": true,
+    "sha256_local_pc": "49f7212f42e0d7c937c24f398493e702fa662c5f6d499d9b18bd52ffeb659b36",
+    "sha256_server": "49f7212f42e0d7c937c24f398493e702fa662c5f6d499d9b18bd52ffeb659b36",
+    "build_s_server": 204.4,
+    "identical": true
+   },
+   "nullin:26": {
+    "present": true,
+    "sha256_local_pc": "a8a99433db342c4cd482b8634bcb6f3d95a19408c4471ecf43a4aa0cf7ec7dd3",
+    "sha256_server": "a8a99433db342c4cd482b8634bcb6f3d95a19408c4471ecf43a4aa0cf7ec7dd3",
+    "build_s_server": 213.1,
+    "identical": true
+   },
+   "nullin:27": {
+    "present": false,
+    "sha256_local_pc": "4915cd61efa4d312216ec48cba3725d6cb921bb7d7ab122e589b9e6e15580f5b",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:28": {
+    "present": false,
+    "sha256_local_pc": "96678318a78d2555d869b272d4660fb30542860093b1f6aeb53dc2c2db793ecc",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:29": {
+    "present": false,
+    "sha256_local_pc": "ca99b7cf6567b64b72aeb34f8cffdd3f9562ddcf74acbf4edd24805939617908",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:30": {
+    "present": false,
+    "sha256_local_pc": "704466ea78766c524b173be8676fd5a2dc07cb798ee4f3720358788b0c1cccea",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:31": {
+    "present": false,
+    "sha256_local_pc": "74411c3f6a912ac329d66dc1df88262698c879b3c4394ad28ae6a4fddfb226f6",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:32": {
+    "present": false,
+    "sha256_local_pc": "df6e6ea61c50d8d24a3bae43d2b4e89d47de267dafb9f006409c2776296bd4ca",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:33": {
+    "present": false,
+    "sha256_local_pc": "cda8bd20e4da25543543e206eddc1628baf12086f48d25f985accd7098cdc7d5",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:34": {
+    "present": false,
+    "sha256_local_pc": "92dda5ada5e90482c0d97f3f8f877f488a53a22292976ec3105ce793cec3766f",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:35": {
+    "present": false,
+    "sha256_local_pc": "4ba166f6064d7f1101c260fbd5c1e9ac03e57fc26e0df6384349ca1d58e23cd9",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:36": {
+    "present": false,
+    "sha256_local_pc": "feff1bc65ce80f66b3acdef8df5f1394b1a96793e8e51fbd6f2c45b404b16265",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:37": {
+    "present": false,
+    "sha256_local_pc": "2fa03f952a2f0bd929e6f7fe40559a46352ca927e16243f001d5c47e0bbd9c6c",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:38": {
+    "present": false,
+    "sha256_local_pc": "b68e37f80912ef032b03bcbdfe4d62cf6eabdf43bb55a77e56e7ca98e1b3a5a1",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:39": {
+    "present": false,
+    "sha256_local_pc": "0b04db0c999aed9415265fd6f83506fe5067ae1181f0fa8f78088eae04439a25",
+    "sha256_server": null,
+    "build_s_server": null,
+    "identical": false
+   },
+   "nullin:100": {
+    "present": true,
+    "sha256_local_pc": "674dac72d4224769af18cee794152141b2e3840c422b377bfc23ba28458a70bd",
+    "sha256_server": "674dac72d4224769af18cee794152141b2e3840c422b377bfc23ba28458a70bd",
+    "build_s_server": 180.9,
+    "identical": true
+   },
+   "nullin:101": {
+    "present": true,
+    "sha256_local_pc": "647f8ba992e031b468386f168dc972f6a91b501a52c38939cc9ad2a239c2f63e",
+    "sha256_server": "647f8ba992e031b468386f168dc972f6a91b501a52c38939cc9ad2a239c2f63e",
+    "build_s_server": 201.5,
+    "identical": true
+   }
+  },
+  "n_present": 29,
+  "n_identical_to_pc": 29
+ },
+ "checks": {
+  "gpu_visible": true,
+  "connectome_sha256_matches_prep": true,
+  "connectome_counts_match_report": true,
+  "operator_integer": true,
+  "readout_2227": true,
+  "static_two_identical_frames": true,
+  "retina_columns_892": true,
+  "permutable_fraction_ge_0.90": true
+ },
+ "all_pass": true
+}

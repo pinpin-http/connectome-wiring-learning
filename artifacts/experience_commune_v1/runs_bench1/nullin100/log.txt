@@ -1,0 +1,3 @@
+2026-10-20T12:51:15+00:00 start nullin:100 learners=24 blocks=['b0', 'b1', 'b2', 'b3', 'b4', 'b5'] kinds=main stop_at=150
+2026-10-20T12:51:52+00:00 nullin:100 k=0 eval 27.3s
+2026-10-20T12:52:09+00:00 end k=150 complete=False wall=53.1s train_step_median=0.11361706256866455

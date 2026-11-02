@@ -1,0 +1,57 @@
+{
+  "what": "ten-scene decoding from motor counts, sweep windows vs the Gate E window",
+  "scenes": [
+    "1-1_backward",
+    "1-1_jumping",
+    "1-1_obstacles",
+    "1-1_open",
+    "1-1_still",
+    "1-4_castle",
+    "2-1_clouds",
+    "3-1_night",
+    "4-1",
+    "8-1"
+  ],
+  "seeds_per_scene": 16,
+  "train_seeds": "first half of each scene",
+  "test_seeds": "second half",
+  "chance": 0.1,
+  "decoder": "float64 StandardScaler + logistic C=.05 (Gate E / Gate G decoder), constant training columns dropped",
+  "noise_seeds": "70000..70159",
+  "results": {
+    "sweep_0_8": {
+      "decode": 1.0,
+      "shuffled": 0.1125,
+      "features_nonconstant": 1136,
+      "pair_decode": 1.0
+    },
+    "sweep_0_16": {
+      "decode": 1.0,
+      "shuffled": 0.1,
+      "features_nonconstant": 1472,
+      "pair_decode": 1.0
+    },
+    "sweep_0_24": {
+      "decode": 1.0,
+      "shuffled": 0.0875,
+      "features_nonconstant": 1641,
+      "pair_decode": 1.0
+    },
+    "sweep_0_32": {
+      "decode": 1.0,
+      "shuffled": 0.05,
+      "features_nonconstant": 1744,
+      "pair_decode": 1.0
+    },
+    "gate_e_150_166": {
+      "decode": 0.3875,
+      "shuffled": 0.0875,
+      "features_nonconstant": 1472,
+      "pair_decode": 1.0
+    }
+  },
+  "complete": true,
+  "scope": "exploratory diagnostic; no learning",
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_dynamics_decode-20260930_20260930T211902Z_767fd2ca.json",
+  "utc": "2026-09-30T21:19:47+00:00"
+}

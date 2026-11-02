@@ -1,0 +1,656 @@
+{
+  "graphs": [
+    "connectome",
+    "nullin:12",
+    "nullin:22",
+    "nullin:24",
+    "nullin:28",
+    "nullin:3",
+    "nullin:32",
+    "nullin:35",
+    "nullin:39",
+    "nullin:6",
+    "nullin:7",
+    "nulllat:14",
+    "nulllat:20",
+    "nulllat:21",
+    "nulllat:26",
+    "nulllat:29",
+    "nulllat:30",
+    "nulllat:34",
+    "nulllat:39",
+    "nulllat:5",
+    "nulllat:9"
+  ],
+  "blocks": [
+    "r0",
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+  ],
+  "reps": 10000,
+  "seed": 20261102,
+  "margins": {
+    "gap250": 3.0,
+    "gap1000": 3.0,
+    "log2_t50": 0.32192809488736235,
+    "log2_t75": 0.32192809488736235
+  },
+  "censored_runs": {
+    "reference/where/nullin:12/log2_t75/right": 5,
+    "reference/where/nullin:12/log2_t50/right": 1,
+    "reference/where/nullin:22/log2_t75/right": 6,
+    "reference/where/nullin:22/log2_t50/right": 1,
+    "reference/where/nullin:24/log2_t75/right": 5,
+    "reference/where/nullin:28/log2_t75/right": 5,
+    "reference/where/nullin:3/log2_t75/right": 5,
+    "reference/where/nullin:32/log2_t75/right": 5,
+    "reference/where/nullin:32/log2_t50/right": 1,
+    "reference/where/nullin:35/log2_t75/right": 6,
+    "reference/where/nullin:35/log2_t50/right": 3,
+    "reference/where/nullin:39/log2_t75/right": 5,
+    "reference/where/nullin:6/log2_t75/right": 5,
+    "reference/where/nullin:7/log2_t75/right": 6,
+    "reference/where/nulllat:14/log2_t75/right": 5,
+    "reference/where/nulllat:14/log2_t50/right": 1,
+    "reference/where/nulllat:20/log2_t75/right": 5,
+    "reference/where/nulllat:20/log2_t50/right": 1,
+    "reference/where/nulllat:21/log2_t50/right": 5,
+    "reference/where/nulllat:21/log2_t75/right": 6,
+    "reference/where/nulllat:26/log2_t75/right": 6,
+    "reference/where/nulllat:26/log2_t50/right": 2,
+    "reference/where/nulllat:29/log2_t75/right": 6,
+    "reference/where/nulllat:29/log2_t50/right": 2,
+    "reference/where/nulllat:30/log2_t75/right": 6,
+    "reference/where/nulllat:30/log2_t50/right": 1,
+    "reference/where/nulllat:34/log2_t50/right": 2,
+    "reference/where/nulllat:34/log2_t75/right": 5,
+    "reference/where/nulllat:39/log2_t75/right": 6,
+    "reference/where/nulllat:39/log2_t50/right": 2,
+    "reference/where/nulllat:5/log2_t75/right": 6,
+    "reference/where/nulllat:5/log2_t50/right": 1,
+    "reference/where/nulllat:9/log2_t50/right": 2,
+    "reference/where/nulllat:9/log2_t75/right": 6,
+    "reference/loom/connectome/log2_t50/left": 1,
+    "reference/loom/nullin:12/log2_t75/right": 4,
+    "reference/loom/nullin:22/log2_t75/right": 5,
+    "reference/loom/nullin:22/log2_t50/right": 1,
+    "reference/loom/nullin:24/log2_t75/right": 4,
+    "reference/loom/nullin:28/log2_t75/right": 3,
+    "reference/loom/nullin:3/log2_t75/right": 2,
+    "reference/loom/nullin:32/log2_t75/right": 3,
+    "reference/loom/nullin:35/log2_t75/right": 5,
+    "reference/loom/nullin:39/log2_t75/right": 3,
+    "reference/loom/nullin:6/log2_t75/right": 5,
+    "reference/loom/nullin:7/log2_t75/right": 2,
+    "reference/loom/nulllat:14/log2_t75/right": 5,
+    "reference/loom/nulllat:20/log2_t75/right": 6,
+    "reference/loom/nulllat:21/log2_t75/right": 6,
+    "reference/loom/nulllat:21/log2_t50/right": 1,
+    "reference/loom/nulllat:26/log2_t75/right": 6,
+    "reference/loom/nulllat:26/log2_t50/right": 1,
+    "reference/loom/nulllat:29/log2_t75/right": 5,
+    "reference/loom/nulllat:29/log2_t50/left": 1,
+    "reference/loom/nulllat:30/log2_t50/right": 1,
+    "reference/loom/nulllat:30/log2_t75/right": 6,
+    "reference/loom/nulllat:34/log2_t50/right": 1,
+    "reference/loom/nulllat:34/log2_t75/right": 6,
+    "reference/loom/nulllat:39/log2_t50/right": 2,
+    "reference/loom/nulllat:39/log2_t75/right": 5,
+    "reference/loom/nulllat:5/log2_t75/right": 6,
+    "reference/loom/nulllat:9/log2_t75/right": 5,
+    "tuned/where/connectome/log2_t50/left": 2,
+    "tuned/where/nulllat:26/log2_t75/right": 1,
+    "tuned/where/nulllat:9/log2_t75/right": 1,
+    "tuned/loom/connectome/log2_t50/left": 2,
+    "tuned/loom/nullin:22/log2_t50/left": 1,
+    "tuned/loom/nulllat:14/log2_t75/right": 1,
+    "tuned/loom/nulllat:29/log2_t75/right": 1
+  },
+  "results": {
+    "where/S/gap250": {
+      "reference": {
+        "point": 4.651583333333338,
+        "ci95": [
+          -0.9802620833333306,
+          9.436937083333332
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 22.301266666666663,
+        "ci95": [
+          9.335425833333325,
+          34.127548749999995
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 17.649683333333325,
+        "ci95": [
+          3.977995833333328,
+          29.89305166666666
+        ],
+        "reading": "above margin"
+      }
+    },
+    "where/S/gap1000": {
+      "reference": {
+        "point": 13.167300000000001,
+        "ci95": [
+          -0.9020562500000046,
+          27.84191541666666
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 25.27998333333332,
+        "ci95": [
+          14.055892083333315,
+          35.947165
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 12.112683333333319,
+        "ci95": [
+          -8.35390208333333,
+          29.580299999999994
+        ],
+        "reading": "not decided"
+      }
+    },
+    "where/S/log2_t50": {
+      "reference": {
+        "point": 1.5832750819318928,
+        "ci95": [
+          0.891201819339389,
+          2.248854935872882
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.5280928797202211,
+        "ci95": [
+          0.9044338735672036,
+          2.136287158299351
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": -0.055182202211671694,
+        "ci95": [
+          -0.8589164337531586,
+          0.732067347910938
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/S": 0.31666666666666665,
+        "tuned/connectome": 0.3333333333333333,
+        "tuned/S": 0.0
+      }
+    },
+    "where/S/log2_t75": {
+      "reference": {
+        "point": 1.0435725286731241,
+        "ci95": [
+          0.7464434109624315,
+          1.4043216189577805
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.4173753949721508,
+        "ci95": [
+          0.9180442752195087,
+          1.921733531391284
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": 0.3738028662990267,
+        "ci95": [
+          -0.33993586936971415,
+          1.086869232675631
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/S": 0.95,
+        "tuned/connectome": 0.0,
+        "tuned/S": 0.03333333333333333
+      }
+    },
+    "where/E/gap250": {
+      "reference": {
+        "point": 3.5025166666666685,
+        "ci95": [
+          -2.816079583333332,
+          9.192959166666673
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 18.430799999999994,
+        "ci95": [
+          6.74742625,
+          29.91528333333333
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 14.928283333333326,
+        "ci95": [
+          3.339860416666669,
+          26.692435833333334
+        ],
+        "reading": "above margin"
+      }
+    },
+    "where/E/gap1000": {
+      "reference": {
+        "point": 8.867150000000002,
+        "ci95": [
+          0.8722687500000005,
+          16.044784166666677
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 23.22928333333332,
+        "ci95": [
+          13.369220833333335,
+          32.74445874999999
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 14.362133333333318,
+        "ci95": [
+          0.6092262499999952,
+          25.651129583333315
+        ],
+        "reading": "not decided"
+      }
+    },
+    "where/E/log2_t50": {
+      "reference": {
+        "point": 1.2051938977489272,
+        "ci95": [
+          0.7932257117012129,
+          1.5917722185088057
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.3400669519187147,
+        "ci95": [
+          0.7720367203692989,
+          1.9115902171446177
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": 0.13487305416978757,
+        "ci95": [
+          -0.5249796394957723,
+          0.7762392776999782
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/E": 0.1,
+        "tuned/connectome": 0.3333333333333333,
+        "tuned/E": 0.0
+      }
+    },
+    "where/E/log2_t75": {
+      "reference": {
+        "point": 1.0229562697439185,
+        "ci95": [
+          0.7116236404881007,
+          1.3950237771392995
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.0822078476688137,
+        "ci95": [
+          0.6852767975104769,
+          1.469770737030699
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": 0.059251577924895216,
+        "ci95": [
+          -0.563089325511949,
+          0.6291531375258554
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/E": 0.8833333333333333,
+        "tuned/connectome": 0.0,
+        "tuned/E": 0.0
+      }
+    },
+    "loom/S/gap250": {
+      "reference": {
+        "point": 6.630666666666659,
+        "ci95": [
+          -4.726963750000007,
+          19.11466249999999
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 23.792266666666666,
+        "ci95": [
+          14.163302083333337,
+          31.562727083333332
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 17.161600000000007,
+        "ci95": [
+          -3.510403333333322,
+          34.033776249999995
+        ],
+        "reading": "not decided"
+      }
+    },
+    "loom/S/gap1000": {
+      "reference": {
+        "point": 20.244,
+        "ci95": [
+          9.374588333333325,
+          30.813942083333334
+        ],
+        "reading": "above margin"
+      },
+      "tuned": {
+        "point": 25.50423333333334,
+        "ci95": [
+          19.114331250000006,
+          32.14485166666667
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 5.260233333333339,
+        "ci95": [
+          -8.314063333333344,
+          18.70093166666667
+        ],
+        "reading": "not decided"
+      }
+    },
+    "loom/S/log2_t50": {
+      "reference": {
+        "point": 1.7025730823997804,
+        "ci95": [
+          0.8536391884877915,
+          2.606368807451535
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.4400440775321286,
+        "ci95": [
+          0.9474102016491377,
+          1.920765674622901
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": -0.26252900486765185,
+        "ci95": [
+          -1.5121122317499947,
+          0.9277900157285757
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.16666666666666666,
+        "reference/S": 0.11666666666666667,
+        "tuned/connectome": 0.3333333333333333,
+        "tuned/S": 0.0
+      }
+    },
+    "loom/S/log2_t75": {
+      "reference": {
+        "point": 0.9755056648973373,
+        "ci95": [
+          0.5695616314493677,
+          1.353557635281891
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 1.5678165979461092,
+        "ci95": [
+          1.2753058904788546,
+          1.8604056644855729
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": 0.5923109330487719,
+        "ci95": [
+          0.09853006297995887,
+          1.1386182362524022
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/S": 0.9333333333333333,
+        "tuned/connectome": 0.0,
+        "tuned/S": 0.03333333333333333
+      }
+    },
+    "loom/E/gap250": {
+      "reference": {
+        "point": 6.490650000000002,
+        "ci95": [
+          -3.783158333333332,
+          16.97573541666666
+        ],
+        "reading": "not decided"
+      },
+      "tuned": {
+        "point": 13.541566666666665,
+        "ci95": [
+          4.976566250000002,
+          20.963380833333336
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": 7.050916666666662,
+        "ci95": [
+          -8.880085000000005,
+          19.71787583333332
+        ],
+        "reading": "not decided"
+      }
+    },
+    "loom/E/gap1000": {
+      "reference": {
+        "point": 23.577333333333335,
+        "ci95": [
+          17.81566666666667,
+          29.35905583333333
+        ],
+        "reading": "above margin"
+      },
+      "tuned": {
+        "point": 17.291466666666672,
+        "ci95": [
+          10.920922499999996,
+          23.408146250000005
+        ],
+        "reading": "above margin"
+      },
+      "D": {
+        "point": -6.285866666666664,
+        "ci95": [
+          -16.80676250000002,
+          3.020552083333368
+        ],
+        "reading": "not decided"
+      }
+    },
+    "loom/E/log2_t50": {
+      "reference": {
+        "point": 1.5536965945810532,
+        "ci95": [
+          1.0684089391174074,
+          2.1061035040626517
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 0.9078042133791406,
+        "ci95": [
+          0.5631892665552134,
+          1.2934808221324638
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": -0.6458923812019126,
+        "ci95": [
+          -1.3449474139720363,
+          0.10200926686707784
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.16666666666666666,
+        "reference/E": 0.016666666666666666,
+        "tuned/connectome": 0.3333333333333333,
+        "tuned/E": 0.016666666666666666
+      }
+    },
+    "loom/E/log2_t75": {
+      "reference": {
+        "point": 0.895854128312429,
+        "ci95": [
+          0.533788217198004,
+          1.2585169469585455
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "tuned": {
+        "point": 0.8697101409625336,
+        "ci95": [
+          0.6172265496137984,
+          1.1209316728673158
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "D": {
+        "point": -0.026143987349895426,
+        "ci95": [
+          -0.40122318789937716,
+          0.38393644892703277
+        ],
+        "reading": "not interpretable (censoring)"
+      },
+      "censored_fraction": {
+        "reference/connectome": 0.0,
+        "reference/E": 0.6,
+        "tuned/connectome": 0.0,
+        "tuned/E": 0.0
+      }
+    }
+  },
+  "verdict": {
+    "where/S": {
+      "measure": null,
+      "reading": "these exams cannot separate the tuning from the ceiling"
+    },
+    "where/E": {
+      "measure": null,
+      "reading": "these exams cannot separate the tuning from the ceiling"
+    },
+    "loom/S": {
+      "measure": null,
+      "reading": "these exams cannot separate the tuning from the ceiling"
+    },
+    "loom/E": {
+      "measure": null,
+      "reading": "these exams cannot separate the tuning from the ceiling"
+    }
+  },
+  "references": {
+    "references": "pass",
+    "ceiling_reference_D_learning_area": -9.3,
+    "where/S": {
+      "ceiling": {
+        "where/S/gap250": [
+          10.815,
+          "above margin"
+        ],
+        "where/S/gap1000": [
+          -10.895,
+          "below margin"
+        ],
+        "where/S/log2_t50": [
+          -0.272,
+          "not interpretable (censoring)"
+        ],
+        "where/S/log2_t75": [
+          -0.042,
+          "within margin"
+        ]
+      },
+      "shrink": {
+        "where/S/gap250": [
+          -30.92,
+          "below margin"
+        ],
+        "where/S/gap1000": [
+          -31.385,
+          "below margin"
+        ],
+        "where/S/log2_t50": [
+          -1.785,
+          "not interpretable (censoring)"
+        ],
+        "where/S/log2_t75": [
+          -2.042,
+          "below margin"
+        ]
+      },
+      "identical": {
+        "where/S/gap250": [
+          -0.875,
+          "within margin"
+        ],
+        "where/S/gap1000": [
+          -0.553,
+          "within margin"
+        ],
+        "where/S/log2_t50": [
+          -0.045,
+          "within margin"
+        ],
+        "where/S/log2_t75": [
+          -0.042,
+          "within margin"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+ "what": "fresh validation of the occlusion specificity criterion (PERCEPTION_CREDIT_STUDY)",
+ "criterion": "Wilcoxon p < 0.05 and S >= 0.12",
+ "n_frames": 92,
+ "results": {
+  "positive_danger_readout": {
+   "n": 92,
+   "enemy": 1.1404,
+   "scenery": 0.7603,
+   "ratio": 1.5,
+   "p_greater": 0.00152,
+   "pass": false,
+   "swap": 3.6195,
+   "S": 0.105
+  },
+  "specialist_ro1": {
+   "n": 92,
+   "enemy": 0.0007,
+   "scenery": 0.0005,
+   "ratio": 1.35,
+   "p_greater": 0.0226,
+   "pass": false,
+   "swap": 0.0025,
+   "S": 0.079
+  },
+  "generalist_ro1": {
+   "n": 92,
+   "enemy": 0.0091,
+   "scenery": 0.0048,
+   "ratio": 1.9,
+   "p_greater": 0.00015,
+   "pass": true,
+   "swap": 0.0309,
+   "S": 0.139
+  },
+  "specialist_ro2": {
+   "n": 92,
+   "enemy": 0.0354,
+   "scenery": 0.0103,
+   "ratio": 3.44,
+   "p_greater": 0.0,
+   "pass": true,
+   "swap": 0.1552,
+   "S": 0.162
+  },
+  "generalist_ro2": {
+   "n": 92,
+   "enemy": 0.0735,
+   "scenery": 0.011,
+   "ratio": 6.7,
+   "p_greater": 3e-05,
+   "pass": true,
+   "swap": 0.468,
+   "S": 0.134
+  },
+  "specialist_ro3": {
+   "n": 92,
+   "enemy": 0.0698,
+   "scenery": 0.0135,
+   "ratio": 5.17,
+   "p_greater": 3e-05,
+   "pass": true,
+   "swap": 0.3714,
+   "S": 0.152
+  },
+  "generalist_ro3": {
+   "n": 92,
+   "enemy": 0.0038,
+   "scenery": 0.003,
+   "ratio": 1.27,
+   "p_greater": 0.00336,
+   "pass": false,
+   "swap": 0.0162,
+   "S": 0.049
+  },
+  "untrained_ro1": {
+   "n": 92,
+   "enemy": 0.0894,
+   "scenery": 0.0443,
+   "ratio": 2.02,
+   "p_greater": 0.00014,
+   "pass": true,
+   "swap": 0.2027,
+   "S": 0.222
+  },
+  "untrained_ro2": {
+   "n": 92,
+   "enemy": 0.0554,
+   "scenery": 0.0274,
+   "ratio": 2.02,
+   "p_greater": 5e-05,
+   "pass": true,
+   "swap": 0.1152,
+   "S": 0.243
+  },
+  "untrained_ro3": {
+   "n": 92,
+   "enemy": 0.1423,
+   "scenery": 0.0701,
+   "ratio": 2.03,
+   "p_greater": 1e-05,
+   "pass": true,
+   "swap": 0.3733,
+   "S": 0.193
+  }
+ },
+ "criterion_validated": false,
+ "utc": "2026-10-03T19:37:03+00:00"
+}

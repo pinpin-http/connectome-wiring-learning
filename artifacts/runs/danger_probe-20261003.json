@@ -1,0 +1,77 @@
+{
+  "what": "untrained connectome: level-invariant enemy-ahead signal (exploratory)",
+  "labels": "DANGER: enemy 8-64 px ahead; CLEAR: none within 160 px (RAM, analysis only)",
+  "results": {
+    "counts": {
+      "Level1-1": {
+        "danger": 129,
+        "clear": 58
+      },
+      "Level2-1": {
+        "danger": 77,
+        "clear": 405
+      },
+      "Level4-1": {
+        "danger": 525,
+        "clear": 42
+      },
+      "Level7-1": {
+        "danger": 125,
+        "clear": 231
+      },
+      "Level5-1": {
+        "danger": 162,
+        "clear": 192
+      },
+      "Level8-1": {
+        "danger": 259,
+        "clear": 154
+      }
+    },
+    "train_1-1": {
+      "motor_counts": {
+        "heldout_5-1_8-1": {
+          "balanced_accuracy": 0.7294,
+          "auc": 0.9554
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.6805,
+          "auc": 0.5828
+        }
+      },
+      "lamina_input": {
+        "heldout_5-1_8-1": {
+          "balanced_accuracy": 0.7358,
+          "auc": 0.8639
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.2568,
+          "auc": 0.151
+        }
+      }
+    },
+    "train_4_levels": {
+      "motor_counts": {
+        "heldout_5-1_8-1": {
+          "balanced_accuracy": 0.7187,
+          "auc": 0.9244
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.414,
+          "auc": 0.3877
+        }
+      },
+      "lamina_input": {
+        "heldout_5-1_8-1": {
+          "balanced_accuracy": 0.583,
+          "auc": 0.7438
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.5781,
+          "auc": 0.5213
+        }
+      }
+    }
+  },
+  "utc": "2026-10-03T11:51:22+00:00"
+}

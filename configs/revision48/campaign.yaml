@@ -1,0 +1,115 @@
+# REVISION48: the 48-hour revision campaign (owner's dossier docs/revision48/DOSSIER_FR.md, 2026-10-24).
+# DRAFT prepared on the owner's PC before the rental. The server agent finalises the fields marked TO_FREEZE from
+# NVIDIA measurements only (throughput, determinism, memory; never a score of an analysed graph), writes
+# docs/revision48/PROTOCOL_FROZEN.md, sets protocol_status: frozen and commits; scripts/revision48/campaign.py
+# refuses the main phases before that.
+study: REVISION48
+protocol_status: frozen                # 2026-10-24, docs/revision48/PROTOCOL_FROZEN.md
+authority: docs/revision48/DOSSIER_FR.md
+base_campaign: EXPERIENCE_COMMUNE_V1 (docs/experience_commune/PROTOCOL_FROZEN.md), its U mode
+max_rental_hours: 48
+
+graphs:
+  manifest: configs/revision48/graph_manifest.json      # connectome + X3's 10 S (nulllat) + 10 E (nullin), selected
+                                                         # before any new result; historical subset, not a new sample
+  dev: [nulllat:100, nullin:100, nullin:101]             # pilot and references only, never analysed
+  autapse:                                               # reviewer R3: the same seeds, autapses kept, no new loop
+    S: [nulllatL:5, nulllatL:9, nulllatL:14, nulllatL:20, nulllatL:21, nulllatL:26, nulllatL:29, nulllatL:30,
+        nulllatL:34, nulllatL:39]
+    E: [nullinL:3, nullinL:6, nullinL:7, nullinL:12, nullinL:22, nullinL:24, nullinL:28, nullinL:32, nullinL:35,
+        nullinL:39]
+    dev: [nulllatL:100, nullinL:100]
+
+blocks:                                # data.py block codes; fresh seeds, independent of EC's b0-b5 and d0
+  main: [r0, r1, r2, r3, r4, r5]       # evaluation of every condition (6,000 decisions, banks progress/final/ood)
+  tuning: [t0, t1]                     # equal-budget tuning only; never in the main evaluation
+  dev: [rd0]                           # references and pilot on development graphs
+tasks: [where, loom]                   # "Où ?" and "Approche ou recul ?", 8 classes, chance 0.125
+mode: U                                # uniform imposed actions and the corrected signal (EC); the action journal is
+                                       # identical for every graph and condition
+
+reference:                             # the historical setting (EC): gain 0.18452 x gamma, eta, temperature
+  gamma: 1.0
+  eta: 0.001
+  tau: 2.0
+  weights: raw
+horizon: 6000
+checkpoints: [0, 250, 500, 1000, 2000, 4000, 6000]
+batch: "one GPU process per (graph, condition) with 12 learners = 6 main blocks x 2 tasks, in block-then-task
+  order; the same composition for every graph and condition (rounding depends on the batch, EC DEVIATIONS X2)"
+
+tuning:                                # reviewer R1: the same search budget for every graph
+  horizon: 1500
+  checkpoints: [0, 250, 500, 1000, 1500]
+  trials:                              # dossier §4; trial 1 is the reference setting
+    - {trial: 1, gamma: 1.0,   eta: 0.001,  tau: 2.0}
+    - {trial: 2, gamma: 0.063, eta: 0.001,  tau: 2.0}
+    - {trial: 3, gamma: 0.25,  eta: 0.001,  tau: 2.0}
+    - {trial: 4, gamma: 1.0,   eta: 0.0003, tau: 1.0}
+    - {trial: 5, gamma: 1.0,   eta: 0.003,  tau: 4.0}
+    - {trial: 6, gamma: 0.063, eta: 0.0003, tau: 4.0}
+    - {trial: 7, gamma: 0.063, eta: 0.003,  tau: 1.0}
+    - {trial: 8, gamma: 0.25,  eta: 0.0003, tau: 4.0}
+    - {trial: 9, gamma: 0.25,  eta: 0.003,  tau: 1.0}
+  batch: "one process per (graph, gamma) with its 3 trials x 2 tasks x 2 tuning blocks = 12 learners"
+  score: mean over both tasks and both tuning blocks of the validation area (trapezoid of greedy accuracy on the
+         tuning block's progress bank over the tuning checkpoints, divided by the horizon)
+  ties: lowest trial number
+  invalid: a trial with any non-finite score or weight; never replaced by another trial; a graph without a valid
+           trial is reported as not judgeable
+  sealed: artifacts/revision48/tuning/selection.json with its sha256 recorded before any main run of the tuned
+          condition
+
+conditions:                            # each: one 12-learner run per graph on the 6 main blocks
+  reference:  {graphs: analysed, kind: main, hp: reference}
+  tuned:      {graphs: analysed, kind: main, hp: selected}     # trial 1 selected: the reference run is reused
+                                                               # (identical computation on the same platform)
+  supervised: {graphs: analysed, kind: supervised, hp: reference}   # reviewer R4: the target class replaces the
+                                                               # reward signal, nothing else changes
+  lognorm:    {graphs: analysed, kind: main, hp: reference, weights: lognorm}   # reviewer R2
+  autapse:    {graphs: autapse, kind: main, hp: reference}    # reviewer R3; its connectome is reference's
+  readout:    optional                 # reviewer R8, not implemented in this preparation; only if time remains
+
+lognorm:
+  operator: log1p of the summed counts (signed), then every neuron's incoming absolute mass normalised to 1
+  base_gain: 149.97884186649117        # frozen 2026-10-24 (calibration/lognorm_gain.json); rule: calibrate_gain.py on the development graphs only (never the analysed
+                                       # graphs): the common gain at which their mean untrained readout activity on
+                                       # the rd0 progress bank equals their mean activity with raw weights at 0.18452
+                                       # (bisection in [2, 200], relative tolerance 2 %); the historical log_norm gain
+                                       # was 20.0 (configs/base.yaml), recorded for comparison
+  frozen_product: exact64              # frozen 2026-10-24. Rule as revised before the freeze (RUN_LOG): csr if
+                                       # repeatable on the server's GPU, else the fastest bit-repeatable product that
+                                       # passes repeatability and resume. csr: not repeatable (diag_lognorm_resume,
+                                       # csr_determinism_probe); segment: repeatable, 3.7x slower; exact64 (exact sum on
+                                       # the 2^-40 grid, learn.Exact64Operator): repeatable, resume exact, 1.65x raw
+
+references:                            # on development graphs and block rd0, before any main run
+  supervised_must_learn: final U accuracy >= 0.80 on both tasks (dev graphs)
+  frozen_must_not_learn: predictions identical at every checkpoint (eta 0)
+  shuffled_reward_near_chance: final accuracy <= 0.20 (label-independent reward)
+  analysis_synthetic: the analysis recovers a known advantage, a known equivalence and graph spread
+                      (tests/unit/test_revision48.py)
+
+analysis:
+  primary_condition: tuned
+  contrasts: G(task, family) = mean over blocks of L(connectome) - mean over the family's graphs and blocks of L(null)
+  primary: four G in the tuned condition (2 tasks x 2 families), 98.75 % intervals (Bonferroni over 4)
+  change_after_tuning: D(task, family) = G_tuned - G_reference, bootstrapped directly (paired), 95 %
+  sensitivity: G in supervised, lognorm and autapse, each with its own four contrasts, 95 %, read separately
+  margin: 0.03                         # EC's practical margin on L, kept for continuity
+  bootstrap: {replicates: 10000, seed: 20261024, resample: [main blocks, null graphs within family as whole graphs,
+              evaluation images within their 8 classes], paired: same indices for every graph and condition}
+  reading: EC's table (entirely above +margin / inside / below / otherwise not settled)
+
+execution:
+  gpu_processes: 1                     # frozen 2026-10-24: throughput 3.53 / 3.34 / 3.33 main runs/h at N=1/2/3; owner (2026-10-24): run in parallel; N = the number of concurrent processes
+                                       # that maximises jobs per hour in the concurrency benchmark (checks.py
+                                       # --bench-only --bench-tag), within VRAM; EC saw no gain beyond 1 (24 learners)
+  order: tuning (graph order of the manifest) -> selection sealed -> reference -> tuned -> supervised -> lognorm
+         -> autapse -> readout; within a phase the manifest order (connectome, then S and E alternating)
+  retries: one restart from the last checkpoint for a technical failure; never for a score
+  stop_file: artifacts/revision48/STOP (checked at every checkpoint and between runs; the run saves and resumes)
+  scores_hidden: the campaign runner prints counts and times only; no comparative score before the planned reading
+  backup: artifacts/revision48 to the owner's Drive every 30 min and after each phase (deployment/backup_remote.sh)
+  final_reserve_hours: 4               # no new long run if it could not end 4 h before the 48-hour limit
+  rental_start_utc: "2026-10-24T18:22:14Z"   # Vast start_date 1792866134, verified 2026-10-24T19:02Z

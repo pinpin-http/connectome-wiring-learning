@@ -1,0 +1,58 @@
+{
+ "what": "criterion E (validate), PERCEPTION_CREDIT_STUDY \u00a75",
+ "E_min": 0.05,
+ "checkpoint": "mario_ref2.pt",
+ "trained_decisions": 10000,
+ "n_frames": 285,
+ "results": {
+  "positive_teacher2_vs_tshufA_ro1": {
+   "E": 0.1095,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "negative_tshufB_vs_tshufA_ro1": {
+   "E": -0.0121,
+   "p_greater": 0.996076,
+   "pass": false
+  },
+  "negative_tshufA_vs_tshufB_ro1": {
+   "E": 0.0121,
+   "p_greater": 0.003941,
+   "pass": false
+  },
+  "positive_teacher2_vs_tshufA_ro2": {
+   "E": 0.1922,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "negative_tshufB_vs_tshufA_ro2": {
+   "E": 0.0271,
+   "p_greater": 0.0,
+   "pass": false
+  },
+  "negative_tshufA_vs_tshufB_ro2": {
+   "E": -0.0271,
+   "p_greater": 1.0,
+   "pass": false
+  },
+  "positive_teacher2_vs_tshufA_ro3": {
+   "E": 0.0129,
+   "p_greater": 0.97792,
+   "pass": false
+  },
+  "negative_tshufB_vs_tshufA_ro3": {
+   "E": -0.0102,
+   "p_greater": 0.998955,
+   "pass": false
+  },
+  "negative_tshufA_vs_tshufB_ro3": {
+   "E": 0.0102,
+   "p_greater": 0.00105,
+   "pass": false
+  }
+ },
+ "positives_passing": 2,
+ "negatives_passing": 0,
+ "criterion_validated": true,
+ "utc": "2026-10-03T21:20:55+00:00"
+}

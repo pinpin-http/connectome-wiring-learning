@@ -1,0 +1,43 @@
+{
+  "what": "Partial Gate G clipped block-4 BPTT staged witness; not a learning verdict",
+  "run_tag": "clipped-b4-witness",
+  "manifest": "artifacts/runs/manifests/gate_g_bptt_pilot_clipped-b4-witness_20260926T204153Z_25d1d6fd.json",
+  "live_status": "artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness/status.json",
+  "started_utc": "2026-09-26T20:41:53+00:00",
+  "stopped_utc": "2026-09-26T21:37:22+00:00",
+  "runtime_seconds": 3328.984,
+  "stop_reason": "Owner requested stop after the current fit; RunControl finished two fits and stopped before the third task completed.",
+  "protocol_configuration": {
+    "block_len_decisions": 4,
+    "state_grad_clip_norm": 1000000000.0,
+    "training_trials_per_mapping": 500,
+    "heldout_trials_per_mapping": 200,
+    "learning_rate_grid": [0.0001, 0.001, 0.01],
+    "gpu_memory_fraction": 0.5,
+    "gpu_duty_target": 0.6,
+    "seed_set": 1,
+    "readout_seed": 1,
+    "mapping": 0,
+    "readout": "fixed"
+  },
+  "progress": {
+    "completed_tasks": 2,
+    "total_tasks": 8,
+    "completed_learning_rate_fits": {
+      "0.0001": {
+        "accuracy_last_100_training_trials": 0.48,
+        "checkpoint": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness/pilot_lr_0.0001.pt"
+      },
+      "0.001": {
+        "accuracy_last_100_training_trials": 0.52,
+        "checkpoint": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness/pilot_lr_0.001.pt"
+      }
+    },
+    "learning_rate_0.01": "started after task 2 but stopped before task completion; no checkpoint or score retained",
+    "chosen_learning_rate": null,
+    "mapping_1_training": "not reached",
+    "heldout_evaluation": "not run"
+  },
+  "interpretation": "The two values are training-only calibration measurements over each fit's final 100 trials. They are near the 50% two-choice reference and do not establish generalization, controllability, or a Gate G pass.",
+  "result_status": "incomplete; do not use the partial fits as the registered staged witness"
+}

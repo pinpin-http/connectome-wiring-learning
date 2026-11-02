@@ -1,0 +1,28 @@
+{
+ "connectome_S_by_noise_set": [
+  0.8794,
+  0.8797,
+  0.8752,
+  0.8685,
+  0.8867,
+  0.873,
+  0.8758,
+  0.8692,
+  0.8726
+ ],
+ "seed_sd": 0.0057,
+ "seed_range": [
+  0.8685,
+  0.8867
+ ],
+ "production_run_S": 0.8750874999999999,
+ "null_total_sd": 0.1146,
+ "graph_sd_estimate": 0.1145,
+ "ICC": 0.998,
+ "perm_S": 0.4972,
+ "eta_half_S": 0.86,
+ "connectome_rank_range_over_seeds": [
+  10,
+  15
+ ]
+}

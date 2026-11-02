@@ -1,0 +1,4809 @@
+{
+  "what": "Training-only matched-state surrogate-gradient direction diagnostic",
+  "complete": true,
+  "training_only": true,
+  "learning_run": false,
+  "gate_verdict": null,
+  "arguments": {
+    "device": "cuda",
+    "run_tag": "seed2-mapping1-20260927",
+    "seed_set": 2,
+    "mapping": 1,
+    "trial_starts": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "decisions": 1,
+    "steps": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "variants": [
+      "baseline",
+      "narrow_detached"
+    ],
+    "match_random_rms": true,
+    "state_grad_clip_norm": 1000000000.0,
+    "gpu_memory_fraction": 0.5,
+    "gpu_duty": 0.6
+  },
+  "variants": {
+    "baseline": {
+      "surrogate_slope": 1.0,
+      "detach_reset": false
+    },
+    "narrow_detached": {
+      "surrogate_slope": 25.0,
+      "detach_reset": true
+    }
+  },
+  "hypotheses": {
+    "useful_local_direction": "negative-gradient CE decreases versus zero, positive-gradient and matched-step random directions",
+    "noise_transfer": "direction computed on original noise also decreases CE under independent training noise from the same initial state",
+    "limitation": "own-noise descent is in-sample; two noise replays and a few windows do not establish learning, generalization, or a Gate pass"
+  },
+  "coordinate_system": "r=m/m0, d=m0*(dL/dm)/RMS(m0*dL/dm); proposal m=m0*clip(1+alpha*d,0,2)",
+  "objective": "mean cross-entropy of fixed RIGHT/LEFT scores, temperature 1",
+  "state_grad_clip_norm": 1000000000.0,
+  "initial_state": "frozen original weights, continuous training-stream prefix; identical state for every replay of a window",
+  "noise_sampling": "warmup drawn once, then one (ticks,neurons,1) tensor per decision; independent replay noise uses a separate training-only seed",
+  "seeds": {
+    "master": 20260923,
+    "seed_set": 2,
+    "readout_seed": 1610069010,
+    "original_training_noise": 1478913353,
+    "independent_training_noise": 353349713,
+    "random_direction": 684088378
+  },
+  "timing": {
+    "warmup_ticks": 150,
+    "ticks_per_decision": 16
+  },
+  "windows": [
+    {
+      "trial_start": 2,
+      "cues": [
+        1
+      ],
+      "targets": [
+        0
+      ],
+      "variants": {
+        "baseline": {
+          "specification": {
+            "surrogate_slope": 1.0,
+            "detach_reset": false
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.808562159538269,
+              "mean_target_margin": -0.2188771665096283,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.27744895219802856,
+                  -0.05857178941369057
+                ]
+              ],
+              "decision_target_margins": [
+                -0.2188771665096283
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.8092552423477173,
+              "mean_target_margin": -0.2201266884803772,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.2035868614912033,
+                  0.01653982326388359
+                ]
+              ],
+              "decision_target_margins": [
+                -0.2201266884803772
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.0001000000197292976,
+              "realized_relative_max_abs": 0.03428243001302083,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9047939777374268,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7522783279418945,
+                  "mean_target_margin": -0.11496022343635559,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.08088093250989914,
+                      0.03407928720116615
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.11496022343635559
+                  ],
+                  "loss_delta_vs_zero": -0.05628383159637451,
+                  "target_margin_delta_vs_zero": 0.1039169430732727,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9395126104354858,
+                  "mean_target_margin": -0.4438740015029907,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.26324155926704407,
+                      0.18063244223594666
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.4438740015029907
+                  ],
+                  "loss_delta_vs_zero": 0.13025736808776855,
+                  "target_margin_delta_vs_zero": -0.22374731302261353,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000050811686,
+              "realized_relative_max_abs": 0.34282435099283853,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8469744324684143,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.3627550601959229,
+                  "mean_target_margin": -1.0671017169952393,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.49338510632514954,
+                      0.5737166404724121
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.0671017169952393
+                  ],
+                  "loss_delta_vs_zero": 0.5541929006576538,
+                  "target_margin_delta_vs_zero": -0.848224550485611,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1223595142364502,
+                  "mean_target_margin": -0.7285598516464233,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5622706413269043,
+                      0.16628922522068024
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7285598516464233
+                  ],
+                  "loss_delta_vs_zero": 0.3131042718887329,
+                  "target_margin_delta_vs_zero": -0.5084331631660461,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.007905939226337668,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.4297933375928551e-05,
+              "unchanged_fraction": 0.8020191788673401,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9339855909347534,
+                  "mean_target_margin": -0.4347849190235138,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.17574673891067505,
+                      0.25903818011283875
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.4347849190235138
+                  ],
+                  "loss_delta_vs_zero": 0.12542343139648438,
+                  "target_margin_delta_vs_zero": -0.2159077525138855,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0065112113952637,
+                  "mean_target_margin": -0.5516059994697571,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4003763794898987,
+                      0.1512296348810196
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5516059994697571
+                  ],
+                  "loss_delta_vs_zero": 0.1972559690475464,
+                  "target_margin_delta_vs_zero": -0.3314793109893799,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.031147192220600403,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0005303233047015965,
+              "unchanged_fraction": 0.7676469087600708,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.1286406517028809,
+                  "mean_target_margin": -0.7378583550453186,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.47761231660842896,
+                      0.26024603843688965
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7378583550453186
+                  ],
+                  "loss_delta_vs_zero": 0.3200784921646118,
+                  "target_margin_delta_vs_zero": -0.5189811885356903,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.844459056854248,
+                  "mean_target_margin": -0.28270891308784485,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2866860032081604,
+                      -0.003977081272751093
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.28270891308784485
+                  ],
+                  "loss_delta_vs_zero": 0.03520381450653076,
+                  "target_margin_delta_vs_zero": -0.06258222460746765,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000005235082603,
+              "realized_relative_max_abs": 0.03428243001302083,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9043676257133484,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7849229574203491,
+                  "mean_target_margin": -0.17583242058753967,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.17231784760951996,
+                      0.003514576470479369
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.17583242058753967
+                  ],
+                  "loss_delta_vs_zero": -0.023639202117919922,
+                  "target_margin_delta_vs_zero": 0.04304474592208862,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0025416612625122,
+                  "mean_target_margin": -0.5453426837921143,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2791723906993866,
+                      0.26617029309272766
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5453426837921143
+                  ],
+                  "loss_delta_vs_zero": 0.19328641891479492,
+                  "target_margin_delta_vs_zero": -0.32521599531173706,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000000313409468,
+              "realized_relative_max_abs": 0.3428243001302083,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8470030426979065,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.2459678649902344,
+                  "mean_target_margin": -0.9067645072937012,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5239336490631104,
+                      0.3828308880329132
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.9067645072937012
+                  ],
+                  "loss_delta_vs_zero": 0.43740570545196533,
+                  "target_margin_delta_vs_zero": -0.6878873407840729,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.828485369682312,
+                  "mean_target_margin": -0.254524290561676,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.05768953636288643,
+                      0.1968347579240799
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.254524290561676
+                  ],
+                  "loss_delta_vs_zero": 0.019230127334594727,
+                  "target_margin_delta_vs_zero": -0.03439760208129883,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.00790593920531007,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.4297933375928551e-05,
+              "unchanged_fraction": 0.8021218180656433,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.021484613418579,
+                  "mean_target_margin": -0.5751038789749146,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.32569754123687744,
+                      0.24940632283687592
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5751038789749146
+                  ],
+                  "loss_delta_vs_zero": 0.21292245388031006,
+                  "target_margin_delta_vs_zero": -0.35622671246528625,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0061039924621582,
+                  "mean_target_margin": -0.55096435546875,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.007136107422411442,
+                      0.5438282489776611
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.55096435546875
+                  ],
+                  "loss_delta_vs_zero": 0.19684875011444092,
+                  "target_margin_delta_vs_zero": -0.3308376669883728,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.03114719222553044,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0005303233047015965,
+              "unchanged_fraction": 0.7677093148231506,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7351648807525635,
+                  "mean_target_margin": -0.08234083652496338,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.4836159348487854,
+                      0.5659567713737488
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.08234083652496338
+                  ],
+                  "loss_delta_vs_zero": -0.07339727878570557,
+                  "target_margin_delta_vs_zero": 0.13653632998466492,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.6744483113288879,
+                  "mean_target_margin": 0.0377541184425354,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.286497563123703,
+                      0.2487434446811676
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.0377541184425354
+                  ],
+                  "loss_delta_vs_zero": -0.13480693101882935,
+                  "target_margin_delta_vs_zero": 0.2578808069229126,
+                  "accuracy_delta_vs_zero": 1.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001000000197292976,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.808562159538269,
+                  "mean_target_margin": -0.2188771665096283,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.27744895219802856,
+                      -0.05857178941369057
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2188771665096283
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8092552423477173,
+                  "mean_target_margin": -0.2201266884803772,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2035868614912033,
+                      0.01653982326388359
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2201266884803772
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001000000050811686,
+              "realized_relative_rms": 0.0010000216533266129,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7944348454475403,
+                  "mean_target_margin": -0.19325311481952667,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2975301444530487,
+                      -0.10427702963352203
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.19325311481952667
+                  ],
+                  "loss_delta_vs_zero": -0.01412731409072876,
+                  "target_margin_delta_vs_zero": 0.025624051690101624,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8388092517852783,
+                  "mean_target_margin": -0.27277955412864685,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.21866364777088165,
+                      0.054115910083055496
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.27277955412864685
+                  ],
+                  "loss_delta_vs_zero": 0.029554009437561035,
+                  "target_margin_delta_vs_zero": -0.05265286564826965,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.007905939226337668,
+              "realized_relative_rms": 0.007905959969780309,
+              "realized_relative_max_abs": 0.007906015853435672,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.1831539869308472,
+                  "mean_target_margin": -0.8174222707748413,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.49491629004478455,
+                      0.32250601053237915
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8174222707748413
+                  ],
+                  "loss_delta_vs_zero": 0.3745918273925781,
+                  "target_margin_delta_vs_zero": -0.598545104265213,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0225729942321777,
+                  "mean_target_margin": -0.5768039226531982,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.409389853477478,
+                      0.16741406917572021
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5768039226531982
+                  ],
+                  "loss_delta_vs_zero": 0.21331775188446045,
+                  "target_margin_delta_vs_zero": -0.35667723417282104,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.031147192220600403,
+              "realized_relative_rms": 0.031147210746776358,
+              "realized_relative_max_abs": 0.031147296612079326,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.0257049798965454,
+                  "mean_target_margin": -0.581690788269043,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3627947270870209,
+                      0.2188960611820221
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.581690788269043
+                  ],
+                  "loss_delta_vs_zero": 0.21714282035827637,
+                  "target_margin_delta_vs_zero": -0.3628136217594147,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0283838510513306,
+                  "mean_target_margin": -0.5858640670776367,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.29139822721481323,
+                      0.2944658100605011
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5858640670776367
+                  ],
+                  "loss_delta_vs_zero": 0.21912860870361328,
+                  "target_margin_delta_vs_zero": -0.3657373785972595,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 31.879833221435547,
+            "rms_finite": 0.5535882115364075
+          },
+          "relative_gradient_rms": 5.568617037647417,
+          "status": "complete"
+        },
+        "narrow_detached": {
+          "specification": {
+            "surrogate_slope": 25.0,
+            "detach_reset": true
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.808562159538269,
+              "mean_target_margin": -0.2188771665096283,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.27744895219802856,
+                  -0.05857178941369057
+                ]
+              ],
+              "decision_target_margins": [
+                -0.2188771665096283
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.8092552423477173,
+              "mean_target_margin": -0.2201266884803772,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.2035868614912033,
+                  0.01653982326388359
+                ]
+              ],
+              "decision_target_margins": [
+                -0.2201266884803772
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999994542719182e-05,
+              "realized_relative_max_abs": 0.03318895612444196,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9544689059257507,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.8861735463142395,
+                  "mean_target_margin": -0.3547537922859192,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3720874786376953,
+                      -0.017333699390292168
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.3547537922859192
+                  ],
+                  "loss_delta_vs_zero": 0.07761138677597046,
+                  "target_margin_delta_vs_zero": -0.1358766257762909,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9094858169555664,
+                  "mean_target_margin": -0.39409780502319336,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.19421982765197754,
+                      0.19987799227237701
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.39409780502319336
+                  ],
+                  "loss_delta_vs_zero": 0.10023057460784912,
+                  "target_margin_delta_vs_zero": -0.17397111654281616,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000001237748613,
+              "realized_relative_max_abs": 0.33188996996198383,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9017381072044373,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9166802167892456,
+                  "mean_target_margin": -0.4061141610145569,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.13197240233421326,
+                      0.27414175868034363
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.4061141610145569
+                  ],
+                  "loss_delta_vs_zero": 0.10811805725097656,
+                  "target_margin_delta_vs_zero": -0.1872369945049286,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9004167318344116,
+                  "mean_target_margin": -0.3788667321205139,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.22489069402217865,
+                      0.15397602319717407
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.3788667321205139
+                  ],
+                  "loss_delta_vs_zero": 0.09116148948669434,
+                  "target_margin_delta_vs_zero": -0.15874004364013672,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.006874537400261928,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 2.0796993339899927e-05,
+              "unchanged_fraction": 0.8247619867324829,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7247185111045837,
+                  "mean_target_margin": -0.06217639893293381,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.04566711559891701,
+                      0.0165092833340168
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.06217639893293381
+                  ],
+                  "loss_delta_vs_zero": -0.0838436484336853,
+                  "target_margin_delta_vs_zero": 0.1567007675766945,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8425266742706299,
+                  "mean_target_margin": -0.27931755781173706,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.16213113069534302,
+                      0.11718641966581345
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.27931755781173706
+                  ],
+                  "loss_delta_vs_zero": 0.0332714319229126,
+                  "target_margin_delta_vs_zero": -0.05919086933135986,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.019683239609599838,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0002560629800427705,
+              "unchanged_fraction": 0.757061243057251,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5626704692840576,
+                  "mean_target_margin": 0.2805689573287964,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.13944557309150696,
+                      -0.14112336933612823
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.2805689573287964
+                  ],
+                  "loss_delta_vs_zero": -0.24589169025421143,
+                  "target_margin_delta_vs_zero": 0.4994461238384247,
+                  "accuracy_delta_vs_zero": 1.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8280273079872131,
+                  "mean_target_margin": -0.25371092557907104,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.10782072693109512,
+                      0.14589020609855652
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.25371092557907104
+                  ],
+                  "loss_delta_vs_zero": 0.01877206563949585,
+                  "target_margin_delta_vs_zero": -0.03358423709869385,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.0001000000356183675,
+              "realized_relative_max_abs": 0.03318902424403599,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9542648196220398,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9293383955955505,
+                  "mean_target_margin": -0.42711764574050903,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3655409514904022,
+                      0.061576683074235916
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.42711764574050903
+                  ],
+                  "loss_delta_vs_zero": 0.1207762360572815,
+                  "target_margin_delta_vs_zero": -0.20824047923088074,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8178106546401978,
+                  "mean_target_margin": -0.23549455404281616,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1910589635372162,
+                      0.044435594230890274
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.23549455404281616
+                  ],
+                  "loss_delta_vs_zero": 0.008555412292480469,
+                  "target_margin_delta_vs_zero": -0.015367865562438965,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.000999999970088278,
+              "realized_relative_max_abs": 0.33188996996198383,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9015418887138367,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.017293930053711,
+                  "mean_target_margin": -0.5685476064682007,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5102599859237671,
+                      0.058287594467401505
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5685476064682007
+                  ],
+                  "loss_delta_vs_zero": 0.2087317705154419,
+                  "target_margin_delta_vs_zero": -0.3496704399585724,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8137344121932983,
+                  "mean_target_margin": -0.2281854748725891,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.21552234888076782,
+                      0.012663129717111588
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2281854748725891
+                  ],
+                  "loss_delta_vs_zero": 0.004479169845581055,
+                  "target_margin_delta_vs_zero": -0.008058786392211914,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.006874537454672954,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 2.0796993339899927e-05,
+              "unchanged_fraction": 0.8246683478355408,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.4104474782943726,
+                  "mean_target_margin": -1.1306885480880737,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6128946542739868,
+                      0.5177938938140869
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.1306885480880737
+                  ],
+                  "loss_delta_vs_zero": 0.6018853187561035,
+                  "target_margin_delta_vs_zero": -0.9118113815784454,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.2422035932540894,
+                  "mean_target_margin": -0.901476263999939,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.520886242389679,
+                      0.3805899918079376
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.901476263999939
+                  ],
+                  "loss_delta_vs_zero": 0.43294835090637207,
+                  "target_margin_delta_vs_zero": -0.6813495755195618,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.019683239629028477,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0002560629800427705,
+              "unchanged_fraction": 0.7569416761398315,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.6213864088058472,
+                  "mean_target_margin": -1.4012078046798706,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5269955396652222,
+                      0.8742122650146484
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.4012078046798706
+                  ],
+                  "loss_delta_vs_zero": 0.8128242492675781,
+                  "target_margin_delta_vs_zero": -1.1823306381702423,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.6944199800491333,
+                  "mean_target_margin": -1.4914395809173584,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5504356622695923,
+                      0.9410039782524109
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.4914395809173584
+                  ],
+                  "loss_delta_vs_zero": 0.885164737701416,
+                  "target_margin_delta_vs_zero": -1.2713128924369812,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 9.999994542719182e-05,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.808562159538269,
+                  "mean_target_margin": -0.2188771665096283,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.27744895219802856,
+                      -0.05857178941369057
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2188771665096283
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8092552423477173,
+                  "mean_target_margin": -0.2201266884803772,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2035868614912033,
+                      0.01653982326388359
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2201266884803772
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000001237748613,
+              "realized_relative_rms": 0.0010000216533266129,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7944348454475403,
+                  "mean_target_margin": -0.19325311481952667,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2975301444530487,
+                      -0.10427702963352203
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.19325311481952667
+                  ],
+                  "loss_delta_vs_zero": -0.01412731409072876,
+                  "target_margin_delta_vs_zero": 0.025624051690101624,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8388092517852783,
+                  "mean_target_margin": -0.27277955412864685,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.21866364777088165,
+                      0.054115910083055496
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.27277955412864685
+                  ],
+                  "loss_delta_vs_zero": 0.029554009437561035,
+                  "target_margin_delta_vs_zero": -0.05265286564826965,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.006874537400261928,
+              "realized_relative_rms": 0.006874560375534408,
+              "realized_relative_max_abs": 0.006874616755995639,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.2128349542617798,
+                  "mean_target_margin": -0.8599340915679932,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4960649311542511,
+                      0.36386919021606445
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8599340915679932
+                  ],
+                  "loss_delta_vs_zero": 0.40427279472351074,
+                  "target_margin_delta_vs_zero": -0.6410569250583649,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9455249905586243,
+                  "mean_target_margin": -0.45372459292411804,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2566743493080139,
+                      0.19705024361610413
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.45372459292411804
+                  ],
+                  "loss_delta_vs_zero": 0.13626974821090698,
+                  "target_margin_delta_vs_zero": -0.23359790444374084,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.019683239609599838,
+              "realized_relative_rms": 0.019683236695224277,
+              "realized_relative_max_abs": 0.019683294873220642,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.0339844226837158,
+                  "mean_target_margin": -0.5945684909820557,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.43142169713974,
+                      0.16314679384231567
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5945684909820557
+                  ],
+                  "loss_delta_vs_zero": 0.22542226314544678,
+                  "target_margin_delta_vs_zero": -0.37569132447242737,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8763949871063232,
+                  "mean_target_margin": -0.33805951476097107,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2632695436477661,
+                      0.07478997111320496
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.33805951476097107
+                  ],
+                  "loss_delta_vs_zero": 0.06713974475860596,
+                  "target_margin_delta_vs_zero": -0.11793282628059387,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 0.005631316918879747,
+            "rms_finite": 4.03932026529219e-05
+          },
+          "relative_gradient_rms": 0.00022035176774375654,
+          "status": "complete"
+        }
+      },
+      "relative_direction_cosines": {
+        "baseline|narrow_detached": 0.02315043790515167
+      }
+    },
+    {
+      "trial_start": 3,
+      "cues": [
+        0
+      ],
+      "targets": [
+        1
+      ],
+      "variants": {
+        "baseline": {
+          "specification": {
+            "surrogate_slope": 1.0,
+            "detach_reset": false
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.5052656531333923,
+              "mean_target_margin": 0.4194234013557434,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  0.04807928204536438,
+                  0.4675026834011078
+                ]
+              ],
+              "decision_target_margins": [
+                0.4194234013557434
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.4306044578552246,
+              "mean_target_margin": 0.619549036026001,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.2642003893852234,
+                  0.3553486764431
+                ]
+              ],
+              "decision_target_margins": [
+                0.619549036026001
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000009382267442,
+              "realized_relative_max_abs": 0.03217991420200893,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9277668595314026,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.45956525206565857,
+                  "mean_target_margin": 0.5389070510864258,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.14065426588058472,
+                      0.39825281500816345
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5389070510864258
+                  ],
+                  "loss_delta_vs_zero": -0.045700401067733765,
+                  "target_margin_delta_vs_zero": 0.11948364973068237,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.43826112151145935,
+                  "mean_target_margin": 0.5978195667266846,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3172614276409149,
+                      0.28055816888809204
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5978195667266846
+                  ],
+                  "loss_delta_vs_zero": 0.007656663656234741,
+                  "target_margin_delta_vs_zero": -0.021729469299316406,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000096214383,
+              "realized_relative_max_abs": 0.32179925101143975,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8719633221626282,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4765560030937195,
+                  "mean_target_margin": 0.49344706535339355,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.26207032799720764,
+                      0.2313767522573471
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.49344706535339355
+                  ],
+                  "loss_delta_vs_zero": -0.02870965003967285,
+                  "target_margin_delta_vs_zero": 0.07402366399765015,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.46295976638793945,
+                  "mean_target_margin": 0.5297206044197083,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.11122988164424896,
+                      0.4184907078742981
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5297206044197083
+                  ],
+                  "loss_delta_vs_zero": 0.032355308532714844,
+                  "target_margin_delta_vs_zero": -0.08982843160629272,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.007073273094322543,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.9497181710903533e-05,
+              "unchanged_fraction": 0.8196601867675781,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4518345892429352,
+                  "mean_target_margin": 0.5600298047065735,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.48436209559440613,
+                      0.07566773146390915
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5600298047065735
+                  ],
+                  "loss_delta_vs_zero": -0.05343106389045715,
+                  "target_margin_delta_vs_zero": 0.14060640335083008,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4748311936855316,
+                  "mean_target_margin": 0.4980035424232483,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.22187410295009613,
+                      0.27612942457199097
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4980035424232483
+                  ],
+                  "loss_delta_vs_zero": 0.04422673583030701,
+                  "target_margin_delta_vs_zero": -0.12154549360275269,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.022754137195518782,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0002976569812744856,
+              "unchanged_fraction": 0.7837256193161011,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5444709658622742,
+                  "mean_target_margin": 0.3233834505081177,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.17980539798736572,
+                      0.14357806742191315
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.3233834505081177
+                  ],
+                  "loss_delta_vs_zero": 0.039205312728881836,
+                  "target_margin_delta_vs_zero": -0.09603995084762573,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.6062995791435242,
+                  "mean_target_margin": 0.1819612681865692,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.22489234805107117,
+                      -0.04293108731508255
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.1819612681865692
+                  ],
+                  "loss_delta_vs_zero": 0.17569512128829956,
+                  "target_margin_delta_vs_zero": -0.43758776783943176,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000004130966424,
+              "realized_relative_max_abs": 0.03217991420200893,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9276888966560364,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.48955899477005005,
+                  "mean_target_margin": 0.4595043361186981,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.0029256579000502825,
+                      0.4624300003051758
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4595043361186981
+                  ],
+                  "loss_delta_vs_zero": -0.015706658363342285,
+                  "target_margin_delta_vs_zero": 0.04008093476295471,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4977625608444214,
+                  "mean_target_margin": 0.43844830989837646,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.11472276598215103,
+                      0.32372555136680603
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.43844830989837646
+                  ],
+                  "loss_delta_vs_zero": 0.06715810298919678,
+                  "target_margin_delta_vs_zero": -0.1811007261276245,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000034601127,
+              "realized_relative_max_abs": 0.32179925101143975,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8716825842857361,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4865035116672516,
+                  "mean_target_margin": 0.46741676330566406,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3187832236289978,
+                      0.14863353967666626
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.46741676330566406
+                  ],
+                  "loss_delta_vs_zero": -0.018762141466140747,
+                  "target_margin_delta_vs_zero": 0.047993361949920654,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.48512229323387146,
+                  "mean_target_margin": 0.4710063636302948,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.09993353486061096,
+                      0.37107282876968384
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4710063636302948
+                  ],
+                  "loss_delta_vs_zero": 0.05451783537864685,
+                  "target_margin_delta_vs_zero": -0.14854267239570618,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.007073273184325252,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.9497181710903533e-05,
+              "unchanged_fraction": 0.8198798894882202,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.42609480023384094,
+                  "mean_target_margin": 0.6324924230575562,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.12634435296058655,
+                      0.506148099899292
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6324924230575562
+                  ],
+                  "loss_delta_vs_zero": -0.07917085289955139,
+                  "target_margin_delta_vs_zero": 0.21306902170181274,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4873273968696594,
+                  "mean_target_margin": 0.4652794897556305,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1877042055130005,
+                      0.27757528424263
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4652794897556305
+                  ],
+                  "loss_delta_vs_zero": 0.056722939014434814,
+                  "target_margin_delta_vs_zero": -0.15426954627037048,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.022754137203859444,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0002976569812744856,
+              "unchanged_fraction": 0.7834877371788025,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.37020376324653625,
+                  "mean_target_margin": 0.8028958439826965,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.13024334609508514,
+                      0.6726524829864502
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8028958439826965
+                  ],
+                  "loss_delta_vs_zero": -0.13506188988685608,
+                  "target_margin_delta_vs_zero": 0.3834724426269531,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.3332463204860687,
+                  "mean_target_margin": 0.9276271462440491,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.337649941444397,
+                      0.5899772047996521
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9276271462440491
+                  ],
+                  "loss_delta_vs_zero": -0.09735813736915588,
+                  "target_margin_delta_vs_zero": 0.3080781102180481,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.00010000009382267442,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5052656531333923,
+                  "mean_target_margin": 0.4194234013557434,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.04807928204536438,
+                      0.4675026834011078
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4194234013557434
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4306044578552246,
+                  "mean_target_margin": 0.619549036026001,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2642003893852234,
+                      0.3553486764431
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.619549036026001
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001000000096214383,
+              "realized_relative_rms": 0.0010000216135505997,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5254473686218262,
+                  "mean_target_margin": 0.36930400133132935,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.036581650376319885,
+                      0.4058856666088104
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.36930400133132935
+                  ],
+                  "loss_delta_vs_zero": 0.020181715488433838,
+                  "target_margin_delta_vs_zero": -0.05011940002441406,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.46594685316085815,
+                  "mean_target_margin": 0.5216804146766663,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.051578328013420105,
+                      0.47010207176208496
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5216804146766663
+                  ],
+                  "loss_delta_vs_zero": 0.035342395305633545,
+                  "target_margin_delta_vs_zero": -0.09786862134933472,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.007073273094322543,
+              "realized_relative_rms": 0.007073278518549168,
+              "realized_relative_max_abs": 0.007073335869367732,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5097134113311768,
+                  "mean_target_margin": 0.4082478880882263,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.08925510942935944,
+                      0.3189927637577057
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4082478880882263
+                  ],
+                  "loss_delta_vs_zero": 0.004447758197784424,
+                  "target_margin_delta_vs_zero": -0.01117551326751709,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.5160154104232788,
+                  "mean_target_margin": 0.39254072308540344,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1171201542019844,
+                      0.27542057633399963
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.39254072308540344
+                  ],
+                  "loss_delta_vs_zero": 0.0854109525680542,
+                  "target_margin_delta_vs_zero": -0.22700831294059753,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.022754137195518782,
+              "realized_relative_rms": 0.022754161000786217,
+              "realized_relative_max_abs": 0.022754248503212615,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.45438122749328613,
+                  "mean_target_margin": 0.5530401468276978,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.11082536727190018,
+                      0.4422147870063782
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5530401468276978
+                  ],
+                  "loss_delta_vs_zero": -0.0508844256401062,
+                  "target_margin_delta_vs_zero": 0.13361674547195435,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.41207823157310486,
+                  "mean_target_margin": 0.673437774181366,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.39551636576652527,
+                      0.2779214084148407
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.673437774181366
+                  ],
+                  "loss_delta_vs_zero": -0.01852622628211975,
+                  "target_margin_delta_vs_zero": 0.05388873815536499,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 44.893333435058594,
+            "rms_finite": 0.48583656549453735
+          },
+          "relative_gradient_rms": 4.882330260270656,
+          "status": "complete"
+        },
+        "narrow_detached": {
+          "specification": {
+            "surrogate_slope": 25.0,
+            "detach_reset": true
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.5052656531333923,
+              "mean_target_margin": 0.4194234013557434,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  0.04807928204536438,
+                  0.4675026834011078
+                ]
+              ],
+              "decision_target_margins": [
+                0.4194234013557434
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.4306044578552246,
+              "mean_target_margin": 0.619549036026001,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.2642003893852234,
+                  0.3553486764431
+                ]
+              ],
+              "decision_target_margins": [
+                0.619549036026001
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999996417540192e-05,
+              "realized_relative_max_abs": 0.057197082009488164,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9526400566101074,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.47352704405784607,
+                  "mean_target_margin": 0.5014572739601135,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.017097391188144684,
+                      0.5185546875
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5014572739601135
+                  ],
+                  "loss_delta_vs_zero": -0.031738609075546265,
+                  "target_margin_delta_vs_zero": 0.08203387260437012,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4448259770870209,
+                  "mean_target_margin": 0.5794280767440796,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.09375721961259842,
+                      0.48567086458206177
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5794280767440796
+                  ],
+                  "loss_delta_vs_zero": 0.014221519231796265,
+                  "target_margin_delta_vs_zero": -0.04012095928192139,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000001077510201,
+              "realized_relative_max_abs": 0.5719709901092445,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9002511501312256,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.47792619466781616,
+                  "mean_target_margin": 0.4898366928100586,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1482229381799698,
+                      0.34161376953125
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4898366928100586
+                  ],
+                  "loss_delta_vs_zero": -0.027339458465576172,
+                  "target_margin_delta_vs_zero": 0.07041329145431519,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4198724031448364,
+                  "mean_target_margin": 0.6505333781242371,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1847553700208664,
+                      0.46577802300453186
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6505333781242371
+                  ],
+                  "loss_delta_vs_zero": -0.010732054710388184,
+                  "target_margin_delta_vs_zero": 0.030984342098236084,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.0049288624549007325,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 3.899436251231236e-06,
+              "unchanged_fraction": 0.8278438448905945,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4092123508453369,
+                  "mean_target_margin": 0.6819473505020142,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.25516489148139954,
+                      0.42678242921829224
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6819473505020142
+                  ],
+                  "loss_delta_vs_zero": -0.09605330228805542,
+                  "target_margin_delta_vs_zero": 0.26252394914627075,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.3778204619884491,
+                  "mean_target_margin": 0.778485119342804,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3941584825515747,
+                      0.38432663679122925
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.778485119342804
+                  ],
+                  "loss_delta_vs_zero": -0.05278399586677551,
+                  "target_margin_delta_vs_zero": 0.15893608331680298,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.016273599817841756,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00014817857299931347,
+              "unchanged_fraction": 0.7644532918930054,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.20341826975345612,
+                  "mean_target_margin": 1.489058256149292,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.46897658705711365,
+                      1.020081639289856
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.489058256149292
+                  ],
+                  "loss_delta_vs_zero": -0.3018473833799362,
+                  "target_margin_delta_vs_zero": 1.0696348547935486,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.14752714335918427,
+                  "mean_target_margin": 1.839072823524475,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6735326051712036,
+                      1.1655402183532715
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.839072823524475
+                  ],
+                  "loss_delta_vs_zero": -0.28307731449604034,
+                  "target_margin_delta_vs_zero": 1.2195237874984741,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999998465235236e-05,
+              "realized_relative_max_abs": 0.057197082009488164,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9524710774421692,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5479086637496948,
+                  "mean_target_margin": 0.31521496176719666,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.0309491865336895,
+                      0.34616413712501526
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.31521496176719666
+                  ],
+                  "loss_delta_vs_zero": 0.04264301061630249,
+                  "target_margin_delta_vs_zero": -0.10420843958854675,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.44225195050239563,
+                  "mean_target_margin": 0.5866132974624634,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.23247146606445312,
+                      0.35414186120033264
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5866132974624634
+                  ],
+                  "loss_delta_vs_zero": 0.01164749264717102,
+                  "target_margin_delta_vs_zero": -0.0329357385635376,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000100242199,
+              "realized_relative_max_abs": 0.5719709901092445,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9005175828933716,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5936012268066406,
+                  "mean_target_margin": 0.21010783314704895,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.16423571109771729,
+                      0.04587211459875107
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.21010783314704895
+                  ],
+                  "loss_delta_vs_zero": 0.08833557367324829,
+                  "target_margin_delta_vs_zero": -0.20931556820869446,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.48051321506500244,
+                  "mean_target_margin": 0.4830417037010193,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.20487616956233978,
+                      0.2781655490398407
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4830417037010193
+                  ],
+                  "loss_delta_vs_zero": 0.04990875720977783,
+                  "target_margin_delta_vs_zero": -0.1365073323249817,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.004928862399543606,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 3.899436251231236e-06,
+              "unchanged_fraction": 0.8278710842132568,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.6476543545722961,
+                  "mean_target_margin": 0.09315420687198639,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.027151774615049362,
+                      0.12030597776174545
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.09315420687198639
+                  ],
+                  "loss_delta_vs_zero": 0.1423887014389038,
+                  "target_margin_delta_vs_zero": -0.326269194483757,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.636652410030365,
+                  "mean_target_margin": 0.11637323349714279,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.0910714641213417,
+                      0.2074446976184845
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.11637323349714279
+                  ],
+                  "loss_delta_vs_zero": 0.20604795217514038,
+                  "target_margin_delta_vs_zero": -0.5031758025288582,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.016273599869957817,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00014817857299931347,
+              "unchanged_fraction": 0.7645572423934937,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9285703897476196,
+                  "mean_target_margin": -0.4258482754230499,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.26550111174583435,
+                      -0.16034716367721558
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.4258482754230499
+                  ],
+                  "loss_delta_vs_zero": 0.4233047366142273,
+                  "target_margin_delta_vs_zero": -0.8452716767787933,
+                  "accuracy_delta_vs_zero": -1.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9531139731407166,
+                  "mean_target_margin": -0.4661048650741577,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.19123537838459015,
+                      -0.27486947178840637
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.4661048650741577
+                  ],
+                  "loss_delta_vs_zero": 0.5225095152854919,
+                  "target_margin_delta_vs_zero": -1.0856539011001587,
+                  "accuracy_delta_vs_zero": -1.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 9.999996417540192e-05,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5052656531333923,
+                  "mean_target_margin": 0.4194234013557434,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.04807928204536438,
+                      0.4675026834011078
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4194234013557434
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4306044578552246,
+                  "mean_target_margin": 0.619549036026001,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2642003893852234,
+                      0.3553486764431
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.619549036026001
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000001077510201,
+              "realized_relative_rms": 0.0010000216135505997,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5254473686218262,
+                  "mean_target_margin": 0.36930400133132935,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.036581650376319885,
+                      0.4058856666088104
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.36930400133132935
+                  ],
+                  "loss_delta_vs_zero": 0.020181715488433838,
+                  "target_margin_delta_vs_zero": -0.05011940002441406,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.46594685316085815,
+                  "mean_target_margin": 0.5216804146766663,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.051578328013420105,
+                      0.47010207176208496
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5216804146766663
+                  ],
+                  "loss_delta_vs_zero": 0.035342395305633545,
+                  "target_margin_delta_vs_zero": -0.09786862134933472,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.0049288624549007325,
+              "realized_relative_rms": 0.004928856783249943,
+              "realized_relative_max_abs": 0.004928943722747093,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5730183720588684,
+                  "mean_target_margin": 0.2566843032836914,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.011672328226268291,
+                      0.2683566212654114
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.2566843032836914
+                  ],
+                  "loss_delta_vs_zero": 0.06775271892547607,
+                  "target_margin_delta_vs_zero": -0.162739098072052,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.47079285979270935,
+                  "mean_target_margin": 0.5087223649024963,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1887582689523697,
+                      0.31996411085128784
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5087223649024963
+                  ],
+                  "loss_delta_vs_zero": 0.04018840193748474,
+                  "target_margin_delta_vs_zero": -0.11082667112350464,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.016273599817841756,
+              "realized_relative_rms": 0.016273621336675235,
+              "realized_relative_max_abs": 0.016273675962936048,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.42299914360046387,
+                  "mean_target_margin": 0.6414412260055542,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.17101937532424927,
+                      0.47042185068130493
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6414412260055542
+                  ],
+                  "loss_delta_vs_zero": -0.08226650953292847,
+                  "target_margin_delta_vs_zero": 0.2220178246498108,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.5016342997550964,
+                  "mean_target_margin": 0.4286037087440491,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1826256364583969,
+                      0.24597807228565216
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.4286037087440491
+                  ],
+                  "loss_delta_vs_zero": 0.07102984189987183,
+                  "target_margin_delta_vs_zero": -0.1909453272819519,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 0.0028564094100147486,
+            "rms_finite": 1.702098234090954e-05
+          },
+          "relative_gradient_rms": 0.00012360616384920524,
+          "status": "complete"
+        }
+      },
+      "relative_direction_cosines": {
+        "baseline|narrow_detached": -0.001944487504159723
+      }
+    },
+    {
+      "trial_start": 5,
+      "cues": [
+        1
+      ],
+      "targets": [
+        0
+      ],
+      "variants": {
+        "baseline": {
+          "specification": {
+            "surrogate_slope": 1.0,
+            "detach_reset": false
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.9386672973632812,
+              "mean_target_margin": -0.44248589873313904,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.3940104842185974,
+                  0.048475414514541626
+                ]
+              ],
+              "decision_target_margins": [
+                -0.44248589873313904
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 1.183104395866394,
+              "mean_target_margin": -0.8173508048057556,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.5686444640159607,
+                  0.24870635569095612
+                ]
+              ],
+              "decision_target_margins": [
+                -0.8173508048057556
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999999570173446e-05,
+              "realized_relative_max_abs": 0.04604862160878639,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9539645910263062,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.916630744934082,
+                  "mean_target_margin": -0.40603187680244446,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3802255094051361,
+                      0.0258063692599535
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.40603187680244446
+                  ],
+                  "loss_delta_vs_zero": -0.02203655242919922,
+                  "target_margin_delta_vs_zero": 0.03645402193069458,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.183104395866394,
+                  "mean_target_margin": -0.8173508048057556,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5686444640159607,
+                      0.24870635569095612
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8173508048057556
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000000853636177,
+              "realized_relative_max_abs": 0.46048616383173696,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9117974042892456,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.2485616207122803,
+                  "mean_target_margin": -0.9104037880897522,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.38915514945983887,
+                      0.5212486386299133
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.9104037880897522
+                  ],
+                  "loss_delta_vs_zero": 0.309894323348999,
+                  "target_margin_delta_vs_zero": -0.46791788935661316,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.042446255683899,
+                  "mean_target_margin": -0.6076691150665283,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2508644759654999,
+                      0.35680460929870605
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.6076691150665283
+                  ],
+                  "loss_delta_vs_zero": -0.14065814018249512,
+                  "target_margin_delta_vs_zero": 0.2096816897392273,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.006450962112376731,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.9497181710903533e-05,
+              "unchanged_fraction": 0.8653590083122253,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.8634195923805237,
+                  "mean_target_margin": -0.31572675704956055,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.013618454337120056,
+                      0.3293452262878418
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.31572675704956055
+                  ],
+                  "loss_delta_vs_zero": -0.07524770498275757,
+                  "target_margin_delta_vs_zero": 0.1267591416835785,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9028421640396118,
+                  "mean_target_margin": -0.3829493820667267,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.1627170741558075,
+                      0.5456664562225342
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.3829493820667267
+                  ],
+                  "loss_delta_vs_zero": -0.2802622318267822,
+                  "target_margin_delta_vs_zero": 0.43440142273902893,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.01640834271112121,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0001715752005111426,
+              "unchanged_fraction": 0.8258681297302246,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.7912600636482239,
+                  "mean_target_margin": -0.1874539852142334,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.25689584016799927,
+                      -0.06944186240434647
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.1874539852142334
+                  ],
+                  "loss_delta_vs_zero": -0.14740723371505737,
+                  "target_margin_delta_vs_zero": 0.25503191351890564,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.853039026260376,
+                  "mean_target_margin": -0.2977076470851898,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.11056651920080185,
+                      0.18714113533496857
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2977076470851898
+                  ],
+                  "loss_delta_vs_zero": -0.33006536960601807,
+                  "target_margin_delta_vs_zero": 0.5196431577205658,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000002778123466,
+              "realized_relative_max_abs": 0.04604862160878639,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9539451003074646,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.1973490715026855,
+                  "mean_target_margin": -0.8378219604492188,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.42596709728240967,
+                      0.4118548333644867
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8378219604492188
+                  ],
+                  "loss_delta_vs_zero": 0.2586817741394043,
+                  "target_margin_delta_vs_zero": -0.3953360617160797,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9941438436508179,
+                  "mean_target_margin": -0.5320446491241455,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4806861877441406,
+                      0.051358435302972794
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5320446491241455
+                  ],
+                  "loss_delta_vs_zero": -0.18896055221557617,
+                  "target_margin_delta_vs_zero": 0.2853061556816101,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000028235375,
+              "realized_relative_max_abs": 0.4604862160878639,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9118116497993469,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9906687140464783,
+                  "mean_target_margin": -0.5265226364135742,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.29756516218185425,
+                      0.22895750403404236
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5265226364135742
+                  ],
+                  "loss_delta_vs_zero": 0.05200141668319702,
+                  "target_margin_delta_vs_zero": -0.08403673768043518,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.8152680397033691,
+                  "mean_target_margin": -0.2309381663799286,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.057665321975946426,
+                      0.17327284812927246
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.2309381663799286
+                  ],
+                  "loss_delta_vs_zero": -0.3678363561630249,
+                  "target_margin_delta_vs_zero": 0.586412638425827,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.006450962145379637,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.9497181710903533e-05,
+              "unchanged_fraction": 0.865508496761322,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.1618878841400146,
+                  "mean_target_margin": -0.7866199016571045,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.36083105206489563,
+                      0.42578887939453125
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7866199016571045
+                  ],
+                  "loss_delta_vs_zero": 0.2232205867767334,
+                  "target_margin_delta_vs_zero": -0.34413400292396545,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1137372255325317,
+                  "mean_target_margin": -0.7157497406005859,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.48727238178253174,
+                      0.2284773290157318
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7157497406005859
+                  ],
+                  "loss_delta_vs_zero": -0.0693671703338623,
+                  "target_margin_delta_vs_zero": 0.10160106420516968,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.016408342727957798,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0001715752005111426,
+              "unchanged_fraction": 0.8257836103439331,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.265944004058838,
+                  "mean_target_margin": -0.9346959590911865,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5323639512062073,
+                      0.40233197808265686
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.9346959590911865
+                  ],
+                  "loss_delta_vs_zero": 0.32727670669555664,
+                  "target_margin_delta_vs_zero": -0.4922100603580475,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0148518085479736,
+                  "mean_target_margin": -0.5647196769714355,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.40091848373413086,
+                      0.1638011932373047
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5647196769714355
+                  ],
+                  "loss_delta_vs_zero": -0.1682525873184204,
+                  "target_margin_delta_vs_zero": 0.25263112783432007,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 9.999999570173446e-05,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9386672973632812,
+                  "mean_target_margin": -0.44248589873313904,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3940104842185974,
+                      0.048475414514541626
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.44248589873313904
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.183104395866394,
+                  "mean_target_margin": -0.8173508048057556,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5686444640159607,
+                      0.24870635569095612
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8173508048057556
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000000853636177,
+              "realized_relative_rms": 0.0010000215813859342,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9386672973632812,
+                  "mean_target_margin": -0.44248589873313904,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3940104842185974,
+                      0.048475414514541626
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.44248589873313904
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.183104395866394,
+                  "mean_target_margin": -0.8173508048057556,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5686444640159607,
+                      0.24870635569095612
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8173508048057556
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.006450962112376731,
+              "realized_relative_rms": 0.006450978993006694,
+              "realized_relative_max_abs": 0.00645106473415018,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.030759334564209,
+                  "mean_target_margin": -0.5895593166351318,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5152632594108582,
+                      0.07429604232311249
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5895593166351318
+                  ],
+                  "loss_delta_vs_zero": 0.09209203720092773,
+                  "target_margin_delta_vs_zero": -0.1470734179019928,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1239769458770752,
+                  "mean_target_margin": -0.7309569120407104,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5541456341743469,
+                      0.17681126296520233
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7309569120407104
+                  ],
+                  "loss_delta_vs_zero": -0.05912744998931885,
+                  "target_margin_delta_vs_zero": 0.08639389276504517,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.01640834271112121,
+              "realized_relative_rms": 0.016408318699953,
+              "realized_relative_max_abs": 0.016408382130218332,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.2705535888671875,
+                  "mean_target_margin": -0.9411099553108215,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.37483924627304077,
+                      0.5662707090377808
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.9411099553108215
+                  ],
+                  "loss_delta_vs_zero": 0.33188629150390625,
+                  "target_margin_delta_vs_zero": -0.4986240565776825,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1506898403167725,
+                  "mean_target_margin": -0.7702804803848267,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.29539838433265686,
+                      0.4748820960521698
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7702804803848267
+                  ],
+                  "loss_delta_vs_zero": -0.03241455554962158,
+                  "target_margin_delta_vs_zero": 0.047070324420928955,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 1442.9141845703125,
+            "rms_finite": 11.957924842834473
+          },
+          "relative_gradient_rms": 323.3464781747158,
+          "status": "complete"
+        },
+        "narrow_detached": {
+          "specification": {
+            "surrogate_slope": 25.0,
+            "detach_reset": true
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.9386672973632812,
+              "mean_target_margin": -0.44248589873313904,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.3940104842185974,
+                  0.048475414514541626
+                ]
+              ],
+              "decision_target_margins": [
+                -0.44248589873313904
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 1.183104395866394,
+              "mean_target_margin": -0.8173508048057556,
+              "accuracy": 0.0,
+              "decision_scores_right_left": [
+                [
+                  -0.5686444640159607,
+                  0.24870635569095612
+                ]
+              ],
+              "decision_target_margins": [
+                -0.8173508048057556
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999993054623832e-05,
+              "realized_relative_max_abs": 0.06071326846168155,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9389127492904663,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9286491870880127,
+                  "mean_target_margin": -0.42597854137420654,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.35890108346939087,
+                      0.06707747280597687
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.42597854137420654
+                  ],
+                  "loss_delta_vs_zero": -0.010018110275268555,
+                  "target_margin_delta_vs_zero": 0.016507357358932495,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1787652969360352,
+                  "mean_target_margin": -0.8110895752906799,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5636377930641174,
+                      0.2474517971277237
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8110895752906799
+                  ],
+                  "loss_delta_vs_zero": -0.004339098930358887,
+                  "target_margin_delta_vs_zero": 0.006261229515075684,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000000844316412,
+              "realized_relative_max_abs": 0.6071334112258184,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.874614953994751,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.0676891803741455,
+                  "mean_target_margin": -0.6463963389396667,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5269119143486023,
+                      0.11948440223932266
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.6463963389396667
+                  ],
+                  "loss_delta_vs_zero": 0.12902188301086426,
+                  "target_margin_delta_vs_zero": -0.2039104402065277,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1334489583969116,
+                  "mean_target_margin": -0.7449573874473572,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.512104332447052,
+                      0.23285305500030518
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7449573874473572
+                  ],
+                  "loss_delta_vs_zero": -0.04965543746948242,
+                  "target_margin_delta_vs_zero": 0.07239341735839844,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.0057008373076456705,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 9.098685040953569e-06,
+              "unchanged_fraction": 0.7984797358512878,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.8701974749565125,
+                  "mean_target_margin": -0.3274186849594116,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.07635264843702316,
+                      0.25106602907180786
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.3274186849594116
+                  ],
+                  "loss_delta_vs_zero": -0.0684698224067688,
+                  "target_margin_delta_vs_zero": 0.11506721377372742,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9033728241920471,
+                  "mean_target_margin": -0.38384175300598145,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.28749844431877136,
+                      0.09634332358837128
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.38384175300598145
+                  ],
+                  "loss_delta_vs_zero": -0.2797315716743469,
+                  "target_margin_delta_vs_zero": 0.43350905179977417,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.021465441179180818,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00024176505394279957,
+              "unchanged_fraction": 0.7455098032951355,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4478279650211334,
+                  "mean_target_margin": 0.5710897445678711,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.28201237320899963,
+                      -0.28907740116119385
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5710897445678711
+                  ],
+                  "loss_delta_vs_zero": -0.4908393323421478,
+                  "target_margin_delta_vs_zero": 1.0135756433010101,
+                  "accuracy_delta_vs_zero": 1.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4368675649166107,
+                  "mean_target_margin": 0.6017516851425171,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.3235809803009033,
+                      -0.27817070484161377
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6017516851425171
+                  ],
+                  "loss_delta_vs_zero": -0.7462368309497833,
+                  "target_margin_delta_vs_zero": 1.4191024899482727,
+                  "accuracy_delta_vs_zero": 1.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999999981080605e-05,
+              "realized_relative_max_abs": 0.060713329012431795,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9386748671531677,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9774117469787598,
+                  "mean_target_margin": -0.5053519606590271,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4088793694972992,
+                      0.0964726060628891
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5053519606590271
+                  ],
+                  "loss_delta_vs_zero": 0.038744449615478516,
+                  "target_margin_delta_vs_zero": -0.06286606192588806,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1836854219436646,
+                  "mean_target_margin": -0.8181883096694946,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5678918361663818,
+                      0.2502964735031128
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8181883096694946
+                  ],
+                  "loss_delta_vs_zero": 0.0005810260772705078,
+                  "target_margin_delta_vs_zero": -0.0008375048637390137,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000043918651,
+              "realized_relative_max_abs": 0.6071333809504433,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8741353154182434,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.2338117361068726,
+                  "mean_target_margin": -0.8896573781967163,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5932313799858093,
+                      0.2964259684085846
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8896573781967163
+                  ],
+                  "loss_delta_vs_zero": 0.2951444387435913,
+                  "target_margin_delta_vs_zero": -0.44717147946357727,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.2184725999832153,
+                  "mean_target_margin": -0.867948055267334,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6448801755905151,
+                      0.22306787967681885
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.867948055267334
+                  ],
+                  "loss_delta_vs_zero": 0.03536820411682129,
+                  "target_margin_delta_vs_zero": -0.05059725046157837,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.0057008373437082635,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 9.098685040953569e-06,
+              "unchanged_fraction": 0.7985109686851501,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.3540868759155273,
+                  "mean_target_margin": -1.055434226989746,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5123045444488525,
+                      0.5431297421455383
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.055434226989746
+                  ],
+                  "loss_delta_vs_zero": 0.4154195785522461,
+                  "target_margin_delta_vs_zero": -0.6129483282566071,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.3785500526428223,
+                  "mean_target_margin": -1.088273286819458,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5249810218811035,
+                      0.5632923245429993
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.088273286819458
+                  ],
+                  "loss_delta_vs_zero": 0.19544565677642822,
+                  "target_margin_delta_vs_zero": -0.2709224820137024,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.021465441206971952,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00024176505394279957,
+              "unchanged_fraction": 0.7458698749542236,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.9723424911499023,
+                  "mean_target_margin": -1.8225300312042236,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6781396269798279,
+                      1.1443904638290405
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.8225300312042236
+                  ],
+                  "loss_delta_vs_zero": 1.033675193786621,
+                  "target_margin_delta_vs_zero": -1.3800441324710846,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 2.025087594985962,
+                  "mean_target_margin": -1.8835443258285522,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6167343854904175,
+                      1.2668099403381348
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -1.8835443258285522
+                  ],
+                  "loss_delta_vs_zero": 0.8419831991195679,
+                  "target_margin_delta_vs_zero": -1.0661935210227966,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 9.999993054623832e-05,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9386672973632812,
+                  "mean_target_margin": -0.44248589873313904,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3940104842185974,
+                      0.048475414514541626
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.44248589873313904
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.183104395866394,
+                  "mean_target_margin": -0.8173508048057556,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5686444640159607,
+                      0.24870635569095612
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8173508048057556
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000000844316412,
+              "realized_relative_rms": 0.0010000215813859342,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9386672973632812,
+                  "mean_target_margin": -0.44248589873313904,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3940104842185974,
+                      0.048475414514541626
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.44248589873313904
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.183104395866394,
+                  "mean_target_margin": -0.8173508048057556,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5686444640159607,
+                      0.24870635569095612
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.8173508048057556
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.0057008373076456705,
+              "realized_relative_rms": 0.005700828745100073,
+              "realized_relative_max_abs": 0.005700880481350807,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.0693804025650024,
+                  "mean_target_margin": -0.6489726901054382,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5313032269477844,
+                      0.1176694706082344
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.6489726901054382
+                  ],
+                  "loss_delta_vs_zero": 0.1307131052017212,
+                  "target_margin_delta_vs_zero": -0.2064867913722992,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.1298413276672363,
+                  "mean_target_margin": -0.7396324276924133,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.568255603313446,
+                      0.17137682437896729
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.7396324276924133
+                  ],
+                  "loss_delta_vs_zero": -0.053263068199157715,
+                  "target_margin_delta_vs_zero": 0.07771837711334229,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.021465441179180818,
+              "realized_relative_rms": 0.021465424494528,
+              "realized_relative_max_abs": 0.021465477576622597,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 1.0328586101531982,
+                  "mean_target_margin": -0.5928210616111755,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.24459539353847504,
+                      0.3482256829738617
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5928210616111755
+                  ],
+                  "loss_delta_vs_zero": 0.09419131278991699,
+                  "target_margin_delta_vs_zero": -0.1503351628780365,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 1.0923488140106201,
+                  "mean_target_margin": -0.6837371587753296,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3247380256652832,
+                      0.358999103307724
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.6837371587753296
+                  ],
+                  "loss_delta_vs_zero": -0.09075558185577393,
+                  "target_margin_delta_vs_zero": 0.13361364603042603,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 0.000787637778557837,
+            "rms_finite": 8.915072612580843e-06
+          },
+          "relative_gradient_rms": 8.096164388428232e-05,
+          "status": "complete"
+        }
+      },
+      "relative_direction_cosines": {
+        "baseline|narrow_detached": -3.982663919763186e-05
+      }
+    },
+    {
+      "trial_start": 6,
+      "cues": [
+        0
+      ],
+      "targets": [
+        1
+      ],
+      "variants": {
+        "baseline": {
+          "specification": {
+            "surrogate_slope": 1.0,
+            "detach_reset": false
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.2774640619754791,
+              "mean_target_margin": 1.1401259899139404,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.5846744775772095,
+                  0.555451512336731
+                ]
+              ],
+              "decision_target_margins": [
+                1.1401259899139404
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.32223543524742126,
+              "mean_target_margin": 0.9670321941375732,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.37179163098335266,
+                  0.5952405333518982
+                ]
+              ],
+              "decision_target_margins": [
+                0.9670321941375732
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000002655845371,
+              "realized_relative_max_abs": 0.0549092148289536,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9444343447685242,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.35905611515045166,
+                  "mean_target_margin": 0.839382529258728,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.555992603302002,
+                      0.28338995575904846
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.839382529258728
+                  ],
+                  "loss_delta_vs_zero": 0.08159205317497253,
+                  "target_margin_delta_vs_zero": -0.3007434606552124,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.36655521392822266,
+                  "mean_target_margin": 0.8147363662719727,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2875892221927643,
+                      0.5271471738815308
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8147363662719727
+                  ],
+                  "loss_delta_vs_zero": 0.04431977868080139,
+                  "target_margin_delta_vs_zero": -0.15229582786560059,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000000000225438,
+              "realized_relative_max_abs": 0.5490920615918709,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8946801424026489,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.4576983153820038,
+                  "mean_target_margin": 0.5439822673797607,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.18080741167068481,
+                      0.3631748855113983
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.5439822673797607
+                  ],
+                  "loss_delta_vs_zero": 0.18023425340652466,
+                  "target_margin_delta_vs_zero": -0.5961437225341797,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.2778807282447815,
+                  "mean_target_margin": 1.1384074687957764,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4751146733760834,
+                      0.6632928252220154
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1384074687957764
+                  ],
+                  "loss_delta_vs_zero": -0.04435470700263977,
+                  "target_margin_delta_vs_zero": 0.17137527465820312,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.005842755047798737,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.689755663392134e-05,
+              "unchanged_fraction": 0.8376275300979614,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.318139910697937,
+                  "mean_target_margin": 0.9819803237915039,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.621486246585846,
+                      0.36049407720565796
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9819803237915039
+                  ],
+                  "loss_delta_vs_zero": 0.040675848722457886,
+                  "target_margin_delta_vs_zero": -0.15814566612243652,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.3364250361919403,
+                  "mean_target_margin": 0.9164559841156006,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4966055750846863,
+                      0.4198504388332367
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9164559841156006
+                  ],
+                  "loss_delta_vs_zero": 0.014189600944519043,
+                  "target_margin_delta_vs_zero": -0.050576210021972656,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.01703930467637163,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0001702753797871992,
+              "unchanged_fraction": 0.7898074388504028,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.43565869331359863,
+                  "mean_target_margin": 0.6051709651947021,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.24409298598766327,
+                      0.3610779643058777
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.6051709651947021
+                  ],
+                  "loss_delta_vs_zero": 0.1581946313381195,
+                  "target_margin_delta_vs_zero": -0.5349550247192383,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4027705192565918,
+                  "mean_target_margin": 0.7012526988983154,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.1896747648715973,
+                      0.5115779042243958
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.7012526988983154
+                  ],
+                  "loss_delta_vs_zero": 0.08053508400917053,
+                  "target_margin_delta_vs_zero": -0.2657794952392578,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.00010000001308586547,
+              "realized_relative_max_abs": 0.0549092148289536,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9445318579673767,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.37497371435165405,
+                  "mean_target_margin": 0.7875605821609497,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.31032079458236694,
+                      0.47723981738090515
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.7875605821609497
+                  ],
+                  "loss_delta_vs_zero": 0.09750965237617493,
+                  "target_margin_delta_vs_zero": -0.3525654077529907,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.34668365120887756,
+                  "mean_target_margin": 0.8809977769851685,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.36386698484420776,
+                      0.5171307921409607
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8809977769851685
+                  ],
+                  "loss_delta_vs_zero": 0.0244482159614563,
+                  "target_margin_delta_vs_zero": -0.08603441715240479,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.000999999985173258,
+              "realized_relative_max_abs": 0.5490920326926492,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8946138620376587,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.3668972849845886,
+                  "mean_target_margin": 0.8136218786239624,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4241124987602234,
+                      0.3895093500614166
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8136218786239624
+                  ],
+                  "loss_delta_vs_zero": 0.0894332230091095,
+                  "target_margin_delta_vs_zero": -0.326504111289978,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28723084926605225,
+                  "mean_target_margin": 1.1004183292388916,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6128169298171997,
+                      0.4876014292240143
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1004183292388916
+                  ],
+                  "loss_delta_vs_zero": -0.03500458598136902,
+                  "target_margin_delta_vs_zero": 0.13338613510131836,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.00584275502206348,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 1.689755663392134e-05,
+              "unchanged_fraction": 0.8374026417732239,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.34541308879852295,
+                  "mean_target_margin": 0.8853411674499512,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4058804512023926,
+                      0.4794606864452362
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8853411674499512
+                  ],
+                  "loss_delta_vs_zero": 0.06794902682304382,
+                  "target_margin_delta_vs_zero": -0.25478482246398926,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.29447564482688904,
+                  "mean_target_margin": 1.0717105865478516,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6944409608840942,
+                      0.3772696852684021
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0717105865478516
+                  ],
+                  "loss_delta_vs_zero": -0.027759790420532227,
+                  "target_margin_delta_vs_zero": 0.10467839241027832,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.017039304694139196,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.0001702753797871992,
+              "unchanged_fraction": 0.7898321151733398,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.3431480824947357,
+                  "mean_target_margin": 0.8931176662445068,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.4359125792980194,
+                      0.4572050869464874
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8931176662445068
+                  ],
+                  "loss_delta_vs_zero": 0.06568402051925659,
+                  "target_margin_delta_vs_zero": -0.2470083236694336,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.22599412500858307,
+                  "mean_target_margin": 1.372122049331665,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6917589902877808,
+                      0.680363118648529
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.372122049331665
+                  ],
+                  "loss_delta_vs_zero": -0.0962413102388382,
+                  "target_margin_delta_vs_zero": 0.4050898551940918,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.00010000002655845371,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.2774640619754791,
+                  "mean_target_margin": 1.1401259899139404,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5846744775772095,
+                      0.555451512336731
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1401259899139404
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28949540853500366,
+                  "mean_target_margin": 1.0913786888122559,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6087315678596497,
+                      0.4826471209526062
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0913786888122559
+                  ],
+                  "loss_delta_vs_zero": -0.0327400267124176,
+                  "target_margin_delta_vs_zero": 0.12434649467468262,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000000000225438,
+              "realized_relative_rms": 0.001000021653719579,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.47864145040512085,
+                  "mean_target_margin": 0.48795512318611145,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.250349223613739,
+                      0.23760589957237244
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.48795512318611145
+                  ],
+                  "loss_delta_vs_zero": 0.20117738842964172,
+                  "target_margin_delta_vs_zero": -0.652170866727829,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28529736399650574,
+                  "mean_target_margin": 1.1081852912902832,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.586518406867981,
+                      0.5216668844223022
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1081852912902832
+                  ],
+                  "loss_delta_vs_zero": -0.03693807125091553,
+                  "target_margin_delta_vs_zero": 0.14115309715270996,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.005842755047798737,
+              "realized_relative_rms": 0.005842779888380075,
+              "realized_relative_max_abs": 0.005842859604779412,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.363159716129303,
+                  "mean_target_margin": 0.8258435726165771,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.43279972672462463,
+                      0.3930438458919525
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.8258435726165771
+                  ],
+                  "loss_delta_vs_zero": 0.08569565415382385,
+                  "target_margin_delta_vs_zero": -0.3142824172973633,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28287971019744873,
+                  "mean_target_margin": 1.1179615259170532,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6759304404258728,
+                      0.44203105568885803
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1179615259170532
+                  ],
+                  "loss_delta_vs_zero": -0.039355725049972534,
+                  "target_margin_delta_vs_zero": 0.15092933177947998,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.01703930467637163,
+              "realized_relative_rms": 0.01703929934291097,
+              "realized_relative_max_abs": 0.01703935510971967,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.3079826533794403,
+                  "mean_target_margin": 1.0197714567184448,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.638445258140564,
+                      0.38132622838020325
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0197714567184448
+                  ],
+                  "loss_delta_vs_zero": 0.03051859140396118,
+                  "target_margin_delta_vs_zero": -0.1203545331954956,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.30063262581825256,
+                  "mean_target_margin": 1.0477869510650635,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6125271916389465,
+                      0.43525978922843933
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0477869510650635
+                  ],
+                  "loss_delta_vs_zero": -0.0216028094291687,
+                  "target_margin_delta_vs_zero": 0.08075475692749023,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 60.98835754394531,
+            "rms_finite": 0.3516944348812103
+          },
+          "relative_gradient_rms": 2.8982838747697635,
+          "status": "complete"
+        },
+        "narrow_detached": {
+          "specification": {
+            "surrogate_slope": 25.0,
+            "detach_reset": true
+          },
+          "zero": {
+            "direction_noise": {
+              "loss": 0.2774640619754791,
+              "mean_target_margin": 1.1401259899139404,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.5846744775772095,
+                  0.555451512336731
+                ]
+              ],
+              "decision_target_margins": [
+                1.1401259899139404
+              ]
+            },
+            "independent_training_noise": {
+              "loss": 0.32223543524742126,
+              "mean_target_margin": 0.9670321941375732,
+              "accuracy": 1.0,
+              "decision_scores_right_left": [
+                [
+                  -0.37179163098335266,
+                  0.5952405333518982
+                ]
+              ],
+              "decision_target_margins": [
+                0.9670321941375732
+              ]
+            }
+          },
+          "proposals": [
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 0.0001000000298066408,
+              "realized_relative_max_abs": 0.028247024073745266,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9434633851051331,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.2703373432159424,
+                  "mean_target_margin": 1.169872522354126,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5849794149398804,
+                      0.5848931670188904
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.169872522354126
+                  ],
+                  "loss_delta_vs_zero": -0.007126718759536743,
+                  "target_margin_delta_vs_zero": 0.029746532440185547,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.31417447328567505,
+                  "mean_target_margin": 0.9966102838516235,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3788219392299652,
+                      0.6177883148193359
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9966102838516235
+                  ],
+                  "loss_delta_vs_zero": -0.008060961961746216,
+                  "target_margin_delta_vs_zero": 0.029578089714050293,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.0010000000957006803,
+              "realized_relative_max_abs": 0.28246993247908775,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8821174502372742,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.2580488920211792,
+                  "mean_target_margin": 1.222808599472046,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6255747079849243,
+                      0.5972338914871216
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.222808599472046
+                  ],
+                  "loss_delta_vs_zero": -0.019415169954299927,
+                  "target_margin_delta_vs_zero": 0.08268260955810547,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.3222532272338867,
+                  "mean_target_margin": 0.9669677019119263,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.468311071395874,
+                      0.49865663051605225
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9669677019119263
+                  ],
+                  "loss_delta_vs_zero": 1.77919864654541e-05,
+                  "target_margin_delta_vs_zero": -6.449222564697266e-05,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.007912075316384931,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 2.2096804968896322e-05,
+              "unchanged_fraction": 0.8075823187828064,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.2000855952501297,
+                  "mean_target_margin": 1.507299780845642,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.8564395904541016,
+                      0.6508601903915405
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.507299780845642
+                  ],
+                  "loss_delta_vs_zero": -0.07737846672534943,
+                  "target_margin_delta_vs_zero": 0.36717379093170166,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.23894084990024567,
+                  "mean_target_margin": 1.3096908330917358,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6112104058265686,
+                      0.6984804272651672
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.3096908330917358
+                  ],
+                  "loss_delta_vs_zero": -0.0832945853471756,
+                  "target_margin_delta_vs_zero": 0.3426586389541626,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "negative_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.02366622519512948,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00036004793946631253,
+              "unchanged_fraction": 0.7531033158302307,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.13441672921180725,
+                  "mean_target_margin": 1.9388492107391357,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.9863357543945312,
+                      0.9525134563446045
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.9388492107391357
+                  ],
+                  "loss_delta_vs_zero": -0.14304733276367188,
+                  "target_margin_delta_vs_zero": 0.7987232208251953,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.18436583876609802,
+                  "mean_target_margin": 1.5972344875335693,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.835025429725647,
+                      0.7622091174125671
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.5972344875335693
+                  ],
+                  "loss_delta_vs_zero": -0.13786959648132324,
+                  "target_margin_delta_vs_zero": 0.6302022933959961,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001,
+              "realized_relative_rms": 9.999999182546428e-05,
+              "realized_relative_max_abs": 0.028247024073745266,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.9432788491249084,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.27339276671409607,
+                  "mean_target_margin": 1.1570372581481934,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5895143151283264,
+                      0.5675228834152222
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1570372581481934
+                  ],
+                  "loss_delta_vs_zero": -0.004071295261383057,
+                  "target_margin_delta_vs_zero": 0.01691126823425293,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.3255350589752197,
+                  "mean_target_margin": 0.9551060199737549,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.3621273934841156,
+                      0.5929786562919617
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.9551060199737549
+                  ],
+                  "loss_delta_vs_zero": 0.003299623727798462,
+                  "target_margin_delta_vs_zero": -0.01192617416381836,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.001,
+              "realized_relative_rms": 0.001000000077876707,
+              "realized_relative_max_abs": 0.28247000954367896,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.8825464248657227,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.43185359239578247,
+                  "mean_target_margin": 0.615983247756958,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.35399526357650757,
+                      0.2619880139827728
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.615983247756958
+                  ],
+                  "loss_delta_vs_zero": 0.15438953042030334,
+                  "target_margin_delta_vs_zero": -0.5241427421569824,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.4067850708961487,
+                  "mean_target_margin": 0.689192533493042,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2568003833293915,
+                      0.4323921501636505
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.689192533493042
+                  ],
+                  "loss_delta_vs_zero": 0.08454963564872742,
+                  "target_margin_delta_vs_zero": -0.27783966064453125,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.01,
+              "realized_relative_rms": 0.007912075334685893,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 2.2096804968896322e-05,
+              "unchanged_fraction": 0.8073315024375916,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.5460582375526428,
+                  "mean_target_margin": 0.3196069896221161,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.05670500174164772,
+                      0.26290199160575867
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.3196069896221161
+                  ],
+                  "loss_delta_vs_zero": 0.2685941755771637,
+                  "target_margin_delta_vs_zero": -0.8205190002918243,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.5408836603164673,
+                  "mean_target_margin": 0.3319489657878876,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.30570268630981445,
+                      0.026246272027492523
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.3319489657878876
+                  ],
+                  "loss_delta_vs_zero": 0.21864822506904602,
+                  "target_margin_delta_vs_zero": -0.6350832283496857,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "positive_gradient",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.1,
+              "realized_relative_rms": 0.023666225206967633,
+              "realized_relative_max_abs": 1.0,
+              "projected_fraction": 0.00036004793946631253,
+              "unchanged_fraction": 0.7529265284538269,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.9963275194168091,
+                  "mean_target_margin": -0.5355088710784912,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.4031113386154175,
+                      -0.13239753246307373
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.5355088710784912
+                  ],
+                  "loss_delta_vs_zero": 0.71886345744133,
+                  "target_margin_delta_vs_zero": -1.6756348609924316,
+                  "accuracy_delta_vs_zero": -1.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.9145206212997437,
+                  "mean_target_margin": -0.40251317620277405,
+                  "accuracy": 0.0,
+                  "decision_scores_right_left": [
+                    [
+                      0.4292978048324585,
+                      0.026784623041749
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    -0.40251317620277405
+                  ],
+                  "loss_delta_vs_zero": 0.5922851860523224,
+                  "target_margin_delta_vs_zero": -1.3695453703403473,
+                  "accuracy_delta_vs_zero": -1.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.0001,
+              "requested_relative_rms": 0.0001000000298066408,
+              "realized_relative_rms": 0.00010001191644166695,
+              "realized_relative_max_abs": 0.00010007057965573014,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.2774640619754791,
+                  "mean_target_margin": 1.1401259899139404,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5846744775772095,
+                      0.555451512336731
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1401259899139404
+                  ],
+                  "loss_delta_vs_zero": 0.0,
+                  "target_margin_delta_vs_zero": 0.0,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28949540853500366,
+                  "mean_target_margin": 1.0913786888122559,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.6087315678596497,
+                      0.4826471209526062
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0913786888122559
+                  ],
+                  "loss_delta_vs_zero": -0.0327400267124176,
+                  "target_margin_delta_vs_zero": 0.12434649467468262,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.001,
+              "requested_relative_rms": 0.0010000000957006803,
+              "realized_relative_rms": 0.001000021653719579,
+              "realized_relative_max_abs": 0.0010001012521196706,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.47864145040512085,
+                  "mean_target_margin": 0.48795512318611145,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.250349223613739,
+                      0.23760589957237244
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.48795512318611145
+                  ],
+                  "loss_delta_vs_zero": 0.20117738842964172,
+                  "target_margin_delta_vs_zero": -0.652170866727829,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.28529736399650574,
+                  "mean_target_margin": 1.1081852912902832,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.586518406867981,
+                      0.5216668844223022
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.1081852912902832
+                  ],
+                  "loss_delta_vs_zero": -0.03693807125091553,
+                  "target_margin_delta_vs_zero": 0.14115309715270996,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.01,
+              "requested_relative_rms": 0.007912075316384931,
+              "realized_relative_rms": 0.007912064856722054,
+              "realized_relative_max_abs": 0.007912153764204545,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.48007482290267944,
+                  "mean_target_margin": 0.48419129848480225,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.2713911533355713,
+                      0.21280016005039215
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    0.48419129848480225
+                  ],
+                  "loss_delta_vs_zero": 0.20261076092720032,
+                  "target_margin_delta_vs_zero": -0.6559346914291382,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.2562410831451416,
+                  "mean_target_margin": 1.2307817935943604,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.665355384349823,
+                      0.5654264688491821
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.2307817935943604
+                  ],
+                  "loss_delta_vs_zero": -0.06599435210227966,
+                  "target_margin_delta_vs_zero": 0.2637495994567871,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            },
+            {
+              "direction": "random",
+              "comparison_step": 0.1,
+              "requested_relative_rms": 0.02366622519512948,
+              "realized_relative_rms": 0.02366623076202058,
+              "realized_relative_max_abs": 0.02366632199754902,
+              "projected_fraction": 0.0,
+              "unchanged_fraction": 0.0,
+              "replays": {
+                "direction_noise": {
+                  "loss": 0.29410988092422485,
+                  "mean_target_margin": 1.0731455087661743,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5754284262657166,
+                      0.49771708250045776
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.0731455087661743
+                  ],
+                  "loss_delta_vs_zero": 0.016645818948745728,
+                  "target_margin_delta_vs_zero": -0.06698048114776611,
+                  "accuracy_delta_vs_zero": 0.0
+                },
+                "independent_training_noise": {
+                  "loss": 0.299369752407074,
+                  "mean_target_margin": 1.052659511566162,
+                  "accuracy": 1.0,
+                  "decision_scores_right_left": [
+                    [
+                      -0.5631831288337708,
+                      0.4894763231277466
+                    ]
+                  ],
+                  "decision_target_margins": [
+                    1.052659511566162
+                  ],
+                  "loss_delta_vs_zero": -0.02286568284034729,
+                  "target_margin_delta_vs_zero": 0.08562731742858887,
+                  "accuracy_delta_vs_zero": 0.0
+                }
+              }
+            }
+          ],
+          "gradient": {
+            "nonfinite": 0,
+            "max_abs_finite": 0.0005754110170528293,
+            "rms_finite": 6.370976734615397e-06
+          },
+          "relative_gradient_rms": 4.401304589026582e-05,
+          "status": "complete"
+        }
+      },
+      "relative_direction_cosines": {
+        "baseline|narrow_detached": -0.002022907325610831
+      }
+    }
+  ],
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_bptt_direction_seed2-mapping1-20260927_20260927T183109Z_53ee35a0.json",
+  "status": "complete",
+  "peak_allocated_mib": 2182.89111328125,
+  "peak_reserved_mib": 3464.0,
+  "seconds": 36.76479802999984
+}

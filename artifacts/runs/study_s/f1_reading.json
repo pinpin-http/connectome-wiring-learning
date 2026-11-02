@@ -1,0 +1,69 @@
+{
+ "what": "Study S F1 reading (declared 2026-10-12 06:10 UTC)",
+ "tasks": {
+  "where": {
+   "connectome_rep1": 0.403,
+   "connectome_orig": 0.4032,
+   "nulls_rep1": {
+    "nulllat0": 0.2667,
+    "nulllat1": 0.2479,
+    "nulllat2": 0.2286,
+    "nulllat3": 0.2768,
+    "nullin0": 0.2628,
+    "nullin1": 0.2566,
+    "nullin2": 0.2908,
+    "nullin3": 0.3128
+   },
+   "null_shift_rep1_minus_orig": {
+    "nulllat0": 0.0166,
+    "nulllat1": 0.0093,
+    "nulllat2": -0.0259,
+    "nulllat3": 0.0084,
+    "nullin0": -0.0219,
+    "nullin1": -0.0327,
+    "nullin2": 0.0283,
+    "nullin3": 0.0045
+   },
+   "mean_abs_shift": 0.0184,
+   "max_null_rep1": 0.3128,
+   "z_vs_original_nulls": {
+    "b": 9.46,
+    "c": 6.43
+   },
+   "n_null_reps": 8,
+   "replicates": true
+  },
+  "loom": {
+   "connectome_rep1": 0.4502,
+   "connectome_orig": 0.4726,
+   "nulls_rep1": {
+    "nulllat0": 0.2828,
+    "nulllat1": 0.2634,
+    "nulllat2": 0.2848,
+    "nulllat3": 0.2732,
+    "nullin0": 0.3042,
+    "nullin1": 0.2615,
+    "nullin2": 0.2959,
+    "nullin3": 0.3432
+   },
+   "null_shift_rep1_minus_orig": {
+    "nulllat0": 0.0125,
+    "nulllat1": -0.0213,
+    "nulllat2": -0.0098,
+    "nulllat3": -0.0266,
+    "nullin0": -0.0068,
+    "nullin1": -0.0142,
+    "nullin2": -0.0263,
+    "nullin3": 0.0207
+   },
+   "mean_abs_shift": 0.0173,
+   "max_null_rep1": 0.3432,
+   "z_vs_original_nulls": {
+    "b": 9.36,
+    "c": 7.26
+   },
+   "n_null_reps": 8,
+   "replicates": true
+  }
+ }
+}

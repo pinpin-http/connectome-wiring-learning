@@ -1,0 +1,167 @@
+......................s................................................F [ 55%]
+F.........................................................               [100%]
+=================================== FAILURES ===================================
+______________________ test_reset_info_matches_step_info _______________________
+
+game = 'SuperMarioBros-Nes', state = 'Level1-1'
+inttype = <Integrations.ALL: 15>
+kwargs = {'use_restricted_actions': <Actions.ALL: 0>, 'render_mode': None}
+
+    def make(
+        game,
+        state=State.DEFAULT,
+        inttype=stable_retro.data.Integrations.DEFAULT,
+        **kwargs,
+    ):
+        """Create and return a ``RetroEnv`` for the requested game and options."""
+        try:
+>           stable_retro.data.get_romfile_path(game, inttype)
+
+.venv/lib/python3.11/site-packages/stable_retro/__init__.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+game = 'SuperMarioBros-Nes', inttype = <Integrations.ALL: 15>
+
+    def get_romfile_path(game, inttype=Integrations.DEFAULT):
+        """
+        Return the path to a given game's romfile
+        """
+        for extension in EMU_EXTENSIONS.keys():
+            possible_path = get_file_path(game, "rom" + extension, inttype)
+            if possible_path:
+                return possible_path
+    
+>       raise FileNotFoundError(f"No romfiles found for game: {game}")
+E       FileNotFoundError: No romfiles found for game: SuperMarioBros-Nes
+
+.venv/lib/python3.11/site-packages/stable_retro/data/__init__.py:340: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.mark.skipif(not _rom_present(), reason="needs the game ROM")
+    def test_reset_info_matches_step_info():
+        """`reset()` must report the same RAM fields as `step()`.
+    
+        stable-retro returns an empty info dict from reset. Passing that through
+        made `info["mario_x"]` None on the first decision of every episode; cast
+        into a float array it became NaN, and a single NaN turns np.median into
+        NaN, so `x > median(x)` was False everywhere. Gate F's positive control
+        died on "the data contains only one class" -- a statistic poisoned three
+        steps upstream, not a broken classifier.
+        """
+        from flymario.env.retro_env import EnvConfig, MarioEnv
+    
+>       env = MarioEnv(EnvConfig())
+              ^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_env.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/flymario/env/retro_env.py:90: in __init__
+    self.env = retro.make(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+game = 'SuperMarioBros-Nes', state = 'Level1-1'
+inttype = <Integrations.ALL: 15>
+kwargs = {'use_restricted_actions': <Actions.ALL: 0>, 'render_mode': None}
+
+    def make(
+        game,
+        state=State.DEFAULT,
+        inttype=stable_retro.data.Integrations.DEFAULT,
+        **kwargs,
+    ):
+        """Create and return a ``RetroEnv`` for the requested game and options."""
+        try:
+            stable_retro.data.get_romfile_path(game, inttype)
+        except FileNotFoundError:
+            if not stable_retro.data.get_file_path(game, "rom.sha", inttype):
+                raise
+            else:
+>               raise FileNotFoundError(
+                    f"Game not found: {game}. Did you make sure to import the ROM?",
+                )
+E               FileNotFoundError: Game not found: SuperMarioBros-Nes. Did you make sure to import the ROM?
+
+.venv/lib/python3.11/site-packages/stable_retro/__init__.py:69: FileNotFoundError
+__________________ test_first_step_earns_no_phantom_progress ___________________
+
+game = 'SuperMarioBros-Nes', state = 'Level1-1'
+inttype = <Integrations.ALL: 15>
+kwargs = {'use_restricted_actions': <Actions.ALL: 0>, 'render_mode': None}
+
+    def make(
+        game,
+        state=State.DEFAULT,
+        inttype=stable_retro.data.Integrations.DEFAULT,
+        **kwargs,
+    ):
+        """Create and return a ``RetroEnv`` for the requested game and options."""
+        try:
+>           stable_retro.data.get_romfile_path(game, inttype)
+
+.venv/lib/python3.11/site-packages/stable_retro/__init__.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+game = 'SuperMarioBros-Nes', inttype = <Integrations.ALL: 15>
+
+    def get_romfile_path(game, inttype=Integrations.DEFAULT):
+        """
+        Return the path to a given game's romfile
+        """
+        for extension in EMU_EXTENSIONS.keys():
+            possible_path = get_file_path(game, "rom" + extension, inttype)
+            if possible_path:
+                return possible_path
+    
+>       raise FileNotFoundError(f"No romfiles found for game: {game}")
+E       FileNotFoundError: No romfiles found for game: SuperMarioBros-Nes
+
+.venv/lib/python3.11/site-packages/stable_retro/data/__init__.py:340: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.mark.skipif(not _rom_present(), reason="needs the game ROM")
+    def test_first_step_earns_no_phantom_progress():
+        """The progress baseline starts where Mario stands, not at zero.
+    
+        It used to be seeded from reset's empty info, i.e. progress 0 while Mario
+        is really at x=40, so every episode handed out a free +40 of "forward
+        progress" on its first step regardless of the action taken.
+        """
+        from flymario.env.retro_env import EnvConfig, MarioEnv
+    
+>       env = MarioEnv(EnvConfig())
+              ^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_env.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/flymario/env/retro_env.py:90: in __init__
+    self.env = retro.make(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+game = 'SuperMarioBros-Nes', state = 'Level1-1'
+inttype = <Integrations.ALL: 15>
+kwargs = {'use_restricted_actions': <Actions.ALL: 0>, 'render_mode': None}
+
+    def make(
+        game,
+        state=State.DEFAULT,
+        inttype=stable_retro.data.Integrations.DEFAULT,
+        **kwargs,
+    ):
+        """Create and return a ``RetroEnv`` for the requested game and options."""
+        try:
+            stable_retro.data.get_romfile_path(game, inttype)
+        except FileNotFoundError:
+            if not stable_retro.data.get_file_path(game, "rom.sha", inttype):
+                raise
+            else:
+>               raise FileNotFoundError(
+                    f"Game not found: {game}. Did you make sure to import the ROM?",
+                )
+E               FileNotFoundError: Game not found: SuperMarioBros-Nes. Did you make sure to import the ROM?
+
+.venv/lib/python3.11/site-packages/stable_retro/__init__.py:69: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/unit/test_env.py::test_reset_info_matches_step_info - FileNotFou...
+FAILED tests/unit/test_env.py::test_first_step_earns_no_phantom_progress - Fi...

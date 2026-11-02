@@ -1,0 +1,11 @@
+# PyTorch for this machine: AMD Radeon RX 9060 XT (gfx1200), ROCm 7.2.
+# There is no CUDA here, so CuPy-based connectome code found online will not run.
+#
+#   uv pip install --python .venv/bin/python \
+#       --index-url https://download.pytorch.org/whl/rocm6.4 -r requirements-gpu.txt
+#
+# Optional: CPU already does 4.2 ms/frame on the full graph. The GPU buys finer
+# neural time resolution (1.4 ms/tick vs 6.3 ms), not feasibility.
+# Launch with HSA_OVERRIDE_GFX_VERSION=12.0.0 if ROCm does not detect gfx1200.
+pytorch-triton-rocm==3.5.1
+torch==2.9.1

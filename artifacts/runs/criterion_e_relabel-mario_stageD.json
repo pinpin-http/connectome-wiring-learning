@@ -1,0 +1,32 @@
+{
+ "what": "criterion-E style re-analysis with ground-threat / obstacle / clear frames (exploratory)",
+ "n_frames": {
+  "threat": 168,
+  "obstacle": 240,
+  "clear": 240
+ },
+ "results": {
+  "mario_stageD:tko2_ro1": {
+   "q_threat": -0.2432,
+   "q_obstacle": -0.1941,
+   "q_clear": -0.3476,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageD:tko2_ro2": {
+   "q_threat": -0.3065,
+   "q_obstacle": -0.2753,
+   "q_clear": -0.356,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageD:tko2_ro3": {
+   "q_threat": -0.112,
+   "q_obstacle": -0.1095,
+   "q_clear": -0.2541,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  }
+ },
+ "utc": "2026-10-06T17:11:28+00:00"
+}

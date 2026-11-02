@@ -1,0 +1,11 @@
+2026-10-20T12:55:35+00:00 start connectome learners=24 blocks=['b0', 'b1', 'b2', 'b3', 'b4', 'b5'] kinds=main stop_at=None
+/workspace/SMB_Flywire_Speedrun_ec/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+2026-10-20T12:56:08+00:00 connectome k=0 eval 25.9s
+2026-10-20T12:57:02+00:00 connectome k=250 eval 25.7s
+2026-10-20T12:57:56+00:00 connectome k=500 eval 25.9s
+2026-10-20T12:59:18+00:00 connectome k=1000 eval 25.7s
+2026-10-20T13:01:36+00:00 connectome k=2000 eval 25.7s
+2026-10-20T13:05:45+00:00 connectome k=4000 eval 25.7s
+2026-10-20T13:09:55+00:00 connectome k=6000 eval 25.7s
+2026-10-20T13:12:03+00:00 end k=6000 complete=True wall=987.0s train_step_median=0.1117943525314331

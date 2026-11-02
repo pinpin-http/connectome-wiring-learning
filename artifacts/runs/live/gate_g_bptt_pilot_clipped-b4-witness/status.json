@@ -1,0 +1,45 @@
+{
+  "name": "gate_g_bptt_pilot_clipped-b4-witness",
+  "state": "stopped",
+  "pid": 4457,
+  "unit": "model",
+  "completed": 2,
+  "total": 8,
+  "started": "2026-09-26T20:41:53+00:00",
+  "heartbeat": "2026-09-26T21:37:22+00:00",
+  "heartbeat_unix": 1790458642.117984,
+  "seconds_per_step": 1631.4215214252472,
+  "eta_seconds": 9723.2583796978,
+  "eta_note": null,
+  "seconds_per_kind": {},
+  "current": null,
+  "sub_progress": null,
+  "step_elapsed": 65.27075171470642,
+  "checkpoints": 0,
+  "last_checkpoint": null,
+  "last_results": [
+    {
+      "label": "pilot lr=0.0001",
+      "at": "2026-09-26T21:09:05+00:00",
+      "lr": 0.0001,
+      "accuracy_last_100": 0.47999998927116394
+    },
+    {
+      "label": "pilot lr=0.001",
+      "at": "2026-09-26T21:36:16+00:00",
+      "lr": 0.001,
+      "accuracy_last_100": 0.5199999809265137
+    }
+  ],
+  "meta": {
+    "question": "Can the fixed-readout task be controlled by training exactly the allowed motor edges?",
+    "method": "Hard-spike forward dynamics with surrogate BPTT and projected Adam; same fixed readout and incoming-motor-edge mask as Gate G."
+  },
+  "charts": {},
+  "tasks": {},
+  "images": [],
+  "control": {
+    "stop": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness/STOP",
+    "checkpoint": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/live/gate_g_bptt_pilot_clipped-b4-witness/CHECKPOINT"
+  }
+}

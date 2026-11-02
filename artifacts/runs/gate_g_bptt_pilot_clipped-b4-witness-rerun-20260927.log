@@ -1,0 +1,82 @@
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/training/bptt.py:82: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.Wf = torch.sparse_csr_tensor(crow, col, val, size=Wf.shape, device=self.dev)
+{
+  "what": "Gate G staged BPTT controllability witness",
+  "training_rate_selection_uses_training_only": true,
+  "seed_set": 1,
+  "readout_seed": 1610069010,
+  "mappings": [
+    0,
+    1
+  ],
+  "trials": 500,
+  "block_len": 4,
+  "gpu_duty_target": 1.0,
+  "gpu_memory_fraction": 0.5,
+  "optimizer": "projected Adam",
+  "learning_rates": {
+    "0.0001": {
+      "lr": 0.0001,
+      "mean_accuracy_last_100": 0.47999998927116394,
+      "mean_loss_last_100": 0.7522299885749817,
+      "mean_accuracy_first_100": 0.4699999988079071,
+      "seconds": 810.582765340805,
+      "peak_allocated_mib": 3578.90673828125,
+      "peak_reserved_mib": 4966.0,
+      "weights": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.0001.pt"
+    },
+    "0.001": {
+      "lr": 0.001,
+      "mean_accuracy_last_100": 0.5199999809265137,
+      "mean_loss_last_100": 0.7192879319190979,
+      "mean_accuracy_first_100": 0.49000000953674316,
+      "seconds": 815.6424462795258,
+      "peak_allocated_mib": 3579.111328125,
+      "peak_reserved_mib": 5044.0,
+      "weights": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.001.pt"
+    },
+    "0.01": {
+      "lr": 0.01,
+      "mean_accuracy_last_100": 0.46000000834465027,
+      "mean_loss_last_100": 0.7257529497146606,
+      "mean_accuracy_first_100": 0.5099999904632568,
+      "seconds": 812.1981112957001,
+      "peak_allocated_mib": 3579.111328125,
+      "peak_reserved_mib": 5044.0,
+      "weights": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/pilot_lr_0.01.pt"
+    }
+  },
+  "state_grad_clip_norm": 1000000000.0,
+  "chosen_lr": 0.001,
+  "staged_witness": {
+    "protocol_version": 1,
+    "scope": "one seed set, one readout, two mappings; no shuffled-target control; not full Gate G control",
+    "block_len": 4,
+    "state_grad_clip_norm": 1000000000.0,
+    "training_trials_per_mapping": 500,
+    "heldout_trials_per_mapping": 200,
+    "candidate_accuracy": {
+      "0": 0.5199999809265137,
+      "1": 0.4950000047683716
+    },
+    "frozen_accuracy": {
+      "0": 0.5,
+      "1": 0.5
+    },
+    "largest_binomial_se": 0.035355339059327376,
+    "pass_rule": "both mappings >=0.75 and candidate - frozen > 2 * largest binomial SE",
+    "checks": {
+      "each_mapping_at_least_0.75": false,
+      "beats_frozen_by_more_than_2u": false
+    },
+    "pass": false,
+    "map1_weights": "artifacts/runs/checkpoints/gate_g_bptt_clipped-b4-witness-rerun-20260927/staged_witness_map1.pt",
+    "map1_train_accuracy_last100": 0.49000000953674316,
+    "map1_peak_allocated_mib": 3579.111328125,
+    "map1_peak_reserved_mib": 5044.0
+  },
+  "scope": "preliminary controllability witness only; full 18-model control not run",
+  "utc": "2026-09-27T14:01:08+00:00",
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_bptt_pilot_clipped-b4-witness-rerun-20260927_20260927T130633Z_35cb947f.json"
+}

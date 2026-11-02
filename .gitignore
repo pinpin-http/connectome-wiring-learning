@@ -1,0 +1,98 @@
+# --- ROMs: NEVER commit. You must own a legal copy. ---
+roms/
+*.nes
+*.sfc
+*.md5
+
+# --- Datasets: never committed. All of it is rebuilt by
+# `make download && make build-graphs`, so the recipe is versioned, not the
+# output. data/connectome alone is ~60 MB of derived .npz. ---
+data/raw/*
+data/external/*
+data/processed/*
+data/connectome/*
+!data/**/.gitkeep
+
+
+# --- Run outputs ---
+artifacts/runs/*
+# Aggregated results behind the manuscript's tables and figures (results/README.md): small JSON,
+# versioned at the paths the manuscript cites. Stimulus caches (.npz) and checkpoints stay out.
+!artifacts/runs/study_s/
+artifacts/runs/study_s/*
+!artifacts/runs/study_s/*.json
+!artifacts/runs/mission/
+artifacts/runs/mission/**
+!artifacts/runs/mission/**/
+!artifacts/runs/mission/**/*.json
+artifacts/checkpoints/*
+artifacts/logs/*
+# null realisations: hundreds of MB each, rebuilt from a seed in ~4 min
+artifacts/cache/*
+!artifacts/**/.gitkeep
+
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- LaTeX ---
+# Report build intermediates and duplicate source bundle (keep the tracked PDF).
+paper.zip
+paper/**/*.aux
+paper/**/*.log
+paper/**/*.out
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.synctex.gz
+paper/**/*.dvi
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.toc
+
+# GPU core dumps (multi-GB)
+gpucore.*
+
+# --- deployment (deployment/README.md): local config, server reports, bundles, runs ---
+deployment/deploy.env
+deployment/state/
+deployment/CODE_VERSION.json
+artifacts/deploy/
+artifacts/deploy_runs/
+artifacts/remote/
+artifacts/rocm_reference/
+# server-side, generated or private (2026-10-19)
+.claude/
+artifacts/monitor/
+
+# RETINO_ALIGN_V1: inputs, features, decoders and predictions are large binaries kept on the server, backed up to
+# the owner's Drive (smb-backup) and archived; JSON records, figures and logs stay in git.
+artifacts/retino_align/**/*.npz
+artifacts/retino_align/**/*.part
+artifacts/activity_match/**/*.npz
+artifacts/activity_match/**/*.part
+artifacts/experience_commune_v1/**/*.npz
+artifacts/experience_commune_v1/**/*.pt
+artifacts/experience_commune_v1/**/*.part
+artifacts/cache
+data/connectome/malecns*
+# REVISION48 outputs and setup data: on the Drive, never in git (2026-10-24)
+artifacts/revision48/*
+# ...except the campaign's aggregated analysis (tables, report, figures; ~6 MB), which the manuscript's
+# tables and figures are computed from (results/README.md). Imported 2026-11-02 from the owner's archive.
+!artifacts/revision48/analysis/
+# post hoc ceiling-sensitivity analysis of 2026-11-02 (docs/REVISION_UNSATURATED.md)
+!artifacts/revision48/unsaturated/
+# the sealed tuning selection (SHA-256 in results/SHA256SUMS.revision48-freeze-20261024)
+!artifacts/revision48/tuning/
+artifacts/revision48/tuning/*
+!artifacts/revision48/tuning/selection.json
+# local state of the ClaudePrism editor (build folder, edit history)
+paper/.prism/
+paper/.claudeprism/
+# figures written by make figures (scripts/figures/)
+artifacts/figures/

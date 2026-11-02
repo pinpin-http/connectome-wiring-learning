@@ -1,0 +1,26 @@
+{
+ "what": "criterion E (stageC), PERCEPTION_CREDIT_STUDY \u00a75",
+ "E_min": 0.05,
+ "checkpoint": "mario_stageC_40k.pt",
+ "trained_decisions": 40000,
+ "n_frames": 285,
+ "results": {
+  "tko_ro1": {
+   "E": 0.1719,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "tko_ro2": {
+   "E": 0.2073,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "tko_ro3": {
+   "E": 0.0251,
+   "p_greater": 0.0,
+   "pass": false
+  }
+ },
+ "tko_passing": 2,
+ "utc": "2026-10-05T16:02:44+00:00"
+}

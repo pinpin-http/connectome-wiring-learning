@@ -1,0 +1,95 @@
+{
+ "what": "criterion-E style re-analysis with ground-threat / obstacle / clear frames (exploratory)",
+ "n_frames": {
+  "threat": 168,
+  "obstacle": 240,
+  "clear": 240
+ },
+ "results": {
+  "mario_stageB:tfull_ro1": {
+   "q_threat": 0.1156,
+   "q_obstacle": 0.1696,
+   "q_clear": -0.0445,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageB:tfull_ro2": {
+   "q_threat": 0.081,
+   "q_obstacle": 0.1648,
+   "q_clear": -0.0383,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageB:tfull_ro3": {
+   "q_threat": 0.0731,
+   "q_obstacle": 0.0956,
+   "q_clear": -0.059,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageC_40k:tko_ro1": {
+   "q_threat": 0.1111,
+   "q_obstacle": 0.1976,
+   "q_clear": -0.0543,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageC_40k:tko_ro2": {
+   "q_threat": 0.1672,
+   "q_obstacle": 0.2619,
+   "q_clear": -0.0029,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_stageC_40k:tko_ro3": {
+   "q_threat": -0.3414,
+   "q_obstacle": -0.308,
+   "q_clear": -0.343,
+   "p_threat_gt_clear": 0.14401,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_ref2:teacher2_ro1": {
+   "q_threat": -0.0824,
+   "q_obstacle": -0.0757,
+   "q_clear": -0.1327,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_ref2:teacher2_ro2": {
+   "q_threat": 0.249,
+   "q_obstacle": 0.3036,
+   "q_clear": 0.0891,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_ref2:teacher2_ro3": {
+   "q_threat": 0.5211,
+   "q_obstacle": 0.5737,
+   "q_clear": 0.4798,
+   "p_threat_gt_clear": 0.13199,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_oracle:pixels_ro1": {
+   "q_threat": -0.592,
+   "q_obstacle": -0.5879,
+   "q_clear": -0.5745,
+   "p_threat_gt_clear": 0.99995,
+   "p_obstacle_gt_clear": 1.0
+  },
+  "mario_oracle:pixels_ro2": {
+   "q_threat": 0.3661,
+   "q_obstacle": 0.3458,
+   "q_clear": 0.3234,
+   "p_threat_gt_clear": 0.0,
+   "p_obstacle_gt_clear": 0.0
+  },
+  "mario_oracle:pixels_ro3": {
+   "q_threat": -0.2241,
+   "q_obstacle": -0.2283,
+   "q_clear": -0.2319,
+   "p_threat_gt_clear": 0.00025,
+   "p_obstacle_gt_clear": 0.04344
+  }
+ },
+ "utc": "2026-10-05T17:34:33+00:00"
+}

@@ -1,0 +1,38 @@
+{
+ "what": "enemy distance vs presence, decodability from the untrained brain (exploratory)",
+ "fit_levels": [
+  "Level1-1"
+ ],
+ "test_levels": [
+  "Level5-1"
+ ],
+ "results": {
+  "distance: 16-40 vs 48-96 px": {
+   "n_fit": [
+    3,
+    365
+   ],
+   "n_test": [
+    79,
+    121
+   ],
+   "motor_code_auc": 0.5641,
+   "lamina_input_auc": 0.4795
+  },
+  "presence: 8-64 px vs none within 160": {
+   "n_fit": [
+    184,
+    817
+   ],
+   "n_test": [
+    191,
+    1055
+   ],
+   "motor_code_auc": 0.4475,
+   "lamina_input_auc": 0.4105
+  }
+ },
+ "utc": "2026-10-05T17:13:54+00:00",
+ "label": "threat_ahead",
+ "steps": 3000
+}

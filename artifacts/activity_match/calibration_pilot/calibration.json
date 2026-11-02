@@ -1,0 +1,1954 @@
+{
+ "study": "ACTIVITY_MATCH_V1",
+ "pilot": true,
+ "started_utc": "2026-10-20T07:46:21+00:00",
+ "env": {
+  "utc": "2026-10-20T07:46:22+00:00",
+  "commit": "dc5cd6a386310d6ce8a9fd887cb0057cba0dffa7",
+  "branch": "activity-match-v1",
+  "dirty": true,
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "code_sha256": {
+   "src/flymario/retino_align/simulate.py": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+   "src/flymario/retino_align/stimuli.py": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+   "src/flymario/retino_align/decode.py": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+   "src/flymario/activity_match/calibrate.py": "df8266939998c19eb81142aea37b19f5532a8f2c4c2a96513d2de7134a7fec71",
+   "src/flymario/activity_match/analysis.py": "b949d22129f932367a333e72f483757d06a6b184097faa48daf87263f160b6e4",
+   "scripts/activity_match/run_am.py": "0094e92ed7168c7737ea5128b0c0c45afd6135e7e12d012fb927d681e8b05999"
+  },
+  "config_sha256": "10293c6c4fc24e396cd26a78144a7956901aec3922fd58fb2546c4971e47b0ec"
+ },
+ "graphs": [
+  "nullin:100",
+  "nullin:101"
+ ],
+ "noise_seeds": [
+  11011,
+  11012
+ ],
+ "window_s": 0.05328,
+ "max_spikes": 8,
+ "fit_uid_sha256": "e4ba147bce6da83bbf357e0538dbb252efed57568193d858b20715eba0d27a63",
+ "check_uid_sha256": "b5d8e2577c104f41e3f553fb794d2b5ebfad4e3d00933944a577b88094d35e2f",
+ "labels_used": false,
+ "grid": {
+  "nullin:100": {
+   "0.5": {
+    "rate_hz": 48.29282635661031,
+    "active_frac_mean": 0.6967946649079478,
+    "saturated_frac_mean": 0.0,
+    "rate_hz_by_seed": [
+     48.28183067721965,
+     48.30382203600097
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.5,
+    "gain": 0.09226,
+    "per_seed": [
+     {
+      "rate_hz": 48.28183067721965,
+      "rate_hz_sd_over_images": 0.4496609227706443,
+      "active_frac_mean": 0.6967999270318814,
+      "active_frac_min": 0.6865738661876964,
+      "saturated_frac_mean": 0.0,
+      "saturated_frac_max": 0.0,
+      "ge7_frac_mean": 0.11386885383924562,
+      "count_hist": [
+       86429,
+       60602,
+       26524,
+       15458,
+       11725,
+       11997,
+       39862,
+       32459,
+       0
+      ],
+      "n_constant_features": 820,
+      "max_count": 7
+     },
+     {
+      "rate_hz": 48.30382203600097,
+      "rate_hz_sd_over_images": 0.4712945956559186,
+      "active_frac_mean": 0.6967894027840142,
+      "active_frac_min": 0.6874719353390211,
+      "saturated_frac_mean": 0.0,
+      "saturated_frac_max": 0.0,
+      "ge7_frac_mean": 0.11431788841490795,
+      "count_hist": [
+       86432,
+       60564,
+       26375,
+       15817,
+       11494,
+       11944,
+       39843,
+       32587,
+       0
+      ],
+      "n_constant_features": 820,
+      "max_count": 7
+     }
+    ],
+    "rate_all_network_frac": 0.09311150068260102,
+    "seconds": 1.92
+   },
+   "0.75": {
+    "rate_hz": 50.77603923313187,
+    "active_frac_mean": 0.7154383700044904,
+    "saturated_frac_mean": 0.00019294454422990568,
+    "rate_hz_by_seed": [
+     50.79009658373011,
+     50.76198188253363
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.75,
+    "gain": 0.13838999999999999,
+    "per_seed": [
+     {
+      "rate_hz": 50.79009658373011,
+      "rate_hz_sd_over_images": 0.47070909005775335,
+      "active_frac_mean": 0.7151752638078132,
+      "active_frac_min": 0.6977997305792546,
+      "saturated_frac_mean": 0.00020346879209699146,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1359908228558599,
+      "count_hist": [
+       81191,
+       60676,
+       25666,
+       16169,
+       12051,
+       11971,
+       38567,
+       38707,
+       58
+      ],
+      "n_constant_features": 786,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 50.76198188253363,
+      "rate_hz_sd_over_images": 0.4015379557872198,
+      "active_frac_mean": 0.7157014762011675,
+      "active_frac_min": 0.7013920071845532,
+      "saturated_frac_mean": 0.0001824202963628199,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1356224741805119,
+      "count_hist": [
+       81041,
+       60708,
+       26019,
+       16032,
+       12089,
+       11950,
+       38557,
+       38608,
+       52
+      ],
+      "n_constant_features": 775,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10151312293776546,
+    "seconds": 1.75
+   },
+   "1.0": {
+    "rate_hz": 51.82902368016872,
+    "active_frac_mean": 0.7310914346654693,
+    "saturated_frac_mean": 0.00030871127076784915,
+    "rate_hz_by_seed": [
+     51.798736180050724,
+     51.8593111802867
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.798736180050724,
+      "rate_hz_sd_over_images": 0.4453814538177025,
+      "active_frac_mean": 0.7309546194431972,
+      "active_frac_min": 0.7189043556353839,
+      "saturated_frac_mean": 0.00030871127076784915,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1474166479568927,
+      "count_hist": [
+       76693,
+       62738,
+       26967,
+       16197,
+       11777,
+       11877,
+       36785,
+       41934,
+       88
+      ],
+      "n_constant_features": 817,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.8593111802867,
+      "rate_hz_sd_over_images": 0.4216130542008514,
+      "active_frac_mean": 0.7312282498877414,
+      "active_frac_min": 0.7215985630893579,
+      "saturated_frac_mean": 0.0003087112707678491,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14755697126178716,
+      "count_hist": [
+       76615,
+       62748,
+       26781,
+       16110,
+       12032,
+       11910,
+       36798,
+       41974,
+       88
+      ],
+      "n_constant_features": 815,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10635545311203923,
+    "seconds": 1.77
+   },
+   "1.5": {
+    "rate_hz": 53.70072534506891,
+    "active_frac_mean": 0.7529678378985183,
+    "saturated_frac_mean": 0.0005560310956443646,
+    "rate_hz_by_seed": [
+     53.674717600402374,
+     53.72673308973545
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.5,
+    "gain": 0.27677999999999997,
+    "per_seed": [
+     {
+      "rate_hz": 53.674717600402374,
+      "rate_hz_sd_over_images": 0.4115097009000907,
+      "active_frac_mean": 0.7528941681634486,
+      "active_frac_min": 0.7436012572968118,
+      "saturated_frac_mean": 0.0005542770543331836,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.16548327346205657,
+      "count_hist": [
+       70439,
+       63599,
+       28907,
+       16470,
+       12456,
+       11887,
+       34126,
+       47014,
+       158
+      ],
+      "n_constant_features": 872,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 53.72673308973545,
+      "rate_hz_sd_over_images": 0.39072770266420753,
+      "active_frac_mean": 0.7530415076335879,
+      "active_frac_min": 0.7431522227211496,
+      "saturated_frac_mean": 0.0005577851369555455,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.16572533116299956,
+      "count_hist": [
+       70397,
+       63493,
+       28820,
+       16644,
+       12460,
+       11767,
+       34234,
+       47082,
+       159
+      ],
+      "n_constant_features": 864,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.11207946380936956,
+    "seconds": 1.77
+   },
+   "2.0": {
+    "rate_hz": 54.00531224842939,
+    "active_frac_mean": 0.7525696705208802,
+    "saturated_frac_mean": 0.0006349629546475077,
+    "rate_hz_by_seed": [
+     54.00346866146568,
+     54.00715583539309
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 2.0,
+    "gain": 0.36904,
+    "per_seed": [
+     {
+      "rate_hz": 54.00346866146568,
+      "rate_hz_sd_over_images": 0.44479212976859767,
+      "active_frac_mean": 0.7525223114054783,
+      "active_frac_min": 0.7373147732375392,
+      "saturated_frac_mean": 0.0006419791198922315,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.17118039964077233,
+      "count_hist": [
+       70545,
+       63185,
+       28145,
+       16808,
+       12644,
+       11635,
+       33298,
+       48613,
+       183
+      ],
+      "n_constant_features": 862,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 54.00715583539309,
+      "rate_hz_sd_over_images": 0.43039333135841557,
+      "active_frac_mean": 0.7526170296362821,
+      "active_frac_min": 0.7391109115401886,
+      "saturated_frac_mean": 0.0006279467894027839,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1714785866636731,
+      "count_hist": [
+       70518,
+       63233,
+       28118,
+       16851,
+       12648,
+       11553,
+       33254,
+       48702,
+       179
+      ],
+      "n_constant_features": 862,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.1156836705035474,
+    "seconds": 1.76
+   }
+  },
+  "nullin:101": {
+   "0.5": {
+    "rate_hz": 47.931779602486415,
+    "active_frac_mean": 0.6911834867534801,
+    "saturated_frac_mean": 0.0003052031881454872,
+    "rate_hz_by_seed": [
+     47.9079117355456,
+     47.95564746942722
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.5,
+    "gain": 0.09226,
+    "per_seed": [
+     {
+      "rate_hz": 47.9079117355456,
+      "rate_hz_sd_over_images": 0.4297636093067182,
+      "active_frac_mean": 0.6905064268073642,
+      "active_frac_min": 0.6766951055231253,
+      "saturated_frac_mean": 0.00030871127076784915,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.11802242366412213,
+      "count_hist": [
+       88223,
+       60363,
+       25937,
+       15282,
+       11855,
+       11995,
+       37758,
+       33555,
+       88
+      ],
+      "n_constant_features": 781,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 47.95564746942722,
+      "rate_hz_sd_over_images": 0.44692868678851466,
+      "active_frac_mean": 0.691860546699596,
+      "active_frac_min": 0.6798383475527615,
+      "saturated_frac_mean": 0.0003016951055231252,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.11794173776380781,
+      "count_hist": [
+       87837,
+       60732,
+       25742,
+       15363,
+       11819,
+       12325,
+       37618,
+       33534,
+       86
+      ],
+      "n_constant_features": 786,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.0940859375229801,
+    "seconds": 1.77
+   },
+   "0.75": {
+    "rate_hz": 49.99969159423793,
+    "active_frac_mean": 0.7152278850471485,
+    "saturated_frac_mean": 0.00045254265828468794,
+    "rate_hz_by_seed": [
+     50.00676965133072,
+     49.99261353714514
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.75,
+    "gain": 0.13838999999999999,
+    "per_seed": [
+     {
+      "rate_hz": 50.00676965133072,
+      "rate_hz_sd_over_images": 0.44916480793089364,
+      "active_frac_mean": 0.7152278850471486,
+      "active_frac_min": 0.7009429726088909,
+      "saturated_frac_mean": 0.00045955882352941176,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.13593118545127975,
+      "count_hist": [
+       81176,
+       64563,
+       25284,
+       14494,
+       11332,
+       12570,
+       36889,
+       38617,
+       131
+      ],
+      "n_constant_features": 759,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 49.99261353714514,
+      "rate_hz_sd_over_images": 0.4850361858758869,
+      "active_frac_mean": 0.7152278850471485,
+      "active_frac_min": 0.699595868881904,
+      "saturated_frac_mean": 0.00044552649303996407,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1362013078132016,
+      "count_hist": [
+       81176,
+       64596,
+       25296,
+       14513,
+       11390,
+       12472,
+       36788,
+       38698,
+       127
+      ],
+      "n_constant_features": 759,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10148157987249903,
+    "seconds": 1.78
+   },
+   "1.0": {
+    "rate_hz": 51.66082929092653,
+    "active_frac_mean": 0.7296618909968569,
+    "saturated_frac_mean": 0.0004928856084418499,
+    "rate_hz_by_seed": [
+     51.67054104368176,
+     51.651117538171306
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.67054104368176,
+      "rate_hz_sd_over_images": 0.4057906227475018,
+      "active_frac_mean": 0.7296846935339021,
+      "active_frac_min": 0.7202514593623709,
+      "saturated_frac_mean": 0.000494639649753031,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.15565713403682083,
+      "count_hist": [
+       77055,
+       64188,
+       26492,
+       15430,
+       11528,
+       11503,
+       34489,
+       44230,
+       141
+      ],
+      "n_constant_features": 831,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.651117538171306,
+      "rate_hz_sd_over_images": 0.3709780509839852,
+      "active_frac_mean": 0.7296390884598115,
+      "active_frac_min": 0.7211495285136955,
+      "saturated_frac_mean": 0.0004911315671306689,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.15537999550965426,
+      "count_hist": [
+       77068,
+       64183,
+       26438,
+       15540,
+       11401,
+       11805,
+       34329,
+       44152,
+       140
+      ],
+      "n_constant_features": 832,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10573663338121161,
+    "seconds": 1.76
+   },
+   "1.5": {
+    "rate_hz": 53.57858770872354,
+    "active_frac_mean": 0.7461147984957343,
+    "saturated_frac_mean": 0.0005507689717108217,
+    "rate_hz_by_seed": [
+     53.57516390436238,
+     53.5820115130847
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.5,
+    "gain": 0.27677999999999997,
+    "per_seed": [
+     {
+      "rate_hz": 53.57516390436238,
+      "rate_hz_sd_over_images": 0.4188404227569151,
+      "active_frac_mean": 0.7459306241580603,
+      "active_frac_min": 0.732824427480916,
+      "saturated_frac_mean": 0.0005507689717108217,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.16790735855410865,
+      "count_hist": [
+       72424,
+       64846,
+       25755,
+       15672,
+       11998,
+       11862,
+       34636,
+       47706,
+       157
+      ],
+      "n_constant_features": 900,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 53.5820115130847,
+      "rate_hz_sd_over_images": 0.402685090618824,
+      "active_frac_mean": 0.7462989728334082,
+      "active_frac_min": 0.7332734620565784,
+      "saturated_frac_mean": 0.0005507689717108217,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.16823010215536596,
+      "count_hist": [
+       72319,
+       64874,
+       25694,
+       15823,
+       12129,
+       11869,
+       34393,
+       47798,
+       157
+      ],
+      "n_constant_features": 892,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.11229493675461735,
+    "seconds": 1.78
+   },
+   "2.0": {
+    "rate_hz": 54.50423297048171,
+    "active_frac_mean": 0.7545640154916928,
+    "saturated_frac_mean": 0.0006051442523574315,
+    "rate_hz_by_seed": [
+     54.49076820140751,
+     54.5176977395559
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 2.0,
+    "gain": 0.36904,
+    "per_seed": [
+     {
+      "rate_hz": 54.49076820140751,
+      "rate_hz_sd_over_images": 0.349624041563806,
+      "active_frac_mean": 0.7542974012123934,
+      "active_frac_min": 0.7440502918724742,
+      "saturated_frac_mean": 0.0006033902110462504,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.17880697126178716,
+      "count_hist": [
+       70039,
+       64741,
+       27141,
+       15667,
+       11538,
+       11304,
+       33656,
+       50798,
+       172
+      ],
+      "n_constant_features": 870,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 54.5176977395559,
+      "rate_hz_sd_over_images": 0.36412758817789,
+      "active_frac_mean": 0.7548306297709924,
+      "active_frac_min": 0.7400089806915132,
+      "saturated_frac_mean": 0.0006068982936686125,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.17894027840143692,
+      "count_hist": [
+       69887,
+       64826,
+       27218,
+       15617,
+       11415,
+       11509,
+       33576,
+       50835,
+       173
+      ],
+      "n_constant_features": 872,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.11615678775741393,
+    "seconds": 1.77
+   }
+  }
+ },
+ "search": {
+  "nullin:100": {
+   "points": {
+    "0.5": {
+     "rate_hz": 48.29282635661031,
+     "active_frac_mean": 0.6967946649079478,
+     "saturated_frac_mean": 0.0,
+     "rate_hz_by_seed": [
+      48.28183067721965,
+      48.30382203600097
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 0.5,
+     "gain": 0.09226,
+     "per_seed": [
+      {
+       "rate_hz": 48.28183067721965,
+       "rate_hz_sd_over_images": 0.4496609227706443,
+       "active_frac_mean": 0.6967999270318814,
+       "active_frac_min": 0.6865738661876964,
+       "saturated_frac_mean": 0.0,
+       "saturated_frac_max": 0.0,
+       "ge7_frac_mean": 0.11386885383924562,
+       "count_hist": [
+        86429,
+        60602,
+        26524,
+        15458,
+        11725,
+        11997,
+        39862,
+        32459,
+        0
+       ],
+       "n_constant_features": 820,
+       "max_count": 7
+      },
+      {
+       "rate_hz": 48.30382203600097,
+       "rate_hz_sd_over_images": 0.4712945956559186,
+       "active_frac_mean": 0.6967894027840142,
+       "active_frac_min": 0.6874719353390211,
+       "saturated_frac_mean": 0.0,
+       "saturated_frac_max": 0.0,
+       "ge7_frac_mean": 0.11431788841490795,
+       "count_hist": [
+        86432,
+        60564,
+        26375,
+        15817,
+        11494,
+        11944,
+        39843,
+        32587,
+        0
+       ],
+       "n_constant_features": 820,
+       "max_count": 7
+      }
+     ],
+     "rate_all_network_frac": 0.09311150068260102,
+     "seconds": 1.92
+    },
+    "0.631309": {
+     "rate_hz": 49.519140899431086,
+     "active_frac_mean": 0.7041020010103278,
+     "saturated_frac_mean": 0.00015961775931746744,
+     "rate_hz_by_seed": [
+      49.53922282885714,
+      49.49905897000503
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 0.631309,
+     "gain": 0.11648913668,
+     "per_seed": [
+      {
+       "rate_hz": 49.53922282885714,
+       "rate_hz_sd_over_images": 0.47942209992713813,
+       "active_frac_mean": 0.7041493601257297,
+       "active_frac_min": 0.6879209699146834,
+       "saturated_frac_mean": 0.00016838796587337224,
+       "saturated_frac_max": 0.000449034575662326,
+       "ge7_frac_mean": 0.12748372249663223,
+       "count_hist": [
+        84334,
+        60998,
+        25398,
+        15729,
+        11487,
+        11586,
+        39184,
+        36292,
+        48
+       ],
+       "n_constant_features": 794,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 49.49905897000503,
+       "rate_hz_sd_over_images": 0.5457629049972555,
+       "active_frac_mean": 0.704054641894926,
+       "active_frac_min": 0.6879209699146834,
+       "saturated_frac_mean": 0.0001508475527615626,
+       "saturated_frac_max": 0.000449034575662326,
+       "ge7_frac_mean": 0.12707678491243826,
+       "count_hist": [
+        84361,
+        61035,
+        25342,
+        15834,
+        11529,
+        11553,
+        39178,
+        36181,
+        43
+       ],
+       "n_constant_features": 790,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.0983999206359128,
+     "seconds": 1.76
+    },
+    "0.75": {
+     "rate_hz": 50.77603923313187,
+     "active_frac_mean": 0.7154383700044904,
+     "saturated_frac_mean": 0.00019294454422990568,
+     "rate_hz_by_seed": [
+      50.79009658373011,
+      50.76198188253363
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 0.75,
+     "gain": 0.13838999999999999,
+     "per_seed": [
+      {
+       "rate_hz": 50.79009658373011,
+       "rate_hz_sd_over_images": 0.47070909005775335,
+       "active_frac_mean": 0.7151752638078132,
+       "active_frac_min": 0.6977997305792546,
+       "saturated_frac_mean": 0.00020346879209699146,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.1359908228558599,
+       "count_hist": [
+        81191,
+        60676,
+        25666,
+        16169,
+        12051,
+        11971,
+        38567,
+        38707,
+        58
+       ],
+       "n_constant_features": 786,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 50.76198188253363,
+       "rate_hz_sd_over_images": 0.4015379557872198,
+       "active_frac_mean": 0.7157014762011675,
+       "active_frac_min": 0.7013920071845532,
+       "saturated_frac_mean": 0.0001824202963628199,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.1356224741805119,
+       "count_hist": [
+        81041,
+        60708,
+        26019,
+        16032,
+        12089,
+        11950,
+        38557,
+        38608,
+        52
+       ],
+       "n_constant_features": 775,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.10151312293776546,
+     "seconds": 1.75
+    },
+    "1.0": {
+     "rate_hz": 51.82902368016872,
+     "active_frac_mean": 0.7310914346654693,
+     "saturated_frac_mean": 0.00030871127076784915,
+     "rate_hz_by_seed": [
+      51.798736180050724,
+      51.8593111802867
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 1.0,
+     "gain": 0.18452,
+     "per_seed": [
+      {
+       "rate_hz": 51.798736180050724,
+       "rate_hz_sd_over_images": 0.4453814538177025,
+       "active_frac_mean": 0.7309546194431972,
+       "active_frac_min": 0.7189043556353839,
+       "saturated_frac_mean": 0.00030871127076784915,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.1474166479568927,
+       "count_hist": [
+        76693,
+        62738,
+        26967,
+        16197,
+        11777,
+        11877,
+        36785,
+        41934,
+        88
+       ],
+       "n_constant_features": 817,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 51.8593111802867,
+       "rate_hz_sd_over_images": 0.4216130542008514,
+       "active_frac_mean": 0.7312282498877414,
+       "active_frac_min": 0.7215985630893579,
+       "saturated_frac_mean": 0.0003087112707678491,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.14755697126178716,
+       "count_hist": [
+        76615,
+        62748,
+        26781,
+        16110,
+        12032,
+        11910,
+        36798,
+        41974,
+        88
+       ],
+       "n_constant_features": 815,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.10635545311203923,
+     "seconds": 1.77
+    },
+    "1.5": {
+     "rate_hz": 53.70072534506891,
+     "active_frac_mean": 0.7529678378985183,
+     "saturated_frac_mean": 0.0005560310956443646,
+     "rate_hz_by_seed": [
+      53.674717600402374,
+      53.72673308973545
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 1.5,
+     "gain": 0.27677999999999997,
+     "per_seed": [
+      {
+       "rate_hz": 53.674717600402374,
+       "rate_hz_sd_over_images": 0.4115097009000907,
+       "active_frac_mean": 0.7528941681634486,
+       "active_frac_min": 0.7436012572968118,
+       "saturated_frac_mean": 0.0005542770543331836,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.16548327346205657,
+       "count_hist": [
+        70439,
+        63599,
+        28907,
+        16470,
+        12456,
+        11887,
+        34126,
+        47014,
+        158
+       ],
+       "n_constant_features": 872,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 53.72673308973545,
+       "rate_hz_sd_over_images": 0.39072770266420753,
+       "active_frac_mean": 0.7530415076335879,
+       "active_frac_min": 0.7431522227211496,
+       "saturated_frac_mean": 0.0005577851369555455,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.16572533116299956,
+       "count_hist": [
+        70397,
+        63493,
+        28820,
+        16644,
+        12460,
+        11767,
+        34234,
+        47082,
+        159
+       ],
+       "n_constant_features": 864,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.11207946380936956,
+     "seconds": 1.77
+    },
+    "2.0": {
+     "rate_hz": 54.00531224842939,
+     "active_frac_mean": 0.7525696705208802,
+     "saturated_frac_mean": 0.0006349629546475077,
+     "rate_hz_by_seed": [
+      54.00346866146568,
+      54.00715583539309
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 2.0,
+     "gain": 0.36904,
+     "per_seed": [
+      {
+       "rate_hz": 54.00346866146568,
+       "rate_hz_sd_over_images": 0.44479212976859767,
+       "active_frac_mean": 0.7525223114054783,
+       "active_frac_min": 0.7373147732375392,
+       "saturated_frac_mean": 0.0006419791198922315,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.17118039964077233,
+       "count_hist": [
+        70545,
+        63185,
+        28145,
+        16808,
+        12644,
+        11635,
+        33298,
+        48613,
+        183
+       ],
+       "n_constant_features": 862,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 54.00715583539309,
+       "rate_hz_sd_over_images": 0.43039333135841557,
+       "active_frac_mean": 0.7526170296362821,
+       "active_frac_min": 0.7391109115401886,
+       "saturated_frac_mean": 0.0006279467894027839,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.1714785866636731,
+       "count_hist": [
+        70518,
+        63233,
+        28118,
+        16851,
+        12648,
+        11553,
+        33254,
+        48702,
+        179
+       ],
+       "n_constant_features": 862,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.1156836705035474,
+     "seconds": 1.76
+    }
+   },
+   "evaluations": [
+    [
+     "CL",
+     0.631309,
+     49.519140899431086
+    ]
+   ],
+   "notes": [
+    "extra evaluations used: 1 of 9"
+   ],
+   "selected": {
+    "CL": {
+     "gamma": 0.631309,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 49.519140899431086,
+     "fit_rel_err": 0.004058790890828498
+    },
+    "CM": {
+     "gamma": 1.0,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 51.82902368016872,
+     "fit_rel_err": 0.0132935825992707
+    },
+    "CH": {
+     "gamma": 1.0,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 51.82902368016872,
+     "fit_rel_err": 0.014229879616445684
+    }
+   }
+  },
+  "nullin:101": {
+   "points": {
+    "0.5": {
+     "rate_hz": 47.931779602486415,
+     "active_frac_mean": 0.6911834867534801,
+     "saturated_frac_mean": 0.0003052031881454872,
+     "rate_hz_by_seed": [
+      47.9079117355456,
+      47.95564746942722
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 0.5,
+     "gain": 0.09226,
+     "per_seed": [
+      {
+       "rate_hz": 47.9079117355456,
+       "rate_hz_sd_over_images": 0.4297636093067182,
+       "active_frac_mean": 0.6905064268073642,
+       "active_frac_min": 0.6766951055231253,
+       "saturated_frac_mean": 0.00030871127076784915,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.11802242366412213,
+       "count_hist": [
+        88223,
+        60363,
+        25937,
+        15282,
+        11855,
+        11995,
+        37758,
+        33555,
+        88
+       ],
+       "n_constant_features": 781,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 47.95564746942722,
+       "rate_hz_sd_over_images": 0.44692868678851466,
+       "active_frac_mean": 0.691860546699596,
+       "active_frac_min": 0.6798383475527615,
+       "saturated_frac_mean": 0.0003016951055231252,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.11794173776380781,
+       "count_hist": [
+        87837,
+        60732,
+        25742,
+        15363,
+        11819,
+        12325,
+        37618,
+        33534,
+        86
+       ],
+       "n_constant_features": 786,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.0940859375229801,
+     "seconds": 1.77
+    },
+    "0.75": {
+     "rate_hz": 49.99969159423793,
+     "active_frac_mean": 0.7152278850471485,
+     "saturated_frac_mean": 0.00045254265828468794,
+     "rate_hz_by_seed": [
+      50.00676965133072,
+      49.99261353714514
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 0.75,
+     "gain": 0.13838999999999999,
+     "per_seed": [
+      {
+       "rate_hz": 50.00676965133072,
+       "rate_hz_sd_over_images": 0.44916480793089364,
+       "active_frac_mean": 0.7152278850471486,
+       "active_frac_min": 0.7009429726088909,
+       "saturated_frac_mean": 0.00045955882352941176,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.13593118545127975,
+       "count_hist": [
+        81176,
+        64563,
+        25284,
+        14494,
+        11332,
+        12570,
+        36889,
+        38617,
+        131
+       ],
+       "n_constant_features": 759,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 49.99261353714514,
+       "rate_hz_sd_over_images": 0.4850361858758869,
+       "active_frac_mean": 0.7152278850471485,
+       "active_frac_min": 0.699595868881904,
+       "saturated_frac_mean": 0.00044552649303996407,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.1362013078132016,
+       "count_hist": [
+        81176,
+        64596,
+        25296,
+        14513,
+        11390,
+        12472,
+        36788,
+        38698,
+        127
+       ],
+       "n_constant_features": 759,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.10148157987249903,
+     "seconds": 1.78
+    },
+    "1.0": {
+     "rate_hz": 51.66082929092653,
+     "active_frac_mean": 0.7296618909968569,
+     "saturated_frac_mean": 0.0004928856084418499,
+     "rate_hz_by_seed": [
+      51.67054104368176,
+      51.651117538171306
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 1.0,
+     "gain": 0.18452,
+     "per_seed": [
+      {
+       "rate_hz": 51.67054104368176,
+       "rate_hz_sd_over_images": 0.4057906227475018,
+       "active_frac_mean": 0.7296846935339021,
+       "active_frac_min": 0.7202514593623709,
+       "saturated_frac_mean": 0.000494639649753031,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.15565713403682083,
+       "count_hist": [
+        77055,
+        64188,
+        26492,
+        15430,
+        11528,
+        11503,
+        34489,
+        44230,
+        141
+       ],
+       "n_constant_features": 831,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 51.651117538171306,
+       "rate_hz_sd_over_images": 0.3709780509839852,
+       "active_frac_mean": 0.7296390884598115,
+       "active_frac_min": 0.7211495285136955,
+       "saturated_frac_mean": 0.0004911315671306689,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.15537999550965426,
+       "count_hist": [
+        77068,
+        64183,
+        26438,
+        15540,
+        11401,
+        11805,
+        34329,
+        44152,
+        140
+       ],
+       "n_constant_features": 832,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.10573663338121161,
+     "seconds": 1.76
+    },
+    "1.5": {
+     "rate_hz": 53.57858770872354,
+     "active_frac_mean": 0.7461147984957343,
+     "saturated_frac_mean": 0.0005507689717108217,
+     "rate_hz_by_seed": [
+      53.57516390436238,
+      53.5820115130847
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 1.5,
+     "gain": 0.27677999999999997,
+     "per_seed": [
+      {
+       "rate_hz": 53.57516390436238,
+       "rate_hz_sd_over_images": 0.4188404227569151,
+       "active_frac_mean": 0.7459306241580603,
+       "active_frac_min": 0.732824427480916,
+       "saturated_frac_mean": 0.0005507689717108217,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.16790735855410865,
+       "count_hist": [
+        72424,
+        64846,
+        25755,
+        15672,
+        11998,
+        11862,
+        34636,
+        47706,
+        157
+       ],
+       "n_constant_features": 900,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 53.5820115130847,
+       "rate_hz_sd_over_images": 0.402685090618824,
+       "active_frac_mean": 0.7462989728334082,
+       "active_frac_min": 0.7332734620565784,
+       "saturated_frac_mean": 0.0005507689717108217,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.16823010215536596,
+       "count_hist": [
+        72319,
+        64874,
+        25694,
+        15823,
+        12129,
+        11869,
+        34393,
+        47798,
+        157
+       ],
+       "n_constant_features": 892,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.11229493675461735,
+     "seconds": 1.78
+    },
+    "2.0": {
+     "rate_hz": 54.50423297048171,
+     "active_frac_mean": 0.7545640154916928,
+     "saturated_frac_mean": 0.0006051442523574315,
+     "rate_hz_by_seed": [
+      54.49076820140751,
+      54.5176977395559
+     ],
+     "valid": true,
+     "invalid_reasons": [],
+     "gamma": 2.0,
+     "gain": 0.36904,
+     "per_seed": [
+      {
+       "rate_hz": 54.49076820140751,
+       "rate_hz_sd_over_images": 0.349624041563806,
+       "active_frac_mean": 0.7542974012123934,
+       "active_frac_min": 0.7440502918724742,
+       "saturated_frac_mean": 0.0006033902110462504,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.17880697126178716,
+       "count_hist": [
+        70039,
+        64741,
+        27141,
+        15667,
+        11538,
+        11304,
+        33656,
+        50798,
+        172
+       ],
+       "n_constant_features": 870,
+       "max_count": 8
+      },
+      {
+       "rate_hz": 54.5176977395559,
+       "rate_hz_sd_over_images": 0.36412758817789,
+       "active_frac_mean": 0.7548306297709924,
+       "active_frac_min": 0.7400089806915132,
+       "saturated_frac_mean": 0.0006068982936686125,
+       "saturated_frac_max": 0.000898069151324652,
+       "ge7_frac_mean": 0.17894027840143692,
+       "count_hist": [
+        69887,
+        64826,
+        27218,
+        15617,
+        11415,
+        11509,
+        33576,
+        50835,
+        173
+       ],
+       "n_constant_features": 872,
+       "max_count": 8
+      }
+     ],
+     "rate_all_network_frac": 0.11615678775741393,
+     "seconds": 1.77
+    }
+   },
+   "evaluations": [],
+   "notes": [
+    "extra evaluations used: 0 of 9"
+   ],
+   "selected": {
+    "CL": {
+     "gamma": 0.75,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 49.99969159423793,
+     "fit_rel_err": 0.005606163535504841
+    },
+    "CM": {
+     "gamma": 1.0,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 51.66082929092653,
+     "fit_rel_err": 0.010005264912639747
+    },
+    "CH": {
+     "gamma": 1.0,
+     "rule": "within fit tolerance, closest to gamma = 1",
+     "fit_rate_hz": 51.66082929092653,
+     "fit_rel_err": 0.01742887877865739
+    }
+   }
+  }
+ },
+ "check": {
+  "nullin:100": {
+   "C0": {
+    "rate_hz": 51.80532041920681,
+    "active_frac_mean": 0.7304126206780422,
+    "saturated_frac_mean": 0.0003385299730579254,
+    "rate_hz_by_seed": [
+     51.74777416898263,
+     51.86286666943099
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.74777416898263,
+      "rate_hz_sd_over_images": 0.43472318237882485,
+      "active_frac_mean": 0.7303547373147733,
+      "active_frac_min": 0.7193533902110463,
+      "saturated_frac_mean": 0.00034730017961383025,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14681325774584644,
+      "count_hist": [
+       76864,
+       62734,
+       26650,
+       16399,
+       11803,
+       12094,
+       36662,
+       41751,
+       99
+      ],
+      "n_constant_features": 835,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.86286666943099,
+      "rate_hz_sd_over_images": 0.42691676614922835,
+      "active_frac_mean": 0.7304705040413112,
+      "active_frac_min": 0.7220475976650202,
+      "saturated_frac_mean": 0.0003297597665020206,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14739910754378088,
+      "count_hist": [
+       76831,
+       62558,
+       26650,
+       16321,
+       11752,
+       11922,
+       37005,
+       41923,
+       94
+      ],
+      "n_constant_features": 824,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.1063499709209764,
+    "seconds": 1.77
+   },
+   "CL": {
+    "rate_hz": 49.51805449997033,
+    "active_frac_mean": 0.7036073613605748,
+    "saturated_frac_mean": 0.0001420773462056578,
+    "rate_hz_by_seed": [
+     49.54185652451958,
+     49.494252475421085
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.631309,
+    "gain": 0.11648913668,
+    "per_seed": [
+     {
+      "rate_hz": 49.54185652451958,
+      "rate_hz_sd_over_images": 0.4971020810062362,
+      "active_frac_mean": 0.7037494387067804,
+      "active_frac_min": 0.6906151773686574,
+      "saturated_frac_mean": 0.00013330713964975301,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.12718202739110912,
+      "count_hist": [
+       84448,
+       60809,
+       25322,
+       15925,
+       11420,
+       11561,
+       39317,
+       36216,
+       38
+      ],
+      "n_constant_features": 811,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 49.494252475421085,
+      "rate_hz_sd_over_images": 0.47335292787014166,
+      "active_frac_mean": 0.7034652840143691,
+      "active_frac_min": 0.6892680736416704,
+      "saturated_frac_mean": 0.0001508475527615626,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1273328749438707,
+      "count_hist": [
+       84529,
+       60932,
+       25367,
+       15765,
+       11487,
+       11397,
+       39282,
+       36254,
+       43
+      ],
+      "n_constant_features": 790,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.09839578708970403,
+    "seconds": 1.77,
+    "target_hz": 49.720947829565084,
+    "rel_err": 0.004080640825477316,
+    "rel_err_by_seed": [
+     0.0036019286208983305,
+     0.004559353030056302
+    ],
+    "pass": true
+   },
+   "CM": {
+    "rate_hz": 51.80532041920681,
+    "active_frac_mean": 0.7304126206780422,
+    "saturated_frac_mean": 0.0003385299730579254,
+    "rate_hz_by_seed": [
+     51.74777416898263,
+     51.86286666943099
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.74777416898263,
+      "rate_hz_sd_over_images": 0.43472318237882485,
+      "active_frac_mean": 0.7303547373147733,
+      "active_frac_min": 0.7193533902110463,
+      "saturated_frac_mean": 0.00034730017961383025,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14681325774584644,
+      "count_hist": [
+       76864,
+       62734,
+       26650,
+       16399,
+       11803,
+       12094,
+       36662,
+       41751,
+       99
+      ],
+      "n_constant_features": 835,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.86286666943099,
+      "rate_hz_sd_over_images": 0.42691676614922835,
+      "active_frac_mean": 0.7304705040413112,
+      "active_frac_min": 0.7220475976650202,
+      "saturated_frac_mean": 0.0003297597665020206,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14739910754378088,
+      "count_hist": [
+       76831,
+       62558,
+       26650,
+       16321,
+       11752,
+       11922,
+       37005,
+       41923,
+       94
+      ],
+      "n_constant_features": 824,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.1063499709209764,
+    "seconds": 1.77,
+    "target_hz": 51.14906930251985,
+    "rel_err": 0.012830167305793573,
+    "rel_err_by_seed": [
+     0.011705097954407688,
+     0.013955236657179597
+    ],
+    "pass": true
+   },
+   "CH": {
+    "rate_hz": 51.80532041920681,
+    "active_frac_mean": 0.7304126206780422,
+    "saturated_frac_mean": 0.0003385299730579254,
+    "rate_hz_by_seed": [
+     51.74777416898263,
+     51.86286666943099
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.74777416898263,
+      "rate_hz_sd_over_images": 0.43472318237882485,
+      "active_frac_mean": 0.7303547373147733,
+      "active_frac_min": 0.7193533902110463,
+      "saturated_frac_mean": 0.00034730017961383025,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14681325774584644,
+      "count_hist": [
+       76864,
+       62734,
+       26650,
+       16399,
+       11803,
+       12094,
+       36662,
+       41751,
+       99
+      ],
+      "n_constant_features": 835,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.86286666943099,
+      "rate_hz_sd_over_images": 0.42691676614922835,
+      "active_frac_mean": 0.7304705040413112,
+      "active_frac_min": 0.7220475976650202,
+      "saturated_frac_mean": 0.0003297597665020206,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.14739910754378088,
+      "count_hist": [
+       76831,
+       62558,
+       26650,
+       16321,
+       11752,
+       11922,
+       37005,
+       41923,
+       94
+      ],
+      "n_constant_features": 824,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.1063499709209764,
+    "seconds": 1.78,
+    "target_hz": 52.57719077547462,
+    "rel_err": 0.014680707449053391,
+    "rel_err_by_seed": [
+     0.015775217242661857,
+     0.01358619765544479
+    ],
+    "pass": true
+   }
+  },
+  "nullin:101": {
+   "C0": {
+    "rate_hz": 51.72653999770426,
+    "active_frac_mean": 0.7298688678715761,
+    "saturated_frac_mean": 0.00048762348450830714,
+    "rate_hz_by_seed": [
+     51.746786533109216,
+     51.7062934622993
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.746786533109216,
+      "rate_hz_sd_over_images": 0.3287940872330387,
+      "active_frac_mean": 0.7300074371351595,
+      "active_frac_min": 0.7207004939380333,
+      "saturated_frac_mean": 0.00048060731926358326,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1556711663673103,
+      "count_hist": [
+       76963,
+       64131,
+       26206,
+       15657,
+       11532,
+       11637,
+       34555,
+       44238,
+       137
+      ],
+      "n_constant_features": 811,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.7062934622993,
+      "rate_hz_sd_over_images": 0.39214127645861957,
+      "active_frac_mean": 0.7297302986079928,
+      "active_frac_min": 0.7189043556353839,
+      "saturated_frac_mean": 0.000494639649753031,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.15525370453524923,
+      "count_hist": [
+       77042,
+       64069,
+       26275,
+       15714,
+       11475,
+       11640,
+       34585,
+       44115,
+       141
+      ],
+      "n_constant_features": 832,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10575376361249442,
+    "seconds": 1.81
+   },
+   "CL": {
+    "rate_hz": 49.96522310225582,
+    "active_frac_mean": 0.7151524612707678,
+    "saturated_frac_mean": 0.0004332482038616973,
+    "rate_hz_by_seed": [
+     49.97174149902035,
+     49.9587047054913
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 0.75,
+    "gain": 0.13838999999999999,
+    "per_seed": [
+     {
+      "rate_hz": 49.97174149902035,
+      "rate_hz_sd_over_images": 0.4657958645785718,
+      "active_frac_mean": 0.7150840536596317,
+      "active_frac_min": 0.695554557700943,
+      "saturated_frac_mean": 0.0004244779973057925,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.13629953412662776,
+      "count_hist": [
+       81217,
+       64734,
+       25229,
+       14436,
+       11431,
+       12292,
+       36864,
+       38732,
+       121
+      ],
+      "n_constant_features": 759,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 49.9587047054913,
+      "rate_hz_sd_over_images": 0.4541739062511228,
+      "active_frac_mean": 0.715220868881904,
+      "active_frac_min": 0.7013920071845532,
+      "saturated_frac_mean": 0.0004420184104176021,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1358715480466996,
+      "count_hist": [
+       81178,
+       64756,
+       25341,
+       14292,
+       11393,
+       12557,
+       36808,
+       38605,
+       126
+      ],
+      "n_constant_features": 773,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10145151902394123,
+    "seconds": 1.82,
+    "target_hz": 49.720947829565084,
+    "rel_err": 0.0049129246998281225,
+    "rel_err_by_seed": [
+     0.0050440243077211734,
+     0.004781825091935215
+    ],
+    "pass": true
+   },
+   "CM": {
+    "rate_hz": 51.72653999770426,
+    "active_frac_mean": 0.7298688678715761,
+    "saturated_frac_mean": 0.00048762348450830714,
+    "rate_hz_by_seed": [
+     51.746786533109216,
+     51.7062934622993
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.746786533109216,
+      "rate_hz_sd_over_images": 0.3287940872330387,
+      "active_frac_mean": 0.7300074371351595,
+      "active_frac_min": 0.7207004939380333,
+      "saturated_frac_mean": 0.00048060731926358326,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1556711663673103,
+      "count_hist": [
+       76963,
+       64131,
+       26206,
+       15657,
+       11532,
+       11637,
+       34555,
+       44238,
+       137
+      ],
+      "n_constant_features": 811,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.7062934622993,
+      "rate_hz_sd_over_images": 0.39214127645861957,
+      "active_frac_mean": 0.7297302986079928,
+      "active_frac_min": 0.7189043556353839,
+      "saturated_frac_mean": 0.000494639649753031,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.15525370453524923,
+      "count_hist": [
+       77042,
+       64069,
+       26275,
+       15714,
+       11475,
+       11640,
+       34585,
+       44115,
+       141
+      ],
+      "n_constant_features": 832,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10575376361249442,
+    "seconds": 1.8,
+    "target_hz": 51.14906930251985,
+    "rel_err": 0.011289955087334512,
+    "rel_err_by_seed": [
+     0.011685788983846106,
+     0.01089412119082292
+    ],
+    "pass": true
+   },
+   "CH": {
+    "rate_hz": 51.72653999770426,
+    "active_frac_mean": 0.7298688678715761,
+    "saturated_frac_mean": 0.00048762348450830714,
+    "rate_hz_by_seed": [
+     51.746786533109216,
+     51.7062934622993
+    ],
+    "valid": true,
+    "invalid_reasons": [],
+    "gamma": 1.0,
+    "gain": 0.18452,
+    "per_seed": [
+     {
+      "rate_hz": 51.746786533109216,
+      "rate_hz_sd_over_images": 0.3287940872330387,
+      "active_frac_mean": 0.7300074371351595,
+      "active_frac_min": 0.7207004939380333,
+      "saturated_frac_mean": 0.00048060731926358326,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.1556711663673103,
+      "count_hist": [
+       76963,
+       64131,
+       26206,
+       15657,
+       11532,
+       11637,
+       34555,
+       44238,
+       137
+      ],
+      "n_constant_features": 811,
+      "max_count": 8
+     },
+     {
+      "rate_hz": 51.7062934622993,
+      "rate_hz_sd_over_images": 0.39214127645861957,
+      "active_frac_mean": 0.7297302986079928,
+      "active_frac_min": 0.7189043556353839,
+      "saturated_frac_mean": 0.000494639649753031,
+      "saturated_frac_max": 0.000898069151324652,
+      "ge7_frac_mean": 0.15525370453524923,
+      "count_hist": [
+       77042,
+       64069,
+       26275,
+       15714,
+       11475,
+       11640,
+       34585,
+       44115,
+       141
+      ],
+      "n_constant_features": 832,
+      "max_count": 8
+     }
+    ],
+    "rate_all_network_frac": 0.10575376361249442,
+    "seconds": 1.81,
+    "target_hz": 52.57719077547462,
+    "rel_err": 0.01617908384270618,
+    "rel_err_by_seed": [
+     0.015794001735687214,
+     0.016564165949725144
+    ],
+    "pass": true
+   }
+  }
+ },
+ "updated_utc": "2026-10-20T07:47:27+00:00",
+ "common_range": {
+  "exists": true,
+  "r_min": 48.29282635661031,
+  "r_max": 54.00531224842939,
+  "reason": null
+ },
+ "envelopes": {
+  "nullin:100": [
+   48.29282635661031,
+   54.00531224842939
+  ],
+  "nullin:101": [
+   47.931779602486415,
+   54.50423297048171
+  ]
+ },
+ "targets_hz": {
+  "CL": 49.720947829565084,
+  "CM": 51.14906930251985,
+  "CH": 52.57719077547462
+ },
+ "check_passed": {
+  "CL": true,
+  "CM": true,
+  "CH": true
+ },
+ "complete_utc": "2026-10-20T07:47:27+00:00"
+}

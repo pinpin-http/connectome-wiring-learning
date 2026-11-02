@@ -1,0 +1,29 @@
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+2026-10-19T17:48:56+00:00 ('nullin:100', 'ordered', 1) done=1/16 eta=112.0s
+2026-10-19T17:49:03+00:00 ('nullin:100', 'perm1', 1) done=2/16 eta=104.0s
+2026-10-19T17:49:11+00:00 ('nullin:100', 'perm2', 1) done=3/16 eta=96.0s
+2026-10-19T17:49:19+00:00 ('nullin:100', 'perm3', 1) done=4/16 eta=89.0s
+2026-10-19T17:49:26+00:00 ('nullin:100', 'perm3', 2) done=5/16 eta=81.0s
+2026-10-19T17:49:34+00:00 ('nullin:100', 'perm2', 2) done=6/16 eta=74.0s
+2026-10-19T17:49:41+00:00 ('nullin:100', 'perm1', 2) done=7/16 eta=66.0s
+2026-10-19T17:49:49+00:00 ('nullin:100', 'ordered', 2) done=8/16 eta=59.0s
+2026-10-19T17:50:03+00:00 ('nullin:101', 'perm1', 2) done=9/16 eta=52.0s
+2026-10-19T17:50:10+00:00 ('nullin:101', 'perm2', 2) done=10/16 eta=44.0s
+2026-10-19T17:50:18+00:00 ('nullin:101', 'perm3', 2) done=11/16 eta=37.0s
+2026-10-19T17:50:25+00:00 ('nullin:101', 'ordered', 2) done=12/16 eta=30.0s
+2026-10-19T17:50:33+00:00 ('nullin:101', 'ordered', 1) done=13/16 eta=22.0s
+2026-10-19T17:50:40+00:00 ('nullin:101', 'perm3', 1) done=14/16 eta=15.0s
+2026-10-19T17:50:48+00:00 ('nullin:101', 'perm2', 1) done=15/16 eta=7.0s
+2026-10-19T17:50:56+00:00 ('nullin:101', 'perm1', 1) done=16/16 eta=0.0s
+9 decoder jobs
+2026-10-19T17:51:26+00:00 ('nullin:100', 'ordered', False) done
+2026-10-19T17:51:35+00:00 ('nullin:100', 'perm1', False) done
+2026-10-19T17:52:07+00:00 ('nullin:100', 'perm2', False) done
+2026-10-19T17:52:16+00:00 ('nullin:100', 'perm3', False) done
+2026-10-19T17:52:46+00:00 ('nullin:101', 'ordered', False) done
+2026-10-19T17:52:55+00:00 ('nullin:101', 'perm1', False) done
+2026-10-19T17:53:21+00:00 ('nullin:101', 'perm2', False) done
+2026-10-19T17:53:35+00:00 ('nullin:101', 'perm3', False) done
+2026-10-19T17:53:46+00:00 ('nullin:100', 'ordered', True) done
+{"D_orientation": -0.0049055516719818115, "D_brightness": -0.0072103142738342285, "G": 0.0005273520946502686, "S": 0.002304762601852417} (-0.016941244477129656, 0.006262776018547805) compatible with practical equivalence at this margin (conditional)

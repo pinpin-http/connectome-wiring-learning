@@ -1,0 +1,3299 @@
+{
+  "what": "BPTT finite-gradient/memory smoke; not a learning result",
+  "training_only": true,
+  "seed_set": 1,
+  "readout_seed": 1610069010,
+  "mapping": 0,
+  "trials": 3,
+  "block_len": 3,
+  "lr": 0.0001,
+  "optimizer_step_applied": false,
+  "detect_anomaly": true,
+  "weights_finite": true,
+  "gradient_checks_completed": true,
+  "peak_allocated_mib": 2774.67236328125,
+  "peak_reserved_mib": 4882.0,
+  "gpu_duty_target": 1.0,
+  "checkpoint_granularity": "one simulation tick",
+  "gradient_audit": {
+    "warmup_ticks": [
+      {
+        "tick": 0,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 0.9996108412742615,
+          "rms_finite": 0.09190210700035095
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 0.0,
+          "rms_finite": 0.0
+        }
+      },
+      {
+        "tick": 1,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 18.83812713623047,
+          "rms_finite": 1.285199522972107
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.0,
+          "rms_finite": 0.02996780164539814
+        }
+      },
+      {
+        "tick": 2,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 1056.6170654296875,
+          "rms_finite": 8.398892402648926
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.0,
+          "rms_finite": 0.17541776597499847
+        }
+      },
+      {
+        "tick": 3,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6033.79931640625,
+          "rms_finite": 27.09032440185547
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.2639487981796265,
+          "rms_finite": 0.5346611142158508
+        }
+      },
+      {
+        "tick": 4,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 4633.2919921875,
+          "rms_finite": 36.78763198852539
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.2639487981796265,
+          "rms_finite": 0.6294450163841248
+        }
+      },
+      {
+        "tick": 5,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 3043.056396484375,
+          "rms_finite": 37.92117691040039
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3336178064346313,
+          "rms_finite": 0.6729058623313904
+        }
+      },
+      {
+        "tick": 6,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 4152.42626953125,
+          "rms_finite": 47.03031921386719
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3336178064346313,
+          "rms_finite": 0.5938424468040466
+        }
+      },
+      {
+        "tick": 7,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 14219.3369140625,
+          "rms_finite": 57.08552169799805
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3520067930221558,
+          "rms_finite": 0.5757523775100708
+        }
+      },
+      {
+        "tick": 8,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 4529.6005859375,
+          "rms_finite": 49.243141174316406
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3520067930221558,
+          "rms_finite": 0.49609899520874023
+        }
+      },
+      {
+        "tick": 9,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16425.046875,
+          "rms_finite": 62.361297607421875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.356860637664795,
+          "rms_finite": 0.5128892064094543
+        }
+      },
+      {
+        "tick": 10,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6542.1123046875,
+          "rms_finite": 51.47323989868164
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.356860637664795,
+          "rms_finite": 0.4635838270187378
+        }
+      },
+      {
+        "tick": 11,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16446.279296875,
+          "rms_finite": 63.7488899230957
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3581417798995972,
+          "rms_finite": 0.49776384234428406
+        }
+      },
+      {
+        "tick": 12,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6552.125,
+          "rms_finite": 52.256099700927734
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3581417798995972,
+          "rms_finite": 0.4623962640762329
+        }
+      },
+      {
+        "tick": 13,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16446.650390625,
+          "rms_finite": 65.3574447631836
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3584799766540527,
+          "rms_finite": 0.49624577164649963
+        }
+      },
+      {
+        "tick": 14,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.7607421875,
+          "rms_finite": 54.274017333984375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3584799766540527,
+          "rms_finite": 0.44917500019073486
+        }
+      },
+      {
+        "tick": 15,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16444.58984375,
+          "rms_finite": 67.10259246826172
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585691452026367,
+          "rms_finite": 0.5065237879753113
+        }
+      },
+      {
+        "tick": 16,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.8896484375,
+          "rms_finite": 56.25216293334961
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585691452026367,
+          "rms_finite": 0.44514137506484985
+        }
+      },
+      {
+        "tick": 17,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16442.21875,
+          "rms_finite": 68.51458740234375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585927486419678,
+          "rms_finite": 0.5038632154464722
+        }
+      },
+      {
+        "tick": 18,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6527.76708984375,
+          "rms_finite": 57.4913215637207
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585927486419678,
+          "rms_finite": 0.44151774048805237
+        }
+      },
+      {
+        "tick": 19,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16444.244140625,
+          "rms_finite": 69.74161529541016
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585989475250244,
+          "rms_finite": 0.5044143795967102
+        }
+      },
+      {
+        "tick": 20,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6548.4404296875,
+          "rms_finite": 58.93069076538086
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3585989475250244,
+          "rms_finite": 0.4405718147754669
+        }
+      },
+      {
+        "tick": 21,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16504.01171875,
+          "rms_finite": 70.34506225585938
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586006164550781,
+          "rms_finite": 0.51298588514328
+        }
+      },
+      {
+        "tick": 22,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6532.9345703125,
+          "rms_finite": 58.91727828979492
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586006164550781,
+          "rms_finite": 0.4460989534854889
+        }
+      },
+      {
+        "tick": 23,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.8984375,
+          "rms_finite": 70.81185913085938
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5150525569915771
+        }
+      },
+      {
+        "tick": 24,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.44482421875,
+          "rms_finite": 59.6963005065918
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46242716908454895
+        }
+      },
+      {
+        "tick": 25,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.615234375,
+          "rms_finite": 71.55034637451172
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5233195424079895
+        }
+      },
+      {
+        "tick": 26,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6529.22998046875,
+          "rms_finite": 60.38157653808594
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47488436102867126
+        }
+      },
+      {
+        "tick": 27,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16504.72265625,
+          "rms_finite": 71.78511810302734
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5356379151344299
+        }
+      },
+      {
+        "tick": 28,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6548.8193359375,
+          "rms_finite": 60.798797607421875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4840315878391266
+        }
+      },
+      {
+        "tick": 29,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16503.2734375,
+          "rms_finite": 72.48448944091797
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5326756834983826
+        }
+      },
+      {
+        "tick": 30,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6532.189453125,
+          "rms_finite": 61.52621078491211
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4871567189693451
+        }
+      },
+      {
+        "tick": 31,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16504.966796875,
+          "rms_finite": 72.9500503540039
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5285996794700623
+        }
+      },
+      {
+        "tick": 32,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.0859375,
+          "rms_finite": 62.01932907104492
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4805886149406433
+        }
+      },
+      {
+        "tick": 33,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.501953125,
+          "rms_finite": 73.84151458740234
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5183857083320618
+        }
+      },
+      {
+        "tick": 34,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6528.10791015625,
+          "rms_finite": 62.72026443481445
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4788009822368622
+        }
+      },
+      {
+        "tick": 35,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.3125,
+          "rms_finite": 74.33941650390625
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5097072124481201
+        }
+      },
+      {
+        "tick": 36,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6549.3603515625,
+          "rms_finite": 63.511268615722656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4735455811023712
+        }
+      },
+      {
+        "tick": 37,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.9921875,
+          "rms_finite": 74.99761199951172
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5020326375961304
+        }
+      },
+      {
+        "tick": 38,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6533.31640625,
+          "rms_finite": 64.12709045410156
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46512892842292786
+        }
+      },
+      {
+        "tick": 39,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.671875,
+          "rms_finite": 75.44771575927734
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5052915811538696
+        }
+      },
+      {
+        "tick": 40,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.1435546875,
+          "rms_finite": 64.6923828125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46891072392463684
+        }
+      },
+      {
+        "tick": 41,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16507.169921875,
+          "rms_finite": 75.8907699584961
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5065833330154419
+        }
+      },
+      {
+        "tick": 42,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6524.4453125,
+          "rms_finite": 65.1445541381836
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47330769896507263
+        }
+      },
+      {
+        "tick": 43,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.181640625,
+          "rms_finite": 76.144287109375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5193963646888733
+        }
+      },
+      {
+        "tick": 44,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.63671875,
+          "rms_finite": 65.23021697998047
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48541030287742615
+        }
+      },
+      {
+        "tick": 45,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.986328125,
+          "rms_finite": 76.41568756103516
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5327028632164001
+        }
+      },
+      {
+        "tick": 46,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6535.19189453125,
+          "rms_finite": 65.74681854248047
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4900434613227844
+        }
+      },
+      {
+        "tick": 47,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16509.908203125,
+          "rms_finite": 76.6346435546875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.531329333782196
+        }
+      },
+      {
+        "tick": 48,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6554.34228515625,
+          "rms_finite": 66.23285675048828
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4877205491065979
+        }
+      },
+      {
+        "tick": 49,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16507.71875,
+          "rms_finite": 76.97827911376953
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5337116718292236
+        }
+      },
+      {
+        "tick": 50,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.7958984375,
+          "rms_finite": 66.04700469970703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4909466505050659
+        }
+      },
+      {
+        "tick": 51,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16507.30078125,
+          "rms_finite": 76.7732162475586
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5280826091766357
+        }
+      },
+      {
+        "tick": 52,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.794921875,
+          "rms_finite": 66.21379089355469
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.484712690114975
+        }
+      },
+      {
+        "tick": 53,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.26171875,
+          "rms_finite": 77.35633850097656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5197147727012634
+        }
+      },
+      {
+        "tick": 54,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6537.9345703125,
+          "rms_finite": 66.4706039428711
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4721144437789917
+        }
+      },
+      {
+        "tick": 55,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.712890625,
+          "rms_finite": 77.36194610595703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.510884165763855
+        }
+      },
+      {
+        "tick": 56,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.9208984375,
+          "rms_finite": 66.15066528320312
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46033287048339844
+        }
+      },
+      {
+        "tick": 57,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.41796875,
+          "rms_finite": 77.14727783203125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5091425180435181
+        }
+      },
+      {
+        "tick": 58,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6537.18896484375,
+          "rms_finite": 65.80154418945312
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4620799720287323
+        }
+      },
+      {
+        "tick": 59,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.34375,
+          "rms_finite": 76.82655334472656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5053797960281372
+        }
+      },
+      {
+        "tick": 60,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6555.6279296875,
+          "rms_finite": 65.6977767944336
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4645296335220337
+        }
+      },
+      {
+        "tick": 61,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.888671875,
+          "rms_finite": 76.83873748779297
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.511117696762085
+        }
+      },
+      {
+        "tick": 62,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6530.70068359375,
+          "rms_finite": 65.59590911865234
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4702601134777069
+        }
+      },
+      {
+        "tick": 63,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16506.080078125,
+          "rms_finite": 76.9747314453125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5221760869026184
+        }
+      },
+      {
+        "tick": 64,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6548.7626953125,
+          "rms_finite": 65.98943328857422
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.475492000579834
+        }
+      },
+      {
+        "tick": 65,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.591796875,
+          "rms_finite": 77.30426788330078
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5225497484207153
+        }
+      },
+      {
+        "tick": 66,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6535.72509765625,
+          "rms_finite": 66.15686798095703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4696003794670105
+        }
+      },
+      {
+        "tick": 67,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.830078125,
+          "rms_finite": 77.18819427490234
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5186578035354614
+        }
+      },
+      {
+        "tick": 68,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.6533203125,
+          "rms_finite": 66.23818969726562
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4723913371562958
+        }
+      },
+      {
+        "tick": 69,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.78125,
+          "rms_finite": 77.14046478271484
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5274385809898376
+        }
+      },
+      {
+        "tick": 70,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.2138671875,
+          "rms_finite": 66.31239318847656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.484035849571228
+        }
+      },
+      {
+        "tick": 71,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.140625,
+          "rms_finite": 77.46173095703125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5344997048377991
+        }
+      },
+      {
+        "tick": 72,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6552.65625,
+          "rms_finite": 66.75434112548828
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4761888086795807
+        }
+      },
+      {
+        "tick": 73,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.861328125,
+          "rms_finite": 77.85738372802734
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5189403295516968
+        }
+      },
+      {
+        "tick": 74,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6536.2265625,
+          "rms_finite": 66.63526916503906
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4712768495082855
+        }
+      },
+      {
+        "tick": 75,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.91796875,
+          "rms_finite": 77.53958129882812
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5145016312599182
+        }
+      },
+      {
+        "tick": 76,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.76220703125,
+          "rms_finite": 66.45329284667969
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46929678320884705
+        }
+      },
+      {
+        "tick": 77,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.96875,
+          "rms_finite": 77.42521667480469
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5104378461837769
+        }
+      },
+      {
+        "tick": 78,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6536.64697265625,
+          "rms_finite": 66.2591781616211
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47657209634780884
+        }
+      },
+      {
+        "tick": 79,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.650390625,
+          "rms_finite": 76.87278747558594
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5169758200645447
+        }
+      },
+      {
+        "tick": 80,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.53125,
+          "rms_finite": 65.48869323730469
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4827861785888672
+        }
+      },
+      {
+        "tick": 81,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.416015625,
+          "rms_finite": 76.30118560791016
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.516886830329895
+        }
+      },
+      {
+        "tick": 82,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6529.79931640625,
+          "rms_finite": 65.1122817993164
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4818060100078583
+        }
+      },
+      {
+        "tick": 83,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.98828125,
+          "rms_finite": 76.22055053710938
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5083920359611511
+        }
+      },
+      {
+        "tick": 84,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.52392578125,
+          "rms_finite": 64.71600341796875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47752606868743896
+        }
+      },
+      {
+        "tick": 85,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16494.970703125,
+          "rms_finite": 75.79991912841797
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5193294286727905
+        }
+      },
+      {
+        "tick": 86,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6522.58203125,
+          "rms_finite": 64.79148864746094
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4833163022994995
+        }
+      },
+      {
+        "tick": 87,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16494.44921875,
+          "rms_finite": 76.21636199951172
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5183712840080261
+        }
+      },
+      {
+        "tick": 88,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.16748046875,
+          "rms_finite": 65.22628021240234
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48037490248680115
+        }
+      },
+      {
+        "tick": 89,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16496.2734375,
+          "rms_finite": 76.4324722290039
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49887433648109436
+        }
+      },
+      {
+        "tick": 90,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6528.29296875,
+          "rms_finite": 65.47877502441406
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4667125344276428
+        }
+      },
+      {
+        "tick": 91,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.888671875,
+          "rms_finite": 76.12952423095703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49399325251579285
+        }
+      },
+      {
+        "tick": 92,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.5361328125,
+          "rms_finite": 65.1944580078125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4650145471096039
+        }
+      },
+      {
+        "tick": 93,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.529296875,
+          "rms_finite": 76.15901184082031
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4992523193359375
+        }
+      },
+      {
+        "tick": 94,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6525.55615234375,
+          "rms_finite": 65.24822235107422
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4684341251850128
+        }
+      },
+      {
+        "tick": 95,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.912109375,
+          "rms_finite": 75.96818542480469
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5049163103103638
+        }
+      },
+      {
+        "tick": 96,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.3359375,
+          "rms_finite": 64.84929656982422
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4774682819843292
+        }
+      },
+      {
+        "tick": 97,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16496.48828125,
+          "rms_finite": 75.90437316894531
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5087332725524902
+        }
+      },
+      {
+        "tick": 98,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6530.8916015625,
+          "rms_finite": 64.93981170654297
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4891241788864136
+        }
+      },
+      {
+        "tick": 99,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.5234375,
+          "rms_finite": 75.78087615966797
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5150570273399353
+        }
+      },
+      {
+        "tick": 100,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6547.87939453125,
+          "rms_finite": 64.70147705078125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5045443177223206
+        }
+      },
+      {
+        "tick": 101,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16497.384765625,
+          "rms_finite": 76.05208587646484
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5222277045249939
+        }
+      },
+      {
+        "tick": 102,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6527.3671875,
+          "rms_finite": 64.91954803466797
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5012542605400085
+        }
+      },
+      {
+        "tick": 103,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.359375,
+          "rms_finite": 76.16681671142578
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5245635509490967
+        }
+      },
+      {
+        "tick": 104,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6553.60009765625,
+          "rms_finite": 64.87049865722656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5008090734481812
+        }
+      },
+      {
+        "tick": 105,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.525390625,
+          "rms_finite": 76.33577728271484
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5245844125747681
+        }
+      },
+      {
+        "tick": 106,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.94189453125,
+          "rms_finite": 65.40280151367188
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4948587417602539
+        }
+      },
+      {
+        "tick": 107,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.361328125,
+          "rms_finite": 76.29052734375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.528895378112793
+        }
+      },
+      {
+        "tick": 108,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6549.154296875,
+          "rms_finite": 65.32860565185547
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5074053406715393
+        }
+      },
+      {
+        "tick": 109,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.732421875,
+          "rms_finite": 76.33643341064453
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5283031463623047
+        }
+      },
+      {
+        "tick": 110,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6525.91162109375,
+          "rms_finite": 65.10321044921875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5002429485321045
+        }
+      },
+      {
+        "tick": 111,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.638671875,
+          "rms_finite": 76.07150268554688
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.513360321521759
+        }
+      },
+      {
+        "tick": 112,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6554.7314453125,
+          "rms_finite": 65.10940551757812
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5037193894386292
+        }
+      },
+      {
+        "tick": 113,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16508.43359375,
+          "rms_finite": 76.31233978271484
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5208984613418579
+        }
+      },
+      {
+        "tick": 114,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.0576171875,
+          "rms_finite": 65.20010375976562
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49540477991104126
+        }
+      },
+      {
+        "tick": 115,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.533203125,
+          "rms_finite": 76.23677062988281
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.518345832824707
+        }
+      },
+      {
+        "tick": 116,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.75439453125,
+          "rms_finite": 64.96749877929688
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49755942821502686
+        }
+      },
+      {
+        "tick": 117,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.60546875,
+          "rms_finite": 76.34243774414062
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5156319737434387
+        }
+      },
+      {
+        "tick": 118,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6529.06396484375,
+          "rms_finite": 65.44629669189453
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4937661588191986
+        }
+      },
+      {
+        "tick": 119,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16498.681640625,
+          "rms_finite": 76.1915283203125
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.511890709400177
+        }
+      },
+      {
+        "tick": 120,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6554.75341796875,
+          "rms_finite": 65.31228637695312
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48225346207618713
+        }
+      },
+      {
+        "tick": 121,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16504.025390625,
+          "rms_finite": 75.87760162353516
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5061255693435669
+        }
+      },
+      {
+        "tick": 122,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.2451171875,
+          "rms_finite": 64.82537841796875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4772740602493286
+        }
+      },
+      {
+        "tick": 123,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16504.033203125,
+          "rms_finite": 75.63202667236328
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49854642152786255
+        }
+      },
+      {
+        "tick": 124,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.4833984375,
+          "rms_finite": 64.55076599121094
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47442561388015747
+        }
+      },
+      {
+        "tick": 125,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.07421875,
+          "rms_finite": 75.5535888671875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49941208958625793
+        }
+      },
+      {
+        "tick": 126,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.98681640625,
+          "rms_finite": 64.49850463867188
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4778214395046234
+        }
+      },
+      {
+        "tick": 127,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.427734375,
+          "rms_finite": 75.607177734375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5050657391548157
+        }
+      },
+      {
+        "tick": 128,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.45654296875,
+          "rms_finite": 64.74210357666016
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48025447130203247
+        }
+      },
+      {
+        "tick": 129,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16494.587890625,
+          "rms_finite": 75.83834838867188
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5093858242034912
+        }
+      },
+      {
+        "tick": 130,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6537.14990234375,
+          "rms_finite": 65.06367492675781
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4830089807510376
+        }
+      },
+      {
+        "tick": 131,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16498.84375,
+          "rms_finite": 75.71179962158203
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5189173221588135
+        }
+      },
+      {
+        "tick": 132,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6554.34912109375,
+          "rms_finite": 64.6256332397461
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48864030838012695
+        }
+      },
+      {
+        "tick": 133,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.21875,
+          "rms_finite": 75.81547546386719
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5278456807136536
+        }
+      },
+      {
+        "tick": 134,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6530.51904296875,
+          "rms_finite": 64.8902359008789
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.502739667892456
+        }
+      },
+      {
+        "tick": 135,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.029296875,
+          "rms_finite": 76.00214385986328
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5392448306083679
+        }
+      },
+      {
+        "tick": 136,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.66259765625,
+          "rms_finite": 65.11721801757812
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5037122368812561
+        }
+      },
+      {
+        "tick": 137,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.244140625,
+          "rms_finite": 76.27635192871094
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5413593053817749
+        }
+      },
+      {
+        "tick": 138,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6536.82373046875,
+          "rms_finite": 65.23776245117188
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4979614317417145
+        }
+      },
+      {
+        "tick": 139,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16495.166015625,
+          "rms_finite": 76.53461456298828
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5331873297691345
+        }
+      },
+      {
+        "tick": 140,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6553.4189453125,
+          "rms_finite": 65.42327880859375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4896817207336426
+        }
+      },
+      {
+        "tick": 141,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16492.400390625,
+          "rms_finite": 76.76406860351562
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5179298520088196
+        }
+      },
+      {
+        "tick": 142,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6532.7275390625,
+          "rms_finite": 65.65150451660156
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48185163736343384
+        }
+      },
+      {
+        "tick": 143,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16491.474609375,
+          "rms_finite": 77.01651763916016
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5187228918075562
+        }
+      },
+      {
+        "tick": 144,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6550.9990234375,
+          "rms_finite": 65.96971130371094
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4718349874019623
+        }
+      },
+      {
+        "tick": 145,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16493.140625,
+          "rms_finite": 76.90576171875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.52154141664505
+        }
+      },
+      {
+        "tick": 146,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6536.43408203125,
+          "rms_finite": 65.80726623535156
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48640912771224976
+        }
+      },
+      {
+        "tick": 147,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16494.4296875,
+          "rms_finite": 76.78193664550781
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5136268138885498
+        }
+      },
+      {
+        "tick": 148,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.548828125,
+          "rms_finite": 65.91797637939453
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4855926036834717
+        }
+      },
+      {
+        "tick": 149,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.7265625,
+          "rms_finite": 76.71197509765625
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5148350596427917
+        }
+      }
+    ],
+    "forward_ticks": [
+      {
+        "tick": 0,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6534.4248046875,
+          "rms_finite": 65.59304809570312
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47487691044807434
+        }
+      },
+      {
+        "tick": 1,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.64453125,
+          "rms_finite": 76.34869384765625
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5095797777175903
+        }
+      },
+      {
+        "tick": 2,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6551.40478515625,
+          "rms_finite": 65.51708221435547
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4758482575416565
+        }
+      },
+      {
+        "tick": 3,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.728515625,
+          "rms_finite": 76.42182159423828
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5201275944709778
+        }
+      },
+      {
+        "tick": 4,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6538.84375,
+          "rms_finite": 65.63611602783203
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4822032153606415
+        }
+      },
+      {
+        "tick": 5,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.130859375,
+          "rms_finite": 76.65122985839844
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5164944529533386
+        }
+      },
+      {
+        "tick": 6,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6557.65185546875,
+          "rms_finite": 65.54124450683594
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4744487404823303
+        }
+      },
+      {
+        "tick": 7,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.083984375,
+          "rms_finite": 76.6112060546875
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5115665197372437
+        }
+      },
+      {
+        "tick": 8,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6532.38037109375,
+          "rms_finite": 65.47190856933594
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4777582585811615
+        }
+      },
+      {
+        "tick": 9,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.2578125,
+          "rms_finite": 76.77381896972656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5060886144638062
+        }
+      },
+      {
+        "tick": 10,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6555.62060546875,
+          "rms_finite": 65.62189483642578
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47821372747421265
+        }
+      },
+      {
+        "tick": 11,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.685546875,
+          "rms_finite": 76.63427734375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5081896781921387
+        }
+      },
+      {
+        "tick": 12,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6540.1181640625,
+          "rms_finite": 65.29173278808594
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4747191369533539
+        }
+      },
+      {
+        "tick": 13,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16506.400390625,
+          "rms_finite": 76.4866943359375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5093092322349548
+        }
+      },
+      {
+        "tick": 14,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6555.41259765625,
+          "rms_finite": 65.19677734375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46985483169555664
+        }
+      },
+      {
+        "tick": 15,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.876953125,
+          "rms_finite": 76.44296264648438
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.49619683623313904
+        }
+      },
+      {
+        "tick": 16,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6544.20361328125,
+          "rms_finite": 65.08876037597656
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.463300496339798
+        }
+      },
+      {
+        "tick": 17,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16506.04296875,
+          "rms_finite": 76.3754653930664
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5015830993652344
+        }
+      },
+      {
+        "tick": 18,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6556.8681640625,
+          "rms_finite": 65.22736358642578
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4602300524711609
+        }
+      },
+      {
+        "tick": 19,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.193359375,
+          "rms_finite": 76.55134582519531
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5027042031288147
+        }
+      },
+      {
+        "tick": 20,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6545.33935546875,
+          "rms_finite": 65.50409698486328
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4647490978240967
+        }
+      },
+      {
+        "tick": 21,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16500.876953125,
+          "rms_finite": 76.7981185913086
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5128387808799744
+        }
+      },
+      {
+        "tick": 22,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6556.92333984375,
+          "rms_finite": 65.77014923095703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46516790986061096
+        }
+      },
+      {
+        "tick": 23,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.255859375,
+          "rms_finite": 76.93501281738281
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5169629454612732
+        }
+      },
+      {
+        "tick": 24,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6541.2177734375,
+          "rms_finite": 65.87030792236328
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47189390659332275
+        }
+      },
+      {
+        "tick": 25,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.365234375,
+          "rms_finite": 76.75289154052734
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5160015225410461
+        }
+      },
+      {
+        "tick": 26,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6557.11376953125,
+          "rms_finite": 65.52445220947266
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4700670540332794
+        }
+      },
+      {
+        "tick": 27,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16503.7109375,
+          "rms_finite": 76.5571060180664
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.515051007270813
+        }
+      },
+      {
+        "tick": 28,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6541.05078125,
+          "rms_finite": 65.49048614501953
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.47811460494995117
+        }
+      },
+      {
+        "tick": 29,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16506.96875,
+          "rms_finite": 76.58577728271484
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5215470790863037
+        }
+      },
+      {
+        "tick": 30,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6556.18017578125,
+          "rms_finite": 65.79999542236328
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4876122772693634
+        }
+      },
+      {
+        "tick": 31,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.4375,
+          "rms_finite": 76.77446746826172
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5176153779029846
+        }
+      },
+      {
+        "tick": 32,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6544.3427734375,
+          "rms_finite": 65.619140625
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4790004789829254
+        }
+      },
+      {
+        "tick": 33,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16499.9609375,
+          "rms_finite": 76.80289459228516
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5173778533935547
+        }
+      },
+      {
+        "tick": 34,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6556.17724609375,
+          "rms_finite": 65.58216094970703
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4826025366783142
+        }
+      },
+      {
+        "tick": 35,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.22265625,
+          "rms_finite": 76.58161926269531
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5241565704345703
+        }
+      },
+      {
+        "tick": 36,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6540.12744140625,
+          "rms_finite": 65.75006866455078
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.495414674282074
+        }
+      },
+      {
+        "tick": 37,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16505.857421875,
+          "rms_finite": 76.67533874511719
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5259034037590027
+        }
+      },
+      {
+        "tick": 38,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6558.19677734375,
+          "rms_finite": 65.62649536132812
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4936141073703766
+        }
+      },
+      {
+        "tick": 39,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.34375,
+          "rms_finite": 76.82862091064453
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5286816954612732
+        }
+      },
+      {
+        "tick": 40,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6538.11474609375,
+          "rms_finite": 65.83944702148438
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.483169287443161
+        }
+      },
+      {
+        "tick": 41,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.72265625,
+          "rms_finite": 76.70828247070312
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5303640365600586
+        }
+      },
+      {
+        "tick": 42,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6554.3388671875,
+          "rms_finite": 65.5890121459961
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.48255929350852966
+        }
+      },
+      {
+        "tick": 43,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16502.380859375,
+          "rms_finite": 76.66162109375
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5219489336013794
+        }
+      },
+      {
+        "tick": 44,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6541.22216796875,
+          "rms_finite": 65.6568603515625
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.4702710509300232
+        }
+      },
+      {
+        "tick": 45,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16507.8671875,
+          "rms_finite": 76.85323333740234
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5064262747764587
+        }
+      },
+      {
+        "tick": 46,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 6548.984375,
+          "rms_finite": 65.58788299560547
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.46790653467178345
+        }
+      },
+      {
+        "tick": 47,
+        "membrane": {
+          "nonfinite": 0,
+          "max_abs_finite": 16501.0859375,
+          "rms_finite": 76.35733032226562
+        },
+        "motor_trace": {
+          "nonfinite": 0,
+          "max_abs_finite": 1.3586010932922363,
+          "rms_finite": 0.5051091909408569
+        }
+      }
+    ],
+    "decision_outputs": [
+      {
+        "decision": 0,
+        "scores": [
+          -0.048221491277217865,
+          0.6229919195175171
+        ],
+        "loss": 1.0840433835983276
+      },
+      {
+        "decision": 1,
+        "scores": [
+          -0.44353240728378296,
+          0.29295405745506287
+        ],
+        "loss": 1.1277128458023071
+      },
+      {
+        "decision": 2,
+        "scores": [
+          -0.5152751207351685,
+          0.432802677154541
+        ],
+        "loss": 0.3274928629398346
+      }
+    ],
+    "state_gradients": [
+      {
+        "kind": "spikes",
+        "tick": 47,
+        "nonfinite": 0,
+        "max_abs_finite": 0.009283464401960373,
+        "rms_finite": 0.0003123534261249006
+      },
+      {
+        "kind": "membrane",
+        "tick": 46,
+        "nonfinite": 0,
+        "max_abs_finite": 0.004123752471059561,
+        "rms_finite": 2.0010746084153652e-05
+      },
+      {
+        "kind": "spikes",
+        "tick": 46,
+        "nonfinite": 0,
+        "max_abs_finite": 0.11702113598585129,
+        "rms_finite": 0.0011347378604114056
+      },
+      {
+        "kind": "membrane",
+        "tick": 45,
+        "nonfinite": 0,
+        "max_abs_finite": 0.016429994255304337,
+        "rms_finite": 5.2362280257511884e-05
+      },
+      {
+        "kind": "spikes",
+        "tick": 45,
+        "nonfinite": 0,
+        "max_abs_finite": 0.3066551089286804,
+        "rms_finite": 0.0029061175882816315
+      },
+      {
+        "kind": "membrane",
+        "tick": 44,
+        "nonfinite": 0,
+        "max_abs_finite": 0.019238945096731186,
+        "rms_finite": 7.859527977416292e-05
+      },
+      {
+        "kind": "spikes",
+        "tick": 44,
+        "nonfinite": 0,
+        "max_abs_finite": 0.44647642970085144,
+        "rms_finite": 0.004051100928336382
+      },
+      {
+        "kind": "membrane",
+        "tick": 43,
+        "nonfinite": 0,
+        "max_abs_finite": 0.07152033597230911,
+        "rms_finite": 0.00020878341456409544
+      },
+      {
+        "kind": "spikes",
+        "tick": 43,
+        "nonfinite": 0,
+        "max_abs_finite": 1.753283977508545,
+        "rms_finite": 0.010483328253030777
+      },
+      {
+        "kind": "membrane",
+        "tick": 42,
+        "nonfinite": 0,
+        "max_abs_finite": 0.08222189545631409,
+        "rms_finite": 0.0003720727108884603
+      },
+      {
+        "kind": "spikes",
+        "tick": 42,
+        "nonfinite": 0,
+        "max_abs_finite": 7.30338191986084,
+        "rms_finite": 0.0425642654299736
+      },
+      {
+        "kind": "membrane",
+        "tick": 41,
+        "nonfinite": 0,
+        "max_abs_finite": 0.11872082203626633,
+        "rms_finite": 0.000590349140111357
+      },
+      {
+        "kind": "spikes",
+        "tick": 41,
+        "nonfinite": 0,
+        "max_abs_finite": 6.357790946960449,
+        "rms_finite": 0.04515337571501732
+      },
+      {
+        "kind": "membrane",
+        "tick": 40,
+        "nonfinite": 0,
+        "max_abs_finite": 0.18481352925300598,
+        "rms_finite": 0.001207886729389429
+      },
+      {
+        "kind": "spikes",
+        "tick": 40,
+        "nonfinite": 0,
+        "max_abs_finite": 5.771787643432617,
+        "rms_finite": 0.06233857199549675
+      },
+      {
+        "kind": "membrane",
+        "tick": 39,
+        "nonfinite": 0,
+        "max_abs_finite": 0.9440608620643616,
+        "rms_finite": 0.003904202952980995
+      },
+      {
+        "kind": "spikes",
+        "tick": 39,
+        "nonfinite": 0,
+        "max_abs_finite": 28.829442977905273,
+        "rms_finite": 0.20828863978385925
+      },
+      {
+        "kind": "membrane",
+        "tick": 38,
+        "nonfinite": 0,
+        "max_abs_finite": 1.619219183921814,
+        "rms_finite": 0.009075360372662544
+      },
+      {
+        "kind": "spikes",
+        "tick": 38,
+        "nonfinite": 0,
+        "max_abs_finite": 43.96522521972656,
+        "rms_finite": 0.4464333653450012
+      },
+      {
+        "kind": "membrane",
+        "tick": 37,
+        "nonfinite": 0,
+        "max_abs_finite": 5.59994649887085,
+        "rms_finite": 0.03913604095578194
+      },
+      {
+        "kind": "spikes",
+        "tick": 37,
+        "nonfinite": 0,
+        "max_abs_finite": 771.61328125,
+        "rms_finite": 5.6113505363464355
+      },
+      {
+        "kind": "membrane",
+        "tick": 36,
+        "nonfinite": 0,
+        "max_abs_finite": 106.19747924804688,
+        "rms_finite": 0.5438904762268066
+      },
+      {
+        "kind": "spikes",
+        "tick": 36,
+        "nonfinite": 0,
+        "max_abs_finite": 13733.77734375,
+        "rms_finite": 98.82282257080078
+      },
+      {
+        "kind": "membrane",
+        "tick": 35,
+        "nonfinite": 0,
+        "max_abs_finite": 1645.8836669921875,
+        "rms_finite": 8.929374694824219
+      },
+      {
+        "kind": "spikes",
+        "tick": 35,
+        "nonfinite": 0,
+        "max_abs_finite": 232145.953125,
+        "rms_finite": 1655.611083984375
+      },
+      {
+        "kind": "membrane",
+        "tick": 34,
+        "nonfinite": 0,
+        "max_abs_finite": 28947.943359375,
+        "rms_finite": 149.61195373535156
+      },
+      {
+        "kind": "spikes",
+        "tick": 34,
+        "nonfinite": 0,
+        "max_abs_finite": 3771402.25,
+        "rms_finite": 27035.69921875
+      },
+      {
+        "kind": "membrane",
+        "tick": 33,
+        "nonfinite": 0,
+        "max_abs_finite": 497298.40625,
+        "rms_finite": 2275.716796875
+      },
+      {
+        "kind": "spikes",
+        "tick": 33,
+        "nonfinite": 0,
+        "max_abs_finite": 57962876.0,
+        "rms_finite": 412037.96875
+      },
+      {
+        "kind": "membrane",
+        "tick": 32,
+        "nonfinite": 0,
+        "max_abs_finite": 8444208.0,
+        "rms_finite": 35720.11328125
+      },
+      {
+        "kind": "spikes",
+        "tick": 32,
+        "nonfinite": 0,
+        "max_abs_finite": 883900480.0,
+        "rms_finite": 6319286.5
+      },
+      {
+        "kind": "membrane",
+        "tick": 31,
+        "nonfinite": 0,
+        "max_abs_finite": 102158576.0,
+        "rms_finite": 462150.9375
+      },
+      {
+        "kind": "spikes",
+        "tick": 31,
+        "nonfinite": 0,
+        "max_abs_finite": 11789229056.0,
+        "rms_finite": 83946568.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 30,
+        "nonfinite": 0,
+        "max_abs_finite": 2041243904.0,
+        "rms_finite": 6979731.5
+      },
+      {
+        "kind": "spikes",
+        "tick": 30,
+        "nonfinite": 0,
+        "max_abs_finite": 160908476416.0,
+        "rms_finite": 1151227136.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 29,
+        "nonfinite": 0,
+        "max_abs_finite": 11736188928.0,
+        "rms_finite": 63777276.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 29,
+        "nonfinite": 0,
+        "max_abs_finite": 1687449632768.0,
+        "rms_finite": 12094893056.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 28,
+        "nonfinite": 0,
+        "max_abs_finite": 159243780096.0,
+        "rms_finite": 698400512.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 28,
+        "nonfinite": 0,
+        "max_abs_finite": 17373287415808.0,
+        "rms_finite": 125668958208.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 27,
+        "nonfinite": 0,
+        "max_abs_finite": 1185177796608.0,
+        "rms_finite": 5781102592.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 27,
+        "nonfinite": 0,
+        "max_abs_finite": 149663957123072.0,
+        "rms_finite": 1078512058368.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 26,
+        "nonfinite": 0,
+        "max_abs_finite": 13218780020736.0,
+        "rms_finite": 51970969600.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 26,
+        "nonfinite": 0,
+        "max_abs_finite": 1261225602187264.0,
+        "rms_finite": 9132944916480.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 25,
+        "nonfinite": 0,
+        "max_abs_finite": 79037238083584.0,
+        "rms_finite": 340452933632.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 25,
+        "nonfinite": 0,
+        "max_abs_finite": 8620207132114944.0,
+        "rms_finite": 62211007447040.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 24,
+        "nonfinite": 0,
+        "max_abs_finite": 697264787947520.0,
+        "rms_finite": 2455444127744.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 24,
+        "nonfinite": 0,
+        "max_abs_finite": 5.688163633515725e+16,
+        "rms_finite": 411939272392704.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 23,
+        "nonfinite": 0,
+        "max_abs_finite": 3145513520070656.0,
+        "rms_finite": 12101784436736.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 23,
+        "nonfinite": 0,
+        "max_abs_finite": 2.951637933972521e+17,
+        "rms_finite": 2133940810809344.0
+      },
+      {
+        "kind": "membrane",
+        "tick": 22,
+        "nonfinite": 0,
+        "max_abs_finite": 2.162892916916224e+16,
+        "rms_finite": 68358376521728.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 22,
+        "nonfinite": 0,
+        "max_abs_finite": 1.491483125031633e+18,
+        "rms_finite": 1.0738532784013312e+16
+      },
+      {
+        "kind": "membrane",
+        "tick": 21,
+        "nonfinite": 0,
+        "max_abs_finite": 7.208409398614426e+16,
+        "rms_finite": 249808719708160.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 21,
+        "nonfinite": 0,
+        "max_abs_finite": 5.891894685646979e+18,
+        "rms_finite": 4.243323320742707e+16
+      },
+      {
+        "kind": "membrane",
+        "tick": 20,
+        "nonfinite": 0,
+        "max_abs_finite": 8.536594534157517e+17,
+        "rms_finite": 2413097310486528.0
+      },
+      {
+        "kind": "spikes",
+        "tick": 20,
+        "nonfinite": 0,
+        "max_abs_finite": 4.181256683064708e+19,
+        "rms_finite": 3.018463158332293e+17
+      },
+      {
+        "kind": "membrane",
+        "tick": 19,
+        "nonfinite": 0,
+        "max_abs_finite": 2.8311575042499543e+18,
+        "rms_finite": 1.3439563628281856e+16
+      },
+      {
+        "kind": "spikes",
+        "tick": 19,
+        "nonfinite": 0,
+        "max_abs_finite": 2.472825400319384e+20,
+        "rms_finite": 2.139514525160833e+18
+      },
+      {
+        "kind": "membrane",
+        "tick": 18,
+        "nonfinite": 0,
+        "max_abs_finite": 3.8524996277271265e+19,
+        "rms_finite": 1.9973582201290752e+17
+      },
+      {
+        "kind": "spikes",
+        "tick": 18,
+        "nonfinite": 0,
+        "max_abs_finite": 2.8479615625586037e+21,
+        "rms_finite": 2.742266442166357e+19
+      },
+      {
+        "kind": "membrane",
+        "tick": 17,
+        "nonfinite": 0,
+        "max_abs_finite": 4.211382510017399e+20,
+        "rms_finite": 1.932246962598314e+18
+      },
+      {
+        "kind": "spikes",
+        "tick": 17,
+        "nonfinite": 0,
+        "max_abs_finite": 2.86984995746755e+22,
+        "rms_finite": 2.903881105466175e+20
+      },
+      {
+        "kind": "membrane",
+        "tick": 16,
+        "nonfinite": 0,
+        "max_abs_finite": 4.611174296919728e+21,
+        "rms_finite": 2.043387384640307e+19
+      },
+      {
+        "kind": "spikes",
+        "tick": 16,
+        "nonfinite": 0,
+        "max_abs_finite": 2.9358686747651366e+23,
+        "rms_finite": 2.9630882057329826e+21
+      },
+      {
+        "kind": "membrane",
+        "tick": 15,
+        "nonfinite": 0,
+        "max_abs_finite": 3.816809241035787e+22,
+        "rms_finite": 1.781167671281776e+20
+      },
+      {
+        "kind": "spikes",
+        "tick": 15,
+        "nonfinite": 0,
+        "max_abs_finite": 2.5900563186129793e+24,
+        "rms_finite": 2.569222972981538e+22
+      },
+      {
+        "kind": "membrane",
+        "tick": 14,
+        "nonfinite": 0,
+        "max_abs_finite": 3.707436351709341e+23,
+        "rms_finite": 1.8899787900349537e+21
+      },
+      {
+        "kind": "spikes",
+        "tick": 14,
+        "nonfinite": 0,
+        "max_abs_finite": 2.623978555104801e+25,
+        "rms_finite": 2.64861684074046e+23
+      },
+      {
+        "kind": "membrane",
+        "tick": 13,
+        "nonfinite": 0,
+        "max_abs_finite": 4.163842306874143e+24,
+        "rms_finite": 1.774436605352457e+22
+      },
+      {
+        "kind": "spikes",
+        "tick": 13,
+        "nonfinite": 0,
+        "max_abs_finite": 2.3396953671331213e+26,
+        "rms_finite": 2.432100019643942e+24
+      },
+      {
+        "kind": "membrane",
+        "tick": 12,
+        "nonfinite": 0,
+        "max_abs_finite": 2.6774210785293466e+25,
+        "rms_finite": 1.3637339223001493e+23
+      },
+      {
+        "kind": "spikes",
+        "tick": 12,
+        "nonfinite": 0,
+        "max_abs_finite": 1.8722974473906434e+27,
+        "rms_finite": 1.9077887892976478e+25
+      },
+      {
+        "kind": "membrane",
+        "tick": 11,
+        "nonfinite": 0,
+        "max_abs_finite": 2.12365835305572e+26,
+        "rms_finite": 9.275610910228512e+23
+      },
+      {
+        "kind": "spikes",
+        "tick": 11,
+        "nonfinite": 0,
+        "max_abs_finite": 1.2205688141781443e+28,
+        "rms_finite": 1.2659497784010857e+26
+      },
+      {
+        "kind": "membrane",
+        "tick": 10,
+        "nonfinite": 0,
+        "max_abs_finite": 3.6000196449082326e+27,
+        "rms_finite": 1.0639721117284727e+25
+      },
+      {
+        "kind": "spikes",
+        "tick": 10,
+        "nonfinite": 0,
+        "max_abs_finite": 1.1486506671952369e+29,
+        "rms_finite": 1.1817124448873299e+27
+      },
+      {
+        "kind": "membrane",
+        "tick": 9,
+        "nonfinite": 0,
+        "max_abs_finite": 3.338057875039341e+28,
+        "rms_finite": 9.47544494994761e+25
+      },
+      {
+        "kind": "spikes",
+        "tick": 9,
+        "nonfinite": 0,
+        "max_abs_finite": 9.831422245137137e+29,
+        "rms_finite": 1.0156238937205432e+28
+      },
+      {
+        "kind": "membrane",
+        "tick": 8,
+        "nonfinite": 0,
+        "max_abs_finite": 1.782521642037974e+29,
+        "rms_finite": 5.642589689684276e+26
+      },
+      {
+        "kind": "spikes",
+        "tick": 8,
+        "nonfinite": 0,
+        "max_abs_finite": 6.466280663289975e+30,
+        "rms_finite": 6.740135928013649e+28
+      },
+      {
+        "kind": "membrane",
+        "tick": 7,
+        "nonfinite": 0,
+        "max_abs_finite": 1.0626463243463051e+30,
+        "rms_finite": 3.3443864364221967e+27
+      },
+      {
+        "kind": "spikes",
+        "tick": 7,
+        "nonfinite": 0,
+        "max_abs_finite": 3.685671489072234e+31,
+        "rms_finite": 3.893196753077373e+29
+      },
+      {
+        "kind": "membrane",
+        "tick": 6,
+        "nonfinite": 0,
+        "max_abs_finite": 3.543788025873347e+30,
+        "rms_finite": 1.2617552876359781e+28
+      },
+      {
+        "kind": "spikes",
+        "tick": 6,
+        "nonfinite": 0,
+        "max_abs_finite": 1.6213047303668834e+32,
+        "rms_finite": 1.673932335921661e+30
+      },
+      {
+        "kind": "membrane",
+        "tick": 5,
+        "nonfinite": 0,
+        "max_abs_finite": 7.207670379989466e+31,
+        "rms_finite": 1.851002000668682e+29
+      },
+      {
+        "kind": "spikes",
+        "tick": 5,
+        "nonfinite": 0,
+        "max_abs_finite": 1.532330536722709e+33,
+        "rms_finite": 1.5169847805391568e+31
+      },
+      {
+        "kind": "membrane",
+        "tick": 4,
+        "nonfinite": 0,
+        "max_abs_finite": 2.1223799172244926e+32,
+        "rms_finite": 6.881031226581262e+29
+      },
+      {
+        "kind": "spikes",
+        "tick": 4,
+        "nonfinite": 0,
+        "max_abs_finite": 9.519331812791021e+33,
+        "rms_finite": 8.873597722927112e+31
+      },
+      {
+        "kind": "membrane",
+        "tick": 3,
+        "nonfinite": 0,
+        "max_abs_finite": 1.6967930373368404e+33,
+        "rms_finite": 4.762421519819482e+30
+      },
+      {
+        "kind": "spikes",
+        "tick": 3,
+        "nonfinite": 0,
+        "max_abs_finite": 5.866832559604866e+34,
+        "rms_finite": 5.0554581388135724e+32
+      },
+      {
+        "kind": "membrane",
+        "tick": 2,
+        "nonfinite": 0,
+        "max_abs_finite": 4.030236044472435e+33,
+        "rms_finite": 1.5812995132500731e+31
+      },
+      {
+        "kind": "spikes",
+        "tick": 2,
+        "nonfinite": 0,
+        "max_abs_finite": 3.0461873685155644e+35,
+        "rms_finite": 2.3007544266857395e+33
+      },
+      {
+        "kind": "membrane",
+        "tick": 1,
+        "nonfinite": 0,
+        "max_abs_finite": 1.8217426582920513e+34,
+        "rms_finite": 7.307727367235034e+31
+      },
+      {
+        "kind": "spikes",
+        "tick": 1,
+        "nonfinite": 0,
+        "max_abs_finite": 1.581265932617768e+36,
+        "rms_finite": 1.088792404382258e+34
+      },
+      {
+        "kind": "membrane",
+        "tick": 0,
+        "nonfinite": 0,
+        "max_abs_finite": 1.1606011713414717e+35,
+        "rms_finite": 3.6796475567841925e+32
+      },
+      {
+        "kind": "spikes",
+        "tick": 0,
+        "nonfinite": 0,
+        "max_abs_finite": 8.231606430262529e+36,
+        "rms_finite": 5.789681660476522e+34
+      }
+    ],
+    "plastic_edge_gradient": {
+      "nonfinite": 0,
+      "max_abs_finite": 2.893777626886232e+30,
+      "rms_finite": 3.992158287303071e+28
+    }
+  },
+  "seconds": 7.3021910190582275,
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_bptt_smoke_grad-audit-b3_20260926T134841Z_c153d35e.json",
+  "utc": "2026-09-26T13:48:49+00:00"
+}

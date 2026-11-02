@@ -1,0 +1,9 @@
+2026-10-20T14:03:20+00:00 start nullin:3 learners=24 blocks=['b0', 'b1', 'b2', 'b3', 'b4', 'b5'] kinds=main stop_at=None
+2026-10-20T14:03:57+00:00 nullin:3 k=0 eval 27.3s
+2026-10-20T14:04:53+00:00 nullin:3 k=250 eval 27.0s
+2026-10-20T14:05:49+00:00 nullin:3 k=500 eval 27.0s
+2026-10-20T14:07:13+00:00 nullin:3 k=1000 eval 27.0s
+2026-10-20T14:09:34+00:00 nullin:3 k=2000 eval 27.0s
+2026-10-20T14:13:49+00:00 nullin:3 k=4000 eval 27.0s
+2026-10-20T14:18:04+00:00 nullin:3 k=6000 eval 27.0s
+2026-10-20T14:20:19+00:00 end k=6000 complete=True wall=1017.7s train_step_median=0.1138753890991211

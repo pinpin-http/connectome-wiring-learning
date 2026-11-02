@@ -1,0 +1,104 @@
+{
+ "what": "criterion D references (PERCEPTION_CREDIT_STUDY \u00a75)",
+ "D_min": 0.1,
+ "n_frames": 285,
+ "results": {
+  "noise_twin_ro1": {
+   "D": -0.0012,
+   "p_greater": 0.746222,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false
+  },
+  "noise_twin_ro2": {
+   "D": 0.0069,
+   "p_greater": 0.07086,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false
+  },
+  "noise_twin_ro3": {
+   "D": 0.0001,
+   "p_greater": 0.445565,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false
+  },
+  "teacher_ro1": {
+   "D": 0.1063,
+   "p_greater": 0.0,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": true,
+   "trained_decisions": 10000
+  },
+  "teacher_ro2": {
+   "D": 0.3251,
+   "p_greater": 0.0,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": true,
+   "trained_decisions": 10000
+  },
+  "teacher_ro3": {
+   "D": 0.201,
+   "p_greater": 0.0,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": true,
+   "trained_decisions": 10000
+  },
+  "specialist_ro1": {
+   "D": 0.0435,
+   "p_greater": 2e-06,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false,
+   "trained_decisions": 20505
+  },
+  "generalist_ro1": {
+   "D": 0.0255,
+   "p_greater": 7.3e-05,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false,
+   "trained_decisions": 20505
+  },
+  "specialist_ro2": {
+   "D": 0.1104,
+   "p_greater": 0.0,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": true,
+   "trained_decisions": 20505
+  },
+  "generalist_ro2": {
+   "D": 0.0335,
+   "p_greater": 0.0,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false,
+   "trained_decisions": 20505
+  },
+  "specialist_ro3": {
+   "D": -0.0224,
+   "p_greater": 0.950131,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false,
+   "trained_decisions": 20505
+  },
+  "generalist_ro3": {
+   "D": 0.0042,
+   "p_greater": 0.001124,
+   "n_danger": 160,
+   "n_clear": 125,
+   "pass": false,
+   "trained_decisions": 20505
+  }
+ },
+ "teachers_passing": 3,
+ "negatives_passing": 1,
+ "criterion_validated": false,
+ "utc": "2026-10-03T20:02:53+00:00"
+}

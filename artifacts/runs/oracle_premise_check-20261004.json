@@ -1,0 +1,34 @@
+{
+ "what": "oracle premise: danger decodability, schematic vs game (post hoc instrument check)",
+ "n_frames": 285,
+ "results": {
+  "pixels": {
+   "motor_code": {
+    "train_5-1_test_8-1": 0.9683,
+    "train_8-1_test_5-1": 0.8706,
+    "mean": 0.9195
+   },
+   "lamina_input": {
+    "train_5-1_test_8-1": 0.9556,
+    "train_8-1_test_5-1": 0.7013,
+    "mean": 0.8285
+   },
+   "motor_spikes_per_frame": 4553.7
+  },
+  "schematic": {
+   "motor_code": {
+    "train_5-1_test_8-1": 0.9169,
+    "train_8-1_test_5-1": 0.8277,
+    "mean": 0.8723
+   },
+   "lamina_input": {
+    "train_5-1_test_8-1": 0.7519,
+    "train_8-1_test_5-1": 0.8297,
+    "mean": 0.7908
+   },
+   "motor_spikes_per_frame": 4533.1
+  }
+ },
+ "premise_holds": false,
+ "utc": "2026-10-04T13:01:48+00:00"
+}

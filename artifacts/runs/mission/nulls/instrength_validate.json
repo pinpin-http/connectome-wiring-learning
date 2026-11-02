@@ -1,0 +1,322 @@
+{
+ "0": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82233.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "1": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 81133.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "2": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 81811.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "3": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82579.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "4": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82619.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "5": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83313.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "6": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 84506.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "7": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 81484.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "8": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83293.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "9": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82566.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "10": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82651.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "11": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 84021.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "12": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82196.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "13": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82239.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "14": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82091.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "15": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 84044.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "16": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83543.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "17": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82831.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "18": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83455.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "19": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83147.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "20": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83203.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "21": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83408.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "22": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82930.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "23": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82931.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "24": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83239.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "25": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83535.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "26": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83028.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "27": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82447.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "28": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82227.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "29": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82043.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "30": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83103.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "31": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82357.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "32": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83314.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "33": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83226.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "34": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 81881.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "35": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82842.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "36": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83763.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "37": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 84032.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "38": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 83624.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ },
+ "39": {
+  "in_strength_exact": true,
+  "out_strength_max_abs_change": 82740.0,
+  "in_degree_exact": true,
+  "out_degree_exact": true,
+  "weight_multiset_equal": true,
+  "sign_multiset_equal": true
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "18.1 expert (primary)": {
+  "per_graph": {
+   "connectome": {
+    "curve_mean": [
+     0.5794,
+     0.6596,
+     0.5454
+    ],
+    "points": 8,
+    "final": [
+     0.5782,
+     0.8665,
+     0.6449
+    ],
+    "frames_final": 4000
+   },
+   "nulllat0": {
+    "curve_mean": [
+     0.9144,
+     0.8925,
+     0.9044
+    ],
+    "points": 8,
+    "final": [
+     0.9519,
+     0.8466,
+     0.9286
+    ],
+    "frames_final": 4000
+   },
+   "nulllat1": {
+    "curve_mean": [
+     0.8631,
+     0.768,
+     0.7867
+    ],
+    "points": 8,
+    "final": [
+     0.8907,
+     0.9091,
+     0.89
+    ],
+    "frames_final": 4000
+   },
+   "nulllat2": {
+    "curve_mean": [
+     0.6687,
+     0.7881,
+     0.724
+    ],
+    "points": 8,
+    "final": [
+     0.8221,
+     0.8476,
+     0.6385
+    ],
+    "frames_final": 4000
+   }
+  },
+  "connectome": [
+   0.5794,
+   0.6596,
+   0.5454
+  ],
+  "nulls": [
+   0.9144,
+   0.8925,
+   0.9044,
+   0.8631,
+   0.768,
+   0.7867,
+   0.6687,
+   0.7881,
+   0.724
+  ],
+  "diff_of_means": -0.2174,
+  "per_null_means": [
+   0.9038,
+   0.8059,
+   0.7269
+  ],
+  "mann_whitney_two_sided": {
+   "U": 0.0,
+   "p": 0.00909090909090909
+  },
+  "complete": true,
+  "verdict": "difference: connectome lower"
+ },
+ "18.1 scripted (secondary)": {
+  "per_graph": {
+   "connectome": {
+    "curve_mean": [
+     0.8888,
+     0.8718,
+     0.8647
+    ],
+    "points": 8,
+    "final": [
+     0.9391,
+     0.9225,
+     0.9248
+    ],
+    "frames_final": 4000
+   },
+   "nulllat0": {
+    "curve_mean": [
+     0.9412,
+     0.9345,
+     0.941
+    ],
+    "points": 8,
+    "final": [
+     0.955,
+     0.9481,
+     0.9488
+    ],
+    "frames_final": 4000
+   },
+   "nulllat1": {
+    "curve_mean": [
+     0.9082,
+     0.8637,
+     0.9331
+    ],
+    "points": 8,
+    "final": [
+     0.933,
+     0.923,
+     0.9535
+    ],
+    "frames_final": 4000
+   },
+   "nulllat2": {
+    "curve_mean": [
+     0.8626,
+     0.8592,
+     0.8803
+    ],
+    "points": 8,
+    "final": [
+     0.9639,
+     0.9473,
+     0.91
+    ],
+    "frames_final": 4000
+   }
+  },
+  "connectome": [
+   0.8888,
+   0.8718,
+   0.8647
+  ],
+  "nulls": [
+   0.9412,
+   0.9345,
+   0.941,
+   0.9082,
+   0.8637,
+   0.9331,
+   0.8626,
+   0.8592,
+   0.8803
+  ],
+  "diff_of_means": -0.0275,
+  "per_null_means": [
+   0.9389,
+   0.9017,
+   0.8674
+  ],
+  "mann_whitney_two_sided": {
+   "U": 10.0,
+   "p": 0.6
+  },
+  "complete": true,
+  "verdict": "no difference shown at this power"
+ },
+ "18 replication": {
+  "drops": {
+   "connectome": [
+    0.0689,
+    0.163,
+    0.1028
+   ],
+   "nulllat0": [
+    0.1136,
+    0.0832,
+    0.2307
+   ],
+   "nulllat1": [
+    0.2542,
+    0.1404,
+    0.0663
+   ],
+   "nulllat2": [
+    0.3531,
+    0.2852,
+    0.2944
+   ]
+  },
+  "primary_conn_vs_nulls01": {
+   "U": 7.0,
+   "p": 0.3571428571428571
+  },
+  "replicated": false,
+  "secondary_conn_vs_nulls012": {
+   "U": 7.0,
+   "p": 0.1409090909090909
+  },
+  "classes": {
+   "connectome/cs_ro1": "unclassified",
+   "connectome/cs_ro2": "B observation shift",
+   "connectome/cs_ro3": "B observation shift",
+   "connectome/csperm_ro1": null,
+   "connectome/csperm_ro2": null,
+   "connectome/csperm_ro3": null,
+   "connectome/ref_expert": null,
+   "connectome/ref_alwaysrun": null,
+   "connectome/untrained_ro1": null,
+   "connectome/untrained_ro2": null,
+   "connectome/untrained_ro3": null,
+   "nulllat0/cs_ro1": "B observation shift",
+   "nulllat0/cs_ro2": "unclassified",
+   "nulllat0/cs_ro3": "B observation shift",
+   "nulllat0/untrained_ro1": null,
+   "nulllat0/untrained_ro2": null,
+   "nulllat0/untrained_ro3": null,
+   "nulllat1/cs_ro1": "B observation shift",
+   "nulllat1/cs_ro2": "B observation shift",
+   "nulllat1/cs_ro3": "unclassified",
+   "nulllat1/untrained_ro1": null,
+   "nulllat1/untrained_ro2": null,
+   "nulllat1/untrained_ro3": null,
+   "nulllat2/cs_ro1": "B observation shift",
+   "nulllat2/cs_ro2": "B observation shift",
+   "nulllat2/cs_ro3": "B observation shift",
+   "nulllat2/untrained_ro1": null,
+   "nulllat2/untrained_ro2": null,
+   "nulllat2/untrained_ro3": null
+  }
+ }
+}

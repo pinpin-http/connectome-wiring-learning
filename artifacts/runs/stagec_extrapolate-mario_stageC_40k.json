@@ -1,0 +1,112 @@
+{
+ "what": "Stage C: scaling the learnt weight change (exploratory, no training)",
+ "checkpoint": "mario_stageC_40k.pt",
+ "trained_decisions": 40000,
+ "n_frames": 285,
+ "ks": [
+  0,
+  1,
+  2,
+  4,
+  8
+ ],
+ "results": {
+  "tko_ro1": {
+   "k0": {
+    "greedy_jump_danger": 0.394,
+    "greedy_jump_clear": 0.36,
+    "p_jump_danger": 0.291,
+    "p_jump_clear": 0.319
+   },
+   "k1": {
+    "greedy_jump_danger": 0.775,
+    "greedy_jump_clear": 0.248,
+    "p_jump_danger": 0.579,
+    "p_jump_clear": 0.379
+   },
+   "k2": {
+    "greedy_jump_danger": 0.978,
+    "greedy_jump_clear": 0.304,
+    "p_jump_danger": 0.623,
+    "p_jump_clear": 0.379
+   },
+   "k4": {
+    "greedy_jump_danger": 0.984,
+    "greedy_jump_clear": 0.28,
+    "p_jump_danger": 0.597,
+    "p_jump_clear": 0.383
+   },
+   "k8": {
+    "greedy_jump_danger": 0.994,
+    "greedy_jump_clear": 0.664,
+    "p_jump_danger": 0.656,
+    "p_jump_clear": 0.474
+   }
+  },
+  "tko_ro2": {
+   "k0": {
+    "greedy_jump_danger": 0.906,
+    "greedy_jump_clear": 0.996,
+    "p_jump_danger": 0.456,
+    "p_jump_clear": 0.548
+   },
+   "k1": {
+    "greedy_jump_danger": 0.894,
+    "greedy_jump_clear": 0.36,
+    "p_jump_danger": 0.64,
+    "p_jump_clear": 0.431
+   },
+   "k2": {
+    "greedy_jump_danger": 1.0,
+    "greedy_jump_clear": 0.412,
+    "p_jump_danger": 0.683,
+    "p_jump_clear": 0.479
+   },
+   "k4": {
+    "greedy_jump_danger": 0.222,
+    "greedy_jump_clear": 0.004,
+    "p_jump_danger": 0.463,
+    "p_jump_clear": 0.285
+   },
+   "k8": {
+    "greedy_jump_danger": 0.741,
+    "greedy_jump_clear": 0.06,
+    "p_jump_danger": 0.554,
+    "p_jump_clear": 0.365
+   }
+  },
+  "tko_ro3": {
+   "k0": {
+    "greedy_jump_danger": 0.041,
+    "greedy_jump_clear": 0.032,
+    "p_jump_danger": 0.308,
+    "p_jump_clear": 0.311
+   },
+   "k1": {
+    "greedy_jump_danger": 0.0,
+    "greedy_jump_clear": 0.0,
+    "p_jump_danger": 0.072,
+    "p_jump_clear": 0.029
+   },
+   "k2": {
+    "greedy_jump_danger": 0.138,
+    "greedy_jump_clear": 0.0,
+    "p_jump_danger": 0.33,
+    "p_jump_clear": 0.211
+   },
+   "k4": {
+    "greedy_jump_danger": 0.294,
+    "greedy_jump_clear": 0.024,
+    "p_jump_danger": 0.473,
+    "p_jump_clear": 0.373
+   },
+   "k8": {
+    "greedy_jump_danger": 0.581,
+    "greedy_jump_clear": 0.032,
+    "p_jump_danger": 0.561,
+    "p_jump_clear": 0.371
+   }
+  }
+ },
+ "utc": "2026-10-05T16:05:21+00:00"
+}

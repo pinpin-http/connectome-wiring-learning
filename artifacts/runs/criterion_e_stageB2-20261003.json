@@ -1,0 +1,26 @@
+{
+ "what": "criterion E (stageB2), PERCEPTION_CREDIT_STUDY \u00a75",
+ "E_min": 0.05,
+ "checkpoint": "mario_stageB2.pt",
+ "trained_decisions": 20000,
+ "n_frames": 285,
+ "results": {
+  "tfull_ro1": {
+   "E": 0.302,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "tfull_ro2": {
+   "E": 0.0498,
+   "p_greater": 0.0,
+   "pass": false
+  },
+  "tfull_ro3": {
+   "E": 0.3392,
+   "p_greater": 0.0,
+   "pass": true
+  }
+ },
+ "tfull_passing": 2,
+ "utc": "2026-10-04T16:19:36+00:00"
+}

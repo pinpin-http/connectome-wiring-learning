@@ -1,0 +1,72 @@
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:146: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1857.)
+  v_readout_sd=vr.std(0).cpu().numpy())
+{
+ "utc": "2026-10-20T07:45:57+00:00",
+ "gamma1_reproduces_v1": {
+  "connectome": {
+   "gamma1_equals_v1_features": true,
+   "gain_at_gamma1": 0.18452,
+   "v1_gain": 0.18452,
+   "gamma2_differs": true,
+   "gamma2_mean_count": 2.2474882128423888,
+   "gamma1_mean_count": 2.0574518691064214,
+   "operator_unchanged": true
+  },
+  "nullin:0": {
+   "gamma1_equals_v1_features": true,
+   "gain_at_gamma1": 0.18452,
+   "v1_gain": 0.18452,
+   "gamma2_differs": true,
+   "gamma2_mean_count": 2.8603520010103276,
+   "gamma1_mean_count": 2.7724184019982037,
+   "operator_unchanged": true
+  }
+ },
+ "gain_multiplies_recurrent_input_once": {
+  "cases": {
+   "0.5": {
+    "v1_after_tick1": 0.09226000308990479,
+    "expected": 0.09226
+   },
+   "1.0": {
+    "v1_after_tick1": 0.18452000617980957,
+    "expected": 0.18452
+   },
+   "2.0": {
+    "v1_after_tick1": 0.36904001235961914,
+    "expected": 0.36904
+   },
+   "1.0_again": {
+    "v1_after_tick1": 0.18452000617980957,
+    "expected": 0.18452
+   }
+  },
+  "pass": true
+ },
+ "max_spikes": {
+  "simulated": 8,
+  "formula": 8,
+  "refractory_steps": 1,
+  "ticks": 16
+ },
+ "no_plasticity": {
+  "simulator_has_no_weight_update": true,
+  "note": "FrozenNet holds W as a read-only CSR tensor; the device digest equals the file operator's after every run (item 1, operator_unchanged)"
+ },
+ "reset_between_images": {
+  "alone_equals_after_two_others_sequential": true,
+  "alone_equals_same_batch": true,
+  "identical": true
+ },
+ "positive_control_oriented_energy": {
+  "bank": "am_dev",
+  "n": 256,
+  "accuracy": 1.0,
+  "chance": 0.25,
+  "pass": true
+ },
+ "pass": true
+}
+controls rc=0

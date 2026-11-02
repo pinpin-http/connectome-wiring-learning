@@ -1,0 +1,30 @@
+{
+ "study": "ACTIVITY_MATCH_V1",
+ "pilot": true,
+ "utc": "2026-10-20T07:47:27+00:00",
+ "calibration_sha256": "a08a2cb8331be23c24943406c53f14dc989d8e32d2be6b1df11921dc7d0c510a",
+ "targets_hz": {
+  "CL": 49.720947829565084,
+  "CM": 51.14906930251985,
+  "CH": 52.57719077547462
+ },
+ "check_passed": {
+  "CL": true,
+  "CM": true,
+  "CH": true
+ },
+ "gammas": {
+  "nullin:100": {
+   "C0": 1.0,
+   "CL": 0.631309,
+   "CM": 1.0,
+   "CH": 1.0
+  },
+  "nullin:101": {
+   "C0": 1.0,
+   "CL": 0.75,
+   "CM": 1.0,
+   "CH": 1.0
+  }
+ }
+}

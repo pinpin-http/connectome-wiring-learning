@@ -1,0 +1,16 @@
+# NVIDIA environment = the reference environment with PyTorch rebuilt for CUDA.
+#
+# The reference (AMD RX 9060 XT workstation) runs torch 2.9.1+rocm6.4 on Python 3.11.16
+# (deployment/manifest/reference_env_freeze.txt). On NVIDIA the same torch release is
+# installed from the PyTorch CUDA index, then every other package from the pinned
+# requirements.txt (portable: it contains no torch and nothing ROCm-specific):
+#
+#   uv pip install --python .venv/bin/python --index-url https://download.pytorch.org/whl/cu126 torch==2.9.1
+#   uv pip install --python .venv/bin/python -r requirements.txt
+#   uv pip install --python .venv/bin/python --no-deps -e .
+#
+# deployment/install_remote.sh does exactly this, choosing cu128 when the driver is >= 570
+# and cu126 otherwise (both need driver >= 525; the RTX 3090 is sm_86, covered by both).
+# Not installed on the server: the workstation's GUI / video tools (manim, PySide6,
+# moderngl, ...), which no experiment imports, and pytorch-triton-rocm.
+torch==2.9.1

@@ -1,0 +1,1469 @@
+{
+ "run": "main_am2",
+ "pilot": false,
+ "created_utc": "2026-10-20T11:33:30+00:00",
+ "config": {
+  "study": {
+   "id": "ACTIVITY_MATCH_V2",
+   "protocol_status": "frozen",
+   "t0_utc": "2026-10-20T11:12:45Z",
+   "final_reserve_utc": "2026-10-23T01:37:04Z",
+   "hard_end_utc": "2026-10-23T07:37:04Z",
+   "previous": {
+    "id": "ACTIVITY_MATCH_V1",
+    "commit": "6a7c4c9",
+    "config": "configs/activity_match/protocol.yaml"
+   }
+  },
+  "graphs": {
+   "connectome": "connectome",
+   "null_family": "c",
+   "null_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "pilot_null_seeds": [
+    100,
+    101
+   ]
+  },
+  "simulation": {
+   "base_gain_key": "dynamics.gain",
+   "steps": 16,
+   "dt_ms": 3.33,
+   "reset_state_each_image": true,
+   "plasticity_enabled": false,
+   "input_mapping": "ordered",
+   "readout": "datasets.motor_index",
+   "feature_source": "spike_counts_before_action_projection",
+   "count_dtype": "uint8",
+   "batch": 128,
+   "main_noise_seeds": [
+    51001,
+    51002
+   ],
+   "pilot_noise_seeds": [
+    51101,
+    51102
+   ],
+   "noise_pairing_key": [
+    "study_seed 20261019",
+    "noise seed",
+    "example uid"
+   ]
+  },
+  "calibration": {
+   "mode": "match_reference",
+   "dir": "calibration_v2",
+   "reference": {
+    "graph": "connectome",
+    "gamma": 1.0
+   },
+   "pilot_reference": {
+    "graph": "nullin:100",
+    "gamma": 0.3
+   },
+   "gamma_grid": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "fit_bank": [
+    "am2_cal_fit",
+    8,
+    52201
+   ],
+   "check_bank": [
+    "am2_cal_check",
+    8,
+    52202
+   ],
+   "pilot_fit_bank": [
+    "am2_devcal_fit",
+    8,
+    52301
+   ],
+   "pilot_check_bank": [
+    "am2_devcal_check",
+    8,
+    52302
+   ],
+   "noise_seeds": [
+    52001,
+    52002
+   ],
+   "pilot_noise_seeds": [
+    52101,
+    52102
+   ],
+   "use_labels": false,
+   "fit_tolerance": 0.02,
+   "relative_rate_tolerance": 0.1,
+   "max_refinement_evaluations_per_graph": 9,
+   "refinement_evaluations_per_target": 9,
+   "minimum_active_fraction": 0.01,
+   "maximum_saturation_fraction": 0.05,
+   "saturation_threshold_fraction_of_max_spikes": 0.9,
+   "selected_gains_manifest": "artifacts/activity_match/calibration_v2/selection.json",
+   "verification_passed": true
+  },
+  "dataset": {
+   "tasks": [
+    "orientation_4way",
+    "luminance_4way"
+   ],
+   "generator": {
+    "lum_centres": [
+     0.35,
+     0.45,
+     0.55,
+     0.65
+    ],
+    "lum_jitter": 0.065,
+    "amp_range": [
+     0.15,
+     0.2
+    ],
+    "period_range": [
+     24.0,
+     40.0
+    ],
+    "noise": 0.02,
+    "r0": 60.0,
+    "r1": 92.0,
+    "pos_jitter": 8.0,
+    "centre": [
+     135.38,
+     124.16
+    ]
+   },
+   "banks": {
+    "train": [
+     "am2_train",
+     64,
+     53101
+    ],
+    "val": [
+     "am2_val",
+     32,
+     53102
+    ],
+    "test": [
+     "am2_test",
+     160,
+     53103
+    ]
+   },
+   "pilot_banks": {
+    "train": [
+     "am2_pilot_train",
+     64,
+     53201
+    ],
+    "val": [
+     "am2_pilot_val",
+     32,
+     53202
+    ],
+    "test": [
+     "am2_pilot_test",
+     64,
+     53203
+    ]
+   },
+   "dev_bank": [
+    "am_dev",
+    16,
+    21401
+   ],
+   "balance_joint_labels": true
+  },
+  "conditions": [
+   "C0",
+   "CN"
+  ],
+  "decoder": {
+   "type": "multiclass_ridge",
+   "budgets_per_class": [
+    8,
+    16,
+    32,
+    64,
+    128
+   ],
+   "per_combination": [
+    2,
+    4,
+    8,
+    16,
+    32
+   ],
+   "subset_draws": 10,
+   "subset_draw_seeds": [
+    8301,
+    8302,
+    8303,
+    8304,
+    8305,
+    8306,
+    8307,
+    8308,
+    8309,
+    8310
+   ],
+   "nested_subsets": true,
+   "scale_fit_on_training_subset_only": true,
+   "normalized_loss_lambda_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+   ],
+   "validation_tie_break": "largest_lambda",
+   "refit_on_train_plus_validation": false
+  },
+  "analysis": {
+   "matched_condition": "CN",
+   "interpretation": "v2",
+   "primary_contrast": "G_CN_orient",
+   "practical_margin": 0.02,
+   "informative_accuracy_threshold": 0.27,
+   "confidence_level": 0.95,
+   "interval_method": "percentile",
+   "bootstrap_replicates": 5000,
+   "bootstrap_seed": 53001,
+   "bootstrap_test_examples": "joint_label_stratified_and_paired",
+   "bootstrap_null_graphs": "whole_graph_blocks_all_conditions",
+   "refit_decoder_in_bootstrap": false,
+   "refit_calibration_in_bootstrap": false,
+   "secondary_intervals": "descriptive",
+   "rank_status": "descriptive"
+  },
+  "execution": {
+   "resume": true,
+   "save_predictions_per_example": true,
+   "atomic_outputs": true,
+   "stop_new_long_jobs_before_final_reserve": true,
+   "technical_retry": {
+    "max_attempts": 2,
+    "true": [
+     "cuda_error",
+     "out_of_memory",
+     "io_error"
+    ]
+   }
+  }
+ },
+ "env": {
+  "utc": "2026-10-20T11:33:31+00:00",
+  "commit": "3c5d904c7dce561dc6b4984aaa9e6798aa04ab11",
+  "branch": "activity-match-v1",
+  "dirty": false,
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "code_sha256": {
+   "src/flymario/retino_align/simulate.py": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+   "src/flymario/retino_align/stimuli.py": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+   "src/flymario/retino_align/decode.py": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+   "src/flymario/activity_match/calibrate.py": "df8266939998c19eb81142aea37b19f5532a8f2c4c2a96513d2de7134a7fec71",
+   "src/flymario/activity_match/analysis.py": "db8e3ef84586637b0c09081cf628c0a1a069f8a022a0399fa5b05adec7f360c6",
+   "scripts/activity_match/run_am.py": "c62c6fe2a648746662a1eab4584f4103f467996d36a8442458443da952e440aa"
+  },
+  "config_sha256": "69f4ff316d764cfdf6780339c1f65fb255bab39752156989d5ba43c5c46b2cff"
+ },
+ "graphs": [
+  "connectome",
+  "nullin:0",
+  "nullin:1",
+  "nullin:2",
+  "nullin:3",
+  "nullin:4",
+  "nullin:5",
+  "nullin:6",
+  "nullin:7",
+  "nullin:8",
+  "nullin:9",
+  "nullin:10",
+  "nullin:11",
+  "nullin:12",
+  "nullin:13",
+  "nullin:14",
+  "nullin:15",
+  "nullin:16",
+  "nullin:17",
+  "nullin:18",
+  "nullin:19",
+  "nullin:20",
+  "nullin:21",
+  "nullin:22",
+  "nullin:23",
+  "nullin:24",
+  "nullin:25",
+  "nullin:26",
+  "nullin:27",
+  "nullin:28",
+  "nullin:29",
+  "nullin:30",
+  "nullin:31",
+  "nullin:32",
+  "nullin:33",
+  "nullin:34",
+  "nullin:35",
+  "nullin:36",
+  "nullin:37",
+  "nullin:38",
+  "nullin:39"
+ ],
+ "graph_sha256": {
+  "connectome": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f",
+  "nullin:0": "cb8eeb7b70d716a31580ce667161a56c5dfd1de49744d182ae768d54c4b3ac33",
+  "nullin:1": "2291f353e8ec1e3c384b780ce54adc62dcc04892d5bd56c82bee128773c01d2e",
+  "nullin:2": "eb623d2f71092685eeef854d057885d590d6f7f3ae6e16ca6bf25503126224fa",
+  "nullin:3": "f9fe02d63b56a1dbd61ae97732df912ba0d0177748959c3a42fc22621a68a40b",
+  "nullin:4": "62d2875f797977a320c1e4b5b848a7c2e7262541186bdc1e04b7eba28a4eef55",
+  "nullin:5": "371494f5cd8eb9a3b9122d4f701e71bf86a2673265f09ca1cf384cd6b38cc629",
+  "nullin:6": "6ec6ed2e9b3777f3725f029fd30f8dc0ea1d683de3ce28c34391dcaf836ac4ab",
+  "nullin:7": "6ac23e292971e0e781fb3c789394a935523e382dd09ea51a345ea38f84d91476",
+  "nullin:8": "532a9b3202216679036159febc96eac65edde3b241a037e9d3c967d8ee623d51",
+  "nullin:9": "30c84df3acf7685537215b3c6e312bd823aa289aa222596cbc5e830c6d8ffb9b",
+  "nullin:10": "bf16a81d89ca711ce06e4fcfdcbf54077e55264790f247e65829ffcce250f8d7",
+  "nullin:11": "50bf0a01a41e1de33730c08a335365e6eb1a5274135e91a417e34a7767c6dc2d",
+  "nullin:12": "be1aee37916c5a84cd4df852fc7388192e8d2f8f21c30f3be2287798cdb50cff",
+  "nullin:13": "c3aa0e03a6e05111b21417e0b1a7c0dda40165c6c92742c501aba427080d4607",
+  "nullin:14": "8ba38ea38e43f9d38cb7be45267442a1cbb8931359583280a6b6fcfdc86e9c82",
+  "nullin:15": "255aa446cdbe8aaad12838974eeaf8ff4c994fe16ccd7d9dccf326c650648fbb",
+  "nullin:16": "6a2089101ba773d181b77064e67d522dce03366a41dc1f23748a807f5c886079",
+  "nullin:17": "c696c837a93c60a0b87141c8855d5232775f795f82f593e80cf4461ff180fdb2",
+  "nullin:18": "0a2b21580ad76ec36e2f92db805c7aad28bd5d58e27696ea9d15840c79f114dd",
+  "nullin:19": "b525a375e12a646adb06f84c1936e1e7d088f845edac04d059b4fab3f43d6d6e",
+  "nullin:20": "8c7f0d916d23e81ba10831ef5a42f1201df2df38bf2b235de4fae3555aaf1311",
+  "nullin:21": "aa0706248367f78423328c69775cb734fb681bcf82877fefe4f223a1c3174c2b",
+  "nullin:22": "6634a66180cae98bc92113b16de967b20c9518dab6a5d7b98932236db92f2469",
+  "nullin:23": "0e54ee5daea8c80470134ea1a74b5df1e0fdf2790344b275d2efb08278baa5a4",
+  "nullin:24": "c19880e35f50bde161a5c1684f7b6cfca116a4297622518773347354891c08eb",
+  "nullin:25": "49f7212f42e0d7c937c24f398493e702fa662c5f6d499d9b18bd52ffeb659b36",
+  "nullin:26": "a8a99433db342c4cd482b8634bcb6f3d95a19408c4471ecf43a4aa0cf7ec7dd3",
+  "nullin:27": "4915cd61efa4d312216ec48cba3725d6cb921bb7d7ab122e589b9e6e15580f5b",
+  "nullin:28": "96678318a78d2555d869b272d4660fb30542860093b1f6aeb53dc2c2db793ecc",
+  "nullin:29": "ca99b7cf6567b64b72aeb34f8cffdd3f9562ddcf74acbf4edd24805939617908",
+  "nullin:30": "704466ea78766c524b173be8676fd5a2dc07cb798ee4f3720358788b0c1cccea",
+  "nullin:31": "74411c3f6a912ac329d66dc1df88262698c879b3c4394ad28ae6a4fddfb226f6",
+  "nullin:32": "df6e6ea61c50d8d24a3bae43d2b4e89d47de267dafb9f006409c2776296bd4ca",
+  "nullin:33": "cda8bd20e4da25543543e206eddc1628baf12086f48d25f985accd7098cdc7d5",
+  "nullin:34": "92dda5ada5e90482c0d97f3f8f877f488a53a22292976ec3105ce793cec3766f",
+  "nullin:35": "4ba166f6064d7f1101c260fbd5c1e9ac03e57fc26e0df6384349ca1d58e23cd9",
+  "nullin:36": "feff1bc65ce80f66b3acdef8df5f1394b1a96793e8e51fbd6f2c45b404b16265",
+  "nullin:37": "2fa03f952a2f0bd929e6f7fe40559a46352ca927e16243f001d5c47e0bbd9c6c",
+  "nullin:38": "b68e37f80912ef032b03bcbdfe4d62cf6eabdf43bb55a77e56e7ca98e1b3a5a1",
+  "nullin:39": "0b04db0c999aed9415265fd6f83506fe5067ae1181f0fa8f78088eae04439a25"
+ },
+ "conditions": [
+  "C0",
+  "CN"
+ ],
+ "noise_seeds": [
+  51001,
+  51002
+ ],
+ "lots": [
+  [
+   "nullin:18",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:18",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:18",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:18",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:25",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:25",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:25",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:25",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:28",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:28",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:28",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:28",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:0",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:0",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:0",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:0",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:14",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:14",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:14",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:14",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:2",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:2",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:2",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:2",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:24",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:24",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:24",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:24",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:31",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:31",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:31",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:31",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:19",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:19",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:19",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:19",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:3",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:3",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:3",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:3",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:22",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:22",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:22",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:22",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:27",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:27",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:27",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:27",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:32",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:32",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:32",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:32",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:21",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:21",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:21",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:21",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:1",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:1",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:1",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:1",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:37",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:37",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:37",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:37",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:10",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:10",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:10",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:10",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:23",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:23",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:23",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:23",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:39",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:39",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:39",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:39",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:36",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:36",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:36",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:36",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:9",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:9",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:9",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:9",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:6",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:6",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:6",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:6",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:33",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:33",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:33",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:33",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:34",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:34",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:34",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:34",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:5",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:5",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:5",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:5",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:4",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:4",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:4",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:4",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:16",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:16",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:16",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:16",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:8",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:8",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:8",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:8",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:15",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:15",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:15",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:15",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:7",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:7",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:7",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:7",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:30",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:30",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:30",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:30",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:26",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:26",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:26",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:26",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:17",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:17",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:17",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:17",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:11",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:11",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:11",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:11",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:35",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:35",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:35",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:35",
+   "C0",
+   51002
+  ],
+  [
+   "connectome",
+   "CN",
+   51002
+  ],
+  [
+   "connectome",
+   "C0",
+   51002
+  ],
+  [
+   "connectome",
+   "C0",
+   51001
+  ],
+  [
+   "connectome",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:29",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:29",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:29",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:29",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:38",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:38",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:38",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:38",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:20",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:20",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:20",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:20",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:12",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:12",
+   "C0",
+   51002
+  ],
+  [
+   "nullin:12",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:12",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:13",
+   "C0",
+   51001
+  ],
+  [
+   "nullin:13",
+   "CN",
+   51001
+  ],
+  [
+   "nullin:13",
+   "CN",
+   51002
+  ],
+  [
+   "nullin:13",
+   "C0",
+   51002
+  ]
+ ],
+ "gammas": {
+  "connectome": {
+   "C0": 1.0,
+   "CN": 1.0
+  },
+  "nullin:0": {
+   "C0": 1.0,
+   "CN": 0.168284
+  },
+  "nullin:1": {
+   "C0": 1.0,
+   "CN": 0.163793
+  },
+  "nullin:2": {
+   "C0": 1.0,
+   "CN": 0.221344
+  },
+  "nullin:3": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:4": {
+   "C0": 1.0,
+   "CN": 0.179948
+  },
+  "nullin:5": {
+   "C0": 1.0,
+   "CN": 0.184795
+  },
+  "nullin:6": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:7": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:8": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:9": {
+   "C0": 1.0,
+   "CN": 0.189234
+  },
+  "nullin:10": {
+   "C0": 1.0,
+   "CN": 0.183242
+  },
+  "nullin:11": {
+   "C0": 1.0,
+   "CN": 0.192275
+  },
+  "nullin:12": {
+   "C0": 1.0,
+   "CN": 0.212735
+  },
+  "nullin:13": {
+   "C0": 1.0,
+   "CN": 0.187766
+  },
+  "nullin:14": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:15": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:16": {
+   "C0": 1.0,
+   "CN": 0.229599
+  },
+  "nullin:17": {
+   "C0": 1.0,
+   "CN": 0.180535
+  },
+  "nullin:18": {
+   "C0": 1.0,
+   "CN": 0.25
+  },
+  "nullin:19": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:20": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:21": {
+   "C0": 1.0,
+   "CN": 0.178601
+  },
+  "nullin:22": {
+   "C0": 1.0,
+   "CN": 0.187021
+  },
+  "nullin:23": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:24": {
+   "C0": 1.0,
+   "CN": 0.175255
+  },
+  "nullin:25": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:26": {
+   "C0": 1.0,
+   "CN": 0.25
+  },
+  "nullin:27": {
+   "C0": 1.0,
+   "CN": 0.183735
+  },
+  "nullin:28": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:29": {
+   "C0": 1.0,
+   "CN": 0.182451
+  },
+  "nullin:30": {
+   "C0": 1.0,
+   "CN": 0.182595
+  },
+  "nullin:31": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:32": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:33": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:34": {
+   "C0": 1.0,
+   "CN": 0.221085
+  },
+  "nullin:35": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:36": {
+   "C0": 1.0,
+   "CN": 0.187378
+  },
+  "nullin:37": {
+   "C0": 1.0,
+   "CN": 0.2129
+  },
+  "nullin:38": {
+   "C0": 1.0,
+   "CN": 0.2
+  },
+  "nullin:39": {
+   "C0": 1.0,
+   "CN": 0.2
+  }
+ },
+ "targets_hz": {
+  "CN": 38.63124550375477
+ },
+ "reference": {
+  "graph": "connectome",
+  "gamma": 1.0
+ },
+ "selection_file": "artifacts/activity_match/calibration_v2/selection.json",
+ "selection_sha256": "87f694700907a886c9cb52fde471c626b1e340bcc2518c5a84f3f102e033cf80",
+ "base_gain": 0.18452,
+ "n_images": {
+  "train": 1024,
+  "val": 512,
+  "test": 2560
+ },
+ "inputs_sha256": "406fcbb73de7dcc5ab4f5152ac27703bdb7ae1ec4cfa060dc86f87971b7ce376",
+ "readout_n": 2227,
+ "readout_node_index_sha256": "95e80de210dadcc7bc9b76d419af5d5844f66af7379d8711248c2d094ac37b26",
+ "readout_body_ids_sha256": "0e3492fee2a8664e57a22d1cdf4e858d64f70040134cb4cbdcb6165f1c399bab",
+ "retina_digest": "9955446c01ed4157a697bed9d511a92d50641ae8a9960fe5f0c0f8f1c6c7a372",
+ "generator": {
+  "lum_centres": [
+   0.35,
+   0.45,
+   0.55,
+   0.65
+  ],
+  "lum_jitter": 0.065,
+  "amp_range": [
+   0.15,
+   0.2
+  ],
+  "period_range": [
+   24.0,
+   40.0
+  ],
+  "noise": 0.02,
+  "r0": 60.0,
+  "r1": 92.0,
+  "pos_jitter": 8.0,
+  "centre": [
+   135.38,
+   124.16
+  ]
+ },
+ "banks": {
+  "train": [
+   "am2_train",
+   64,
+   53101
+  ],
+  "val": [
+   "am2_val",
+   32,
+   53102
+  ],
+  "test": [
+   "am2_test",
+   160,
+   53103
+  ]
+ },
+ "prepare_s": 22.9
+}

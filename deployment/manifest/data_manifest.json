@@ -1,0 +1,492 @@
+{
+ "what": "files the server needs beyond the code (deployment/README.md)",
+ "generated_utc": "2026-10-19T16:44:18+00:00",
+ "commit": "4bae89af00d6a35789d385274caabfa42fc21c20",
+ "tracked_changes_not_committed": [
+  " M deployment/monitor.py"
+ ],
+ "items": [
+  {
+   "set": "core",
+   "path": "data/connectome/malecns.npz",
+   "dest": "data/connectome/malecns.npz",
+   "action": "transfer",
+   "origin": "built locally from MaleCNS v1.0 (scripts/build_graph.py); its sha256 keys the null caches",
+   "used_by": "every run (the measured wiring)",
+   "present_locally": true,
+   "size": 105100903,
+   "sha256": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f"
+  },
+  {
+   "set": "core",
+   "path": "data/connectome/malecns_ledger.json",
+   "dest": "data/connectome/malecns_ledger.json",
+   "action": "transfer",
+   "origin": "written with the graph",
+   "used_by": "build ledger",
+   "present_locally": true,
+   "size": 560,
+   "sha256": "986bd2ef71c5ae06d91a21af04a04aee3fa767836fddb7793ef50d7044f43b00"
+  },
+  {
+   "set": "core",
+   "path": "data/connectome/malecns_stats.json",
+   "dest": "data/connectome/malecns_stats.json",
+   "action": "transfer",
+   "origin": "written with the graph",
+   "used_by": "graph statistics",
+   "present_locally": true,
+   "size": 1111,
+   "sha256": "10413edc2ae4fea1530ba8922dbd7db2a641be142c047654ce284e2ea5389feb"
+  },
+  {
+   "set": "nulls-lateral",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s0.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s0.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified_lateral, seeds 0-2), keyed to the graph hash",
+   "used_by": "nulllat:<s> runs (RL_STUDY \u00a712-\u00a714, PERCEPTION_CREDIT_STUDY \u00a721)",
+   "present_locally": true,
+   "size": 107175129,
+   "sha256": "98db41ce41d9149d2c3f30e025f47f3d8ab8c4d564d045570f08e81fcd7da54e"
+  },
+  {
+   "set": "nulls-lateral",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s1.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s1.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified_lateral, seeds 0-2), keyed to the graph hash",
+   "used_by": "nulllat:<s> runs (RL_STUDY \u00a712-\u00a714, PERCEPTION_CREDIT_STUDY \u00a721)",
+   "present_locally": true,
+   "size": 107173809,
+   "sha256": "ed1f2cb22f448cb7727ba1591e4e55bacf7b502887009f6f5744ae3509f9f86f"
+  },
+  {
+   "set": "nulls-lateral",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s2.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s2.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified_lateral, seeds 0-2), keyed to the graph hash",
+   "used_by": "nulllat:<s> runs (RL_STUDY \u00a712-\u00a714, PERCEPTION_CREDIT_STUDY \u00a721)",
+   "present_locally": true,
+   "size": 107170707,
+   "sha256": "d4ab9d60a5357092d4f2252f547df0c1dea5a6e0b40a0c000ddc05f5f1414699"
+  },
+  {
+   "set": "nulls-primary",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s0.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s0.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified, seeds 0-3), keyed to the graph hash",
+   "used_by": "null:<s> runs (Stage D nulls, RL_STUDY \u00a79)",
+   "present_locally": true,
+   "size": 111458800,
+   "sha256": "4baf294deb3ac50ce9118d8e85f726113731e9c3d7e93c7708b501456298b732"
+  },
+  {
+   "set": "nulls-primary",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s1.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s1.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified, seeds 0-3), keyed to the graph hash",
+   "used_by": "null:<s> runs (Stage D nulls, RL_STUDY \u00a79)",
+   "present_locally": true,
+   "size": 111461976,
+   "sha256": "3f3a061c40185276b950047c665aaced533876ce54eecddebdd8584372ed5270"
+  },
+  {
+   "set": "nulls-primary",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s2.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s2.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified, seeds 0-3), keyed to the graph hash",
+   "used_by": "null:<s> runs (Stage D nulls, RL_STUDY \u00a79)",
+   "present_locally": true,
+   "size": 111459864,
+   "sha256": "24bebb610426fe0b93265b791b816f2dab217658af658f3f98c7bf0420d5b891"
+  },
+  {
+   "set": "nulls-primary",
+   "path": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s3.npz",
+   "dest": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_s3.npz",
+   "action": "transfer",
+   "origin": "built locally (randomize.depth_stratified, seeds 0-3), keyed to the graph hash",
+   "used_by": "null:<s> runs (Stage D nulls, RL_STUDY \u00a79)",
+   "present_locally": true,
+   "size": 111462555,
+   "sha256": "532818cc5de49d2515560bc7d38ec9d47d063b2966c8f35ad7b1a16dd27e638c"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/reference/always_run_train.json",
+   "dest": "artifacts/runs/reference/always_run_train.json",
+   "action": "transfer",
+   "origin": "computed locally (scripted policy, emulator)",
+   "used_by": "\u0394x_rand metric (learning_curves.py)",
+   "present_locally": true,
+   "size": 1984,
+   "sha256": "5e3de011bfc6485f90202464c8f1f25f5b6681549f34e299e1af2cb9073f8001"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/reference/random_jumper_train.json",
+   "dest": "artifacts/runs/reference/random_jumper_train.json",
+   "action": "transfer",
+   "origin": "computed locally (random_jumper_table.py)",
+   "used_by": "\u0394x_rand metric",
+   "present_locally": true,
+   "size": 14292,
+   "sha256": "c109ea0bd70cfca4e97af49f52f0fd7a3961597c7d2ac63ca2d328995f7c4d2b"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/reference/scripted_takeoff2_train.json",
+   "dest": "artifacts/runs/reference/scripted_takeoff2_train.json",
+   "action": "transfer",
+   "origin": "computed locally (cached positive reference)",
+   "used_by": "learning_curves.scripted_reference",
+   "present_locally": true,
+   "size": 3994,
+   "sha256": "6b4a4325d26db228ac77434b53cd7bf33cb2b4c6597ff364343b933dc6c3d4ef"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/harness_v2/starts-20261009.json",
+   "dest": "artifacts/runs/harness_v2/starts-20261009.json",
+   "action": "transfer",
+   "origin": "play harness v2 starts (RL_STUDY \u00a713; regenerable, RAM hashes recorded)",
+   "used_by": "frozen play (\u00a713-\u00a714)",
+   "present_locally": true,
+   "size": 36923,
+   "sha256": "6168c42cc8d3c7b45b9198511bdd97327d718ca7a25d97f598cb21099212e69a"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/harness_v2/validation-20261009.json",
+   "dest": "artifacts/runs/harness_v2/validation-20261009.json",
+   "action": "transfer",
+   "origin": "harness v2 validation (scripted, emulator)",
+   "used_by": "probe report (\u00a713.1, \u00a714)",
+   "present_locally": true,
+   "size": 31202,
+   "sha256": "ca5d78fe02bbdd25cf0bee385b94cfbc3fe8248199eb9e93956843c0c6f28e5b"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/harness_v2/validation-hold6-20261009.json",
+   "dest": "artifacts/runs/harness_v2/validation-hold6-20261009.json",
+   "action": "transfer",
+   "origin": "harness v2 hold6 validation",
+   "used_by": "probe report (\u00a713.3, \u00a714)",
+   "present_locally": true,
+   "size": 35673,
+   "sha256": "30b3bb3d84298fd4186f905209a79c2ca8891a598744e2f7b8217ea2d05567e6"
+  },
+  {
+   "set": "reference",
+   "path": "artifacts/runs/oracle_criterion_check-takeoff2-k5-20261004.json",
+   "dest": "artifacts/runs/oracle_criterion_check-takeoff2-k5-20261004.json",
+   "action": "transfer",
+   "origin": "scripted expert, harness v1",
+   "used_by": "probe report v1 (\u00a712)",
+   "present_locally": true,
+   "size": 14228,
+   "sha256": "50d64a93b075c2d58ad6dfc84b69867f9d6bd1207da3abc58d566fcdfb7e7487"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/common_stream_connectome.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/common_stream_connectome.pt",
+   "action": "transfer",
+   "origin": "ROCm-trained common-stream brains (\u00a712.2)",
+   "used_by": "cross-platform checks; \u00a713.3 on ROCm weights",
+   "present_locally": true,
+   "size": 9234208,
+   "sha256": "0b40e0391be4e6a36b6139c211e18571b6e5b071b307a8d490a687dc76a0ce04"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/common_stream_nulllat0.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/common_stream_nulllat0.pt",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "same",
+   "present_locally": true,
+   "size": 9234194,
+   "sha256": "e8723bc89f8265c16cbfd499596cbd6d04a02d04cb29823aa3cd7f29d0a1a6a6"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/common_stream_nulllat1.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/common_stream_nulllat1.pt",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "same",
+   "present_locally": true,
+   "size": 9234194,
+   "sha256": "4d2742bc60ab64f47e94a4fe405f5f7333ac7c536e9a0e5e348e5aab8ff91948"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/common_stream_perm_connectome.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/common_stream_perm_connectome.pt",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "same",
+   "present_locally": true,
+   "size": 9234243,
+   "sha256": "0cf97496f776af7dbc655eedbe407fe74cba0fcf70c133f842bfc34f8fdc84c6"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/frozen_probe_connectome.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/frozen_probe_connectome.pt",
+   "action": "transfer",
+   "origin": "ROCm, merged for play (\u00a712)",
+   "used_by": "smoke: checkpoint load and one-start play",
+   "present_locally": true,
+   "size": 24621529,
+   "sha256": "4859eed58e10c923fdd2495ecea72780f8142266185eae753dbc3fce4f453865"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/frozen_probe_nulllat0.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/frozen_probe_nulllat0.pt",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712)",
+   "used_by": "comparisons",
+   "present_locally": true,
+   "size": 9234123,
+   "sha256": "82cd79fcd8db73e8e28de385a7845f8754fe776ec6804a76c78e9ff8612bbae5"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/checkpoints/frozen_probe_nulllat1.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/frozen_probe_nulllat1.pt",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712)",
+   "used_by": "comparisons",
+   "present_locally": true,
+   "size": 9234123,
+   "sha256": "f510c3664dde5e37ea65b9875ad9eededfe61fd76b43200685fe4bc8096b892b"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/common_stream-20261007.json",
+   "dest": "artifacts/rocm_reference/common_stream-20261007.json",
+   "action": "transfer",
+   "origin": "ROCm AUC curves of the common stream (\u00a76.1)",
+   "used_by": "compare: same-procedure NVIDIA rerun",
+   "present_locally": true,
+   "size": 2657,
+   "sha256": "6eeb44628b855e87b16b5f88c88e28ebc1758f9258c8d1092190906da0cf428a"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/common_stream-connectome-20261009.json",
+   "dest": "artifacts/rocm_reference/common_stream-connectome-20261009.json",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "compare",
+   "present_locally": true,
+   "size": 1064,
+   "sha256": "cf77a956aa1965f71ed1cc2b7c8aeb53d42ece740e0319e43c159e1865bbc885"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/common_stream-nulllat0-20261009.json",
+   "dest": "artifacts/rocm_reference/common_stream-nulllat0-20261009.json",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "compare",
+   "present_locally": true,
+   "size": 1059,
+   "sha256": "188323bccf6be8f1fb564187a40f989f8a0fa9a7993a2052278df2d093afd6d3"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/common_stream-nulllat1-20261009.json",
+   "dest": "artifacts/rocm_reference/common_stream-nulllat1-20261009.json",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "compare",
+   "present_locally": true,
+   "size": 1062,
+   "sha256": "ed50d03cedd55371b2963f5b990c0f9f03a41e8bc176c8879060f156c107dece"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/common_stream-perm-connectome-20261009.json",
+   "dest": "artifacts/rocm_reference/common_stream-perm-connectome-20261009.json",
+   "action": "transfer",
+   "origin": "ROCm (\u00a712.2)",
+   "used_by": "compare",
+   "present_locally": true,
+   "size": 1063,
+   "sha256": "9e449ff0e26ed054fadd9bf1e3b89928ada8d18110abb147269d677b72ffadf1"
+  },
+  {
+   "set": "rocm-reference",
+   "path": "artifacts/runs/frozen_probe/reportv2-training-20261009.json",
+   "dest": "artifacts/rocm_reference/frozen_probe/reportv2-training-20261009.json",
+   "action": "transfer",
+   "origin": "ROCm \u00a713.1 declared result",
+   "used_by": "compare (\u00a713.1 rerun on NVIDIA)",
+   "present_locally": true,
+   "size": 29613,
+   "sha256": "947bfd16c2c9fb05d5ede6488339f47057fa391e990f74c081128cc089eff480"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D connectome (20,000 decisions)",
+   "used_by": "frozen competence evaluations (--eval-from)",
+   "present_locally": true,
+   "size": 69202965,
+   "sha256": "2bbf2fffba6b0a15350960f1a114c05b4a9f0395645910787a9cebe9dfc6c88a"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_null0.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_null0.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D depth-stratified nulls 0-2 (20,000 decisions)",
+   "used_by": "frozen competence evaluations",
+   "present_locally": true,
+   "size": 69211029,
+   "sha256": "fd841f69b5857fb4a0ecea97a657f934857385138124e09be1fb8a443b07a6d0"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_null1.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_null1.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D depth-stratified nulls 0-2 (20,000 decisions)",
+   "used_by": "frozen competence evaluations",
+   "present_locally": true,
+   "size": 69214933,
+   "sha256": "86595b0bd536437af2d7efbcf5ff8128940fa6b40d268b5363860111122b5cf0"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_null2.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_null2.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D depth-stratified nulls 0-2 (20,000 decisions)",
+   "used_by": "frozen competence evaluations",
+   "present_locally": true,
+   "size": 69192661,
+   "sha256": "84721f79f90a73459e652074fb0adddd899f689d1747a95508aba879b5fc0a0c"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_nulllat0.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_nulllat0.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D lateral nulls, paused at 13,651 / 11,641 / 9,879 decisions (\u00a721)",
+   "used_by": "reference only: an NVIDIA continuation would not be exact (README); rerun \u00a721 on NVIDIA",
+   "present_locally": true,
+   "size": 68360181,
+   "sha256": "ae59f64c48eb615673d1b087837a9f6f486dd9c00b05d0a67430bc336fa9fa13"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_nulllat1.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_nulllat1.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D lateral nulls, paused at 13,651 / 11,641 / 9,879 decisions (\u00a721)",
+   "used_by": "reference only: an NVIDIA continuation would not be exact (README); rerun \u00a721 on NVIDIA",
+   "present_locally": true,
+   "size": 68058933,
+   "sha256": "c83116cb4d69b1ff06f321576d753a74a5acf5807d0142df00f6a88dd5e36c55"
+  },
+  {
+   "set": "rocm-stageD",
+   "path": "artifacts/runs/checkpoints/mario_stageD_nulllat2.pt",
+   "dest": "artifacts/rocm_reference/checkpoints/mario_stageD_nulllat2.pt",
+   "action": "transfer",
+   "origin": "ROCm Stage D lateral nulls, paused at 13,651 / 11,641 / 9,879 decisions (\u00a721)",
+   "used_by": "reference only: an NVIDIA continuation would not be exact (README); rerun \u00a721 on NVIDIA",
+   "present_locally": true,
+   "size": 67883637,
+   "sha256": "2f648aaaeca13e63a831887d6631cbf084308543d207f30855fdcc55abdc44bd"
+  },
+  {
+   "set": "public-raw",
+   "path": "data/raw/connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather",
+   "dest": "data/raw/connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather",
+   "action": "download",
+   "origin": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/connectome-weights-male-cns-v1.0-minconf-0.5-traced-only.feather",
+   "used_by": "graph rebuild check only",
+   "present_locally": true,
+   "size": 508025642,
+   "sha256": "9b3beab17bad5f618be3f2c02d3139a8d07b822565919c013f1e5506d93e604b"
+  },
+  {
+   "set": "public-raw",
+   "path": "data/raw/body-annotations-male-cns-v1.0-minconf-0.5.feather",
+   "dest": "data/raw/body-annotations-male-cns-v1.0-minconf-0.5.feather",
+   "action": "download",
+   "origin": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-annotations-male-cns-v1.0-minconf-0.5.feather",
+   "used_by": "graph rebuild check only",
+   "present_locally": true,
+   "size": 14483314,
+   "sha256": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2"
+  },
+  {
+   "set": "public-raw",
+   "path": "data/raw/body-neurotransmitters-male-cns-v1.0.feather",
+   "dest": "data/raw/body-neurotransmitters-male-cns-v1.0.feather",
+   "action": "download",
+   "origin": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-neurotransmitters-male-cns-v1.0.feather",
+   "used_by": "graph rebuild check only",
+   "present_locally": true,
+   "size": 43282834,
+   "sha256": "95c9289220663abeb3409f3ad9e5a7f8a53f8093f5139d15502cd08da8879621"
+  }
+ ],
+ "totals": {
+  "core": {
+   "files": 3,
+   "bytes": 105102574,
+   "action": "transfer"
+  },
+  "nulls-lateral": {
+   "files": 3,
+   "bytes": 321519645,
+   "action": "transfer"
+  },
+  "nulls-primary": {
+   "files": 4,
+   "bytes": 445843195,
+   "action": "transfer"
+  },
+  "reference": {
+   "files": 7,
+   "bytes": 138296,
+   "action": "transfer"
+  },
+  "rocm-reference": {
+   "files": 13,
+   "bytes": 80063132,
+   "action": "transfer"
+  },
+  "rocm-stageD": {
+   "files": 7,
+   "bytes": 481124339,
+   "action": "transfer"
+  },
+  "public-raw": {
+   "files": 3,
+   "bytes": 565791790,
+   "action": "download"
+  }
+ },
+ "rom": {
+  "expected_sha1_without_header": "facee9c577a5262dbe33ac4930bb0b58c8c037f7",
+  "local_present": true,
+  "action": "private (push-rom), never packed or committed"
+ }
+}

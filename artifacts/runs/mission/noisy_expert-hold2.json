@@ -1,0 +1,226 @@
+{
+ "what": "RL_STUDY \u00a721 noisy expert under hold2, training suite",
+ "rows": [
+  {
+   "h": 1.0,
+   "f": 0.0,
+   "onset_miss_rate": 0.0,
+   "off_label_trigger_rate": 0.0,
+   "trigger_rate": 0.202,
+   "mean_diff": 318.9,
+   "p": 1e-05,
+   "pass": true,
+   "counts": true
+  },
+  {
+   "h": 1.0,
+   "f": 0.05,
+   "onset_miss_rate": 0.0,
+   "off_label_trigger_rate": 0.044,
+   "trigger_rate": 0.344,
+   "mean_diff": 184.4,
+   "p": 0.00058,
+   "pass": true,
+   "counts": true
+  },
+  {
+   "h": 1.0,
+   "f": 0.1,
+   "onset_miss_rate": 0.0,
+   "off_label_trigger_rate": 0.096,
+   "trigger_rate": 0.412,
+   "mean_diff": 38.2,
+   "p": 0.56984,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 1.0,
+   "f": 0.2,
+   "onset_miss_rate": 0.0,
+   "off_label_trigger_rate": 0.187,
+   "trigger_rate": 0.484,
+   "mean_diff": 51.1,
+   "p": 0.25899,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 1.0,
+   "f": 0.3,
+   "onset_miss_rate": 0.0,
+   "off_label_trigger_rate": 0.301,
+   "trigger_rate": 0.558,
+   "mean_diff": 61.1,
+   "p": 0.18463,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.7,
+   "f": 0.0,
+   "onset_miss_rate": 0.047,
+   "off_label_trigger_rate": 0.0,
+   "trigger_rate": 0.174,
+   "mean_diff": 304.1,
+   "p": 0.0,
+   "pass": true,
+   "counts": true
+  },
+  {
+   "h": 0.7,
+   "f": 0.05,
+   "onset_miss_rate": 0.056,
+   "off_label_trigger_rate": 0.042,
+   "trigger_rate": 0.283,
+   "mean_diff": 120.7,
+   "p": 0.0008,
+   "pass": true,
+   "counts": true
+  },
+  {
+   "h": 0.7,
+   "f": 0.1,
+   "onset_miss_rate": 0.055,
+   "off_label_trigger_rate": 0.094,
+   "trigger_rate": 0.316,
+   "mean_diff": 20.4,
+   "p": 0.38947,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.7,
+   "f": 0.2,
+   "onset_miss_rate": 0.053,
+   "off_label_trigger_rate": 0.186,
+   "trigger_rate": 0.4,
+   "mean_diff": 27.6,
+   "p": 0.26287,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.7,
+   "f": 0.3,
+   "onset_miss_rate": 0.055,
+   "off_label_trigger_rate": 0.302,
+   "trigger_rate": 0.458,
+   "mean_diff": 61.6,
+   "p": 0.36378,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.5,
+   "f": 0.0,
+   "onset_miss_rate": 0.091,
+   "off_label_trigger_rate": 0.0,
+   "trigger_rate": 0.154,
+   "mean_diff": 170.5,
+   "p": 0.0002,
+   "pass": true,
+   "counts": true
+  },
+  {
+   "h": 0.5,
+   "f": 0.05,
+   "onset_miss_rate": 0.081,
+   "off_label_trigger_rate": 0.041,
+   "trigger_rate": 0.207,
+   "mean_diff": 27.5,
+   "p": 0.26173,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.5,
+   "f": 0.1,
+   "onset_miss_rate": 0.091,
+   "off_label_trigger_rate": 0.094,
+   "trigger_rate": 0.254,
+   "mean_diff": 13.5,
+   "p": 0.72526,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.5,
+   "f": 0.2,
+   "onset_miss_rate": 0.102,
+   "off_label_trigger_rate": 0.188,
+   "trigger_rate": 0.322,
+   "mean_diff": 54.7,
+   "p": 0.15629,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.5,
+   "f": 0.3,
+   "onset_miss_rate": 0.111,
+   "off_label_trigger_rate": 0.315,
+   "trigger_rate": 0.399,
+   "mean_diff": 38.8,
+   "p": 0.34439,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.3,
+   "f": 0.0,
+   "onset_miss_rate": 0.102,
+   "off_label_trigger_rate": 0.0,
+   "trigger_rate": 0.125,
+   "mean_diff": 51.2,
+   "p": 0.14006,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.3,
+   "f": 0.05,
+   "onset_miss_rate": 0.111,
+   "off_label_trigger_rate": 0.038,
+   "trigger_rate": 0.15,
+   "mean_diff": 10.1,
+   "p": 0.77017,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.3,
+   "f": 0.1,
+   "onset_miss_rate": 0.144,
+   "off_label_trigger_rate": 0.091,
+   "trigger_rate": 0.173,
+   "mean_diff": -10.0,
+   "p": 0.86373,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.3,
+   "f": 0.2,
+   "onset_miss_rate": 0.136,
+   "off_label_trigger_rate": 0.191,
+   "trigger_rate": 0.249,
+   "mean_diff": 71.6,
+   "p": 0.15629,
+   "pass": false,
+   "counts": false
+  },
+  {
+   "h": 0.3,
+   "f": 0.3,
+   "onset_miss_rate": 0.122,
+   "off_label_trigger_rate": 0.306,
+   "trigger_rate": 0.306,
+   "mean_diff": 3.4,
+   "p": 0.69787,
+   "pass": false,
+   "counts": false
+  }
+ ],
+ "utc": "2026-10-10T02:54:50+00:00"
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Launcher for deployment/flydeploy.py: the project venv when it exists (the server checks
+# import the project), else python3 (local side, verify, the run supervisor).
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+py="$here/.venv/bin/python"
+case "${1:-}" in
+  doctor|smoke|bench|compare|reference)
+    [ -x "$py" ] || { echo "error: '$1' needs the project venv: run deployment/flydeploy install" >&2; exit 1; } ;;
+esac
+[ -x "$py" ] || py="$(command -v python3 || true)"
+[ -n "$py" ] || { echo "error: no python3 on this machine" >&2; exit 1; }
+exec "$py" "$here/deployment/flydeploy.py" "$@"

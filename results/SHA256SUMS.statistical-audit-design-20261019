@@ -1,0 +1,4 @@
+# Frozen design of the statistical validation (docs/STATISTICAL_AUDIT_20261019.md), as recorded
+# in artifacts/statistical_audit_20261019/calibration.json (design_sha256) before it ran.
+3c5df33e0b042d5875a2fef326a0f2e999dbc605c4fa365dc1630af1f46b3b7b  tools/audits/statistical_20261019.py
+fb757bba200b676c9a371624a0dfd6d62e8f2f40d6124ef0a3029e890e620172  docs/STATISTICAL_AUDIT_20261019.md

@@ -1,0 +1,76 @@
+{
+  "what": "frame generalisation of scene identity from one sweep",
+  "pair": [
+    "1-1_jumping",
+    "1-1_open"
+  ],
+  "frames": 48,
+  "seeds": 8,
+  "noise_seeds": "880000..880767",
+  "results": {
+    "motor_K16": {
+      "block": {
+        "decode": 0.8255,
+        "shuffled": 0.4557,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "interleaved": {
+        "decode": 0.9453,
+        "shuffled": 0.4714,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "noise": {
+        "decode": 0.9896,
+        "shuffled": 0.4609,
+        "n_train": 384,
+        "n_test": 384
+      }
+    },
+    "motor_K32": {
+      "block": {
+        "decode": 0.8359,
+        "shuffled": 0.5469,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "interleaved": {
+        "decode": 0.9427,
+        "shuffled": 0.4479,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "noise": {
+        "decode": 0.9766,
+        "shuffled": 0.4792,
+        "n_train": 384,
+        "n_test": 384
+      }
+    },
+    "input_lamina_current": {
+      "block": {
+        "decode": 0.6667,
+        "shuffled": 0.5625,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "interleaved": {
+        "decode": 0.7917,
+        "shuffled": 0.5,
+        "n_train": 384,
+        "n_test": 384
+      },
+      "noise": {
+        "decode": 1.0,
+        "shuffled": 0.4792,
+        "n_train": 384,
+        "n_test": 384
+      }
+    }
+  },
+  "complete": true,
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_frames-20261002_20261002T192524Z_33d80b1c.json",
+  "scope": "exploratory diagnostic; no learning",
+  "utc": "2026-10-02T19:26:07+00:00"
+}

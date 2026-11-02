@@ -1,0 +1,61 @@
+2026-10-20T07:53:18Z start
+prepared pilot_am: 2 graphs x 4 conditions x 2 seeds = 16 lots; features 0.09 GB as uint8
+{
+ "train_balanced_16_cells": true,
+ "val_balanced_16_cells": true,
+ "test_balanced_16_cells": true,
+ "uids_unique": true,
+ "image_digests_unique": true,
+ "latent_noise_seeds_unique": true,
+ "disjoint_from_retino_v1_main": true,
+ "disjoint_from_retino_v1_pilot": true,
+ "disjoint_from_calibration_fit": true,
+ "disjoint_from_calibration_check": true,
+ "disjoint_from_calibration_pilot_fit": true,
+ "disjoint_from_calibration_pilot_check": true,
+ "uid_position_uncorrelated_with_orient": true,
+ "uid_position_uncorrelated_with_lum": true,
+ "orient_lum_independent_within_each_partition": true,
+ "pass": true
+}
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+2026-10-20T07:53:48+00:00 ('nullin:100', 'C0', 11001) gamma=1.0000 done=1/16 eta=138s
+2026-10-20T07:53:56+00:00 ('nullin:100', 'CL', 11001) gamma=0.6313 done=2/16 eta=114s
+2026-10-20T07:54:05+00:00 ('nullin:100', 'CM', 11001) gamma=1.0000 done=3/16 eta=119s
+2026-10-20T07:54:12+00:00 ('nullin:100', 'CH', 11001) gamma=1.0000 done=4/16 eta=97s
+2026-10-20T07:54:22+00:00 ('nullin:100', 'CH', 11002) gamma=1.0000 done=5/16 eta=100s
+2026-10-20T07:54:29+00:00 ('nullin:100', 'CM', 11002) gamma=1.0000 done=6/16 eta=83s
+2026-10-20T07:54:39+00:00 ('nullin:100', 'CL', 11002) gamma=0.6313 done=7/16 eta=82s
+2026-10-20T07:54:47+00:00 ('nullin:100', 'C0', 11002) gamma=1.0000 done=8/16 eta=68s
+2026-10-20T07:55:00+00:00 ('nullin:101', 'CL', 11002) gamma=0.7500 done=9/16 eta=54s
+2026-10-20T07:55:10+00:00 ('nullin:101', 'CM', 11002) gamma=1.0000 done=10/16 eta=51s
+2026-10-20T07:55:17+00:00 ('nullin:101', 'CH', 11002) gamma=1.0000 done=11/16 eta=39s
+2026-10-20T07:55:26+00:00 ('nullin:101', 'C0', 11002) gamma=1.0000 done=12/16 eta=34s
+2026-10-20T07:55:34+00:00 ('nullin:101', 'C0', 11001) gamma=1.0000 done=13/16 eta=23s
+2026-10-20T07:55:43+00:00 ('nullin:101', 'CH', 11001) gamma=1.0000 done=14/16 eta=17s
+2026-10-20T07:55:51+00:00 ('nullin:101', 'CM', 11001) gamma=1.0000 done=15/16 eta=8s
+2026-10-20T07:56:01+00:00 ('nullin:101', 'CL', 11001) gamma=0.7500 done=16/16 eta=0s
+9 decoder jobs
+2026-10-20T07:56:28+00:00 ('nullin:100', 'C0', False) done
+2026-10-20T07:56:29+00:00 ('nullin:100', 'CL', False) done
+2026-10-20T07:56:52+00:00 ('nullin:100', 'CM', False) done
+2026-10-20T07:56:52+00:00 ('nullin:100', 'CH', False) done
+2026-10-20T07:57:15+00:00 ('nullin:101', 'C0', False) done
+2026-10-20T07:57:16+00:00 ('nullin:101', 'CL', False) done
+2026-10-20T07:57:39+00:00 ('nullin:101', 'CM', False) done
+2026-10-20T07:57:39+00:00 ('nullin:101', 'CH', False) done
+2026-10-20T07:58:02+00:00 ('nullin:100', 'C0', True) done
+{'G_C0_orient': 0.026, 'G_CL_orient': 0.0136, 'G_CM_orient': 0.026, 'G_CH_orient': 0.026, 'T_real_orient': 0.0, 'T_nulls_orient': 0.0, 'R_orient': 0.0, 'G_C0_lum': 0.0104, 'G_CL_lum': 0.01, 'G_CM_lum': 0.0104, 'G_CH_lum': 0.0104, 'T_real_lum': 0.0, 'T_nulls_lum': 0.0, 'R_lum': 0.0}
+G_CM_orient (0.015397705622353899, 0.03579125907690468) practical importance not settled at this precision
+{
+ "lots": 16,
+ "lots_left": 0,
+ "images_per_lot": 2560,
+ "features_gb_uint8": 0.09121792,
+ "lot_seconds_p90": 9.535,
+ "source": "16 measured lots of this run",
+ "extract_hours_p90": 0.0033333333333333335
+}
+2026-10-20T07:58:02Z PILOT DONE
+rc=0

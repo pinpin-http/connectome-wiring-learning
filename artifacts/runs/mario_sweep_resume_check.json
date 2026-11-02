@@ -1,0 +1,23 @@
+{
+  "what": "Mario sweep trainer: bit-identical resume, emulators included",
+  "identical": {
+    "weights": true,
+    "eligibility_trace": true,
+    "screens": true,
+    "positions": true,
+    "episodes": true
+  },
+  "all_identical": true,
+  "relative_rms_weight_change": {
+    "learner_ro1": 0.0035570000763982534,
+    "frozen_ro1": 0.0,
+    "shuffled_ro1": 0.0017890000017359853
+  },
+  "positions_after_40": [
+    25.0,
+    28.0,
+    24.0
+  ],
+  "mean_policy_entropy": 1.7707899987697602,
+  "utc": "2026-10-02T19:30:21+00:00"
+}

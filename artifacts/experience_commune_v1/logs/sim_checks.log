@@ -1,0 +1,41 @@
+/workspace/SMB_Flywire_Speedrun_ec/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+nulllat:100 k=0 eval 150.2s
+nulllat:100 k=250 eval 152.3s
+nulllat:100 k=500 eval 152.1s
+nulllat:100 k=0 eval 149.9s
+nulllat:100 k=250 eval 152.5s
+resumed nulllat:100 at k=250
+nulllat:100 k=500 eval 151.2s
+{
+ "graph": "nulllat:100",
+ "initial_magnitudes_equal_m0": true,
+ "pairing_identical_N_U": [
+  true,
+  true
+ ],
+ "pairing_weights_moved": true,
+ "eval_read_only": {
+  "m": true,
+  "generators": true,
+  "baseline": true,
+  "rms": true,
+  "eligibility_mean": true,
+  "k": true
+ },
+ "eval_repeatable": true,
+ "resume": {
+  "resumed_from": 250,
+  "digests_equal_at_500": true,
+  "digests_equal_at_250": true,
+  "train_step_s_median": 0.06378769874572754,
+  "eval_s": {
+   "0": 150.2,
+   "250": 152.3,
+   "500": 152.1
+  }
+ },
+ "motor_readout_n": 2227,
+ "pass": true
+}
+rc=0

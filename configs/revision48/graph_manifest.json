@@ -1,0 +1,223 @@
+{
+ "what": "graphs of the revision campaign: the connectome, the X3 selection (10 S = nulllat, 10 E = nullin; selected before any new result, historical subset, not a new random sample) and the development graphs (pilot only)",
+ "selection_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-001/SMB_Flywire_Speedrun_backups/COMPLEMENTS_complet_2026-10-21.zip",
+ "selection_member": "SMB_Flywire_Speedrun_ec/artifacts/experience_commune_v1/complements/matched_activity_full/plan.json",
+ "graph_sha256": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f",
+ "graphs": [
+  {
+   "spec": "connectome",
+   "role": "connectome",
+   "file": "data/connectome/malecns.npz",
+   "sha256": "6befb67a0278568316c26d32c3f2cadf76fbb8cc35d93137819c86f804a1df9f",
+   "bytes": 105100903,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_final_2026-10-20_1036UTC-002/SMB_Flywire_Speedrun/data/connectome/malecns.npz"
+  },
+  {
+   "spec": "nulllat:39",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s39.npz",
+   "sha256": "3b6a5b0345c526dd1d504937f6e420e521f76405a1d46f95f2401db9e360cf80",
+   "bytes": 107173813,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-010/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s39.npz"
+  },
+  {
+   "spec": "nullin:6",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s6.npz",
+   "sha256": "6ec6ed2e9b3777f3725f029fd30f8dc0ea1d683de3ce28c34391dcaf836ac4ab",
+   "bytes": 107562478,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-006/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s6.npz"
+  },
+  {
+   "spec": "nulllat:21",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s21.npz",
+   "sha256": "ede9e9b333df55f424fb3be0baa05965331b4a82dfe719b3c48cdd3a023bac6d",
+   "bytes": 107175669,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-006/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s21.npz"
+  },
+  {
+   "spec": "nullin:3",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s3.npz",
+   "sha256": "f9fe02d63b56a1dbd61ae97732df912ba0d0177748959c3a42fc22621a68a40b",
+   "bytes": 107562157,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-013/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s3.npz"
+  },
+  {
+   "spec": "nulllat:29",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s29.npz",
+   "sha256": "4d9a619e19a300a17b7927da65a783f4bcea5ebbf8c9de8c69fa50c44846d5c1",
+   "bytes": 107171713,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-013/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s29.npz"
+  },
+  {
+   "spec": "nullin:32",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s32.npz",
+   "sha256": "df6e6ea61c50d8d24a3bae43d2b4e89d47de267dafb9f006409c2776296bd4ca",
+   "bytes": 107561646,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-006/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s32.npz"
+  },
+  {
+   "spec": "nulllat:30",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s30.npz",
+   "sha256": "ee737de82609f67d3dca9d590aa5c250ff423e01b2d24e2d3dd155b282d6b9ce",
+   "bytes": 107171718,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-003/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s30.npz"
+  },
+  {
+   "spec": "nullin:28",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s28.npz",
+   "sha256": "96678318a78d2555d869b272d4660fb30542860093b1f6aeb53dc2c2db793ecc",
+   "bytes": 107562913,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-009/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s28.npz"
+  },
+  {
+   "spec": "nulllat:26",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s26.npz",
+   "sha256": "ed81843500b9300179c1b5026b8c38ea43362d3fc51cd38454b1a9249e66f720",
+   "bytes": 107175851,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-006/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s26.npz"
+  },
+  {
+   "spec": "nullin:24",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s24.npz",
+   "sha256": "c19880e35f50bde161a5c1684f7b6cfca116a4297622518773347354891c08eb",
+   "bytes": 107566604,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-011/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s24.npz"
+  },
+  {
+   "spec": "nulllat:20",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s20.npz",
+   "sha256": "0bb3d58a0b2d37dac924986adb91bc98844e9d80d24f6480be10d9693cd92721",
+   "bytes": 107175008,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-008/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s20.npz"
+  },
+  {
+   "spec": "nullin:7",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s7.npz",
+   "sha256": "6ac23e292971e0e781fb3c789394a935523e382dd09ea51a345ea38f84d91476",
+   "bytes": 107560908,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-011/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s7.npz"
+  },
+  {
+   "spec": "nulllat:14",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s14.npz",
+   "sha256": "bda7435445036ad2b00c9e55ef290f09543387e12a5524a23337543b8bf3949d",
+   "bytes": 107175300,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-010/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s14.npz"
+  },
+  {
+   "spec": "nullin:35",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s35.npz",
+   "sha256": "4ba166f6064d7f1101c260fbd5c1e9ac03e57fc26e0df6384349ca1d58e23cd9",
+   "bytes": 107562096,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-005/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s35.npz"
+  },
+  {
+   "spec": "nulllat:5",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s5.npz",
+   "sha256": "2539e27ee13fe95bdcb46742dc26d427a6f8bdc54e27c7d7925da656cb8bfc31",
+   "bytes": 107174539,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-001/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s5.npz"
+  },
+  {
+   "spec": "nullin:39",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s39.npz",
+   "sha256": "0b04db0c999aed9415265fd6f83506fe5067ae1181f0fa8f78088eae04439a25",
+   "bytes": 107561881,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-003/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s39.npz"
+  },
+  {
+   "spec": "nulllat:9",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s9.npz",
+   "sha256": "7042a88465a1fc79d57cbbd185b8944f4d605ec2ea4da2561139707e2bd3a112",
+   "bytes": 107173711,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-006/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s9.npz"
+  },
+  {
+   "spec": "nullin:12",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s12.npz",
+   "sha256": "be1aee37916c5a84cd4df852fc7388192e8d2f8f21c30f3be2287798cdb50cff",
+   "bytes": 107564747,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-005/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s12.npz"
+  },
+  {
+   "spec": "nulllat:34",
+   "role": "S",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s34.npz",
+   "sha256": "aa818fdb5c2e5fe5af3e05aa20aba6f8b4bdd28f07b81595f92e8e33c46bc67b",
+   "bytes": 107174896,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-001/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s34.npz"
+  },
+  {
+   "spec": "nullin:22",
+   "role": "E",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s22.npz",
+   "sha256": "6634a66180cae98bc92113b16de967b20c9518dab6a5d7b98932236db92f2469",
+   "bytes": 107562584,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-010/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s22.npz"
+  },
+  {
+   "spec": "nulllat:100",
+   "role": "dev",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s100.npz",
+   "sha256": "18c8ad151380d5b26839b5baeeab99f1725ffa5f99d5e72a5bf27a20d89f60d0",
+   "bytes": 107167599,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-012/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_s100.npz"
+  },
+  {
+   "spec": "nullin:100",
+   "role": "dev",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s100.npz",
+   "sha256": "674dac72d4224769af18cee794152141b2e3840c422b377bfc23ba28458a70bd",
+   "bytes": 107557694,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-007/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s100.npz"
+  },
+  {
+   "spec": "nullin:101",
+   "role": "dev",
+   "file": "artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s101.npz",
+   "sha256": "647f8ba992e031b468386f168dc972f6a91b501a52c38939cc9ad2a239c2f63e",
+   "bytes": 107563396,
+   "archived_source": "/home/soheib/Downloads/campagne/SMB_Flywire_Speedrun_backups-20261021T151848Z-1-005/SMB_Flywire_Speedrun_backups/C.56757376/artifacts/cache/nulls/malecns_6befb67a0278_depth_stratified_lateral_instrength_s101.npz"
+  }
+ ],
+ "order": [
+  "connectome",
+  "nulllat:39",
+  "nullin:6",
+  "nulllat:21",
+  "nullin:3",
+  "nulllat:29",
+  "nullin:32",
+  "nulllat:30",
+  "nullin:28",
+  "nulllat:26",
+  "nullin:24",
+  "nulllat:20",
+  "nullin:7",
+  "nulllat:14",
+  "nullin:35",
+  "nulllat:5",
+  "nullin:39",
+  "nulllat:9",
+  "nullin:12",
+  "nulllat:34",
+  "nullin:22"
+ ]
+}

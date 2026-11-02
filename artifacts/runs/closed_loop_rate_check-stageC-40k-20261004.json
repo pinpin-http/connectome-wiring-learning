@@ -1,0 +1,2671 @@
+{
+ "what": "candidate A on learners: frozen greedy play vs random jumping at the learner's own rate",
+ "checkpoint": "artifacts/runs/checkpoints/mario_stageC_40k.pt",
+ "levels": [
+  "Level5-1",
+  "Level8-1",
+  "Level3-1",
+  "Level6-1"
+ ],
+ "delays": [
+  0,
+  3,
+  6,
+  9,
+  12,
+  15,
+  18,
+  21
+ ],
+ "results": {
+  "tko_ro1": {
+   "n": 32,
+   "wins": 17,
+   "losses": 11,
+   "mean_diff": 120.3,
+   "p_greater": 0.01896,
+   "pass": true,
+   "mean_jump_rate": 0.399
+  },
+  "tkoshuf_ro1": {
+   "n": 32,
+   "wins": 8,
+   "losses": 8,
+   "mean_diff": -17.2,
+   "p_greater": 0.70171,
+   "pass": false,
+   "mean_jump_rate": 0.266
+  },
+  "tko_ro2": {
+   "n": 32,
+   "wins": 7,
+   "losses": 22,
+   "mean_diff": -18.5,
+   "p_greater": 0.99161,
+   "pass": false,
+   "mean_jump_rate": 0.284
+  },
+  "tkoshuf_ro2": {
+   "n": 32,
+   "wins": 13,
+   "losses": 14,
+   "mean_diff": -5.0,
+   "p_greater": 0.6317,
+   "pass": false,
+   "mean_jump_rate": 0.131
+  },
+  "tko_ro3": {
+   "n": 32,
+   "wins": 0,
+   "losses": 0,
+   "mean_diff": 0.0,
+   "p_greater": 1.0,
+   "pass": false,
+   "mean_jump_rate": 0.0
+  },
+  "tkoshuf_ro3": {
+   "n": 32,
+   "wins": 0,
+   "losses": 0,
+   "mean_diff": 0.0,
+   "p_greater": 1.0,
+   "pass": false,
+   "mean_jump_rate": 0.0
+  }
+ },
+ "rows": [
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 929.0,
+   "jump_rate": 0.63,
+   "random_best_x": 311.0,
+   "end": "time"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 204.0,
+   "jump_rate": 0.0,
+   "random_best_x": 204.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 274.0,
+   "jump_rate": 0.414,
+   "random_best_x": 345.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 204.0,
+   "jump_rate": 0.0,
+   "random_best_x": 204.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 204.0,
+   "jump_rate": 0.0,
+   "random_best_x": 204.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 204.0,
+   "jump_rate": 0.0,
+   "random_best_x": 204.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 423.0,
+   "jump_rate": 0.444,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 0.008,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 449.0,
+   "jump_rate": 0.511,
+   "random_best_x": 224.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 199.0,
+   "jump_rate": 0.0,
+   "random_best_x": 199.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 273.0,
+   "jump_rate": 0.452,
+   "random_best_x": 494.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 199.0,
+   "jump_rate": 0.045,
+   "random_best_x": 198.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 199.0,
+   "jump_rate": 0.0,
+   "random_best_x": 199.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 199.0,
+   "jump_rate": 0.0,
+   "random_best_x": 199.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 244.0,
+   "jump_rate": 0.35,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 274.0,
+   "jump_rate": 0.31,
+   "random_best_x": 239.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 194.0,
+   "jump_rate": 0.0,
+   "random_best_x": 194.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 278.0,
+   "jump_rate": 0.406,
+   "random_best_x": 460.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 194.0,
+   "jump_rate": 0.0,
+   "random_best_x": 194.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 194.0,
+   "jump_rate": 0.0,
+   "random_best_x": 194.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 194.0,
+   "jump_rate": 0.0,
+   "random_best_x": 194.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 99.0,
+   "jump_rate": 0.159,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 274.0,
+   "jump_rate": 0.345,
+   "random_best_x": 460.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 189.0,
+   "jump_rate": 0.0,
+   "random_best_x": 189.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 449.0,
+   "jump_rate": 0.553,
+   "random_best_x": 399.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 189.0,
+   "jump_rate": 0.0,
+   "random_best_x": 189.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 189.0,
+   "jump_rate": 0.0,
+   "random_best_x": 189.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 189.0,
+   "jump_rate": 0.0,
+   "random_best_x": 189.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 125.0,
+   "jump_rate": 0.314,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 9,
+   "best_x": 40.0,
+   "jump_rate": 0.009,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 929.0,
+   "jump_rate": 0.665,
+   "random_best_x": 493.0,
+   "end": "time"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 184.0,
+   "jump_rate": 0.0,
+   "random_best_x": 184.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 449.0,
+   "jump_rate": 0.553,
+   "random_best_x": 306.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 274.0,
+   "jump_rate": 0.069,
+   "random_best_x": 199.8,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 184.0,
+   "jump_rate": 0.0,
+   "random_best_x": 184.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 184.0,
+   "jump_rate": 0.0,
+   "random_best_x": 184.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 103.0,
+   "jump_rate": 0.153,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 12,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 449.0,
+   "jump_rate": 0.553,
+   "random_best_x": 249.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 179.0,
+   "jump_rate": 0.0,
+   "random_best_x": 179.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 273.0,
+   "jump_rate": 0.484,
+   "random_best_x": 345.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 179.0,
+   "jump_rate": 0.0,
+   "random_best_x": 179.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 179.0,
+   "jump_rate": 0.0,
+   "random_best_x": 179.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 179.0,
+   "jump_rate": 0.0,
+   "random_best_x": 179.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 180.0,
+   "jump_rate": 0.191,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 15,
+   "best_x": 40.0,
+   "jump_rate": 0.019,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 274.0,
+   "jump_rate": 0.379,
+   "random_best_x": 428.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 174.0,
+   "jump_rate": 0.0,
+   "random_best_x": 174.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 928.0,
+   "jump_rate": 0.826,
+   "random_best_x": 579.6,
+   "end": "time"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 274.0,
+   "jump_rate": 0.034,
+   "random_best_x": 193.2,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 174.0,
+   "jump_rate": 0.0,
+   "random_best_x": 174.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 174.0,
+   "jump_rate": 0.0,
+   "random_best_x": 174.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 470.0,
+   "jump_rate": 0.437,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 1012.0,
+   "jump_rate": 0.703,
+   "random_best_x": 450.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 169.0,
+   "jump_rate": 0.0,
+   "random_best_x": 169.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 274.0,
+   "jump_rate": 0.379,
+   "random_best_x": 289.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 274.0,
+   "jump_rate": 0.034,
+   "random_best_x": 211.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 169.0,
+   "jump_rate": 0.0,
+   "random_best_x": 169.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 169.0,
+   "jump_rate": 0.0,
+   "random_best_x": 169.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 223.0,
+   "jump_rate": 0.232,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level5-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 342.0,
+   "jump_rate": 0.306,
+   "random_best_x": 350.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 227.0,
+   "jump_rate": 0.0,
+   "random_best_x": 227.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 342.0,
+   "jump_rate": 0.389,
+   "random_best_x": 378.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 227.0,
+   "jump_rate": 0.04,
+   "random_best_x": 226.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 227.0,
+   "jump_rate": 0.0,
+   "random_best_x": 227.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 227.0,
+   "jump_rate": 0.0,
+   "random_best_x": 227.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 0.22,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 629.0,
+   "jump_rate": 0.622,
+   "random_best_x": 414.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 222.0,
+   "jump_rate": 0.0,
+   "random_best_x": 222.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 940.0,
+   "jump_rate": 0.75,
+   "random_best_x": 442.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 222.0,
+   "jump_rate": 0.042,
+   "random_best_x": 221.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 222.0,
+   "jump_rate": 0.0,
+   "random_best_x": 222.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 222.0,
+   "jump_rate": 0.0,
+   "random_best_x": 222.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 0.207,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 1203.0,
+   "jump_rate": 0.832,
+   "random_best_x": 453.0,
+   "end": "stall"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 217.0,
+   "jump_rate": 0.0,
+   "random_best_x": 217.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 342.0,
+   "jump_rate": 0.361,
+   "random_best_x": 437.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 217.0,
+   "jump_rate": 0.167,
+   "random_best_x": 322.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 217.0,
+   "jump_rate": 0.0,
+   "random_best_x": 217.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 217.0,
+   "jump_rate": 0.0,
+   "random_best_x": 217.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 0.227,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 212.0,
+   "jump_rate": 0.0,
+   "random_best_x": 212.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 212.0,
+   "jump_rate": 0.0,
+   "random_best_x": 212.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 342.0,
+   "jump_rate": 0.389,
+   "random_best_x": 345.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 212.0,
+   "jump_rate": 0.13,
+   "random_best_x": 278.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 212.0,
+   "jump_rate": 0.0,
+   "random_best_x": 212.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 212.0,
+   "jump_rate": 0.0,
+   "random_best_x": 212.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 41.0,
+   "jump_rate": 0.242,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 9,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.043,
+   "random_best_x": 206.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.0,
+   "random_best_x": 207.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.0,
+   "random_best_x": 207.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.087,
+   "random_best_x": 275.2,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.0,
+   "random_best_x": 207.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 207.0,
+   "jump_rate": 0.0,
+   "random_best_x": 207.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 40.0,
+   "jump_rate": 0.26,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 12,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.0,
+   "random_best_x": 202.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.0,
+   "random_best_x": 202.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.0,
+   "random_best_x": 202.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.045,
+   "random_best_x": 230.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.0,
+   "random_best_x": 202.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 202.0,
+   "jump_rate": 0.0,
+   "random_best_x": 202.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 40.0,
+   "jump_rate": 0.233,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 15,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 197.0,
+   "jump_rate": 0.0,
+   "random_best_x": 197.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 197.0,
+   "jump_rate": 0.0,
+   "random_best_x": 197.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 342.0,
+   "jump_rate": 0.417,
+   "random_best_x": 364.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 197.0,
+   "jump_rate": 0.045,
+   "random_best_x": 225.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 197.0,
+   "jump_rate": 0.0,
+   "random_best_x": 197.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 197.0,
+   "jump_rate": 0.0,
+   "random_best_x": 197.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 0.227,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 192.0,
+   "jump_rate": 0.0,
+   "random_best_x": 192.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 0.18,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level8-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 580.0,
+   "jump_rate": 0.452,
+   "random_best_x": 423.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 510.0,
+   "jump_rate": 0.345,
+   "random_best_x": 441.8,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 372.0,
+   "jump_rate": 0.128,
+   "random_best_x": 447.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 595.0,
+   "jump_rate": 0.142,
+   "random_best_x": 443.4,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 129.0,
+   "jump_rate": 0.028,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 211.0,
+   "jump_rate": 0.953,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 0,
+   "best_x": 316.0,
+   "jump_rate": 0.22,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 350.0,
+   "jump_rate": 0.222,
+   "random_best_x": 415.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 594.0,
+   "jump_rate": 0.283,
+   "random_best_x": 469.2,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 422.0,
+   "jump_rate": 0.114,
+   "random_best_x": 447.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 499.0,
+   "jump_rate": 0.196,
+   "random_best_x": 449.2,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 103.0,
+   "jump_rate": 0.048,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 134.0,
+   "jump_rate": 0.969,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 3,
+   "best_x": 170.0,
+   "jump_rate": 0.058,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 897.0,
+   "jump_rate": 0.768,
+   "random_best_x": 572.8,
+   "end": "time"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 404.0,
+   "jump_rate": 0.377,
+   "random_best_x": 396.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 498.0,
+   "jump_rate": 0.309,
+   "random_best_x": 452.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 594.0,
+   "jump_rate": 0.074,
+   "random_best_x": 381.8,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 87.0,
+   "jump_rate": 0.044,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 231.0,
+   "jump_rate": 0.919,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 6,
+   "best_x": 171.0,
+   "jump_rate": 0.033,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 376.0,
+   "jump_rate": 0.31,
+   "random_best_x": 470.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 594.0,
+   "jump_rate": 0.337,
+   "random_best_x": 503.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 372.0,
+   "jump_rate": 0.179,
+   "random_best_x": 414.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 498.0,
+   "jump_rate": 0.216,
+   "random_best_x": 407.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 94.0,
+   "jump_rate": 0.036,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 200.0,
+   "jump_rate": 0.933,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 9,
+   "best_x": 161.0,
+   "jump_rate": 0.039,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 511.0,
+   "jump_rate": 0.327,
+   "random_best_x": 472.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 594.0,
+   "jump_rate": 0.34,
+   "random_best_x": 369.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 372.0,
+   "jump_rate": 0.154,
+   "random_best_x": 394.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 500.0,
+   "jump_rate": 0.112,
+   "random_best_x": 393.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 88.0,
+   "jump_rate": 0.023,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 169.0,
+   "jump_rate": 0.952,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 12,
+   "best_x": 141.0,
+   "jump_rate": 0.072,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 372.0,
+   "jump_rate": 0.231,
+   "random_best_x": 398.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 594.0,
+   "jump_rate": 0.468,
+   "random_best_x": 559.8,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 372.0,
+   "jump_rate": 0.154,
+   "random_best_x": 369.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 361.0,
+   "jump_rate": 0.25,
+   "random_best_x": 413.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 133.0,
+   "jump_rate": 0.014,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 247.0,
+   "jump_rate": 0.908,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 15,
+   "best_x": 333.0,
+   "jump_rate": 0.275,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 594.0,
+   "jump_rate": 0.616,
+   "random_best_x": 804.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 594.0,
+   "jump_rate": 0.315,
+   "random_best_x": 427.8,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 372.0,
+   "jump_rate": 0.154,
+   "random_best_x": 372.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 594.0,
+   "jump_rate": 0.045,
+   "random_best_x": 372.2,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 86.0,
+   "jump_rate": 0.005,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 108.0,
+   "jump_rate": 0.972,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 18,
+   "best_x": 322.0,
+   "jump_rate": 0.103,
+   "random_best_x": NaN,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 369.0,
+   "jump_rate": 0.275,
+   "random_best_x": 499.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 364.0,
+   "jump_rate": 0.35,
+   "random_best_x": 459.4,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 407.0,
+   "jump_rate": 0.209,
+   "random_best_x": 405.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 373.0,
+   "jump_rate": 0.244,
+   "random_best_x": 429.6,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 372.0,
+   "jump_rate": 0.0,
+   "random_best_x": 372.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 109.0,
+   "jump_rate": 0.015,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 102.0,
+   "jump_rate": 0.968,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level3-1",
+   "delay": 21,
+   "best_x": 143.0,
+   "jump_rate": 0.059,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 1379.0,
+   "jump_rate": 0.483,
+   "random_best_x": 990.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 498.0,
+   "jump_rate": 0.426,
+   "random_best_x": 854.8,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 402.0,
+   "jump_rate": 0.15,
+   "random_best_x": 467.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 466.0,
+   "jump_rate": 0.279,
+   "random_best_x": 468.2,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 112.0,
+   "jump_rate": 0.033,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 65.0,
+   "jump_rate": 0.991,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 0,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 1106.0,
+   "jump_rate": 0.441,
+   "random_best_x": 859.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 470.0,
+   "jump_rate": 0.752,
+   "random_best_x": 476.2,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 402.0,
+   "jump_rate": 0.195,
+   "random_best_x": 659.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 466.0,
+   "jump_rate": 0.24,
+   "random_best_x": 599.4,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 120.0,
+   "jump_rate": 0.032,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 130.0,
+   "jump_rate": 0.988,
+   "random_best_x": NaN,
+   "end": "time"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 3,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 1379.0,
+   "jump_rate": 0.39,
+   "random_best_x": 769.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 466.0,
+   "jump_rate": 0.74,
+   "random_best_x": 677.8,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 402.0,
+   "jump_rate": 0.177,
+   "random_best_x": 473.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 466.0,
+   "jump_rate": 0.308,
+   "random_best_x": 593.8,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 486.0,
+   "jump_rate": 0.134,
+   "random_best_x": NaN,
+   "end": "time"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 6,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 510.0,
+   "jump_rate": 0.667,
+   "random_best_x": 793.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 470.0,
+   "jump_rate": 0.752,
+   "random_best_x": 465.2,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 402.0,
+   "jump_rate": 0.168,
+   "random_best_x": 486.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 499.0,
+   "jump_rate": 0.106,
+   "random_best_x": 474.0,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 112.0,
+   "jump_rate": 0.034,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 43.0,
+   "jump_rate": 0.994,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 9,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 1378.0,
+   "jump_rate": 0.497,
+   "random_best_x": 963.8,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 466.0,
+   "jump_rate": 0.769,
+   "random_best_x": 772.0,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 402.0,
+   "jump_rate": 0.15,
+   "random_best_x": 471.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 466.0,
+   "jump_rate": 0.189,
+   "random_best_x": 467.2,
+   "end": "death"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 126.0,
+   "jump_rate": 0.038,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 50.0,
+   "jump_rate": 0.997,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 12,
+   "best_x": 41.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 419.0,
+   "jump_rate": 0.32,
+   "random_best_x": 488.6,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 466.0,
+   "jump_rate": 0.76,
+   "random_best_x": 590.6,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 402.0,
+   "jump_rate": 0.17,
+   "random_best_x": 482.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 466.0,
+   "jump_rate": 0.317,
+   "random_best_x": 773.0,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 126.0,
+   "jump_rate": 0.037,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 94.0,
+   "jump_rate": 0.99,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 15,
+   "best_x": 45.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 421.0,
+   "jump_rate": 0.32,
+   "random_best_x": 768.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 470.0,
+   "jump_rate": 0.733,
+   "random_best_x": 621.0,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 402.0,
+   "jump_rate": 0.168,
+   "random_best_x": 474.4,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 466.0,
+   "jump_rate": 0.317,
+   "random_best_x": 601.6,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 113.0,
+   "jump_rate": 0.039,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 40.0,
+   "jump_rate": 1.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 18,
+   "best_x": 46.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "tko_ro1",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 1055.0,
+   "jump_rate": 0.547,
+   "random_best_x": 847.4,
+   "end": "time"
+  },
+  {
+   "learner": "tkoshuf_ro1",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 466.0,
+   "jump_rate": 0.76,
+   "random_best_x": 487.8,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro2",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 402.0,
+   "jump_rate": 0.15,
+   "random_best_x": 494.2,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro2",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 466.0,
+   "jump_rate": 0.413,
+   "random_best_x": 590.0,
+   "end": "time"
+  },
+  {
+   "learner": "tko_ro3",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "tkoshuf_ro3",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 469.0,
+   "jump_rate": 0.0,
+   "random_best_x": 469.0,
+   "end": "death"
+  },
+  {
+   "learner": "untrained_ro1",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 126.0,
+   "jump_rate": 0.022,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro2",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 122.0,
+   "jump_rate": 0.977,
+   "random_best_x": NaN,
+   "end": "stall"
+  },
+  {
+   "learner": "untrained_ro3",
+   "level": "Level6-1",
+   "delay": 21,
+   "best_x": 40.0,
+   "jump_rate": 0.0,
+   "random_best_x": NaN,
+   "end": "stall"
+  }
+ ],
+ "utc": "2026-10-05T16:40:03+00:00"
+}

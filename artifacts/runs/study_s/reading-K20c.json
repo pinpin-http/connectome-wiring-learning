@@ -1,0 +1,351 @@
+{
+ "what": "Study S reading (docs/STUDY_S.md \u00a76)",
+ "rung_b": {
+  "K": 40,
+  "primary": {
+   "E1/where": {
+    "connectome": 0.4032,
+    "null_mean": 0.2488,
+    "null_sd": 0.0163,
+    "null_range": [
+     0.2189,
+     0.2844
+    ],
+    "rank_from_bottom": 41,
+    "z": 9.457,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E1/loom": {
+    "connectome": 0.4726,
+    "null_mean": 0.2818,
+    "null_sd": 0.018,
+    "null_range": [
+     0.2479,
+     0.3129
+    ],
+    "rank_from_bottom": 41,
+    "z": 10.591,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   }
+  },
+  "secondary": {
+   "A_test/where": {
+    "connectome": 0.755,
+    "null_mean": 0.505,
+    "null_sd": 0.0503,
+    "null_range": [
+     0.3967,
+     0.64
+    ],
+    "rank_from_bottom": 41,
+    "z": 4.97,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "A_gen/where": {
+    "connectome": 0.6981,
+    "null_mean": 0.4637,
+    "null_sd": 0.0507,
+    "null_range": [
+     0.3436,
+     0.6008
+    ],
+    "rank_from_bottom": 41,
+    "z": 4.623,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E4/where": {
+    "connectome": 0.3758,
+    "null_mean": 0.2868,
+    "null_sd": 0.0544,
+    "null_range": [
+     0.1892,
+     0.3825
+    ],
+    "rank_from_bottom": 39,
+    "z": 1.635,
+    "p_raw_two_sided": 0.1463,
+    "p_adjusted_maxz": 0.439,
+    "direction": "connectome worse",
+    "percentile": 95.0
+   },
+   "E5/where": {
+    "connectome": 0.025,
+    "null_mean": 0.0278,
+    "null_sd": 0.0128,
+    "null_range": [
+     0.0033,
+     0.0608
+    ],
+    "rank_from_bottom": 19,
+    "z": -0.223,
+    "p_raw_two_sided": 0.9268,
+    "p_adjusted_maxz": 1.0,
+    "direction": "connectome better",
+    "percentile": 45.0
+   },
+   "A_test/loom": {
+    "connectome": 0.7967,
+    "null_mean": 0.5479,
+    "null_sd": 0.0576,
+    "null_range": [
+     0.4067,
+     0.6317
+    ],
+    "rank_from_bottom": 41,
+    "z": 4.317,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "A_gen/loom": {
+    "connectome": 0.7317,
+    "null_mean": 0.4842,
+    "null_sd": 0.0516,
+    "null_range": [
+     0.3328,
+     0.5744
+    ],
+    "rank_from_bottom": 41,
+    "z": 4.797,
+    "p_raw_two_sided": 0.0488,
+    "p_adjusted_maxz": 0.0244,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E4/loom": {
+    "connectome": 0.3384,
+    "null_mean": 0.2919,
+    "null_sd": 0.0569,
+    "null_range": [
+     0.1483,
+     0.42
+    ],
+    "rank_from_bottom": 32,
+    "z": 0.817,
+    "p_raw_two_sided": 0.4878,
+    "p_adjusted_maxz": 0.9756,
+    "direction": "connectome worse",
+    "percentile": 77.5
+   },
+   "E5/loom": {
+    "connectome": 0.015,
+    "null_mean": 0.0259,
+    "null_sd": 0.0115,
+    "null_range": [
+     0.0058,
+     0.0525
+    ],
+    "rank_from_bottom": 8,
+    "z": -0.946,
+    "p_raw_two_sided": 0.4878,
+    "p_adjusted_maxz": 0.878,
+    "direction": "connectome better",
+    "percentile": 17.5
+   }
+  }
+ },
+ "rung_c": {
+  "K": 20,
+  "primary": {
+   "E1/where": {
+    "connectome": 0.4032,
+    "null_mean": 0.2841,
+    "null_sd": 0.0185,
+    "null_range": [
+     0.2561,
+     0.3211
+    ],
+    "rank_from_bottom": 21,
+    "z": 6.421,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.0476,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E1/loom": {
+    "connectome": 0.4726,
+    "null_mean": 0.3159,
+    "null_sd": 0.0185,
+    "null_range": [
+     0.2757,
+     0.3569
+    ],
+    "rank_from_bottom": 21,
+    "z": 8.483,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.0476,
+    "direction": "connectome better",
+    "percentile": 100.0
+   }
+  },
+  "secondary": {
+   "A_test/where": {
+    "connectome": 0.755,
+    "null_mean": 0.5486,
+    "null_sd": 0.0464,
+    "null_range": [
+     0.475,
+     0.665
+    ],
+    "rank_from_bottom": 21,
+    "z": 4.448,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.0952,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "A_gen/where": {
+    "connectome": 0.6981,
+    "null_mean": 0.5227,
+    "null_sd": 0.0403,
+    "null_range": [
+     0.4489,
+     0.5975
+    ],
+    "rank_from_bottom": 21,
+    "z": 4.357,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.0952,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E4/where": {
+    "connectome": 0.3758,
+    "null_mean": 0.3426,
+    "null_sd": 0.0392,
+    "null_range": [
+     0.2741,
+     0.4242
+    ],
+    "rank_from_bottom": 18,
+    "z": 0.848,
+    "p_raw_two_sided": 0.381,
+    "p_adjusted_maxz": 0.8571,
+    "direction": "connectome worse",
+    "percentile": 85.0
+   },
+   "E5/where": {
+    "connectome": 0.025,
+    "null_mean": 0.0174,
+    "null_sd": 0.0106,
+    "null_range": [
+     0.0017,
+     0.0459
+    ],
+    "rank_from_bottom": 18,
+    "z": 0.716,
+    "p_raw_two_sided": 0.381,
+    "p_adjusted_maxz": 1.0,
+    "direction": "connectome worse",
+    "percentile": 85.0
+   },
+   "A_test/loom": {
+    "connectome": 0.7967,
+    "null_mean": 0.6094,
+    "null_sd": 0.0537,
+    "null_range": [
+     0.4875,
+     0.7158
+    ],
+    "rank_from_bottom": 21,
+    "z": 3.486,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.1429,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "A_gen/loom": {
+    "connectome": 0.7317,
+    "null_mean": 0.5566,
+    "null_sd": 0.0448,
+    "null_range": [
+     0.4692,
+     0.66
+    ],
+    "rank_from_bottom": 21,
+    "z": 3.906,
+    "p_raw_two_sided": 0.0952,
+    "p_adjusted_maxz": 0.0952,
+    "direction": "connectome better",
+    "percentile": 100.0
+   },
+   "E4/loom": {
+    "connectome": 0.3384,
+    "null_mean": 0.3802,
+    "null_sd": 0.0622,
+    "null_range": [
+     0.2642,
+     0.5708
+    ],
+    "rank_from_bottom": 4,
+    "z": -0.672,
+    "p_raw_two_sided": 0.381,
+    "p_adjusted_maxz": 1.0,
+    "direction": "connectome better",
+    "percentile": 15.0
+   },
+   "E5/loom": {
+    "connectome": 0.015,
+    "null_mean": 0.0166,
+    "null_sd": 0.0111,
+    "null_range": [
+     0.0,
+     0.0391
+    ],
+    "rank_from_bottom": 9,
+    "z": -0.141,
+    "p_raw_two_sided": 0.9524,
+    "p_adjusted_maxz": 1.0,
+    "direction": "connectome better",
+    "percentile": 40.0
+   }
+  }
+ },
+ "verdict": {
+  "E1/where": "ADVANTAGE",
+  "E1/loom": "ADVANTAGE",
+  "A_test/where": "no difference shown",
+  "A_gen/where": "no difference shown",
+  "E4/where": "no difference shown",
+  "E5/where": "no difference shown (typical)",
+  "A_test/loom": "no difference shown",
+  "A_gen/loom": "no difference shown",
+  "E4/loom": "no difference shown (typical)",
+  "E5/loom": "no difference shown (typical)"
+ },
+ "learnability": {
+  "where": {
+   "A_test_range": [
+    0.397,
+    0.755
+   ],
+   "E1_range": [
+    0.219,
+    0.403
+   ]
+  },
+  "loom": {
+   "A_test_range": [
+    0.407,
+    0.797
+   ],
+   "E1_range": [
+    0.248,
+    0.473
+   ]
+  }
+ }
+}

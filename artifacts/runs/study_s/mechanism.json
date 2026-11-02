@@ -1,0 +1,296 @@
+{
+ "connectome": {
+  "where": {
+   "eta2": 0.4702,
+   "dec_scores": 0.72,
+   "dec_sub50": 0.965,
+   "rate": 4576.1
+  },
+  "loom": {
+   "eta2": 0.5753,
+   "dec_scores": 0.8,
+   "dec_sub50": 0.966,
+   "rate": 4574.7
+  }
+ },
+ "nulllat:0": {
+  "where": {
+   "eta2": 0.4152,
+   "dec_scores": 0.78,
+   "dec_sub50": 0.925,
+   "rate": 8168.8
+  },
+  "loom": {
+   "eta2": 0.4193,
+   "dec_scores": 0.7,
+   "dec_sub50": 0.924,
+   "rate": 8173.4
+  }
+ },
+ "nulllat:1": {
+  "where": {
+   "eta2": 0.4029,
+   "dec_scores": 0.56,
+   "dec_sub50": 0.935,
+   "rate": 8214.2
+  },
+  "loom": {
+   "eta2": 0.4524,
+   "dec_scores": 0.735,
+   "dec_sub50": 0.924,
+   "rate": 8221.8
+  }
+ },
+ "nulllat:2": {
+  "where": {
+   "eta2": 0.3778,
+   "dec_scores": 0.735,
+   "dec_sub50": 0.881,
+   "rate": 7880.0
+  },
+  "loom": {
+   "eta2": 0.4581,
+   "dec_scores": 0.61,
+   "dec_sub50": 0.886,
+   "rate": 7872.8
+  }
+ },
+ "nulllat:3": {
+  "where": {
+   "eta2": 0.4572,
+   "dec_scores": 0.71,
+   "dec_sub50": 0.954,
+   "rate": 8164.2
+  },
+  "loom": {
+   "eta2": 0.4913,
+   "dec_scores": 0.79,
+   "dec_sub50": 0.955,
+   "rate": 8154.5
+  }
+ },
+ "nulllat:4": {
+  "where": {
+   "eta2": 0.4202,
+   "dec_scores": 0.715,
+   "dec_sub50": 0.934,
+   "rate": 8457.4
+  },
+  "loom": {
+   "eta2": 0.4525,
+   "dec_scores": 0.735,
+   "dec_sub50": 0.944,
+   "rate": 8441.7
+  }
+ },
+ "nulllat:5": {
+  "where": {
+   "eta2": 0.3891,
+   "dec_scores": 0.57,
+   "dec_sub50": 0.906,
+   "rate": 8227.9
+  },
+  "loom": {
+   "eta2": 0.4222,
+   "dec_scores": 0.655,
+   "dec_sub50": 0.938,
+   "rate": 8232.8
+  }
+ },
+ "nulllat:6": {
+  "where": {
+   "eta2": 0.4231,
+   "dec_scores": 0.735,
+   "dec_sub50": 0.953,
+   "rate": 8498.0
+  },
+  "loom": {
+   "eta2": 0.4854,
+   "dec_scores": 0.66,
+   "dec_sub50": 0.963,
+   "rate": 8486.8
+  }
+ },
+ "nulllat:7": {
+  "where": {
+   "eta2": 0.4059,
+   "dec_scores": 0.61,
+   "dec_sub50": 0.928,
+   "rate": 8063.9
+  },
+  "loom": {
+   "eta2": 0.4206,
+   "dec_scores": 0.575,
+   "dec_sub50": 0.934,
+   "rate": 8060.8
+  }
+ },
+ "nulllat:8": {
+  "where": {
+   "eta2": 0.4435,
+   "dec_scores": 0.69,
+   "dec_sub50": 0.947,
+   "rate": 8094.6
+  },
+  "loom": {
+   "eta2": 0.4699,
+   "dec_scores": 0.685,
+   "dec_sub50": 0.946,
+   "rate": 8063.5
+  }
+ },
+ "nulllat:9": {
+  "where": {
+   "eta2": 0.3862,
+   "dec_scores": 0.585,
+   "dec_sub50": 0.943,
+   "rate": 8163.4
+  },
+  "loom": {
+   "eta2": 0.463,
+   "dec_scores": 0.78,
+   "dec_sub50": 0.961,
+   "rate": 8181.6
+  }
+ },
+ "nullin:0": {
+  "where": {
+   "eta2": 0.2953,
+   "dec_scores": 0.62,
+   "dec_sub50": 0.893,
+   "rate": 6133.4
+  },
+  "loom": {
+   "eta2": 0.345,
+   "dec_scores": 0.63,
+   "dec_sub50": 0.869,
+   "rate": 6135.8
+  }
+ },
+ "nullin:1": {
+  "where": {
+   "eta2": 0.3124,
+   "dec_scores": 0.615,
+   "dec_sub50": 0.869,
+   "rate": 6047.6
+  },
+  "loom": {
+   "eta2": 0.3268,
+   "dec_scores": 0.67,
+   "dec_sub50": 0.863,
+   "rate": 6045.6
+  }
+ },
+ "nullin:2": {
+  "where": {
+   "eta2": 0.288,
+   "dec_scores": 0.6,
+   "dec_sub50": 0.883,
+   "rate": 6046.1
+  },
+  "loom": {
+   "eta2": 0.3376,
+   "dec_scores": 0.565,
+   "dec_sub50": 0.922,
+   "rate": 6033.7
+  }
+ },
+ "nullin:3": {
+  "where": {
+   "eta2": 0.3485,
+   "dec_scores": 0.69,
+   "dec_sub50": 0.919,
+   "rate": 6122.9
+  },
+  "loom": {
+   "eta2": 0.3781,
+   "dec_scores": 0.615,
+   "dec_sub50": 0.937,
+   "rate": 6114.4
+  }
+ },
+ "nullin:4": {
+  "where": {
+   "eta2": 0.3398,
+   "dec_scores": 0.39,
+   "dec_sub50": 0.899,
+   "rate": 6110.2
+  },
+  "loom": {
+   "eta2": 0.3542,
+   "dec_scores": 0.505,
+   "dec_sub50": 0.924,
+   "rate": 6121.4
+  }
+ },
+ "nullin:5": {
+  "where": {
+   "eta2": 0.3033,
+   "dec_scores": 0.535,
+   "dec_sub50": 0.863,
+   "rate": 6210.6
+  },
+  "loom": {
+   "eta2": 0.3609,
+   "dec_scores": 0.635,
+   "dec_sub50": 0.933,
+   "rate": 6204.7
+  }
+ },
+ "nullin:6": {
+  "where": {
+   "eta2": 0.316,
+   "dec_scores": 0.59,
+   "dec_sub50": 0.904,
+   "rate": 6092.7
+  },
+  "loom": {
+   "eta2": 0.3235,
+   "dec_scores": 0.48,
+   "dec_sub50": 0.883,
+   "rate": 6100.4
+  }
+ },
+ "nullin:7": {
+  "where": {
+   "eta2": 0.2985,
+   "dec_scores": 0.555,
+   "dec_sub50": 0.854,
+   "rate": 6093.1
+  },
+  "loom": {
+   "eta2": 0.3342,
+   "dec_scores": 0.505,
+   "dec_sub50": 0.883,
+   "rate": 6090.3
+  }
+ },
+ "nullin:8": {
+  "where": {
+   "eta2": 0.3067,
+   "dec_scores": 0.36,
+   "dec_sub50": 0.86,
+   "rate": 6100.3
+  },
+  "loom": {
+   "eta2": 0.3376,
+   "dec_scores": 0.615,
+   "dec_sub50": 0.857,
+   "rate": 6109.9
+  }
+ },
+ "nullin:9": {
+  "where": {
+   "eta2": 0.2887,
+   "dec_scores": 0.67,
+   "dec_sub50": 0.865,
+   "rate": 5935.4
+  },
+  "loom": {
+   "eta2": 0.3668,
+   "dec_scores": 0.55,
+   "dec_sub50": 0.931,
+   "rate": 5922.9
+  }
+ }
+}

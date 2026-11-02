@@ -1,0 +1,151 @@
+# Shared settings. Experiment configs override only what they are testing.
+seed: 0
+
+connectome:
+  dataset: malecns          # brain + ventral nerve cord; FlyWire 783 is the replication axis
+  min_syn: 1                # primary: no threshold. 5 is the declared sensitivity.
+  nt_conf_floor: 0.5        # below this, a predicted transmitter is unresolved
+                            # and carries no fast current (never "assume excitatory")
+  # No aggregation. Protocol §7.2 keeps every neuron the dataset ships
+  # (MaleCNS: 169,984); cell-type aggregation collapses the retinotopic lamina
+  # into one node per type and blinds the visual interface. docs/AGGREGATION.md.
+
+# Control ladder, §8.2. Each rung destroys strictly more than the one above.
+topology: connectome
+null_primary: depth_stratified   # rewires only within sensorimotor depth strata
+null_secondary:                  # each quantifies what destroying more costs
+  - degree_preserving            #   degrees kept, routing depth destroyed
+  - shuffled_weights             #   edges kept, magnitudes permuted
+  - shuffled_edges               #   node and edge counts only
+swap_multiplier: 10              # double-edge swaps per edge
+strata_key: both                 # depth from input AND to output, per endpoint
+
+env:
+  game: SuperMarioBros-Nes
+  state: Level1-1
+  frame_skip: 4
+  integration_dir: integrations
+
+# Frozen at Gate B, 2026-09-21. Target amended from 4.5% to 8%: see
+# docs/PROTOCOL.md §4 and §9. Applies to the connectome condition; every null
+# realisation is recalibrated independently to the same target.
+dynamics:
+  # Frozen at Gate C, 2026-09-21. MaleCNS, min_syn=1.
+  #
+  # warmup is load-bearing. The network ignites slowly and stochastically:
+  # it sits near 3.5% until somewhere between tick 50 and 100, then settles at
+  # ~6.9%. Convergence across seeds is at tick 94. Measuring at the old
+  # warmup=50 sampled the middle of that ramp and reported its spread as seed
+  # variance; at warmup 150 the cross-seed std is 0.04 points, not 0.77.
+  # The calibration reference is the chain the model runs on, not a synthetic
+  # stand-in: real frames -> RetinotopicVision -> connectome. The old probe
+  # drove 7,114 cells across both eyes at amplitude 2.0; the interface drives
+  # 3,575 on one eye at 1.0, a current ratio of 0.271.
+  calibration_drive: interface
+  warmup_ticks: 150
+  measure_ticks: 60
+  target_rate: 0.07         # amended from 0.08: that figure came from
+                            # warmup-50 measurements. See JOURNAL 2026-09-21d.
+  # Re-frozen at Gate E plan B, 2026-09-22, under the interface-derived drive
+  # rather than the synthetic probe. Two criteria agree here and they did not
+  # have to: 6.87% global against the 7% target, and the highest decodability
+  # measured (0.500 against 0.100 chance, 10 classes, 12 seeds, both controls
+  # at the floor). The curve is non-monotonic -- 0.350 at gain 12, 0.500 at 20,
+  # 0.350 at 30 -- so 20 is a peak, not the end of a ramp. Gains 12 and 30 are
+  # each 2.4 standard errors below it.
+  #
+  # Regional spread is 7.7x here, worse than the 1.8x available at gain 12.
+  # That balance is the balance of a network barely on: at gain 12 the central
+  # brain sits at 1.79% and has not ignited. Carried as a stated limitation.
+  # Re-frozen at Gate E, 2026-09-23, for lin_raw (scripts/gates/gate_e_recert.py).
+  # Coupling fraction 0.0158 x median input 343 synapses -> gain 0.18452.
+  # Rate under the real visual interface: 7.48 % (seeds 1-6), 7.45 % (seeds
+  # 13-18) -- inside the +-0.5 pt band, and so are fractions 0.0158-0.030: the
+  # raw operator's rate is flat across a threefold range of coupling.
+  # Decodability (10 scenes, 12 seeds): 0.533 here on seeds 1-12, the best of
+  # the sweep -- but 0.300 on fresh seeds 13-24, level with its neighbours.
+  # The "peak" was the winner's curse over 11 noisy points; decodability is
+  # flat (~0.3-0.45) across the band, always above both controls (~0.10).
+  # The declared choice rule kept 0.0158. The log_norm value was 20.0.
+  gain: 0.18452
+  bias: 0.0
+  noise_std: 0.02
+
+  # How synapse counts become the simulated operator (protocol §7.4).
+  #
+  # DECIDED 2026-09-23 by the rule committed BEFORE the powered run (4ce838a,
+  # JOURNAL 2026-09-23): never on the connectome-null contrast; every variant
+  # viable on the connectome arm (usable regime at every seed, and at 7 % the
+  # picture reaches the motor neurons far above both controls); then the one
+  # that distorts the measured anatomy least -> lin_raw. Strength proportional
+  # to synapse count; no compression, no per-neuron rescaling.
+  # Was: log1p + normalize_in_degree, never justified in writing.
+  weight_transform:
+    log1p: false                # true = w -> log(1 + count), squashes 1000:1 to ~10:1
+    normalize_in_degree: false  # true = every neuron's inputs sum to 1
+
+  # Which hardware simulates. `gpu` = models/torch_lif.py, the same equation on
+  # the Radeon (SpMM, int32 CSR, deterministic); `cpu` = the reference LIFBrain.
+  # Switched to gpu 2026-09-23 after scripts/diagnostics/gpu_equivalence.py:
+  # spikes identical to the CPU for 300 ticks on both operators, rates equal to
+  # the last digit over 10 seeds, the campaign's decodability reproduced (0.910
+  # vs 0.910; 0.780 vs 0.770 at 2 SE 0.084). A measurement: 17 s vs 73 s.
+  # A run is ONE backend throughout, and the backend is part of its identity.
+  backend: gpu
+  # Gate C evidence: with no sensory drive the motor readout is exactly silent,
+  # so every bit of its activity is input-driven. Four distinct lamina stimuli
+  # produce distinguishable motor states (mean pairwise cosine 0.38).
+
+# Frozen at Gate D, 2026-09-21. The question the gate asks is whether a change
+# on screen reaches the readout before the next decision is due.
+#
+# It does not, at the timings we had. A sensory change is first detectable at
+# the readout after 3 ticks, but four completely different stimuli were still
+# 0.0009 apart after 8 ticks -- the old budget. They need ~16 ticks to separate.
+#
+# Two changes fix it, both measured:
+timing:
+  # RETRACTED 2026-09-21: the 0.30 "separation" that justified this was not a
+  # discriminability measure. It did not control for noise, and repeats of the
+  # same stimulus score higher on it than different stimuli do. Left at 4
+  # because it is not harmful, but it is not justified either.
+  # Renamed 2026-09-22. The old key was per emulator frame; the code has always
+  # applied it per decision. At frame_skip 4 the two spellings are the same
+  # number -- 4 per frame x 4 frames = 16 per decision -- but only one of them
+  # matches AgentConfig.ticks_per_decision, and the mismatch is what let the
+  # docs say 16 while the code ran 4.
+  ticks_per_decision: 16
+  frame_skip: 4             # unchanged: 15 decisions/s
+  # Cost: 44 ms per decision, 22.5 decisions/s against the 15 real time needs.
+
+# Declared by the owner, 2026-09-22, protocol §11.2.
+readout:
+  # §11.2 category, read by scripts/gates/gate_f_interface.py.
+  category: fixed             # the study's primary controller
+
+  # Gate D: the trace time constant was ~14 ticks, longer than one decision, so
+  # every decision still mostly reported the previous scene. Measured at 16
+  # ticks: last tick alone 0.2997 separation, beta 0.50 gives 0.1286, beta 0.93
+  # gives 0.0090. Integrating over the window hurts, because the pre-change
+  # state is common to every condition and averaging it in dilutes what differs.
+  # 0.5 trades some separation for 2.4x more non-zero features.
+  trace_beta: 0.5             # last-tick stays on the table as a Gate G choice
+  implementation: flymario.policy.readout.FixedRandomProjection
+  distribution: gaussian      # declared before any comparison
+  scale_mode: inv_sqrt_features
+  centre_rows: true           # motor activity has a large common-mode term;
+                              # an uncentred projection would let it alone
+                              # decide the action. See the readout's docstring.
+  trainable: false
+  # One realisation per block, shared by every topology compared in it, so a
+  # difference between arms cannot come from their readouts differing. A fresh
+  # seed between blocks, from policy.readout.block_seeds. Every seed recorded.
+  seed_scope: per_block
+  # The other three are not alternatives to this one:
+  #   RandomReadout           floor_control   ignores the network
+  #   MotorPopulationReadout  demonstration   closed-loop demos only
+  #   Gate D linear decoder   diagnostic      measures available information
+  # A plastic readout may exist for Study III as
+  # part_of_the_learning_intervention. It is not this, and must not be
+  # reported as this.
+

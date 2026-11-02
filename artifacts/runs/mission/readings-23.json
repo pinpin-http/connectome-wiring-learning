@@ -1,0 +1,175 @@
+{
+ "block0": {
+  "connectome": {
+   "csx_ro1": {
+    "gain": 17.5,
+    "C": false,
+    "p": 0.32934
+   },
+   "csx_ro2": {
+    "gain": -12.4,
+    "C": false,
+    "p": 0.47135
+   },
+   "csx_ro3": {
+    "gain": 21.3,
+    "C": false,
+    "p": 0.41997
+   }
+  },
+  "nulllat0": {
+   "csx_ro1": {
+    "gain": 128.0,
+    "C": true,
+    "p": 0.00464
+   },
+   "csx_ro2": {
+    "gain": 170.1,
+    "C": true,
+    "p": 0.00136
+   },
+   "csx_ro3": {
+    "gain": 36.0,
+    "C": false,
+    "p": 0.32323
+   }
+  },
+  "nulllat1": {
+   "csx_ro1": {
+    "gain": 46.0,
+    "C": false,
+    "p": 0.47543
+   },
+   "csx_ro2": {
+    "gain": -38.9,
+    "C": false,
+    "p": 0.98274
+   },
+   "csx_ro3": {
+    "gain": -26.9,
+    "C": false,
+    "p": 0.78211
+   }
+  },
+  "nulllat2": {
+   "csx_ro1": {
+    "gain": -3.3,
+    "C": false,
+    "p": 0.72325
+   },
+   "csx_ro2": {
+    "gain": 114.5,
+    "C": false,
+    "p": 0.0844
+   },
+   "csx_ro3": {
+    "gain": 51.8,
+    "C": false,
+    "p": 0.11734
+   }
+  }
+ },
+ "block1": {
+  "connectome": {
+   "csxb_ro1": {
+    "gain": 12.3,
+    "C": false,
+    "p": 0.27686
+   },
+   "csxb_ro2": {
+    "gain": -42.3,
+    "C": false,
+    "p": 0.96168
+   },
+   "csxb_ro3": {
+    "gain": -44.0,
+    "C": false,
+    "p": 0.85771
+   }
+  },
+  "nulllat0": {
+   "csxb_ro1": {
+    "gain": 150.7,
+    "C": true,
+    "p": 0.00082
+   },
+   "csxb_ro2": {
+    "gain": 61.1,
+    "C": false,
+    "p": 0.12389
+   },
+   "csxb_ro3": {
+    "gain": 117.8,
+    "C": false,
+    "p": 0.05018
+   }
+  },
+  "nulllat1": {
+   "csxb_ro1": {
+    "gain": 7.7,
+    "C": false,
+    "p": 0.69683
+   },
+   "csxb_ro2": {
+    "gain": -10.1,
+    "C": false,
+    "p": 0.77016
+   },
+   "csxb_ro3": {
+    "gain": -32.1,
+    "C": false,
+    "p": 0.63394
+   }
+  },
+  "nulllat2": {
+   "csxb_ro1": {
+    "gain": -17.4,
+    "C": false,
+    "p": 0.84009
+   },
+   "csxb_ro2": {
+    "gain": 23.3,
+    "C": false,
+    "p": 0.35119
+   },
+   "csxb_ro3": {
+    "gain": 48.7,
+    "C": false,
+    "p": 0.69319
+   }
+  }
+ },
+ "counts": {
+  "connectome": {
+   "block0": 0,
+   "block1": 0
+  },
+  "nulllat0": {
+   "block0": 2,
+   "block1": 1
+  },
+  "nulllat1": {
+   "block0": 0,
+   "block1": 0
+  },
+  "nulllat2": {
+   "block0": 0,
+   "block1": 0
+  }
+ },
+ "replication_null0_block1": false,
+ "pooled": {
+  "n_connectome": 6,
+  "n_nulls": 18,
+  "C_connectome": 0,
+  "C_nulls": 3,
+  "fisher_two_sided_p": 0.5464426877470356,
+  "mw_gain_two_sided": {
+   "U": 25.0,
+   "p": 0.055856043270230915
+  },
+  "mean_gain_connectome": -7.933333333333333,
+  "mean_gain_nulls": 45.94444444444444,
+  "complete": true
+ }
+}

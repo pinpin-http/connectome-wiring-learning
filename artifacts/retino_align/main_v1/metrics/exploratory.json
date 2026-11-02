@@ -1,0 +1,116 @@
+{
+ "label": "EXPLORATORY (decided after the main result)",
+ "run": "main_v1",
+ "E1_headroom": {
+  "H_connectome": 0.03951951861381531,
+  "H_nulls_mean": 0.09990087673068046,
+  "H_nulls_min": 0.08585938811302185,
+  "relative_loss_connectome": 0.04454490952486888,
+  "relative_loss_nulls_mean": 0.07849200379180923,
+  "relative_loss_nulls_sd": 0.07068192587351221,
+  "max_D_if_connectome_fell_to_chance": 0.03126379698514938,
+  "delta": 0.05,
+  "note": "a D above +delta was out of reach for this connectome even with a complete loss to chance"
+ },
+ "E2_orientation_vs_references": {
+  "connectome_ordered_M": 0.2895195186138153,
+  "connectome_permuted_M": [
+   0.28828126192092896,
+   0.29646486043930054,
+   0.2785312533378601
+  ],
+  "nulls_ordered_M_mean": 0.3499008767306805,
+  "nulls_ordered_M_min": 0.33585938811302185,
+  "n_nulls_below_connectome_ordered": 0,
+  "input_direct_decoder_mean_over_budgets": 0.48029687499999996,
+  "input_sorted_values_mean_over_budgets": 0.3276328125,
+  "input_global_descriptors_mean_over_budgets": 0.28335937499999997,
+  "curves_connectome_ordered_by_budget": [
+   0.26560547947883606,
+   0.27222657203674316,
+   0.2862499952316284,
+   0.3030664026737213,
+   0.32044923305511475
+  ],
+  "curves_nulls_ordered_mean_by_budget": [
+   0.2953369155526161,
+   0.3150625005364418,
+   0.34102343693375586,
+   0.37686035335063933,
+   0.4212211914360523
+  ]
+ },
+ "E3_brightness": {
+  "connectome_ordered_M": 0.7972031831741333,
+  "nulls_mean": 0.747430270910263,
+  "nulls_max": 0.7599140405654907,
+  "G_brightness": 0.04977291226387026,
+  "n_nulls_above_connectome": 0
+ },
+ "E4_activity_ordered": {
+  "mean_count": {
+   "connectome": 2.059824977372867,
+   "nulls_mean": 2.7412860844667364,
+   "nulls_sd": 0.05497299331224623,
+   "nulls_min": 2.57985366252596,
+   "nulls_max": 2.847324571750814,
+   "connectome_outside_null_range": true
+  },
+  "sd_count": {
+   "connectome": 2.218924644501148,
+   "nulls_mean": 2.6653460308680144,
+   "nulls_sd": 0.02327585763940402,
+   "nulls_min": 2.5857141178431546,
+   "nulls_max": 2.710443436174658,
+   "connectome_outside_null_range": true
+  },
+  "frac_silent_entries": {
+   "connectome": 0.28454217109971375,
+   "nulls_mean": 0.2707769578060978,
+   "nulls_sd": 0.009274438240837374,
+   "nulls_min": 0.2505099875112259,
+   "nulls_max": 0.28909884154341603,
+   "connectome_outside_null_range": false
+  },
+  "frac_near_ceiling_entries_ge7": {
+   "connectome": 0.06903380388414908,
+   "nulls_mean": 0.15191295197259486,
+   "nulls_sd": 0.00800820670390597,
+   "nulls_min": 0.12963494453721375,
+   "nulls_max": 0.16826375782302425,
+   "connectome_outside_null_range": true
+  },
+  "frac_neurons_silent_on_all_images": {
+   "connectome": 0.09115401885945218,
+   "nulls_mean": 0.14224292770543331,
+   "nulls_sd": 0.007729388749217059,
+   "nulls_min": 0.12483161203412663,
+   "nulls_max": 0.1558149977548271,
+   "connectome_outside_null_range": true
+  },
+  "rate_all": {
+   "connectome": 0.09221542249602008,
+   "nulls_mean": 0.10530147597036628,
+   "nulls_sd": 0.0007956544364891907,
+   "nulls_min": 0.10390583205833492,
+   "nulls_max": 0.10684183150170798,
+   "connectome_outside_null_range": true
+  },
+  "rate_input": {
+   "connectome": 0.17506953739619754,
+   "nulls_mean": 0.1526437725787396,
+   "nulls_sd": 0.0012486592460239495,
+   "nulls_min": 0.14987183044006774,
+   "nulls_max": 0.15701451228215144,
+   "connectome_outside_null_range": true
+  },
+  "v_readout_mean": {
+   "connectome": -86.42644882202148,
+   "nulls_mean": -70.34529542922974,
+   "nulls_sd": 2.3936798908642354,
+   "nulls_min": -76.65444564819336,
+   "nulls_max": -66.01717758178711,
+   "connectome_outside_null_range": true
+  }
+ }
+}

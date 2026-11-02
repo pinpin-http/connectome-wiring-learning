@@ -1,0 +1,650 @@
+{
+ "connectome": {
+  "motor_spikes_per_decision": 4565.33,
+  "per_brain": [
+   4564.37,
+   4563.83,
+   4567.79
+  ]
+ },
+ "nulllat:0": {
+  "motor_spikes_per_decision": 8141.81,
+  "per_brain": [
+   8142.04,
+   8140.9,
+   8142.49
+  ]
+ },
+ "nulllat:1": {
+  "motor_spikes_per_decision": 8252.09,
+  "per_brain": [
+   8251.18,
+   8252.08,
+   8253.02
+  ]
+ },
+ "nulllat:2": {
+  "motor_spikes_per_decision": 7850.84,
+  "per_brain": [
+   7851.46,
+   7852.21,
+   7848.84
+  ]
+ },
+ "nulllat:3": {
+  "motor_spikes_per_decision": 8158.86,
+  "per_brain": [
+   8159.71,
+   8159.04,
+   8157.82
+  ]
+ },
+ "nulllat:4": {
+  "motor_spikes_per_decision": 8447.91,
+  "per_brain": [
+   8446.03,
+   8448.83,
+   8448.85
+  ]
+ },
+ "nulllat:5": {
+  "motor_spikes_per_decision": 8217.04,
+  "per_brain": [
+   8216.36,
+   8218.67,
+   8216.09
+  ]
+ },
+ "nulllat:6": {
+  "motor_spikes_per_decision": 8507.2,
+  "per_brain": [
+   8505.56,
+   8509.37,
+   8506.68
+  ]
+ },
+ "nulllat:7": {
+  "motor_spikes_per_decision": 8047.12,
+  "per_brain": [
+   8046.59,
+   8047.77,
+   8047.0
+  ]
+ },
+ "nulllat:8": {
+  "motor_spikes_per_decision": 8107.73,
+  "per_brain": [
+   8107.44,
+   8109.7,
+   8106.05
+  ]
+ },
+ "nulllat:9": {
+  "motor_spikes_per_decision": 8164.0,
+  "per_brain": [
+   8162.27,
+   8164.02,
+   8165.72
+  ]
+ },
+ "nulllat:10": {
+  "motor_spikes_per_decision": 8096.99,
+  "per_brain": [
+   8097.63,
+   8097.67,
+   8095.68
+  ]
+ },
+ "nulllat:11": {
+  "motor_spikes_per_decision": 8608.01,
+  "per_brain": [
+   8606.59,
+   8606.82,
+   8610.61
+  ]
+ },
+ "nulllat:12": {
+  "motor_spikes_per_decision": 8321.48,
+  "per_brain": [
+   8322.78,
+   8321.32,
+   8320.34
+  ]
+ },
+ "nulllat:13": {
+  "motor_spikes_per_decision": 8118.32,
+  "per_brain": [
+   8119.46,
+   8118.86,
+   8116.65
+  ]
+ },
+ "nulllat:14": {
+  "motor_spikes_per_decision": 8145.26,
+  "per_brain": [
+   8146.46,
+   8143.51,
+   8145.81
+  ]
+ },
+ "nulllat:15": {
+  "motor_spikes_per_decision": 8488.18,
+  "per_brain": [
+   8489.91,
+   8488.04,
+   8486.58
+  ]
+ },
+ "nulllat:16": {
+  "motor_spikes_per_decision": 8186.67,
+  "per_brain": [
+   8187.69,
+   8185.95,
+   8186.37
+  ]
+ },
+ "nulllat:17": {
+  "motor_spikes_per_decision": 8446.99,
+  "per_brain": [
+   8447.79,
+   8447.65,
+   8445.53
+  ]
+ },
+ "nulllat:18": {
+  "motor_spikes_per_decision": 8443.98,
+  "per_brain": [
+   8442.82,
+   8445.25,
+   8443.86
+  ]
+ },
+ "nulllat:19": {
+  "motor_spikes_per_decision": 8476.38,
+  "per_brain": [
+   8475.27,
+   8476.93,
+   8476.95
+  ]
+ },
+ "nulllat:20": {
+  "motor_spikes_per_decision": 7992.96,
+  "per_brain": [
+   7993.0,
+   7993.17,
+   7992.71
+  ]
+ },
+ "nulllat:21": {
+  "motor_spikes_per_decision": 8288.44,
+  "per_brain": [
+   8288.62,
+   8287.88,
+   8288.81
+  ]
+ },
+ "nulllat:22": {
+  "motor_spikes_per_decision": 8297.61,
+  "per_brain": [
+   8297.22,
+   8297.6,
+   8298.01
+  ]
+ },
+ "nulllat:23": {
+  "motor_spikes_per_decision": 8529.87,
+  "per_brain": [
+   8530.23,
+   8529.91,
+   8529.48
+  ]
+ },
+ "nulllat:24": {
+  "motor_spikes_per_decision": 8114.97,
+  "per_brain": [
+   8113.85,
+   8115.2,
+   8115.86
+  ]
+ },
+ "nulllat:25": {
+  "motor_spikes_per_decision": 8335.2,
+  "per_brain": [
+   8334.15,
+   8335.59,
+   8335.86
+  ]
+ },
+ "nulllat:26": {
+  "motor_spikes_per_decision": 8406.18,
+  "per_brain": [
+   8405.05,
+   8407.53,
+   8405.96
+  ]
+ },
+ "nulllat:27": {
+  "motor_spikes_per_decision": 8008.64,
+  "per_brain": [
+   8007.67,
+   8009.79,
+   8008.46
+  ]
+ },
+ "nulllat:28": {
+  "motor_spikes_per_decision": 8008.84,
+  "per_brain": [
+   8007.31,
+   8010.16,
+   8009.05
+  ]
+ },
+ "nulllat:29": {
+  "motor_spikes_per_decision": 8293.55,
+  "per_brain": [
+   8291.84,
+   8294.15,
+   8294.66
+  ]
+ },
+ "nulllat:30": {
+  "motor_spikes_per_decision": 8289.26,
+  "per_brain": [
+   8287.7,
+   8289.39,
+   8290.7
+  ]
+ },
+ "nulllat:31": {
+  "motor_spikes_per_decision": 8319.86,
+  "per_brain": [
+   8318.48,
+   8319.88,
+   8321.23
+  ]
+ },
+ "nulllat:32": {
+  "motor_spikes_per_decision": 7812.08,
+  "per_brain": [
+   7812.19,
+   7814.19,
+   7809.85
+  ]
+ },
+ "nulllat:33": {
+  "motor_spikes_per_decision": 8248.45,
+  "per_brain": [
+   8246.73,
+   8247.8,
+   8250.82
+  ]
+ },
+ "nulllat:34": {
+  "motor_spikes_per_decision": 7778.02,
+  "per_brain": [
+   7778.96,
+   7775.89,
+   7779.2
+  ]
+ },
+ "nulllat:35": {
+  "motor_spikes_per_decision": 8037.12,
+  "per_brain": [
+   8036.29,
+   8037.04,
+   8038.01
+  ]
+ },
+ "nulllat:36": {
+  "motor_spikes_per_decision": 8189.64,
+  "per_brain": [
+   8188.79,
+   8190.83,
+   8189.28
+  ]
+ },
+ "nulllat:37": {
+  "motor_spikes_per_decision": 8515.82,
+  "per_brain": [
+   8516.37,
+   8514.43,
+   8516.67
+  ]
+ },
+ "nulllat:38": {
+  "motor_spikes_per_decision": 8388.75,
+  "per_brain": [
+   8387.65,
+   8390.07,
+   8388.52
+  ]
+ },
+ "nulllat:39": {
+  "motor_spikes_per_decision": 8219.01,
+  "per_brain": [
+   8217.48,
+   8219.23,
+   8220.31
+  ]
+ },
+ "nullin:0": {
+  "motor_spikes_per_decision": 6168.21,
+  "per_brain": [
+   6167.5,
+   6167.56,
+   6169.56
+  ]
+ },
+ "nullin:1": {
+  "motor_spikes_per_decision": 6063.46,
+  "per_brain": [
+   6065.03,
+   6061.34,
+   6064.01
+  ]
+ },
+ "nullin:2": {
+  "motor_spikes_per_decision": 6026.42,
+  "per_brain": [
+   6024.85,
+   6024.13,
+   6030.29
+  ]
+ },
+ "nullin:3": {
+  "motor_spikes_per_decision": 6119.63,
+  "per_brain": [
+   6118.58,
+   6119.22,
+   6121.09
+  ]
+ },
+ "nullin:4": {
+  "motor_spikes_per_decision": 6113.34,
+  "per_brain": [
+   6112.76,
+   6112.16,
+   6115.09
+  ]
+ },
+ "nullin:5": {
+  "motor_spikes_per_decision": 6218.24,
+  "per_brain": [
+   6220.09,
+   6219.72,
+   6214.93
+  ]
+ },
+ "nullin:6": {
+  "motor_spikes_per_decision": 6094.09,
+  "per_brain": [
+   6091.87,
+   6094.46,
+   6095.95
+  ]
+ },
+ "nullin:7": {
+  "motor_spikes_per_decision": 6145.36,
+  "per_brain": [
+   6147.62,
+   6144.56,
+   6143.91
+  ]
+ },
+ "nullin:8": {
+  "motor_spikes_per_decision": 6124.43,
+  "per_brain": [
+   6123.48,
+   6125.57,
+   6124.23
+  ]
+ },
+ "nullin:9": {
+  "motor_spikes_per_decision": 5953.19,
+  "per_brain": [
+   5954.51,
+   5953.78,
+   5951.28
+  ]
+ },
+ "nullin:10": {
+  "motor_spikes_per_decision": 6243.12,
+  "per_brain": [
+   6241.96,
+   6244.34,
+   6243.06
+  ]
+ },
+ "nullin:11": {
+  "motor_spikes_per_decision": 6164.72,
+  "per_brain": [
+   6163.84,
+   6164.2,
+   6166.13
+  ]
+ },
+ "nullin:12": {
+  "motor_spikes_per_decision": 5806.47,
+  "per_brain": [
+   5805.19,
+   5805.61,
+   5808.61
+  ]
+ },
+ "nullin:13": {
+  "motor_spikes_per_decision": 6198.93,
+  "per_brain": [
+   6200.27,
+   6198.22,
+   6198.28
+  ]
+ },
+ "nullin:14": {
+  "motor_spikes_per_decision": 6153.94,
+  "per_brain": [
+   6152.15,
+   6155.73,
+   6153.93
+  ]
+ },
+ "nullin:15": {
+  "motor_spikes_per_decision": 5975.9,
+  "per_brain": [
+   5976.85,
+   5972.65,
+   5978.2
+  ]
+ },
+ "nullin:16": {
+  "motor_spikes_per_decision": 5771.18,
+  "per_brain": [
+   5771.99,
+   5771.36,
+   5770.17
+  ]
+ },
+ "nullin:17": {
+  "motor_spikes_per_decision": 6242.15,
+  "per_brain": [
+   6239.49,
+   6243.01,
+   6243.96
+  ]
+ },
+ "nullin:18": {
+  "motor_spikes_per_decision": 6164.95,
+  "per_brain": [
+   6164.4,
+   6164.29,
+   6166.17
+  ]
+ },
+ "nullin:19": {
+  "motor_spikes_per_decision": 6006.47,
+  "per_brain": [
+   6007.09,
+   6005.88,
+   6006.43
+  ]
+ },
+ "nullin:20": {
+  "motor_spikes_per_decision": 6108.44,
+  "per_brain": [
+   6108.01,
+   6109.21,
+   6108.09
+  ]
+ },
+ "nullin:21": {
+  "motor_spikes_per_decision": 6289.58,
+  "per_brain": [
+   6290.9,
+   6288.96,
+   6288.89
+  ]
+ },
+ "nullin:22": {
+  "motor_spikes_per_decision": 6143.23,
+  "per_brain": [
+   6142.32,
+   6143.19,
+   6144.19
+  ]
+ },
+ "nullin:23": {
+  "motor_spikes_per_decision": 5988.93,
+  "per_brain": [
+   5990.98,
+   5987.72,
+   5988.09
+  ]
+ },
+ "nullin:24": {
+  "motor_spikes_per_decision": 6031.38,
+  "per_brain": [
+   6030.31,
+   6033.9,
+   6029.93
+  ]
+ },
+ "nullin:25": {
+  "motor_spikes_per_decision": 6145.99,
+  "per_brain": [
+   6144.56,
+   6147.4,
+   6146.0
+  ]
+ },
+ "nullin:26": {
+  "motor_spikes_per_decision": 6074.43,
+  "per_brain": [
+   6073.42,
+   6076.74,
+   6073.13
+  ]
+ },
+ "nullin:27": {
+  "motor_spikes_per_decision": 6181.36,
+  "per_brain": [
+   6180.87,
+   6180.73,
+   6182.47
+  ]
+ },
+ "nullin:28": {
+  "motor_spikes_per_decision": 6194.05,
+  "per_brain": [
+   6192.95,
+   6195.03,
+   6194.16
+  ]
+ },
+ "nullin:29": {
+  "motor_spikes_per_decision": 6376.79,
+  "per_brain": [
+   6376.79,
+   6375.37,
+   6378.23
+  ]
+ },
+ "nullin:30": {
+  "motor_spikes_per_decision": 6205.18,
+  "per_brain": [
+   6205.3,
+   6203.86,
+   6206.39
+  ]
+ },
+ "nullin:31": {
+  "motor_spikes_per_decision": 6228.67,
+  "per_brain": [
+   6230.2,
+   6227.4,
+   6228.4
+  ]
+ },
+ "nullin:32": {
+  "motor_spikes_per_decision": 5915.43,
+  "per_brain": [
+   5916.45,
+   5913.94,
+   5915.9
+  ]
+ },
+ "nullin:33": {
+  "motor_spikes_per_decision": 5989.48,
+  "per_brain": [
+   5989.82,
+   5988.81,
+   5989.8
+  ]
+ },
+ "nullin:34": {
+  "motor_spikes_per_decision": 6018.08,
+  "per_brain": [
+   6019.3,
+   6019.33,
+   6015.61
+  ]
+ },
+ "nullin:35": {
+  "motor_spikes_per_decision": 6089.94,
+  "per_brain": [
+   6090.76,
+   6090.88,
+   6088.18
+  ]
+ },
+ "nullin:36": {
+  "motor_spikes_per_decision": 6183.29,
+  "per_brain": [
+   6186.16,
+   6180.49,
+   6183.23
+  ]
+ },
+ "nullin:37": {
+  "motor_spikes_per_decision": 6172.5,
+  "per_brain": [
+   6173.86,
+   6172.91,
+   6170.73
+  ]
+ },
+ "nullin:38": {
+  "motor_spikes_per_decision": 6068.4,
+  "per_brain": [
+   6065.79,
+   6068.35,
+   6071.07
+  ]
+ },
+ "nullin:39": {
+  "motor_spikes_per_decision": 6023.9,
+  "per_brain": [
+   6025.54,
+   6023.36,
+   6022.79
+  ]
+ }
+}

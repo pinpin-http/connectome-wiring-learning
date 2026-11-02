@@ -1,0 +1,42 @@
+{
+ "what": "criterion E (study), PERCEPTION_CREDIT_STUDY \u00a75",
+ "E_min": 0.05,
+ "checkpoint": "mario_oracle.pt",
+ "trained_decisions": 20000,
+ "n_frames": 285,
+ "results": {
+  "oracle_ro1": {
+   "E": 0.006,
+   "p_greater": 0.006198,
+   "pass": false
+  },
+  "pixels_ro1": {
+   "E": -0.0424,
+   "p_greater": 1.0,
+   "pass": false
+  },
+  "oracle_ro2": {
+   "E": 0.0106,
+   "p_greater": 0.00034,
+   "pass": false
+  },
+  "pixels_ro2": {
+   "E": 0.0662,
+   "p_greater": 0.0,
+   "pass": true
+  },
+  "oracle_ro3": {
+   "E": 0.008,
+   "p_greater": 4.3e-05,
+   "pass": false
+  },
+  "pixels_ro3": {
+   "E": 0.0071,
+   "p_greater": 0.001135,
+   "pass": false
+  }
+ },
+ "oracle_passing": 0,
+ "pixels_passing": 1,
+ "utc": "2026-10-04T12:58:35+00:00"
+}

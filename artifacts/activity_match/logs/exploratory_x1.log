@@ -1,0 +1,60 @@
+{
+ "X2_accuracy_vs_activity": {
+  "label": "EXPLORATORY (decided after the main result)",
+  "per_family": {
+   "connectome": {
+    "orient": {
+     "corr_M_rate": 0.3545551127853518,
+     "corr_M_log_gamma": 0.5152705051118962
+    },
+    "lum": {
+     "corr_M_rate": -0.46757171280725424,
+     "corr_M_log_gamma": -0.3913944128951891
+    }
+   },
+   "nulls": {
+    "orient": {
+     "corr_M_rate": 0.9105323330584477,
+     "corr_M_log_gamma": 0.9779882824196011
+    },
+    "lum": {
+     "corr_M_rate": 0.802088657839244,
+     "corr_M_log_gamma": 0.7152234307691331
+    }
+   }
+  }
+ },
+ "X1_lambda_extended": {
+  "M_connectome_C0_orient": 0.29491796875,
+  "M_nulls_C0_orient": 0.34858408203124996,
+  "G_C0_orient": -0.05366611328124998,
+  "M_connectome_CL_orient": 0.28165234375,
+  "M_nulls_CL_orient": 0.2826890625,
+  "G_CL_orient": -0.0010367187499999986,
+  "M_connectome_CM_orient": 0.27150390625,
+  "M_nulls_CM_orient": 0.2908115234375,
+  "G_CM_orient": -0.019307617187500015,
+  "M_connectome_CH_orient": 0.27566015625,
+  "M_nulls_CH_orient": 0.29648046875,
+  "G_CH_orient": -0.020820312499999993,
+  "T_real_orient": -0.0234140625,
+  "T_nulls_orient": -0.05777255859375001,
+  "R_orient": 0.03435849609374997,
+  "M_connectome_C0_lum": 0.789953125,
+  "M_nulls_C0_lum": 0.742273828125,
+  "G_C0_lum": 0.047679296875000055,
+  "M_connectome_CL_lum": 0.7872578124999999,
+  "M_nulls_CL_lum": 0.7113801757812499,
+  "G_CL_lum": 0.07587763671875003,
+  "M_connectome_CM_lum": 0.7874609375,
+  "M_nulls_CM_lum": 0.7269893554687499,
+  "G_CM_lum": 0.06047158203125014,
+  "M_connectome_CH_lum": 0.7719296874999999,
+  "M_nulls_CH_lum": 0.733048828125,
+  "G_CH_lum": 0.038880859374999854,
+  "T_real_lum": -0.0024921875000000204,
+  "T_nulls_lum": -0.015284472656249997,
+  "R_lum": 0.012792285156250083
+ }
+}
+rc=0

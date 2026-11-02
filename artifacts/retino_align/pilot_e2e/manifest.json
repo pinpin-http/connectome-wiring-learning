@@ -1,0 +1,505 @@
+{
+ "run": "pilot_e2e",
+ "pilot": true,
+ "created_utc": "2026-10-19T17:48:35+00:00",
+ "config": {
+  "study": {
+   "id": "RETINO_ALIGN_V1",
+   "protocol_status": "draft",
+   "max_machine_hours": 72,
+   "t0_utc": "2026-10-19T16:40:12Z",
+   "final_reserve_utc": "2026-10-22T10:40:12Z",
+   "hard_end_utc": "2026-10-22T16:40:12Z",
+   "main_test_labels_visible_during_tuning": false
+  },
+  "graphs": {
+   "connectome": "connectome",
+   "null_family": "c",
+   "null_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "pilot_null_seeds": [
+    100,
+    101
+   ],
+   "use_anatomical_initial_weights": true,
+   "internal_plasticity": false
+  },
+  "retina": {
+   "conditions": [
+    "ordered",
+    "perm1",
+    "perm2",
+    "perm3"
+   ],
+   "permutation_seeds": {
+    "perm1": 31,
+    "perm2": 32,
+    "perm3": 33
+   },
+   "permutation_unit": "compatible_anatomical_column",
+   "min_group_columns": 10,
+   "preserve_cell_types": true,
+   "preserve_on_off_alignment": true,
+   "target_permutable_input_fraction": 0.9,
+   "operation_stage": "after_encoder_before_injection",
+   "static_pair": "identical_frames"
+  },
+  "dataset": {
+   "tasks": [
+    "orientation_4way",
+    "luminance_4way"
+   ],
+   "generator": {
+    "lum_centres": [
+     0.35,
+     0.45,
+     0.55,
+     0.65
+    ],
+    "lum_jitter": 0.065,
+    "amp_range": [
+     0.15,
+     0.2
+    ],
+    "period_range": [
+     24.0,
+     40.0
+    ],
+    "noise": 0.02,
+    "r0": 60.0,
+    "r1": 92.0,
+    "pos_jitter": 8.0,
+    "centre": [
+     135.38,
+     124.16
+    ]
+   },
+   "banks": {
+    "train": [
+     64,
+     5005
+    ],
+    "val": [
+     32,
+     6006
+    ],
+    "test": [
+     160,
+     7007
+    ]
+   },
+   "pilot_banks": {
+    "train": [
+     "pilot_train",
+     64,
+     2002
+    ],
+    "val": [
+     "pilot_val",
+     32,
+     2003
+    ],
+    "test": [
+     "pilot_test",
+     64,
+     2004
+    ]
+   },
+   "balance_joint_labels": true,
+   "primary_test_distribution": "same_generator_as_training"
+  },
+  "simulation": {
+   "steps": 16,
+   "reset_state_each_image": true,
+   "dynamic_seeds": [
+    1,
+    2
+   ],
+   "feature_source": "spike_counts_before_action_projection",
+   "readout": "datasets.motor_index",
+   "shared_noise_for_matched_examples": true,
+   "batch": 128,
+   "count_dtype": "uint8"
+  },
+  "decoder": {
+   "type": "multiclass_ridge",
+   "budgets_per_class": [
+    8,
+    16,
+    32,
+    64,
+    128
+   ],
+   "per_combination": [
+    2,
+    4,
+    8,
+    16,
+    32
+   ],
+   "subset_draws": 10,
+   "subset_draw_seeds": [
+    8101,
+    8102,
+    8103,
+    8104,
+    8105,
+    8106,
+    8107,
+    8108,
+    8109,
+    8110
+   ],
+   "nested_subsets": true,
+   "scale_fit_on_training_subset_only": true,
+   "normalized_loss_lambda_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+   ],
+   "validation_tie_break": "largest_lambda",
+   "refit_on_train_plus_validation": false
+  },
+  "analysis": {
+   "primary_contrast": "D_orientation",
+   "practical_margin": 0.05,
+   "confidence_level": 0.95,
+   "bootstrap_replicates": 5000,
+   "bootstrap_seed": 4242,
+   "bootstrap_test_examples": "joint_label_stratified_and_paired",
+   "bootstrap_null_graphs": "whole_graph_blocks",
+   "bootstrap_refit_decoders": false,
+   "interval_scope": "conditional_on_frozen_training_and_simulation_design",
+   "rank_test_status": "descriptive_unless_validity_justified_before_results"
+  },
+  "execution": {
+   "resume": true,
+   "save_predictions_per_example": true,
+   "atomic_outputs": true,
+   "stop_new_long_jobs_before_final_reserve": true,
+   "technical_retry": {
+    "max_attempts": 2,
+    "true": [
+     "cuda_error",
+     "out_of_memory",
+     "io_error"
+    ]
+   }
+  }
+ },
+ "env": {
+  "utc": "2026-10-19T17:48:36+00:00",
+  "commit": "9223c4ac7476d13db3513fe634eba45cb2876a60",
+  "dirty": true,
+  "python": "3.11.17",
+  "numpy": "2.1.3",
+  "scipy": "1.17.1",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "simulate_py_sha256": "1c88146e2268f265e644996a8f4b3164d6c5ceb5ff9eb158f7844d3b4d0875b9",
+  "decode_py_sha256": "e58db921566fc94a68c98540affe4df954225e720de157b851c4a753f0026680",
+  "stimuli_py_sha256": "d2f30ff730e619a6ecaee32b06d2661a00d2c2a6a572740bcb309dd86c260e12",
+  "config_sha256": "3bc9e17010a102399cd7c2365fbe191edafea973c3e523fed9723e49263ed45b"
+ },
+ "graphs": [
+  "nullin:100",
+  "nullin:101"
+ ],
+ "conditions": [
+  "ordered",
+  "perm1",
+  "perm2",
+  "perm3"
+ ],
+ "dynamic_seeds": [
+  1,
+  2
+ ],
+ "lots": [
+  [
+   "nullin:100",
+   "ordered",
+   1
+  ],
+  [
+   "nullin:100",
+   "perm1",
+   1
+  ],
+  [
+   "nullin:100",
+   "perm2",
+   1
+  ],
+  [
+   "nullin:100",
+   "perm3",
+   1
+  ],
+  [
+   "nullin:100",
+   "perm3",
+   2
+  ],
+  [
+   "nullin:100",
+   "perm2",
+   2
+  ],
+  [
+   "nullin:100",
+   "perm1",
+   2
+  ],
+  [
+   "nullin:100",
+   "ordered",
+   2
+  ],
+  [
+   "nullin:101",
+   "perm1",
+   2
+  ],
+  [
+   "nullin:101",
+   "perm2",
+   2
+  ],
+  [
+   "nullin:101",
+   "perm3",
+   2
+  ],
+  [
+   "nullin:101",
+   "ordered",
+   2
+  ],
+  [
+   "nullin:101",
+   "ordered",
+   1
+  ],
+  [
+   "nullin:101",
+   "perm3",
+   1
+  ],
+  [
+   "nullin:101",
+   "perm2",
+   1
+  ],
+  [
+   "nullin:101",
+   "perm1",
+   1
+  ]
+ ],
+ "n_images": {
+  "train": 1024,
+  "val": 512,
+  "test": 1024
+ },
+ "inputs_sha256": "5a02dfdfb824b367a595b0bebf0c1e8b926da38837c550f149dac00022733a74",
+ "permutations_sha256": "506cc61f4e4f84e74d5ff2d642d24e6843514382dfa8a57f06d560d0e776989b",
+ "permutations": {
+  "perm1": {
+   "seed": 31,
+   "sha256_sigma": "7cc8dd5ca935c82777af649b47ed85f547e59ebf6da37ca6291eac304e88b9a6",
+   "n_cells": 3575,
+   "n_columns": 892,
+   "min_group": 10,
+   "groups": {
+    "L1:1|L2:1|L3:1|L5:1": 886
+   },
+   "fixed_signatures": {
+    "L1:1|L2:1|L3:1|L5:2": 5,
+    "L1:1|L2:2|L3:1|L5:2": 1
+   },
+   "frac_cells_permutable": 0.9913286713286713,
+   "frac_cells_moved": 0.9913286713286713,
+   "frac_columns_moved": 0.9932735426008968,
+   "fixed_points_in_groups": 0,
+   "displacement_hex_units": {
+    "mean_all_columns": 14.578605068518648,
+    "mean_moved": 14.677331513677917,
+    "quantiles_moved": {
+     "q5": 3.6055634729038344,
+     "q25": 9.539424433031206,
+     "q50": 14.422253243790658,
+     "q75": 19.69778280905326,
+     "q95": 25.514788625298134
+    },
+    "max": 32.04694905494181
+   },
+   "neighbour_pairs": 2564,
+   "frac_neighbour_pairs_kept": 0.0093603744149766,
+   "types_preserved": true,
+   "sides_preserved": true,
+   "on_off_same_displacement": true
+  },
+  "perm2": {
+   "seed": 32,
+   "sha256_sigma": "beab562aa1e40efd909f5446aea4c8f89d62e4949b4aa1bc71110e4ea9edaa6b",
+   "n_cells": 3575,
+   "n_columns": 892,
+   "min_group": 10,
+   "groups": {
+    "L1:1|L2:1|L3:1|L5:1": 886
+   },
+   "fixed_signatures": {
+    "L1:1|L2:1|L3:1|L5:2": 5,
+    "L1:1|L2:2|L3:1|L5:2": 1
+   },
+   "frac_cells_permutable": 0.9913286713286713,
+   "frac_cells_moved": 0.9913286713286713,
+   "frac_columns_moved": 0.9932735426008968,
+   "fixed_points_in_groups": 0,
+   "displacement_hex_units": {
+    "mean_all_columns": 14.184090551785633,
+    "mean_moved": 14.280145341075377,
+    "quantiles_moved": {
+     "q5": 4.000013629848693,
+     "q25": 9.000030852958984,
+     "q50": 13.747774161411844,
+     "q75": 19.15730937150491,
+     "q95": 25.71000830355122
+    },
+    "max": 32.92426719614459
+   },
+   "neighbour_pairs": 2564,
+   "frac_neighbour_pairs_kept": 0.0078003120124804995,
+   "types_preserved": true,
+   "sides_preserved": true,
+   "on_off_same_displacement": true
+  },
+  "perm3": {
+   "seed": 33,
+   "sha256_sigma": "d9e5e0da6f91bc3169b5f0325a15b9442e79c7ef966a044670d88ac2446a5ade",
+   "n_cells": 3575,
+   "n_columns": 892,
+   "min_group": 10,
+   "groups": {
+    "L1:1|L2:1|L3:1|L5:1": 886
+   },
+   "fixed_signatures": {
+    "L1:1|L2:1|L3:1|L5:2": 5,
+    "L1:1|L2:2|L3:1|L5:2": 1
+   },
+   "frac_cells_permutable": 0.9913286713286713,
+   "frac_cells_moved": 0.9913286713286713,
+   "frac_columns_moved": 0.9932735426008968,
+   "fixed_points_in_groups": 0,
+   "displacement_hex_units": {
+    "mean_all_columns": 14.534543194080042,
+    "mean_moved": 14.632971251827762,
+    "quantiles_moved": {
+     "q5": 3.7041764402607833,
+     "q25": 9.539423851501292,
+     "q50": 14.73097012257464,
+     "q75": 19.313273999719897,
+     "q95": 26.00008901870086
+    },
+    "max": 31.48026027095435
+   },
+   "neighbour_pairs": 2564,
+   "frac_neighbour_pairs_kept": 0.008190327613104524,
+   "types_preserved": true,
+   "sides_preserved": true,
+   "on_off_same_displacement": true
+  }
+ },
+ "retina_digest": "9955446c01ed4157a697bed9d511a92d50641ae8a9960fe5f0c0f8f1c6c7a372",
+ "readout_n": 2227,
+ "readout_node_index_sha256": "95e80de210dadcc7bc9b76d419af5d5844f66af7379d8711248c2d094ac37b26",
+ "readout_body_ids_sha256": "0e3492fee2a8664e57a22d1cdf4e858d64f70040134cb4cbdcb6165f1c399bab",
+ "generator": {
+  "lum_centres": [
+   0.35,
+   0.45,
+   0.55,
+   0.65
+  ],
+  "lum_jitter": 0.065,
+  "amp_range": [
+   0.15,
+   0.2
+  ],
+  "period_range": [
+   24.0,
+   40.0
+  ],
+  "noise": 0.02,
+  "r0": 60.0,
+  "r1": 92.0,
+  "pos_jitter": 8.0,
+  "centre": [
+   135.38,
+   124.16
+  ]
+ },
+ "banks": {
+  "train": [
+   "pilot_train",
+   64,
+   2002
+  ],
+  "val": [
+   "pilot_val",
+   32,
+   2003
+  ],
+  "test": [
+   "pilot_test",
+   64,
+   2004
+  ]
+ },
+ "prepare_s": 11.3
+}

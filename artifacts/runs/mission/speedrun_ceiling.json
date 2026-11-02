@@ -1,0 +1,137 @@
+[
+ {
+  "level": "Level1-1",
+  "policy": "always_run",
+  "end": "death",
+  "furthest_x": 312.0,
+  "decisions": 33,
+  "game_seconds": 2.2,
+  "jump_rate": 0.0
+ },
+ {
+  "level": "Level1-1",
+  "policy": "label",
+  "end": "death",
+  "furthest_x": 694.0,
+  "decisions": 84,
+  "game_seconds": 5.6,
+  "jump_rate": 0.119
+ },
+ {
+  "level": "Level1-1",
+  "policy": "label_hold2",
+  "end": "death",
+  "furthest_x": 690.0,
+  "decisions": 83,
+  "game_seconds": 5.5,
+  "jump_rate": 0.096
+ },
+ {
+  "level": "Level1-1",
+  "policy": "label_hold4",
+  "end": "death",
+  "furthest_x": 694.0,
+  "decisions": 84,
+  "game_seconds": 5.6,
+  "jump_rate": 0.167
+ },
+ {
+  "level": "Level1-1",
+  "policy": "label_hold6",
+  "end": "death",
+  "furthest_x": 696.0,
+  "decisions": 86,
+  "game_seconds": 5.7,
+  "jump_rate": 0.244
+ },
+ {
+  "level": "Level4-1",
+  "policy": "always_run",
+  "end": "death",
+  "furthest_x": 323.0,
+  "decisions": 224,
+  "game_seconds": 14.9,
+  "jump_rate": 0.0
+ },
+ {
+  "level": "Level4-1",
+  "policy": "label",
+  "end": "time",
+  "furthest_x": 657.0,
+  "decisions": 130,
+  "game_seconds": 8.7,
+  "jump_rate": 0.108
+ },
+ {
+  "level": "Level4-1",
+  "policy": "label_hold2",
+  "end": "death",
+  "furthest_x": 1842.0,
+  "decisions": 268,
+  "game_seconds": 17.8,
+  "jump_rate": 0.246
+ },
+ {
+  "level": "Level4-1",
+  "policy": "label_hold4",
+  "end": "death",
+  "furthest_x": 2111.0,
+  "decisions": 242,
+  "game_seconds": 16.1,
+  "jump_rate": 0.149
+ },
+ {
+  "level": "Level4-1",
+  "policy": "label_hold6",
+  "end": "death",
+  "furthest_x": 2112.0,
+  "decisions": 242,
+  "game_seconds": 16.1,
+  "jump_rate": 0.223
+ },
+ {
+  "level": "Level8-1",
+  "policy": "always_run",
+  "end": "death",
+  "furthest_x": 227.0,
+  "decisions": 25,
+  "game_seconds": 1.7,
+  "jump_rate": 0.0
+ },
+ {
+  "level": "Level8-1",
+  "policy": "label",
+  "end": "death",
+  "furthest_x": 559.0,
+  "decisions": 64,
+  "game_seconds": 4.3,
+  "jump_rate": 0.094
+ },
+ {
+  "level": "Level8-1",
+  "policy": "label_hold2",
+  "end": "stall",
+  "furthest_x": 546.0,
+  "decisions": 357,
+  "game_seconds": 23.8,
+  "jump_rate": 0.577
+ },
+ {
+  "level": "Level8-1",
+  "policy": "label_hold4",
+  "end": "death",
+  "furthest_x": 559.0,
+  "decisions": 64,
+  "game_seconds": 4.3,
+  "jump_rate": 0.188
+ },
+ {
+  "level": "Level8-1",
+  "policy": "label_hold6",
+  "end": "death",
+  "furthest_x": 342.0,
+  "decisions": 36,
+  "game_seconds": 2.4,
+  "jump_rate": 0.222
+ }
+]

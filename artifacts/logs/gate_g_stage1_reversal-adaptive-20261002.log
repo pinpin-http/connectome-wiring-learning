@@ -1,0 +1,9 @@
+/opt/amdgpu/share/libdrm/amdgpu.ids: No such file or directory
+/home/soheib/SMB_Flywire_Speedrun/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+[phase1@mapping] FROZEN 0.500/0.32/0of12  FROZEN2 0.973/0.96/12of12  RULE 0.973/0.96/12of12  SHUF2 0.973/0.96/12of12  SUPERVISED 0.988/0.98/12of12
+[phase2@start(reversed)] FROZEN 0.500/0.32/0of12  FROZEN2 0.028/0.02/0of12  RULE 0.028/0.02/0of12  SHUF2 0.028/0.02/0of12  SUPERVISED 0.012/0.00/0of12
+[phase2@end(reversed)] FROZEN 0.500/0.32/0of12  FROZEN2 0.028/0.02/0of12  RULE 0.758/0.50/7of12  SHUF2 0.312/0.05/0of12  SUPERVISED 0.972/0.96/12of12
+pass false
+informative true
+controls {"mean_shuffled_minus_frozen": 0.28458333605279523, "se": 0.05347209106526104, "pass": false}

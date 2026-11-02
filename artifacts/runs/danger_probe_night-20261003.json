@@ -1,0 +1,43 @@
+{
+  "what": "untrained connectome: level-invariant enemy-ahead signal (exploratory)",
+  "labels": "DANGER: enemy 8-64 px ahead; CLEAR: none within 160 px (RAM, analysis only)",
+  "results": {
+    "counts": {
+      "Level1-1": {
+        "danger": 129,
+        "clear": 58
+      },
+      "Level3-1": {
+        "danger": 484,
+        "clear": 78
+      },
+      "Level6-1": {
+        "danger": 168,
+        "clear": 308
+      }
+    },
+    "train_1-1": {
+      "motor_counts": {
+        "heldout_3-1_6-1": {
+          "balanced_accuracy": 0.493,
+          "auc": 0.504
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.6235,
+          "auc": 0.6326
+        }
+      },
+      "lamina_input": {
+        "heldout_3-1_6-1": {
+          "balanced_accuracy": 0.4914,
+          "auc": 0.4901
+        },
+        "shuffled": {
+          "balanced_accuracy": 0.5021,
+          "auc": 0.5021
+        }
+      }
+    }
+  },
+  "utc": "2026-10-03T13:28:20+00:00"
+}

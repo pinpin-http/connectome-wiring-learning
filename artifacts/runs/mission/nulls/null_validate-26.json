@@ -1,0 +1,72 @@
+{
+ "what": "null validation against the connectome (PROTOCOL \u00a78.3), no task involved",
+ "results": {
+  "connectome": {
+   "ipsilateral_share": 0.7887,
+   "side_pairs": {
+    "C->C": 249555,
+    "C->L": 453799,
+    "C->M": 13862,
+    "C->R": 455375,
+    "L->C": 114566,
+    "L->L": 9540976,
+    "L->M": 65443,
+    "L->R": 1981816,
+    "M->C": 4060,
+    "M->L": 82078,
+    "M->M": 6874,
+    "M->R": 83047,
+    "R->C": 121008,
+    "R->L": 1962302,
+    "R->M": 65004,
+    "R->R": 10363432
+   }
+  },
+  "nullin:0": {
+   "out_degree_exact": true,
+   "in_degree_exact": true,
+   "edge_count_equal": true,
+   "sign_multiset_equal": true,
+   "weight_multiset_equal": true,
+   "edge_overlap_sampled": 0.0538,
+   "edge_overlap_sample_size": 400000,
+   "edge_overlap_exact": false,
+   "edge_overlap_note": "Edge turnover alone does not establish MCMC mixing.",
+   "strata_classes_equal": true,
+   "side_pairs_equal": true,
+   "ipsilateral_share": 0.7887,
+   "n_strata_classes_meta": 6984
+  },
+  "nullin:17": {
+   "out_degree_exact": true,
+   "in_degree_exact": true,
+   "edge_count_equal": true,
+   "sign_multiset_equal": true,
+   "weight_multiset_equal": true,
+   "edge_overlap_sampled": 0.0537,
+   "edge_overlap_sample_size": 400000,
+   "edge_overlap_exact": false,
+   "edge_overlap_note": "Edge turnover alone does not establish MCMC mixing.",
+   "strata_classes_equal": true,
+   "side_pairs_equal": true,
+   "ipsilateral_share": 0.7887,
+   "n_strata_classes_meta": 6984
+  },
+  "nullin:39": {
+   "out_degree_exact": true,
+   "in_degree_exact": true,
+   "edge_count_equal": true,
+   "sign_multiset_equal": true,
+   "weight_multiset_equal": true,
+   "edge_overlap_sampled": 0.0536,
+   "edge_overlap_sample_size": 400000,
+   "edge_overlap_exact": false,
+   "edge_overlap_note": "Edge turnover alone does not establish MCMC mixing.",
+   "strata_classes_equal": true,
+   "side_pairs_equal": true,
+   "ipsilateral_share": 0.7887,
+   "n_strata_classes_meta": 6984
+  }
+ },
+ "utc": "2026-10-10T17:24:14+00:00"
+}

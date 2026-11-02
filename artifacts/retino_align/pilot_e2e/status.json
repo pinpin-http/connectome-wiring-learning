@@ -1,0 +1,13 @@
+{
+ "run": "pilot_e2e",
+ "utc": "2026-10-19T17:53:46+00:00",
+ "lots_expected": 16,
+ "lots_done": 16,
+ "lots_failed": 0,
+ "lots_missing": 0,
+ "missing": [],
+ "sim_seconds_total": 118.0,
+ "eta_extract_s": 0.0,
+ "decoders_expected": 8,
+ "decoders_done": 8
+}

@@ -1,0 +1,266 @@
+{
+ "what": "RL_STUDY \u00a730 S2 probe",
+ "args": {
+  "rounds": 2,
+  "labels": 800,
+  "updates": 3000,
+  "workers": 10
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "aggregate": [
+    9906,
+    9906,
+    9906
+   ],
+   "jump_share": [
+    0.444,
+    0.444,
+    0.444
+   ]
+  },
+  {
+   "round": 1,
+   "labelled": [
+    800,
+    800,
+    800
+   ],
+   "label_seconds": 612,
+   "new_jump_share": [
+    0.41,
+    0.623,
+    0.417
+   ],
+   "aggregate": [
+    10706,
+    10706,
+    10706
+   ],
+   "jump_share": [
+    0.441,
+    0.457,
+    0.442
+   ]
+  },
+  {
+   "round": 2,
+   "labelled": [
+    800,
+    800,
+    800
+   ],
+   "label_seconds": 618,
+   "new_jump_share": [
+    0.495,
+    0.282,
+    0.703
+   ],
+   "aggregate": [
+    11506,
+    11506,
+    11506
+   ],
+   "jump_share": [
+    0.445,
+    0.445,
+    0.46
+   ]
+  }
+ ],
+ "round0": {
+  "trajectories": [
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "time",
+    "best_x": 2599.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level1-1",
+    "end": "flag",
+    "best_x": 3161.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "time",
+    "best_x": 3055.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   },
+   {
+    "level": "Level4-1",
+    "end": "flag",
+    "best_x": 3593.0
+   }
+  ],
+  "frames": 9906,
+  "jump_share": 0.444,
+  "seconds": 737
+ },
+ "evaluation": {
+  "from_level_start": {
+   "Level1-1": [
+    {
+     "best_x": 670.0,
+     "end": "death"
+    },
+    {
+     "best_x": 312.0,
+     "end": "death"
+    },
+    {
+     "best_x": 595.0,
+     "end": "stall"
+    }
+   ],
+   "Level4-1": [
+    {
+     "best_x": 658.0,
+     "end": "time"
+    },
+    {
+     "best_x": 415.0,
+     "end": "death"
+    },
+    {
+     "best_x": 406.0,
+     "end": "death"
+    }
+   ]
+  },
+  "flags_over_17_starts": {
+   "Level1-1": [
+    0,
+    0,
+    0
+   ],
+   "Level4-1": [
+    0,
+    0,
+    0
+   ]
+  },
+  "mean_best_x": {
+   "Level1-1": [
+    670.4,
+    407.4,
+    509.2
+   ],
+   "Level4-1": [
+    721.1,
+    388.8,
+    622.2
+   ]
+  }
+ },
+ "utc": "2026-10-11T09:50:49+00:00"
+}

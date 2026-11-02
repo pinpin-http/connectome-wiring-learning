@@ -1,0 +1,817 @@
+{
+ "what": "criterion references for docs/PERCEPTION_CREDIT_STUDY.md (scripted, no brain)",
+ "levels": [
+  "Level5-1",
+  "Level8-1",
+  "Level3-1",
+  "Level6-1"
+ ],
+ "delays": [
+  0,
+  3,
+  6,
+  9,
+  12,
+  15,
+  18,
+  21
+ ],
+ "checks": {
+  "ram_jumper": {
+   "n": 32,
+   "wins": 17,
+   "losses": 12,
+   "mean_diff": -139.8,
+   "p_greater": 0.58141,
+   "pass": false
+  },
+  "random_b": {
+   "n": 32,
+   "wins": 17,
+   "losses": 13,
+   "mean_diff": -103.0,
+   "p_greater": 0.57748,
+   "pass": false
+  },
+  "always_run": {
+   "n": 32,
+   "wins": 11,
+   "losses": 18,
+   "mean_diff": -289.1,
+   "p_greater": 0.99934,
+   "pass": false
+  }
+ },
+ "criterion_validated": false,
+ "episodes": [
+  {
+   "level": "Level5-1",
+   "delay": 0,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.27586206896551724
+   },
+   "random_a": {
+    "best_x": 276.0,
+    "end": "death",
+    "jump_rate": 0.1935483870967742
+   },
+   "random_b": {
+    "best_x": 194.0,
+    "end": "death",
+    "jump_rate": 0.3333333333333333
+   },
+   "always_run": {
+    "best_x": 204.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 3,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.3103448275862069
+   },
+   "random_a": {
+    "best_x": 276.0,
+    "end": "death",
+    "jump_rate": 0.16129032258064516
+   },
+   "random_b": {
+    "best_x": 275.0,
+    "end": "death",
+    "jump_rate": 0.3225806451612903
+   },
+   "always_run": {
+    "best_x": 199.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 6,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.27586206896551724
+   },
+   "random_a": {
+    "best_x": 194.0,
+    "end": "death",
+    "jump_rate": 0.19047619047619047
+   },
+   "random_b": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.2903225806451613
+   },
+   "always_run": {
+    "best_x": 194.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 9,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.3103448275862069
+   },
+   "random_a": {
+    "best_x": 183.0,
+    "end": "death",
+    "jump_rate": 0.2727272727272727
+   },
+   "random_b": {
+    "best_x": 453.0,
+    "end": "death",
+    "jump_rate": 0.28
+   },
+   "always_run": {
+    "best_x": 189.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 12,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.27586206896551724
+   },
+   "random_a": {
+    "best_x": 456.0,
+    "end": "death",
+    "jump_rate": 0.3673469387755102
+   },
+   "random_b": {
+    "best_x": 273.0,
+    "end": "death",
+    "jump_rate": 0.1935483870967742
+   },
+   "always_run": {
+    "best_x": 184.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 15,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.3103448275862069
+   },
+   "random_a": {
+    "best_x": 930.0,
+    "end": "time",
+    "jump_rate": 0.38333333333333336
+   },
+   "random_b": {
+    "best_x": 450.0,
+    "end": "death",
+    "jump_rate": 0.46
+   },
+   "always_run": {
+    "best_x": 179.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 18,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.27586206896551724
+   },
+   "random_a": {
+    "best_x": 928.0,
+    "end": "time",
+    "jump_rate": 0.24
+   },
+   "random_b": {
+    "best_x": 171.0,
+    "end": "death",
+    "jump_rate": 0.2857142857142857
+   },
+   "always_run": {
+    "best_x": 174.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level5-1",
+   "delay": 21,
+   "ram_jumper": {
+    "best_x": 274.0,
+    "end": "death",
+    "jump_rate": 0.3103448275862069
+   },
+   "random_a": {
+    "best_x": 166.0,
+    "end": "death",
+    "jump_rate": 0.45
+   },
+   "random_b": {
+    "best_x": 452.0,
+    "end": "death",
+    "jump_rate": 0.38461538461538464
+   },
+   "always_run": {
+    "best_x": 169.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 0,
+   "ram_jumper": {
+    "best_x": 342.0,
+    "end": "death",
+    "jump_rate": 0.2777777777777778
+   },
+   "random_a": {
+    "best_x": 226.0,
+    "end": "death",
+    "jump_rate": 0.19230769230769232
+   },
+   "random_b": {
+    "best_x": 228.0,
+    "end": "death",
+    "jump_rate": 0.3076923076923077
+   },
+   "always_run": {
+    "best_x": 227.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 3,
+   "ram_jumper": {
+    "best_x": 342.0,
+    "end": "death",
+    "jump_rate": 0.2777777777777778
+   },
+   "random_a": {
+    "best_x": 546.0,
+    "end": "death",
+    "jump_rate": 0.20454545454545456
+   },
+   "random_b": {
+    "best_x": 214.0,
+    "end": "death",
+    "jump_rate": 0.3448275862068966
+   },
+   "always_run": {
+    "best_x": 222.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 6,
+   "ram_jumper": {
+    "best_x": 562.0,
+    "end": "death",
+    "jump_rate": 0.39655172413793105
+   },
+   "random_a": {
+    "best_x": 1118.0,
+    "end": "death",
+    "jump_rate": 0.44074074074074077
+   },
+   "random_b": {
+    "best_x": 339.0,
+    "end": "death",
+    "jump_rate": 0.4146341463414634
+   },
+   "always_run": {
+    "best_x": 217.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 9,
+   "ram_jumper": {
+    "best_x": 546.0,
+    "end": "stall",
+    "jump_rate": 0.8260869565217391
+   },
+   "random_a": {
+    "best_x": 341.0,
+    "end": "death",
+    "jump_rate": 0.875
+   },
+   "random_b": {
+    "best_x": 936.0,
+    "end": "death",
+    "jump_rate": 0.7956204379562044
+   },
+   "always_run": {
+    "best_x": 212.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 12,
+   "ram_jumper": {
+    "best_x": 546.0,
+    "end": "stall",
+    "jump_rate": 0.8309178743961353
+   },
+   "random_a": {
+    "best_x": 1754.0,
+    "end": "death",
+    "jump_rate": 0.8215384615384616
+   },
+   "random_b": {
+    "best_x": 1958.0,
+    "end": "death",
+    "jump_rate": 0.7978947368421052
+   },
+   "always_run": {
+    "best_x": 207.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 15,
+   "ram_jumper": {
+    "best_x": 546.0,
+    "end": "stall",
+    "jump_rate": 0.8260869565217391
+   },
+   "random_a": {
+    "best_x": 341.0,
+    "end": "death",
+    "jump_rate": 0.8157894736842105
+   },
+   "random_b": {
+    "best_x": 558.0,
+    "end": "death",
+    "jump_rate": 0.85
+   },
+   "always_run": {
+    "best_x": 202.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 18,
+   "ram_jumper": {
+    "best_x": 546.0,
+    "end": "stall",
+    "jump_rate": 0.8309178743961353
+   },
+   "random_a": {
+    "best_x": 338.0,
+    "end": "death",
+    "jump_rate": 0.85
+   },
+   "random_b": {
+    "best_x": 471.0,
+    "end": "death",
+    "jump_rate": 0.8679245283018868
+   },
+   "always_run": {
+    "best_x": 197.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level8-1",
+   "delay": 21,
+   "ram_jumper": {
+    "best_x": 546.0,
+    "end": "stall",
+    "jump_rate": 0.8260869565217391
+   },
+   "random_a": {
+    "best_x": 2731.0,
+    "end": "death",
+    "jump_rate": 0.8149882903981265
+   },
+   "random_b": {
+    "best_x": 658.0,
+    "end": "death",
+    "jump_rate": 0.7714285714285715
+   },
+   "always_run": {
+    "best_x": 192.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 0,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 883.0,
+    "end": "death",
+    "jump_rate": 0.5278969957081545
+   },
+   "random_b": {
+    "best_x": 423.0,
+    "end": "death",
+    "jump_rate": 0.5208333333333334
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 3,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 594.0,
+    "end": "stall",
+    "jump_rate": 0.5041666666666667
+   },
+   "random_b": {
+    "best_x": 499.0,
+    "end": "death",
+    "jump_rate": 0.47572815533980584
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 6,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 376.0,
+    "end": "death",
+    "jump_rate": 0.5853658536585366
+   },
+   "random_b": {
+    "best_x": 417.0,
+    "end": "death",
+    "jump_rate": 0.5510204081632653
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 9,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 368.0,
+    "end": "death",
+    "jump_rate": 0.5609756097560976
+   },
+   "random_b": {
+    "best_x": 527.0,
+    "end": "death",
+    "jump_rate": 0.5254237288135594
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 12,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 366.0,
+    "end": "death",
+    "jump_rate": 0.5
+   },
+   "random_b": {
+    "best_x": 368.0,
+    "end": "death",
+    "jump_rate": 0.5652173913043478
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 15,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 609.0,
+    "end": "death",
+    "jump_rate": 0.5764705882352941
+   },
+   "random_b": {
+    "best_x": 426.0,
+    "end": "death",
+    "jump_rate": 0.5
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 18,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 899.0,
+    "end": "time",
+    "jump_rate": 0.5633802816901409
+   },
+   "random_b": {
+    "best_x": 905.0,
+    "end": "death",
+    "jump_rate": 0.5080906148867314
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level3-1",
+   "delay": 21,
+   "ram_jumper": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5172413793103449
+   },
+   "random_a": {
+    "best_x": 513.0,
+    "end": "death",
+    "jump_rate": 0.5166666666666667
+   },
+   "random_b": {
+    "best_x": 594.0,
+    "end": "death",
+    "jump_rate": 0.5393258426966292
+   },
+   "always_run": {
+    "best_x": 372.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 0,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.11764705882352941
+   },
+   "random_a": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.10576923076923077
+   },
+   "random_b": {
+    "best_x": 467.0,
+    "end": "death",
+    "jump_rate": 0.12380952380952381
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 3,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0784313725490196
+   },
+   "random_a": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.04807692307692308
+   },
+   "random_b": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.07692307692307693
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 6,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.11764705882352941
+   },
+   "random_a": {
+    "best_x": 469.0,
+    "end": "time",
+    "jump_rate": 0.1320754716981132
+   },
+   "random_b": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.10476190476190476
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 9,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0784313725490196
+   },
+   "random_a": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.0673076923076923
+   },
+   "random_b": {
+    "best_x": 488.0,
+    "end": "death",
+    "jump_rate": 0.1111111111111111
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 12,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.11764705882352941
+   },
+   "random_a": {
+    "best_x": 468.0,
+    "end": "time",
+    "jump_rate": 0.14018691588785046
+   },
+   "random_b": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.125
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 15,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0784313725490196
+   },
+   "random_a": {
+    "best_x": 469.0,
+    "end": "time",
+    "jump_rate": 0.10185185185185185
+   },
+   "random_b": {
+    "best_x": 504.0,
+    "end": "death",
+    "jump_rate": 0.05747126436781609
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 18,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.11764705882352941
+   },
+   "random_a": {
+    "best_x": 465.0,
+    "end": "death",
+    "jump_rate": 0.13157894736842105
+   },
+   "random_b": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.11538461538461539
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  },
+  {
+   "level": "Level6-1",
+   "delay": 21,
+   "ram_jumper": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0784313725490196
+   },
+   "random_a": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.07692307692307693
+   },
+   "random_b": {
+    "best_x": 466.0,
+    "end": "time",
+    "jump_rate": 0.11538461538461539
+   },
+   "always_run": {
+    "best_x": 469.0,
+    "end": "death",
+    "jump_rate": 0.0
+   }
+  }
+ ],
+ "utc": "2026-10-03T19:29:16+00:00"
+}

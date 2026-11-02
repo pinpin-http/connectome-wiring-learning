@@ -1,0 +1,10 @@
+.git
+.venv
+roms
+*.nes
+data/raw
+data/connectome
+artifacts/cache
+artifacts/runs/checkpoints
+**/*.pt
+**/__pycache__

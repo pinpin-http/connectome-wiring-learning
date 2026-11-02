@@ -1,0 +1,5 @@
+2026-10-20T12:52:10+00:00 start nullin:100 learners=24 blocks=['b0', 'b1', 'b2', 'b3', 'b4', 'b5'] kinds=main stop_at=150
+/workspace/SMB_Flywire_Speedrun_ec/src/flymario/models/torch_lif.py:69: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  T = torch.sparse_csr_tensor(torch.from_numpy(W.indptr.astype(np.int32)),
+2026-10-20T12:53:20+00:00 nullin:100 k=0 eval 59.6s
+2026-10-20T12:53:57+00:00 end k=150 complete=False wall=106.0s train_step_median=0.246079683303833

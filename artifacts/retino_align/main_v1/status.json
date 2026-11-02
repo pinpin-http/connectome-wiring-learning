@@ -1,0 +1,13 @@
+{
+ "run": "main_v1",
+ "utc": "2026-10-19T20:05:15+00:00",
+ "lots_expected": 328,
+ "lots_done": 328,
+ "lots_failed": 0,
+ "lots_missing": 0,
+ "missing": [],
+ "sim_seconds_total": 3530.0,
+ "eta_extract_s": 0.0,
+ "decoders_expected": 164,
+ "decoders_done": 164
+}

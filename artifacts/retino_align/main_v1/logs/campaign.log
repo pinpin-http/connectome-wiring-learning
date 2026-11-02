@@ -1,0 +1,518 @@
+2026-10-19T18:13:46Z start
+"all checks pass"
+2026-10-19T18:26:07Z controls pass
+/workspace/SMB_Flywire_Speedrun/src/flymario/retino_align/simulate.py:76: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.W = torch.sparse_csr_tensor(torch.from_numpy(Wc.indptr.astype(np.int32)),
+2026-10-19T18:26:49+00:00 ('nullin:18', 'ordered', 1) done=1/328 eta=4120.0s
+2026-10-19T18:27:03+00:00 ('nullin:18', 'perm1', 1) done=2/328 eta=4046.0s
+2026-10-19T18:27:16+00:00 ('nullin:18', 'perm2', 1) done=3/328 eta=4002.0s
+2026-10-19T18:27:27+00:00 ('nullin:18', 'perm3', 1) done=4/328 eta=3873.0s
+2026-10-19T18:27:40+00:00 ('nullin:18', 'perm3', 2) done=5/328 eta=3815.0s
+2026-10-19T18:27:53+00:00 ('nullin:18', 'perm2', 2) done=6/328 eta=3812.0s
+2026-10-19T18:28:06+00:00 ('nullin:18', 'perm1', 2) done=7/328 eta=3799.0s
+2026-10-19T18:28:19+00:00 ('nullin:18', 'ordered', 2) done=8/328 eta=3782.0s
+2026-10-19T18:28:45+00:00 ('nullin:25', 'perm1', 2) done=9/328 eta=3734.0s
+2026-10-19T18:28:57+00:00 ('nullin:25', 'perm2', 2) done=10/328 eta=3693.0s
+2026-10-19T18:29:09+00:00 ('nullin:25', 'perm3', 2) done=11/328 eta=3658.0s
+2026-10-19T18:29:20+00:00 ('nullin:25', 'ordered', 2) done=12/328 eta=3621.0s
+2026-10-19T18:29:32+00:00 ('nullin:25', 'ordered', 1) done=13/328 eta=3587.0s
+2026-10-19T18:29:43+00:00 ('nullin:25', 'perm3', 1) done=14/328 eta=3562.0s
+2026-10-19T18:29:55+00:00 ('nullin:25', 'perm2', 1) done=15/328 eta=3540.0s
+2026-10-19T18:30:07+00:00 ('nullin:25', 'perm1', 1) done=16/328 eta=3519.0s
+2026-10-19T18:30:47+00:00 ('nullin:28', 'perm2', 1) done=17/328 eta=3499.0s
+2026-10-19T18:30:59+00:00 ('nullin:28', 'perm3', 1) done=18/328 eta=3480.0s
+2026-10-19T18:31:10+00:00 ('nullin:28', 'ordered', 1) done=19/328 eta=3458.0s
+2026-10-19T18:31:22+00:00 ('nullin:28', 'perm1', 1) done=20/328 eta=3441.0s
+2026-10-19T18:31:34+00:00 ('nullin:28', 'perm1', 2) done=21/328 eta=3424.0s
+2026-10-19T18:31:46+00:00 ('nullin:28', 'ordered', 2) done=22/328 eta=3404.0s
+2026-10-19T18:31:57+00:00 ('nullin:28', 'perm3', 2) done=23/328 eta=3388.0s
+2026-10-19T18:32:09+00:00 ('nullin:28', 'perm2', 2) done=24/328 eta=3373.0s
+2026-10-19T18:32:42+00:00 ('nullin:0', 'perm3', 2) done=25/328 eta=3358.0s
+2026-10-19T18:32:53+00:00 ('nullin:0', 'ordered', 2) done=26/328 eta=3341.0s
+2026-10-19T18:33:05+00:00 ('nullin:0', 'perm1', 2) done=27/328 eta=3326.0s
+2026-10-19T18:33:17+00:00 ('nullin:0', 'perm2', 2) done=28/328 eta=3312.0s
+2026-10-19T18:33:29+00:00 ('nullin:0', 'perm2', 1) done=29/328 eta=3298.0s
+2026-10-19T18:33:41+00:00 ('nullin:0', 'perm1', 1) done=30/328 eta=3284.0s
+2026-10-19T18:33:52+00:00 ('nullin:0', 'ordered', 1) done=31/328 eta=3268.0s
+2026-10-19T18:34:04+00:00 ('nullin:0', 'perm3', 1) done=32/328 eta=3255.0s
+2026-10-19T18:34:35+00:00 ('nullin:14', 'ordered', 1) done=33/328 eta=3240.0s
+2026-10-19T18:34:47+00:00 ('nullin:14', 'perm1', 1) done=34/328 eta=3227.0s
+2026-10-19T18:34:58+00:00 ('nullin:14', 'perm2', 1) done=35/328 eta=3214.0s
+2026-10-19T18:35:10+00:00 ('nullin:14', 'perm3', 1) done=36/328 eta=3201.0s
+2026-10-19T18:35:22+00:00 ('nullin:14', 'perm3', 2) done=37/328 eta=3189.0s
+2026-10-19T18:35:34+00:00 ('nullin:14', 'perm2', 2) done=38/328 eta=3177.0s
+2026-10-19T18:35:46+00:00 ('nullin:14', 'perm1', 2) done=39/328 eta=3164.0s
+2026-10-19T18:35:57+00:00 ('nullin:14', 'ordered', 2) done=40/328 eta=3150.0s
+2026-10-19T18:36:29+00:00 ('nullin:2', 'perm1', 2) done=41/328 eta=3138.0s
+2026-10-19T18:36:41+00:00 ('nullin:2', 'perm2', 2) done=42/328 eta=3127.0s
+2026-10-19T18:36:53+00:00 ('nullin:2', 'perm3', 2) done=43/328 eta=3115.0s
+2026-10-19T18:37:05+00:00 ('nullin:2', 'ordered', 2) done=44/328 eta=3101.0s
+2026-10-19T18:37:16+00:00 ('nullin:2', 'ordered', 1) done=45/328 eta=3088.0s
+2026-10-19T18:37:28+00:00 ('nullin:2', 'perm3', 1) done=46/328 eta=3076.0s
+2026-10-19T18:37:40+00:00 ('nullin:2', 'perm2', 1) done=47/328 eta=3064.0s
+2026-10-19T18:37:52+00:00 ('nullin:2', 'perm1', 1) done=48/328 eta=3052.0s
+2026-10-19T18:38:24+00:00 ('nullin:24', 'perm2', 1) done=49/328 eta=3041.0s
+2026-10-19T18:38:36+00:00 ('nullin:24', 'perm3', 1) done=50/328 eta=3029.0s
+2026-10-19T18:38:48+00:00 ('nullin:24', 'ordered', 1) done=51/328 eta=3016.0s
+2026-10-19T18:39:00+00:00 ('nullin:24', 'perm1', 1) done=52/328 eta=3004.0s
+2026-10-19T18:39:12+00:00 ('nullin:24', 'perm1', 2) done=53/328 eta=2993.0s
+2026-10-19T18:39:23+00:00 ('nullin:24', 'ordered', 2) done=54/328 eta=2980.0s
+2026-10-19T18:39:35+00:00 ('nullin:24', 'perm3', 2) done=55/328 eta=2969.0s
+2026-10-19T18:39:47+00:00 ('nullin:24', 'perm2', 2) done=56/328 eta=2957.0s
+2026-10-19T18:40:18+00:00 ('nullin:31', 'perm3', 2) done=57/328 eta=2946.0s
+2026-10-19T18:40:30+00:00 ('nullin:31', 'ordered', 2) done=58/328 eta=2934.0s
+2026-10-19T18:40:42+00:00 ('nullin:31', 'perm1', 2) done=59/328 eta=2922.0s
+2026-10-19T18:40:53+00:00 ('nullin:31', 'perm2', 2) done=60/328 eta=2911.0s
+2026-10-19T18:41:05+00:00 ('nullin:31', 'perm2', 1) done=61/328 eta=2900.0s
+2026-10-19T18:41:17+00:00 ('nullin:31', 'perm1', 1) done=62/328 eta=2889.0s
+2026-10-19T18:41:29+00:00 ('nullin:31', 'ordered', 1) done=63/328 eta=2876.0s
+2026-10-19T18:41:41+00:00 ('nullin:31', 'perm3', 1) done=64/328 eta=2865.0s
+2026-10-19T18:42:14+00:00 ('nullin:19', 'ordered', 1) done=65/328 eta=2853.0s
+2026-10-19T18:42:26+00:00 ('nullin:19', 'perm1', 1) done=66/328 eta=2842.0s
+2026-10-19T18:42:38+00:00 ('nullin:19', 'perm2', 1) done=67/328 eta=2831.0s
+2026-10-19T18:42:50+00:00 ('nullin:19', 'perm3', 1) done=68/328 eta=2820.0s
+2026-10-19T18:43:02+00:00 ('nullin:19', 'perm3', 2) done=69/328 eta=2809.0s
+2026-10-19T18:43:14+00:00 ('nullin:19', 'perm2', 2) done=70/328 eta=2797.0s
+2026-10-19T18:43:26+00:00 ('nullin:19', 'perm1', 2) done=71/328 eta=2786.0s
+2026-10-19T18:43:38+00:00 ('nullin:19', 'ordered', 2) done=72/328 eta=2774.0s
+2026-10-19T18:44:08+00:00 ('nullin:3', 'perm1', 2) done=73/328 eta=2763.0s
+2026-10-19T18:44:20+00:00 ('nullin:3', 'perm2', 2) done=74/328 eta=2752.0s
+2026-10-19T18:44:32+00:00 ('nullin:3', 'perm3', 2) done=75/328 eta=2741.0s
+2026-10-19T18:44:44+00:00 ('nullin:3', 'ordered', 2) done=76/328 eta=2729.0s
+2026-10-19T18:44:56+00:00 ('nullin:3', 'ordered', 1) done=77/328 eta=2718.0s
+2026-10-19T18:45:08+00:00 ('nullin:3', 'perm3', 1) done=78/328 eta=2707.0s
+2026-10-19T18:45:20+00:00 ('nullin:3', 'perm2', 1) done=79/328 eta=2696.0s
+2026-10-19T18:45:32+00:00 ('nullin:3', 'perm1', 1) done=80/328 eta=2685.0s
+2026-10-19T18:45:58+00:00 ('nullin:22', 'perm2', 1) done=81/328 eta=2674.0s
+2026-10-19T18:46:10+00:00 ('nullin:22', 'perm3', 1) done=82/328 eta=2663.0s
+2026-10-19T18:46:22+00:00 ('nullin:22', 'ordered', 1) done=83/328 eta=2651.0s
+2026-10-19T18:46:34+00:00 ('nullin:22', 'perm1', 1) done=84/328 eta=2640.0s
+2026-10-19T18:46:46+00:00 ('nullin:22', 'perm1', 2) done=85/328 eta=2629.0s
+2026-10-19T18:46:58+00:00 ('nullin:22', 'ordered', 2) done=86/328 eta=2617.0s
+2026-10-19T18:47:10+00:00 ('nullin:22', 'perm3', 2) done=87/328 eta=2606.0s
+2026-10-19T18:47:22+00:00 ('nullin:22', 'perm2', 2) done=88/328 eta=2595.0s
+2026-10-19T18:47:47+00:00 ('nullin:27', 'perm3', 2) done=89/328 eta=2584.0s
+2026-10-19T18:47:59+00:00 ('nullin:27', 'ordered', 2) done=90/328 eta=2572.0s
+2026-10-19T18:48:11+00:00 ('nullin:27', 'perm1', 2) done=91/328 eta=2562.0s
+2026-10-19T18:48:23+00:00 ('nullin:27', 'perm2', 2) done=92/328 eta=2551.0s
+2026-10-19T18:48:36+00:00 ('nullin:27', 'perm2', 1) done=93/328 eta=2540.0s
+2026-10-19T18:48:48+00:00 ('nullin:27', 'perm1', 1) done=94/328 eta=2529.0s
+2026-10-19T18:49:00+00:00 ('nullin:27', 'ordered', 1) done=95/328 eta=2518.0s
+2026-10-19T18:49:12+00:00 ('nullin:27', 'perm3', 1) done=96/328 eta=2507.0s
+2026-10-19T18:49:29+00:00 ('nullin:32', 'ordered', 1) done=97/328 eta=2495.0s
+2026-10-19T18:49:41+00:00 ('nullin:32', 'perm1', 1) done=98/328 eta=2485.0s
+2026-10-19T18:49:54+00:00 ('nullin:32', 'perm2', 1) done=99/328 eta=2474.0s
+2026-10-19T18:50:06+00:00 ('nullin:32', 'perm3', 1) done=100/328 eta=2463.0s
+2026-10-19T18:50:18+00:00 ('nullin:32', 'perm3', 2) done=101/328 eta=2452.0s
+2026-10-19T18:50:30+00:00 ('nullin:32', 'perm2', 2) done=102/328 eta=2441.0s
+2026-10-19T18:50:43+00:00 ('nullin:32', 'perm1', 2) done=103/328 eta=2430.0s
+2026-10-19T18:50:55+00:00 ('nullin:32', 'ordered', 2) done=104/328 eta=2419.0s
+2026-10-19T18:51:12+00:00 ('nullin:21', 'perm1', 2) done=105/328 eta=2408.0s
+2026-10-19T18:51:24+00:00 ('nullin:21', 'perm2', 2) done=106/328 eta=2397.0s
+2026-10-19T18:51:37+00:00 ('nullin:21', 'perm3', 2) done=107/328 eta=2386.0s
+2026-10-19T18:51:49+00:00 ('nullin:21', 'ordered', 2) done=108/328 eta=2375.0s
+2026-10-19T18:52:01+00:00 ('nullin:21', 'ordered', 1) done=109/328 eta=2364.0s
+2026-10-19T18:52:13+00:00 ('nullin:21', 'perm3', 1) done=110/328 eta=2353.0s
+2026-10-19T18:52:25+00:00 ('nullin:21', 'perm2', 1) done=111/328 eta=2342.0s
+2026-10-19T18:52:38+00:00 ('nullin:21', 'perm1', 1) done=112/328 eta=2332.0s
+2026-10-19T18:52:55+00:00 ('nullin:1', 'perm2', 1) done=113/328 eta=2321.0s
+2026-10-19T18:53:08+00:00 ('nullin:1', 'perm3', 1) done=114/328 eta=2310.0s
+2026-10-19T18:53:20+00:00 ('nullin:1', 'ordered', 1) done=115/328 eta=2299.0s
+2026-10-19T18:53:32+00:00 ('nullin:1', 'perm1', 1) done=116/328 eta=2288.0s
+2026-10-19T18:53:44+00:00 ('nullin:1', 'perm1', 2) done=117/328 eta=2277.0s
+2026-10-19T18:53:57+00:00 ('nullin:1', 'ordered', 2) done=118/328 eta=2266.0s
+2026-10-19T18:54:09+00:00 ('nullin:1', 'perm3', 2) done=119/328 eta=2255.0s
+2026-10-19T18:54:21+00:00 ('nullin:1', 'perm2', 2) done=120/328 eta=2244.0s
+2026-10-19T18:54:39+00:00 ('nullin:37', 'perm3', 2) done=121/328 eta=2234.0s
+2026-10-19T18:54:51+00:00 ('nullin:37', 'ordered', 2) done=122/328 eta=2223.0s
+2026-10-19T18:55:04+00:00 ('nullin:37', 'perm1', 2) done=123/328 eta=2212.0s
+2026-10-19T18:55:16+00:00 ('nullin:37', 'perm2', 2) done=124/328 eta=2201.0s
+2026-10-19T18:55:28+00:00 ('nullin:37', 'perm2', 1) done=125/328 eta=2190.0s
+2026-10-19T18:55:41+00:00 ('nullin:37', 'perm1', 1) done=126/328 eta=2180.0s
+2026-10-19T18:55:53+00:00 ('nullin:37', 'ordered', 1) done=127/328 eta=2168.0s
+2026-10-19T18:56:05+00:00 ('nullin:37', 'perm3', 1) done=128/328 eta=2158.0s
+2026-10-19T18:56:23+00:00 ('nullin:10', 'ordered', 1) done=129/328 eta=2146.0s
+2026-10-19T18:56:35+00:00 ('nullin:10', 'perm1', 1) done=130/328 eta=2136.0s
+2026-10-19T18:56:48+00:00 ('nullin:10', 'perm2', 1) done=131/328 eta=2125.0s
+2026-10-19T18:57:00+00:00 ('nullin:10', 'perm3', 1) done=132/328 eta=2114.0s
+2026-10-19T18:57:12+00:00 ('nullin:10', 'perm3', 2) done=133/328 eta=2103.0s
+2026-10-19T18:57:25+00:00 ('nullin:10', 'perm2', 2) done=134/328 eta=2093.0s
+2026-10-19T18:57:37+00:00 ('nullin:10', 'perm1', 2) done=135/328 eta=2082.0s
+2026-10-19T18:57:49+00:00 ('nullin:10', 'ordered', 2) done=136/328 eta=2071.0s
+2026-10-19T18:58:07+00:00 ('nullin:23', 'perm1', 2) done=137/328 eta=2060.0s
+2026-10-19T18:58:20+00:00 ('nullin:23', 'perm2', 2) done=138/328 eta=2049.0s
+2026-10-19T18:58:32+00:00 ('nullin:23', 'perm3', 2) done=139/328 eta=2038.0s
+2026-10-19T18:58:44+00:00 ('nullin:23', 'ordered', 2) done=140/328 eta=2027.0s
+2026-10-19T18:58:56+00:00 ('nullin:23', 'ordered', 1) done=141/328 eta=2016.0s
+2026-10-19T18:59:09+00:00 ('nullin:23', 'perm3', 1) done=142/328 eta=2005.0s
+2026-10-19T18:59:21+00:00 ('nullin:23', 'perm2', 1) done=143/328 eta=1995.0s
+2026-10-19T18:59:34+00:00 ('nullin:23', 'perm1', 1) done=144/328 eta=1984.0s
+2026-10-19T18:59:52+00:00 ('nullin:39', 'perm2', 1) done=145/328 eta=1973.0s
+2026-10-19T19:00:04+00:00 ('nullin:39', 'perm3', 1) done=146/328 eta=1962.0s
+2026-10-19T19:00:17+00:00 ('nullin:39', 'ordered', 1) done=147/328 eta=1951.0s
+2026-10-19T19:00:29+00:00 ('nullin:39', 'perm1', 1) done=148/328 eta=1941.0s
+2026-10-19T19:00:41+00:00 ('nullin:39', 'perm1', 2) done=149/328 eta=1930.0s
+2026-10-19T19:00:54+00:00 ('nullin:39', 'ordered', 2) done=150/328 eta=1919.0s
+2026-10-19T19:01:06+00:00 ('nullin:39', 'perm3', 2) done=151/328 eta=1908.0s
+2026-10-19T19:01:19+00:00 ('nullin:39', 'perm2', 2) done=152/328 eta=1897.0s
+2026-10-19T19:01:37+00:00 ('nullin:36', 'perm3', 2) done=153/328 eta=1886.0s
+2026-10-19T19:01:49+00:00 ('nullin:36', 'ordered', 2) done=154/328 eta=1875.0s
+2026-10-19T19:02:02+00:00 ('nullin:36', 'perm1', 2) done=155/328 eta=1865.0s
+2026-10-19T19:02:14+00:00 ('nullin:36', 'perm2', 2) done=156/328 eta=1854.0s
+2026-10-19T19:02:27+00:00 ('nullin:36', 'perm2', 1) done=157/328 eta=1843.0s
+2026-10-19T19:02:39+00:00 ('nullin:36', 'perm1', 1) done=158/328 eta=1832.0s
+2026-10-19T19:02:51+00:00 ('nullin:36', 'ordered', 1) done=159/328 eta=1821.0s
+2026-10-19T19:03:04+00:00 ('nullin:36', 'perm3', 1) done=160/328 eta=1811.0s
+2026-10-19T19:03:22+00:00 ('nullin:9', 'ordered', 1) done=161/328 eta=1800.0s
+2026-10-19T19:03:34+00:00 ('nullin:9', 'perm1', 1) done=162/328 eta=1789.0s
+2026-10-19T19:03:47+00:00 ('nullin:9', 'perm2', 1) done=163/328 eta=1778.0s
+2026-10-19T19:03:59+00:00 ('nullin:9', 'perm3', 1) done=164/328 eta=1767.0s
+2026-10-19T19:04:12+00:00 ('nullin:9', 'perm3', 2) done=165/328 eta=1757.0s
+2026-10-19T19:04:25+00:00 ('nullin:9', 'perm2', 2) done=166/328 eta=1746.0s
+2026-10-19T19:04:37+00:00 ('nullin:9', 'perm1', 2) done=167/328 eta=1735.0s
+2026-10-19T19:04:50+00:00 ('nullin:9', 'ordered', 2) done=168/328 eta=1724.0s
+2026-10-19T19:05:08+00:00 ('nullin:6', 'perm1', 2) done=169/328 eta=1713.0s
+2026-10-19T19:05:20+00:00 ('nullin:6', 'perm2', 2) done=170/328 eta=1703.0s
+2026-10-19T19:05:33+00:00 ('nullin:6', 'perm3', 2) done=171/328 eta=1692.0s
+2026-10-19T19:05:45+00:00 ('nullin:6', 'ordered', 2) done=172/328 eta=1681.0s
+2026-10-19T19:05:58+00:00 ('nullin:6', 'ordered', 1) done=173/328 eta=1670.0s
+2026-10-19T19:06:10+00:00 ('nullin:6', 'perm3', 1) done=174/328 eta=1659.0s
+2026-10-19T19:06:23+00:00 ('nullin:6', 'perm2', 1) done=175/328 eta=1648.0s
+2026-10-19T19:06:36+00:00 ('nullin:6', 'perm1', 1) done=176/328 eta=1638.0s
+2026-10-19T19:06:54+00:00 ('nullin:33', 'perm2', 1) done=177/328 eta=1627.0s
+2026-10-19T19:07:06+00:00 ('nullin:33', 'perm3', 1) done=178/328 eta=1616.0s
+2026-10-19T19:07:19+00:00 ('nullin:33', 'ordered', 1) done=179/328 eta=1605.0s
+2026-10-19T19:07:31+00:00 ('nullin:33', 'perm1', 1) done=180/328 eta=1594.0s
+2026-10-19T19:07:44+00:00 ('nullin:33', 'perm1', 2) done=181/328 eta=1584.0s
+2026-10-19T19:07:57+00:00 ('nullin:33', 'ordered', 2) done=182/328 eta=1573.0s
+2026-10-19T19:08:09+00:00 ('nullin:33', 'perm3', 2) done=183/328 eta=1562.0s
+2026-10-19T19:08:22+00:00 ('nullin:33', 'perm2', 2) done=184/328 eta=1551.0s
+2026-10-19T19:08:40+00:00 ('nullin:34', 'perm3', 2) done=185/328 eta=1540.0s
+2026-10-19T19:08:52+00:00 ('nullin:34', 'ordered', 2) done=186/328 eta=1529.0s
+2026-10-19T19:09:05+00:00 ('nullin:34', 'perm1', 2) done=187/328 eta=1519.0s
+2026-10-19T19:09:18+00:00 ('nullin:34', 'perm2', 2) done=188/328 eta=1508.0s
+2026-10-19T19:09:31+00:00 ('nullin:34', 'perm2', 1) done=189/328 eta=1497.0s
+2026-10-19T19:09:43+00:00 ('nullin:34', 'perm1', 1) done=190/328 eta=1486.0s
+2026-10-19T19:09:56+00:00 ('nullin:34', 'ordered', 1) done=191/328 eta=1476.0s
+2026-10-19T19:10:09+00:00 ('nullin:34', 'perm3', 1) done=192/328 eta=1465.0s
+2026-10-19T19:10:27+00:00 ('nullin:5', 'ordered', 1) done=193/328 eta=1454.0s
+2026-10-19T19:10:39+00:00 ('nullin:5', 'perm1', 1) done=194/328 eta=1443.0s
+2026-10-19T19:10:52+00:00 ('nullin:5', 'perm2', 1) done=195/328 eta=1432.0s
+2026-10-19T19:11:05+00:00 ('nullin:5', 'perm3', 1) done=196/328 eta=1422.0s
+2026-10-19T19:11:18+00:00 ('nullin:5', 'perm3', 2) done=197/328 eta=1411.0s
+2026-10-19T19:11:30+00:00 ('nullin:5', 'perm2', 2) done=198/328 eta=1400.0s
+2026-10-19T19:11:43+00:00 ('nullin:5', 'perm1', 2) done=199/328 eta=1389.0s
+2026-10-19T19:11:56+00:00 ('nullin:5', 'ordered', 2) done=200/328 eta=1378.0s
+2026-10-19T19:12:14+00:00 ('nullin:4', 'perm1', 2) done=201/328 eta=1368.0s
+2026-10-19T19:12:27+00:00 ('nullin:4', 'perm2', 2) done=202/328 eta=1357.0s
+2026-10-19T19:12:39+00:00 ('nullin:4', 'perm3', 2) done=203/328 eta=1346.0s
+2026-10-19T19:12:52+00:00 ('nullin:4', 'ordered', 2) done=204/328 eta=1335.0s
+2026-10-19T19:13:05+00:00 ('nullin:4', 'ordered', 1) done=205/328 eta=1324.0s
+2026-10-19T19:13:17+00:00 ('nullin:4', 'perm3', 1) done=206/328 eta=1314.0s
+2026-10-19T19:13:30+00:00 ('nullin:4', 'perm2', 1) done=207/328 eta=1303.0s
+2026-10-19T19:13:43+00:00 ('nullin:4', 'perm1', 1) done=208/328 eta=1292.0s
+2026-10-19T19:14:01+00:00 ('nullin:16', 'perm2', 1) done=209/328 eta=1281.0s
+2026-10-19T19:14:14+00:00 ('nullin:16', 'perm3', 1) done=210/328 eta=1270.0s
+2026-10-19T19:14:27+00:00 ('nullin:16', 'ordered', 1) done=211/328 eta=1260.0s
+2026-10-19T19:14:39+00:00 ('nullin:16', 'perm1', 1) done=212/328 eta=1249.0s
+2026-10-19T19:14:52+00:00 ('nullin:16', 'perm1', 2) done=213/328 eta=1238.0s
+2026-10-19T19:15:05+00:00 ('nullin:16', 'ordered', 2) done=214/328 eta=1227.0s
+2026-10-19T19:15:18+00:00 ('nullin:16', 'perm3', 2) done=215/328 eta=1217.0s
+2026-10-19T19:15:31+00:00 ('nullin:16', 'perm2', 2) done=216/328 eta=1206.0s
+2026-10-19T19:15:49+00:00 ('nullin:8', 'perm3', 2) done=217/328 eta=1195.0s
+2026-10-19T19:16:02+00:00 ('nullin:8', 'ordered', 2) done=218/328 eta=1184.0s
+2026-10-19T19:16:15+00:00 ('nullin:8', 'perm1', 2) done=219/328 eta=1173.0s
+2026-10-19T19:16:28+00:00 ('nullin:8', 'perm2', 2) done=220/328 eta=1163.0s
+2026-10-19T19:16:41+00:00 ('nullin:8', 'perm2', 1) done=221/328 eta=1152.0s
+2026-10-19T19:16:53+00:00 ('nullin:8', 'perm1', 1) done=222/328 eta=1141.0s
+2026-10-19T19:17:06+00:00 ('nullin:8', 'ordered', 1) done=223/328 eta=1130.0s
+2026-10-19T19:17:19+00:00 ('nullin:8', 'perm3', 1) done=224/328 eta=1120.0s
+2026-10-19T19:17:37+00:00 ('nullin:15', 'ordered', 1) done=225/328 eta=1109.0s
+2026-10-19T19:17:50+00:00 ('nullin:15', 'perm1', 1) done=226/328 eta=1098.0s
+2026-10-19T19:18:03+00:00 ('nullin:15', 'perm2', 1) done=227/328 eta=1087.0s
+2026-10-19T19:18:16+00:00 ('nullin:15', 'perm3', 1) done=228/328 eta=1076.0s
+2026-10-19T19:18:29+00:00 ('nullin:15', 'perm3', 2) done=229/328 eta=1066.0s
+2026-10-19T19:18:42+00:00 ('nullin:15', 'perm2', 2) done=230/328 eta=1055.0s
+2026-10-19T19:18:55+00:00 ('nullin:15', 'perm1', 2) done=231/328 eta=1044.0s
+2026-10-19T19:19:07+00:00 ('nullin:15', 'ordered', 2) done=232/328 eta=1033.0s
+2026-10-19T19:19:26+00:00 ('nullin:7', 'perm1', 2) done=233/328 eta=1023.0s
+2026-10-19T19:19:39+00:00 ('nullin:7', 'perm2', 2) done=234/328 eta=1012.0s
+2026-10-19T19:19:52+00:00 ('nullin:7', 'perm3', 2) done=235/328 eta=1001.0s
+2026-10-19T19:20:05+00:00 ('nullin:7', 'ordered', 2) done=236/328 eta=990.0s
+2026-10-19T19:20:17+00:00 ('nullin:7', 'ordered', 1) done=237/328 eta=979.0s
+2026-10-19T19:20:30+00:00 ('nullin:7', 'perm3', 1) done=238/328 eta=969.0s
+2026-10-19T19:20:43+00:00 ('nullin:7', 'perm2', 1) done=239/328 eta=958.0s
+2026-10-19T19:20:56+00:00 ('nullin:7', 'perm1', 1) done=240/328 eta=947.0s
+2026-10-19T19:21:15+00:00 ('nullin:30', 'perm2', 1) done=241/328 eta=936.0s
+2026-10-19T19:21:28+00:00 ('nullin:30', 'perm3', 1) done=242/328 eta=926.0s
+2026-10-19T19:21:40+00:00 ('nullin:30', 'ordered', 1) done=243/328 eta=915.0s
+2026-10-19T19:21:53+00:00 ('nullin:30', 'perm1', 1) done=244/328 eta=904.0s
+2026-10-19T19:22:06+00:00 ('nullin:30', 'perm1', 2) done=245/328 eta=893.0s
+2026-10-19T19:22:19+00:00 ('nullin:30', 'ordered', 2) done=246/328 eta=882.0s
+2026-10-19T19:22:32+00:00 ('nullin:30', 'perm3', 2) done=247/328 eta=872.0s
+2026-10-19T19:22:45+00:00 ('nullin:30', 'perm2', 2) done=248/328 eta=861.0s
+2026-10-19T19:23:04+00:00 ('nullin:26', 'perm3', 2) done=249/328 eta=850.0s
+2026-10-19T19:23:17+00:00 ('nullin:26', 'ordered', 2) done=250/328 eta=839.0s
+2026-10-19T19:23:30+00:00 ('nullin:26', 'perm1', 2) done=251/328 eta=829.0s
+2026-10-19T19:23:43+00:00 ('nullin:26', 'perm2', 2) done=252/328 eta=818.0s
+2026-10-19T19:23:56+00:00 ('nullin:26', 'perm2', 1) done=253/328 eta=807.0s
+2026-10-19T19:24:09+00:00 ('nullin:26', 'perm1', 1) done=254/328 eta=796.0s
+2026-10-19T19:24:22+00:00 ('nullin:26', 'ordered', 1) done=255/328 eta=786.0s
+2026-10-19T19:24:35+00:00 ('nullin:26', 'perm3', 1) done=256/328 eta=775.0s
+2026-10-19T19:24:53+00:00 ('nullin:17', 'ordered', 1) done=257/328 eta=764.0s
+2026-10-19T19:25:06+00:00 ('nullin:17', 'perm1', 1) done=258/328 eta=753.0s
+2026-10-19T19:25:19+00:00 ('nullin:17', 'perm2', 1) done=259/328 eta=742.0s
+2026-10-19T19:25:33+00:00 ('nullin:17', 'perm3', 1) done=260/328 eta=732.0s
+2026-10-19T19:25:46+00:00 ('nullin:17', 'perm3', 2) done=261/328 eta=721.0s
+2026-10-19T19:25:59+00:00 ('nullin:17', 'perm2', 2) done=262/328 eta=710.0s
+2026-10-19T19:26:12+00:00 ('nullin:17', 'perm1', 2) done=263/328 eta=699.0s
+2026-10-19T19:26:25+00:00 ('nullin:17', 'ordered', 2) done=264/328 eta=689.0s
+2026-10-19T19:26:44+00:00 ('nullin:11', 'perm1', 2) done=265/328 eta=678.0s
+2026-10-19T19:26:57+00:00 ('nullin:11', 'perm2', 2) done=266/328 eta=667.0s
+2026-10-19T19:27:10+00:00 ('nullin:11', 'perm3', 2) done=267/328 eta=656.0s
+2026-10-19T19:27:23+00:00 ('nullin:11', 'ordered', 2) done=268/328 eta=646.0s
+2026-10-19T19:27:36+00:00 ('nullin:11', 'ordered', 1) done=269/328 eta=635.0s
+2026-10-19T19:27:55+00:00 ('nullin:11', 'perm3', 1) done=270/328 eta=625.0s
+2026-10-19T19:28:09+00:00 ('nullin:11', 'perm2', 1) done=271/328 eta=615.0s
+2026-10-19T19:28:22+00:00 ('nullin:11', 'perm1', 1) done=272/328 eta=604.0s
+2026-10-19T19:28:41+00:00 ('nullin:35', 'perm2', 1) done=273/328 eta=593.0s
+2026-10-19T19:28:55+00:00 ('nullin:35', 'perm3', 1) done=274/328 eta=582.0s
+2026-10-19T19:29:08+00:00 ('nullin:35', 'ordered', 1) done=275/328 eta=571.0s
+2026-10-19T19:29:21+00:00 ('nullin:35', 'perm1', 1) done=276/328 eta=561.0s
+2026-10-19T19:29:34+00:00 ('nullin:35', 'perm1', 2) done=277/328 eta=550.0s
+2026-10-19T19:29:47+00:00 ('nullin:35', 'ordered', 2) done=278/328 eta=539.0s
+2026-10-19T19:30:00+00:00 ('nullin:35', 'perm3', 2) done=279/328 eta=528.0s
+2026-10-19T19:30:14+00:00 ('nullin:35', 'perm2', 2) done=280/328 eta=517.0s
+2026-10-19T19:30:29+00:00 ('connectome', 'perm3', 2) done=281/328 eta=507.0s
+2026-10-19T19:30:42+00:00 ('connectome', 'ordered', 2) done=282/328 eta=496.0s
+2026-10-19T19:30:55+00:00 ('connectome', 'perm1', 2) done=283/328 eta=485.0s
+2026-10-19T19:31:07+00:00 ('connectome', 'perm2', 2) done=284/328 eta=474.0s
+2026-10-19T19:31:20+00:00 ('connectome', 'perm2', 1) done=285/328 eta=463.0s
+2026-10-19T19:31:33+00:00 ('connectome', 'perm1', 1) done=286/328 eta=452.0s
+2026-10-19T19:31:46+00:00 ('connectome', 'ordered', 1) done=287/328 eta=441.0s
+2026-10-19T19:31:58+00:00 ('connectome', 'perm3', 1) done=288/328 eta=431.0s
+2026-10-19T19:32:17+00:00 ('nullin:29', 'ordered', 1) done=289/328 eta=420.0s
+2026-10-19T19:32:30+00:00 ('nullin:29', 'perm1', 1) done=290/328 eta=409.0s
+2026-10-19T19:32:43+00:00 ('nullin:29', 'perm2', 1) done=291/328 eta=398.0s
+2026-10-19T19:32:57+00:00 ('nullin:29', 'perm3', 1) done=292/328 eta=388.0s
+2026-10-19T19:33:10+00:00 ('nullin:29', 'perm3', 2) done=293/328 eta=377.0s
+2026-10-19T19:33:23+00:00 ('nullin:29', 'perm2', 2) done=294/328 eta=366.0s
+2026-10-19T19:33:37+00:00 ('nullin:29', 'perm1', 2) done=295/328 eta=355.0s
+2026-10-19T19:33:50+00:00 ('nullin:29', 'ordered', 2) done=296/328 eta=344.0s
+2026-10-19T19:34:09+00:00 ('nullin:38', 'perm1', 2) done=297/328 eta=334.0s
+2026-10-19T19:34:22+00:00 ('nullin:38', 'perm2', 2) done=298/328 eta=323.0s
+2026-10-19T19:34:35+00:00 ('nullin:38', 'perm3', 2) done=299/328 eta=312.0s
+2026-10-19T19:34:48+00:00 ('nullin:38', 'ordered', 2) done=300/328 eta=301.0s
+2026-10-19T19:35:01+00:00 ('nullin:38', 'ordered', 1) done=301/328 eta=291.0s
+2026-10-19T19:35:15+00:00 ('nullin:38', 'perm3', 1) done=302/328 eta=280.0s
+2026-10-19T19:35:28+00:00 ('nullin:38', 'perm2', 1) done=303/328 eta=269.0s
+2026-10-19T19:35:41+00:00 ('nullin:38', 'perm1', 1) done=304/328 eta=258.0s
+2026-10-19T19:36:00+00:00 ('nullin:20', 'perm2', 1) done=305/328 eta=248.0s
+2026-10-19T19:36:14+00:00 ('nullin:20', 'perm3', 1) done=306/328 eta=237.0s
+2026-10-19T19:36:27+00:00 ('nullin:20', 'ordered', 1) done=307/328 eta=226.0s
+2026-10-19T19:36:40+00:00 ('nullin:20', 'perm1', 1) done=308/328 eta=215.0s
+2026-10-19T19:36:54+00:00 ('nullin:20', 'perm1', 2) done=309/328 eta=205.0s
+2026-10-19T19:37:07+00:00 ('nullin:20', 'ordered', 2) done=310/328 eta=194.0s
+2026-10-19T19:37:20+00:00 ('nullin:20', 'perm3', 2) done=311/328 eta=183.0s
+2026-10-19T19:37:34+00:00 ('nullin:20', 'perm2', 2) done=312/328 eta=172.0s
+2026-10-19T19:37:53+00:00 ('nullin:12', 'perm3', 2) done=313/328 eta=161.0s
+2026-10-19T19:38:06+00:00 ('nullin:12', 'ordered', 2) done=314/328 eta=151.0s
+2026-10-19T19:38:19+00:00 ('nullin:12', 'perm1', 2) done=315/328 eta=140.0s
+2026-10-19T19:38:33+00:00 ('nullin:12', 'perm2', 2) done=316/328 eta=129.0s
+2026-10-19T19:38:46+00:00 ('nullin:12', 'perm2', 1) done=317/328 eta=118.0s
+2026-10-19T19:39:00+00:00 ('nullin:12', 'perm1', 1) done=318/328 eta=108.0s
+2026-10-19T19:39:13+00:00 ('nullin:12', 'ordered', 1) done=319/328 eta=97.0s
+2026-10-19T19:39:26+00:00 ('nullin:12', 'perm3', 1) done=320/328 eta=86.0s
+2026-10-19T19:39:45+00:00 ('nullin:13', 'ordered', 1) done=321/328 eta=75.0s
+2026-10-19T19:39:59+00:00 ('nullin:13', 'perm1', 1) done=322/328 eta=65.0s
+2026-10-19T19:40:12+00:00 ('nullin:13', 'perm2', 1) done=323/328 eta=54.0s
+2026-10-19T19:40:26+00:00 ('nullin:13', 'perm3', 1) done=324/328 eta=43.0s
+2026-10-19T19:40:39+00:00 ('nullin:13', 'perm3', 2) done=325/328 eta=32.0s
+2026-10-19T19:40:53+00:00 ('nullin:13', 'perm2', 2) done=326/328 eta=22.0s
+2026-10-19T19:41:06+00:00 ('nullin:13', 'perm1', 2) done=327/328 eta=11.0s
+2026-10-19T19:41:19+00:00 ('nullin:13', 'ordered', 2) done=328/328 eta=0.0s
+164 decoder jobs
+2026-10-19T19:41:48+00:00 ('connectome', 'perm2', False) done
+2026-10-19T19:41:50+00:00 ('connectome', 'perm1', False) done
+2026-10-19T19:41:53+00:00 ('connectome', 'ordered', False) done
+2026-10-19T19:42:16+00:00 ('connectome', 'perm3', False) done
+2026-10-19T19:42:18+00:00 ('nullin:0', 'ordered', False) done
+2026-10-19T19:42:19+00:00 ('nullin:0', 'perm1', False) done
+2026-10-19T19:42:40+00:00 ('nullin:0', 'perm2', False) done
+2026-10-19T19:42:46+00:00 ('nullin:1', 'ordered', False) done
+2026-10-19T19:42:46+00:00 ('nullin:0', 'perm3', False) done
+2026-10-19T19:43:07+00:00 ('nullin:1', 'perm1', False) done
+2026-10-19T19:43:09+00:00 ('nullin:1', 'perm2', False) done
+2026-10-19T19:43:13+00:00 ('nullin:1', 'perm3', False) done
+2026-10-19T19:43:29+00:00 ('nullin:2', 'perm1', False) done
+2026-10-19T19:43:34+00:00 ('nullin:2', 'ordered', False) done
+2026-10-19T19:43:40+00:00 ('nullin:2', 'perm2', False) done
+2026-10-19T19:43:55+00:00 ('nullin:2', 'perm3', False) done
+2026-10-19T19:44:02+00:00 ('nullin:3', 'ordered', False) done
+2026-10-19T19:44:07+00:00 ('nullin:3', 'perm1', False) done
+2026-10-19T19:44:21+00:00 ('nullin:3', 'perm2', False) done
+2026-10-19T19:44:30+00:00 ('nullin:3', 'perm3', False) done
+2026-10-19T19:44:34+00:00 ('nullin:4', 'ordered', False) done
+2026-10-19T19:44:47+00:00 ('nullin:4', 'perm1', False) done
+2026-10-19T19:44:57+00:00 ('nullin:4', 'perm2', False) done
+2026-10-19T19:44:58+00:00 ('nullin:4', 'perm3', False) done
+2026-10-19T19:45:09+00:00 ('nullin:5', 'ordered', False) done
+2026-10-19T19:45:22+00:00 ('nullin:5', 'perm1', False) done
+2026-10-19T19:45:24+00:00 ('nullin:5', 'perm2', False) done
+2026-10-19T19:45:35+00:00 ('nullin:5', 'perm3', False) done
+2026-10-19T19:45:48+00:00 ('nullin:6', 'ordered', False) done
+2026-10-19T19:45:51+00:00 ('nullin:6', 'perm1', False) done
+2026-10-19T19:46:00+00:00 ('nullin:6', 'perm2', False) done
+2026-10-19T19:46:15+00:00 ('nullin:6', 'perm3', False) done
+2026-10-19T19:46:16+00:00 ('nullin:7', 'ordered', False) done
+2026-10-19T19:46:26+00:00 ('nullin:7', 'perm1', False) done
+2026-10-19T19:46:42+00:00 ('nullin:7', 'perm2', False) done
+2026-10-19T19:46:44+00:00 ('nullin:7', 'perm3', False) done
+2026-10-19T19:46:53+00:00 ('nullin:8', 'ordered', False) done
+2026-10-19T19:47:10+00:00 ('nullin:8', 'perm1', False) done
+2026-10-19T19:47:11+00:00 ('nullin:8', 'perm2', False) done
+2026-10-19T19:47:18+00:00 ('nullin:8', 'perm3', False) done
+2026-10-19T19:47:36+00:00 ('nullin:9', 'ordered', False) done
+2026-10-19T19:47:38+00:00 ('nullin:9', 'perm1', False) done
+2026-10-19T19:47:42+00:00 ('nullin:9', 'perm2', False) done
+2026-10-19T19:48:03+00:00 ('nullin:9', 'perm3', False) done
+2026-10-19T19:48:05+00:00 ('nullin:10', 'ordered', False) done
+2026-10-19T19:48:08+00:00 ('nullin:10', 'perm1', False) done
+2026-10-19T19:48:29+00:00 ('nullin:10', 'perm3', False) done
+2026-10-19T19:48:31+00:00 ('nullin:10', 'perm2', False) done
+2026-10-19T19:48:35+00:00 ('nullin:11', 'ordered', False) done
+2026-10-19T19:48:55+00:00 ('nullin:11', 'perm1', False) done
+2026-10-19T19:48:58+00:00 ('nullin:11', 'perm2', False) done
+2026-10-19T19:49:02+00:00 ('nullin:11', 'perm3', False) done
+2026-10-19T19:49:20+00:00 ('nullin:12', 'perm1', False) done
+2026-10-19T19:49:23+00:00 ('nullin:12', 'ordered', False) done
+2026-10-19T19:49:26+00:00 ('nullin:12', 'perm2', False) done
+2026-10-19T19:49:48+00:00 ('nullin:12', 'perm3', False) done
+2026-10-19T19:49:49+00:00 ('nullin:13', 'ordered', False) done
+2026-10-19T19:49:53+00:00 ('nullin:13', 'perm1', False) done
+2026-10-19T19:50:11+00:00 ('nullin:13', 'perm2', False) done
+2026-10-19T19:50:16+00:00 ('nullin:13', 'perm3', False) done
+2026-10-19T19:50:18+00:00 ('nullin:14', 'ordered', False) done
+2026-10-19T19:50:32+00:00 ('nullin:14', 'perm1', False) done
+2026-10-19T19:50:40+00:00 ('nullin:14', 'perm2', False) done
+2026-10-19T19:50:45+00:00 ('nullin:14', 'perm3', False) done
+2026-10-19T19:50:52+00:00 ('nullin:15', 'ordered', False) done
+2026-10-19T19:50:59+00:00 ('nullin:15', 'perm1', False) done
+2026-10-19T19:51:12+00:00 ('nullin:15', 'perm2', False) done
+2026-10-19T19:51:12+00:00 ('nullin:15', 'perm3', False) done
+2026-10-19T19:51:23+00:00 ('nullin:16', 'ordered', False) done
+2026-10-19T19:51:39+00:00 ('nullin:16', 'perm1', False) done
+2026-10-19T19:51:40+00:00 ('nullin:16', 'perm2', False) done
+2026-10-19T19:51:49+00:00 ('nullin:16', 'perm3', False) done
+2026-10-19T19:52:05+00:00 ('nullin:17', 'ordered', False) done
+2026-10-19T19:52:07+00:00 ('nullin:17', 'perm1', False) done
+2026-10-19T19:52:15+00:00 ('nullin:17', 'perm2', False) done
+2026-10-19T19:52:33+00:00 ('nullin:17', 'perm3', False) done
+2026-10-19T19:52:33+00:00 ('nullin:18', 'ordered', False) done
+2026-10-19T19:52:37+00:00 ('nullin:18', 'perm1', False) done
+2026-10-19T19:52:57+00:00 ('nullin:19', 'ordered', False) done
+2026-10-19T19:53:00+00:00 ('nullin:18', 'perm2', False) done
+2026-10-19T19:53:01+00:00 ('nullin:18', 'perm3', False) done
+2026-10-19T19:53:23+00:00 ('nullin:19', 'perm1', False) done
+2026-10-19T19:53:25+00:00 ('nullin:19', 'perm3', False) done
+2026-10-19T19:53:26+00:00 ('nullin:19', 'perm2', False) done
+2026-10-19T19:53:48+00:00 ('nullin:20', 'perm2', False) done
+2026-10-19T19:53:50+00:00 ('nullin:20', 'ordered', False) done
+2026-10-19T19:53:53+00:00 ('nullin:20', 'perm1', False) done
+2026-10-19T19:54:15+00:00 ('nullin:20', 'perm3', False) done
+2026-10-19T19:54:17+00:00 ('nullin:21', 'ordered', False) done
+2026-10-19T19:54:20+00:00 ('nullin:21', 'perm1', False) done
+2026-10-19T19:54:41+00:00 ('nullin:21', 'perm3', False) done
+2026-10-19T19:54:42+00:00 ('nullin:21', 'perm2', False) done
+2026-10-19T19:54:47+00:00 ('nullin:22', 'ordered', False) done
+2026-10-19T19:55:06+00:00 ('nullin:22', 'perm1', False) done
+2026-10-19T19:55:09+00:00 ('nullin:22', 'perm2', False) done
+2026-10-19T19:55:14+00:00 ('nullin:22', 'perm3', False) done
+2026-10-19T19:55:33+00:00 ('nullin:23', 'ordered', False) done
+2026-10-19T19:55:36+00:00 ('nullin:23', 'perm1', False) done
+2026-10-19T19:55:38+00:00 ('nullin:23', 'perm2', False) done
+2026-10-19T19:56:00+00:00 ('nullin:23', 'perm3', False) done
+2026-10-19T19:56:00+00:00 ('nullin:24', 'perm1', False) done
+2026-10-19T19:56:04+00:00 ('nullin:24', 'ordered', False) done
+2026-10-19T19:56:22+00:00 ('nullin:24', 'perm3', False) done
+2026-10-19T19:56:27+00:00 ('nullin:24', 'perm2', False) done
+2026-10-19T19:56:31+00:00 ('nullin:25', 'ordered', False) done
+2026-10-19T19:56:50+00:00 ('nullin:25', 'perm1', False) done
+2026-10-19T19:56:53+00:00 ('nullin:25', 'perm2', False) done
+2026-10-19T19:56:58+00:00 ('nullin:25', 'perm3', False) done
+2026-10-19T19:57:17+00:00 ('nullin:26', 'ordered', False) done
+2026-10-19T19:57:20+00:00 ('nullin:26', 'perm1', False) done
+2026-10-19T19:57:22+00:00 ('nullin:26', 'perm2', False) done
+2026-10-19T19:57:42+00:00 ('nullin:26', 'perm3', False) done
+2026-10-19T19:57:46+00:00 ('nullin:27', 'ordered', False) done
+2026-10-19T19:57:48+00:00 ('nullin:27', 'perm1', False) done
+2026-10-19T19:58:09+00:00 ('nullin:27', 'perm3', False) done
+2026-10-19T19:58:09+00:00 ('nullin:27', 'perm2', False) done
+2026-10-19T19:58:15+00:00 ('nullin:28', 'ordered', False) done
+2026-10-19T19:58:33+00:00 ('nullin:28', 'perm1', False) done
+2026-10-19T19:58:37+00:00 ('nullin:28', 'perm2', False) done
+2026-10-19T19:58:41+00:00 ('nullin:28', 'perm3', False) done
+2026-10-19T19:58:59+00:00 ('nullin:29', 'ordered', False) done
+2026-10-19T19:59:04+00:00 ('nullin:29', 'perm1', False) done
+2026-10-19T19:59:08+00:00 ('nullin:29', 'perm2', False) done
+2026-10-19T19:59:24+00:00 ('nullin:29', 'perm3', False) done
+2026-10-19T19:59:31+00:00 ('nullin:30', 'ordered', False) done
+2026-10-19T19:59:36+00:00 ('nullin:30', 'perm1', False) done
+2026-10-19T19:59:51+00:00 ('nullin:30', 'perm2', False) done
+2026-10-19T19:59:59+00:00 ('nullin:30', 'perm3', False) done
+2026-10-19T19:59:59+00:00 ('nullin:31', 'ordered', False) done
+2026-10-19T20:00:18+00:00 ('nullin:31', 'perm1', False) done
+2026-10-19T20:00:21+00:00 ('nullin:31', 'perm2', False) done
+2026-10-19T20:00:22+00:00 ('nullin:31', 'perm3', False) done
+2026-10-19T20:00:41+00:00 ('nullin:32', 'ordered', False) done
+2026-10-19T20:00:43+00:00 ('nullin:32', 'perm1', False) done
+2026-10-19T20:00:49+00:00 ('nullin:32', 'perm2', False) done
+2026-10-19T20:01:05+00:00 ('nullin:32', 'perm3', False) done
+2026-10-19T20:01:10+00:00 ('nullin:33', 'ordered', False) done
+2026-10-19T20:01:16+00:00 ('nullin:33', 'perm1', False) done
+2026-10-19T20:01:32+00:00 ('nullin:33', 'perm2', False) done
+2026-10-19T20:01:38+00:00 ('nullin:33', 'perm3', False) done
+2026-10-19T20:01:41+00:00 ('nullin:34', 'ordered', False) done
+2026-10-19T20:01:55+00:00 ('nullin:34', 'perm1', False) done
+2026-10-19T20:02:04+00:00 ('nullin:34', 'perm3', False) done
+2026-10-19T20:02:05+00:00 ('nullin:34', 'perm2', False) done
+2026-10-19T20:02:15+00:00 ('nullin:35', 'ordered', False) done
+2026-10-19T20:02:30+00:00 ('nullin:35', 'perm1', False) done
+2026-10-19T20:02:33+00:00 ('nullin:35', 'perm2', False) done
+2026-10-19T20:02:36+00:00 ('nullin:35', 'perm3', False) done
+2026-10-19T20:02:57+00:00 ('nullin:36', 'ordered', False) done
+2026-10-19T20:02:58+00:00 ('nullin:36', 'perm2', False) done
+2026-10-19T20:03:00+00:00 ('nullin:36', 'perm1', False) done
+2026-10-19T20:03:23+00:00 ('nullin:36', 'perm3', False) done
+2026-10-19T20:03:25+00:00 ('nullin:37', 'ordered', False) done
+2026-10-19T20:03:28+00:00 ('nullin:37', 'perm1', False) done
+2026-10-19T20:03:50+00:00 ('nullin:37', 'perm2', False) done
+2026-10-19T20:03:51+00:00 ('nullin:37', 'perm3', False) done
+2026-10-19T20:03:55+00:00 ('nullin:38', 'ordered', False) done
+2026-10-19T20:04:16+00:00 ('nullin:38', 'perm1', False) done
+2026-10-19T20:04:19+00:00 ('nullin:38', 'perm2', False) done
+2026-10-19T20:04:21+00:00 ('nullin:38', 'perm3', False) done
+2026-10-19T20:04:44+00:00 ('nullin:39', 'ordered', False) done
+2026-10-19T20:04:46+00:00 ('nullin:39', 'perm1', False) done
+2026-10-19T20:04:47+00:00 ('nullin:39', 'perm2', False) done
+2026-10-19T20:05:09+00:00 ('nullin:39', 'perm3', False) done
+{
+ "run": "main_v1",
+ "utc": "2026-10-19T20:05:15+00:00",
+ "lots_expected": 328,
+ "lots_done": 328,
+ "lots_failed": 0,
+ "lots_missing": 0,
+ "sim_seconds_total": 3530.0,
+ "eta_extract_s": 0.0,
+ "decoders_expected": 164,
+ "decoders_done": 164
+}
+{"D_orientation": -0.0064953286200761795, "D_brightness": 0.007721339352428913, "G": -0.06038135290145874, "S": -0.014216667972505093} (-0.012611669197156483, -0.0005229611570022042) compatible with practical equivalence at this margin (conditional)
+wrote fig1
+wrote fig2
+wrote fig3_4
+wrote fig5
+wrote fig6
+wrote fig7
+2026-10-19T20:05:22Z CAMPAIGN DONE

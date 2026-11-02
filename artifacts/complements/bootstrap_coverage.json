@@ -1,0 +1,41 @@
+{
+ "settings": {
+  "p_conn": 0.29,
+  "p_null_median": 0.35,
+  "null_logit_sd": 0.08,
+  "image_logit_sd": 1.0,
+  "decoders_averaged": 20,
+  "datasets": 300,
+  "bootstrap_replicates": 600
+ },
+ "results": [
+  {
+   "name": "ACTIVITY_MATCH-like (K=40, n=2560)",
+   "K": 40,
+   "n": 2560,
+   "coverage_95": 0.9466666666666667,
+   "mean_width_pts": 1.2238460449218744,
+   "mean_bias_pts": 0.0703873849534088,
+   "mc_se_coverage": 0.012583057392117916
+  },
+  {
+   "name": "fewer images (K=40, n=640)",
+   "K": 40,
+   "n": 640,
+   "coverage_95": 0.9333333333333333,
+   "mean_width_pts": 1.7921862467447918,
+   "mean_bias_pts": 0.06888250214090869,
+   "mc_se_coverage": 0.012583057392117916
+  },
+  {
+   "name": "fewer nulls (K=20, n=2560)",
+   "K": 20,
+   "n": 2560,
+   "coverage_95": 0.9533333333333334,
+   "mean_width_pts": 1.5336077311197909,
+   "mean_bias_pts": 0.04193588755757562,
+   "mc_se_coverage": 0.012583057392117916
+  }
+ ],
+ "G_true": -0.053035426583909084
+}

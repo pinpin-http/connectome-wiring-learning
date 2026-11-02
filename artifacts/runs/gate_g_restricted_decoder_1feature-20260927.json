@@ -1,0 +1,1520 @@
+{
+  "what": "one-feature continuous pair screen with matched synthetic positive control",
+  "complete": true,
+  "gate_g_pass": false,
+  "design": {
+    "source_report": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/gate_g_continuous_pair_screen_ten-scenes-20260927.json",
+    "source_checkpoint": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/checkpoints/gate_g_continuous_pair_screen_ten-scenes-20260927.pt",
+    "training_seed": 3,
+    "selection_seed": 4,
+    "confirmation_seed": 5,
+    "decisions_per_seed": 400,
+    "scenes": [
+      "1-1_backward",
+      "1-1_jumping",
+      "1-1_obstacles",
+      "1-1_open",
+      "1-1_still",
+      "1-4_castle",
+      "2-1_clouds",
+      "3-1_night",
+      "4-1",
+      "8-1"
+    ],
+    "feature_selection": "largest abs standardized between-class mean difference; training range >1e-6",
+    "classifier": "logistic C=.05 on exactly one selected feature",
+    "synthetic_scene": "1-1_open",
+    "synthetic_coordinate": 886,
+    "synthetic_amplitude": 2.508182266115529,
+    "synthetic_rule": "4 \u00d7 seed-3 pooled SD",
+    "shuffle_seed": 20260927999
+  },
+  "original": {
+    "pair_scores": [
+      {
+        "pair": [
+          "4-1",
+          "8-1"
+        ],
+        "indices": [
+          8,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.625,
+          "mean_true_probability": 0.5170194507099612,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "4-1"
+        ],
+        "indices": [
+          6,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.6,
+          "mean_true_probability": 0.5090982675432605,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_obstacles"
+        ],
+        "indices": [
+          0,
+          2
+        ],
+        "selection": {
+          "accuracy": 0.5875,
+          "mean_true_probability": 0.5139217674118098,
+          "coordinate": 1264,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "4-1"
+        ],
+        "indices": [
+          1,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.575,
+          "mean_true_probability": 0.5164079487615391,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "4-1"
+        ],
+        "indices": [
+          5,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.575,
+          "mean_true_probability": 0.511631075476215,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "8-1"
+        ],
+        "indices": [
+          3,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.5625,
+          "mean_true_probability": 0.508298994009422,
+          "coordinate": 1876,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-1_open"
+        ],
+        "indices": [
+          2,
+          3
+        ],
+        "selection": {
+          "accuracy": 0.5625,
+          "mean_true_probability": 0.5051254382678079,
+          "coordinate": 1876,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_open"
+        ],
+        "indices": [
+          0,
+          3
+        ],
+        "selection": {
+          "accuracy": 0.5625,
+          "mean_true_probability": 0.5039162708127953,
+          "coordinate": 2173,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "2-1_clouds"
+        ],
+        "indices": [
+          2,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.5625,
+          "mean_true_probability": 0.5011410557229398,
+          "coordinate": 1876,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "8-1"
+        ],
+        "indices": [
+          6,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.55,
+          "mean_true_probability": 0.5076868936575349,
+          "coordinate": 1091,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "4-1"
+        ],
+        "indices": [
+          3,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.55,
+          "mean_true_probability": 0.5052214256103426,
+          "coordinate": 1037,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "2-1_clouds"
+        ],
+        "indices": [
+          4,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.55,
+          "mean_true_probability": 0.4980455407267338,
+          "coordinate": 835,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-4_castle"
+        ],
+        "indices": [
+          1,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5375,
+          "mean_true_probability": 0.507084853934448,
+          "coordinate": 1887,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "1-1_still"
+        ],
+        "indices": [
+          3,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5089191229674324,
+          "coordinate": 740,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "8-1"
+        ],
+        "indices": [
+          2,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5088708703829073,
+          "coordinate": 1091,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_still"
+        ],
+        "indices": [
+          1,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5074315743197625,
+          "coordinate": 1806,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "3-1_night",
+          "8-1"
+        ],
+        "indices": [
+          7,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.50400692540082,
+          "coordinate": 874,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "3-1_night"
+        ],
+        "indices": [
+          0,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5009336727205345,
+          "coordinate": 1961,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "4-1"
+        ],
+        "indices": [
+          2,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5035096792766068,
+          "coordinate": 1416,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-4_castle"
+        ],
+        "indices": [
+          2,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5016406570636726,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_open"
+        ],
+        "indices": [
+          1,
+          3
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.501393429522415,
+          "coordinate": 1763,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "4-1"
+        ],
+        "indices": [
+          4,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5008271685586508,
+          "coordinate": 1395,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "3-1_night",
+          "4-1"
+        ],
+        "indices": [
+          7,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5001588497255759,
+          "coordinate": 1395,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "3-1_night"
+        ],
+        "indices": [
+          3,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.49969733705038105,
+          "coordinate": 355,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-4_castle"
+        ],
+        "indices": [
+          0,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.4974755253829253,
+          "coordinate": 533,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "8-1"
+        ],
+        "indices": [
+          5,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5119579337939919,
+          "coordinate": 433,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "2-1_clouds"
+        ],
+        "indices": [
+          0,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5051122639176411,
+          "coordinate": 554,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "8-1"
+        ],
+        "indices": [
+          4,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5020726772381131,
+          "coordinate": 740,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-1_still"
+        ],
+        "indices": [
+          2,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.4999403544763738,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "2-1_clouds"
+        ],
+        "indices": [
+          3,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.498665567974542,
+          "coordinate": 1080,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "3-1_night"
+        ],
+        "indices": [
+          5,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.493561848335776,
+          "coordinate": 737,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "1-4_castle"
+        ],
+        "indices": [
+          3,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.5014363756511435,
+          "coordinate": 539,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "3-1_night"
+        ],
+        "indices": [
+          4,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49869039614430744,
+          "coordinate": 1806,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "4-1"
+        ],
+        "indices": [
+          0,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49842162628396985,
+          "coordinate": 1304,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "3-1_night"
+        ],
+        "indices": [
+          1,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.4980801668245884,
+          "coordinate": 1763,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_obstacles"
+        ],
+        "indices": [
+          1,
+          2
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.4978236352099092,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_jumping"
+        ],
+        "indices": [
+          0,
+          1
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49764467206511204,
+          "coordinate": 458,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "2-1_clouds"
+        ],
+        "indices": [
+          5,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.475,
+          "mean_true_probability": 0.502905148622799,
+          "coordinate": 355,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "1-4_castle"
+        ],
+        "indices": [
+          4,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.475,
+          "mean_true_probability": 0.4972415557414127,
+          "coordinate": 539,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "8-1"
+        ],
+        "indices": [
+          1,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.4625,
+          "mean_true_probability": 0.4914686490479564,
+          "coordinate": 1881,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "3-1_night"
+        ],
+        "indices": [
+          2,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4625,
+          "mean_true_probability": 0.4888216451535389,
+          "coordinate": 810,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "8-1"
+        ],
+        "indices": [
+          0,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.45,
+          "mean_true_probability": 0.4937123625824146,
+          "coordinate": 758,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_still"
+        ],
+        "indices": [
+          0,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.45,
+          "mean_true_probability": 0.49269606487147605,
+          "coordinate": 914,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "2-1_clouds"
+        ],
+        "indices": [
+          1,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.4375,
+          "mean_true_probability": 0.4962028714344971,
+          "coordinate": 253,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "3-1_night"
+        ],
+        "indices": [
+          6,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4375,
+          "mean_true_probability": 0.48584499735167447,
+          "coordinate": 1740,
+          "n": 80
+        }
+      }
+    ],
+    "selected_pair": [
+      "4-1",
+      "8-1"
+    ],
+    "confirmation": {
+      "accuracy": 0.425,
+      "mean_true_probability": 0.48738433462467634,
+      "coordinate": 1742,
+      "n": 80
+    },
+    "shuffled_confirmation": {
+      "accuracy": 0.5125,
+      "mean_true_probability": 0.5000147526958071,
+      "coordinate": 62,
+      "n": 80
+    },
+    "chance_2se": 0.11180339887498948,
+    "exploratory_candidate": false
+  },
+  "synthetic": {
+    "pair_scores": [
+      {
+        "pair": [
+          "1-1_open",
+          "3-1_night"
+        ],
+        "indices": [
+          3,
+          7
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.721742175737643,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "2-1_clouds"
+        ],
+        "indices": [
+          3,
+          6
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.71057464654851,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "4-1"
+        ],
+        "indices": [
+          3,
+          8
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.7032519182724801,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "1-1_still"
+        ],
+        "indices": [
+          3,
+          4
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.7017410627495575,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-1_open"
+        ],
+        "indices": [
+          2,
+          3
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.6944382192780021,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_open"
+        ],
+        "indices": [
+          0,
+          3
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.6938110458534379,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_open"
+        ],
+        "indices": [
+          1,
+          3
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.6931324600494415,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "8-1"
+        ],
+        "indices": [
+          3,
+          9
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.6866166538055982,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_open",
+          "1-4_castle"
+        ],
+        "indices": [
+          3,
+          5
+        ],
+        "selection": {
+          "accuracy": 1.0,
+          "mean_true_probability": 0.6824398116395548,
+          "coordinate": 886,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "4-1",
+          "8-1"
+        ],
+        "indices": [
+          8,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.625,
+          "mean_true_probability": 0.5170194507099612,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "4-1"
+        ],
+        "indices": [
+          6,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.6,
+          "mean_true_probability": 0.5090982675432605,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_obstacles"
+        ],
+        "indices": [
+          0,
+          2
+        ],
+        "selection": {
+          "accuracy": 0.5875,
+          "mean_true_probability": 0.5139217674118098,
+          "coordinate": 1264,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "4-1"
+        ],
+        "indices": [
+          1,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.575,
+          "mean_true_probability": 0.5164079487615391,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "4-1"
+        ],
+        "indices": [
+          5,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.575,
+          "mean_true_probability": 0.511631075476215,
+          "coordinate": 1742,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "2-1_clouds"
+        ],
+        "indices": [
+          2,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.5625,
+          "mean_true_probability": 0.5011410557229398,
+          "coordinate": 1876,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "8-1"
+        ],
+        "indices": [
+          6,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.55,
+          "mean_true_probability": 0.5076868936575349,
+          "coordinate": 1091,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "2-1_clouds"
+        ],
+        "indices": [
+          4,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.55,
+          "mean_true_probability": 0.4980455407267338,
+          "coordinate": 835,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-4_castle"
+        ],
+        "indices": [
+          1,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5375,
+          "mean_true_probability": 0.507084853934448,
+          "coordinate": 1887,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "8-1"
+        ],
+        "indices": [
+          2,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5088708703829073,
+          "coordinate": 1091,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_still"
+        ],
+        "indices": [
+          1,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5074315743197625,
+          "coordinate": 1806,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "3-1_night",
+          "8-1"
+        ],
+        "indices": [
+          7,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.50400692540082,
+          "coordinate": 874,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "3-1_night"
+        ],
+        "indices": [
+          0,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.525,
+          "mean_true_probability": 0.5009336727205345,
+          "coordinate": 1961,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "4-1"
+        ],
+        "indices": [
+          2,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5035096792766068,
+          "coordinate": 1416,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-4_castle"
+        ],
+        "indices": [
+          2,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5016406570636726,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "4-1"
+        ],
+        "indices": [
+          4,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5008271685586508,
+          "coordinate": 1395,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "3-1_night",
+          "4-1"
+        ],
+        "indices": [
+          7,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.5001588497255759,
+          "coordinate": 1395,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-4_castle"
+        ],
+        "indices": [
+          0,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.5125,
+          "mean_true_probability": 0.4974755253829253,
+          "coordinate": 533,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "8-1"
+        ],
+        "indices": [
+          5,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5119579337939919,
+          "coordinate": 433,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "2-1_clouds"
+        ],
+        "indices": [
+          0,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5051122639176411,
+          "coordinate": 554,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "8-1"
+        ],
+        "indices": [
+          4,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.5020726772381131,
+          "coordinate": 740,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "1-1_still"
+        ],
+        "indices": [
+          2,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.4999403544763738,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "3-1_night"
+        ],
+        "indices": [
+          5,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.5,
+          "mean_true_probability": 0.493561848335776,
+          "coordinate": 737,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "3-1_night"
+        ],
+        "indices": [
+          4,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49869039614430744,
+          "coordinate": 1806,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "4-1"
+        ],
+        "indices": [
+          0,
+          8
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49842162628396985,
+          "coordinate": 1304,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "3-1_night"
+        ],
+        "indices": [
+          1,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.4980801668245884,
+          "coordinate": 1763,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "1-1_obstacles"
+        ],
+        "indices": [
+          1,
+          2
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.4978236352099092,
+          "coordinate": 1316,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_jumping"
+        ],
+        "indices": [
+          0,
+          1
+        ],
+        "selection": {
+          "accuracy": 0.4875,
+          "mean_true_probability": 0.49764467206511204,
+          "coordinate": 458,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-4_castle",
+          "2-1_clouds"
+        ],
+        "indices": [
+          5,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.475,
+          "mean_true_probability": 0.502905148622799,
+          "coordinate": 355,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_still",
+          "1-4_castle"
+        ],
+        "indices": [
+          4,
+          5
+        ],
+        "selection": {
+          "accuracy": 0.475,
+          "mean_true_probability": 0.4972415557414127,
+          "coordinate": 539,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "8-1"
+        ],
+        "indices": [
+          1,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.4625,
+          "mean_true_probability": 0.4914686490479564,
+          "coordinate": 1881,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_obstacles",
+          "3-1_night"
+        ],
+        "indices": [
+          2,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4625,
+          "mean_true_probability": 0.4888216451535389,
+          "coordinate": 810,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "8-1"
+        ],
+        "indices": [
+          0,
+          9
+        ],
+        "selection": {
+          "accuracy": 0.45,
+          "mean_true_probability": 0.4937123625824146,
+          "coordinate": 758,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_backward",
+          "1-1_still"
+        ],
+        "indices": [
+          0,
+          4
+        ],
+        "selection": {
+          "accuracy": 0.45,
+          "mean_true_probability": 0.49269606487147605,
+          "coordinate": 914,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "1-1_jumping",
+          "2-1_clouds"
+        ],
+        "indices": [
+          1,
+          6
+        ],
+        "selection": {
+          "accuracy": 0.4375,
+          "mean_true_probability": 0.4962028714344971,
+          "coordinate": 253,
+          "n": 80
+        }
+      },
+      {
+        "pair": [
+          "2-1_clouds",
+          "3-1_night"
+        ],
+        "indices": [
+          6,
+          7
+        ],
+        "selection": {
+          "accuracy": 0.4375,
+          "mean_true_probability": 0.48584499735167447,
+          "coordinate": 1740,
+          "n": 80
+        }
+      }
+    ],
+    "selected_pair": [
+      "1-1_open",
+      "3-1_night"
+    ],
+    "confirmation": {
+      "accuracy": 1.0,
+      "mean_true_probability": 0.6978703908464625,
+      "coordinate": 886,
+      "n": 80
+    },
+    "shuffled_confirmation": {
+      "accuracy": 0.5125,
+      "mean_true_probability": 0.48927571694795213,
+      "coordinate": 1843,
+      "n": 80
+    },
+    "chance_2se": 0.11180339887498948,
+    "exploratory_candidate": true
+  },
+  "assay_positive_control_pass": true,
+  "scope": "restricted single-feature observability; no learning",
+  "manifest": "/home/soheib/SMB_Flywire_Speedrun/artifacts/runs/manifests/gate_g_restricted_decoder_1feature-20260927_20260927T185855Z_0d3eafa9.json",
+  "utc": "2026-09-27T18:59:03+00:00"
+}
