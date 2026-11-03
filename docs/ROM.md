@@ -1,6 +1,6 @@
 # Supplying the Super Mario Bros. ROM
 
-The ROM is **not** in this repository and never will be: it is Nintendo's
+The ROM is not in this repository and never will be, because it is Nintendo's
 copyrighted work. `roms/` and `*.nes` are in `.gitignore`.
 
 You need a dump of a cartridge you own.
@@ -13,7 +13,7 @@ You need a dump of a cartridge you own.
    # must equal: facee9c577a5262dbe33ac4930bb0b58c8c037f7
    ```
 
-   That is the US/JP World revision. Other dumps have different RAM layouts and
+   That is the US/JP World revision. Other dumps have different RAM layouts, and
    the addresses in `integrations/SuperMarioBros-Nes/data.json` will read garbage.
 
 3. Import it:
@@ -28,15 +28,12 @@ You need a dump of a cartridge you own.
    make play
    ```
 
-Everything except `make play` — including `make selftest`, `make calibrate` and
-the whole test suite — runs without the ROM, because the synthetic probe frames
-in `smbfly.brain.calibrate` stand in for gameplay.
+Only `make play` and the Mario experiments need the ROM. The visual tasks, the frozen-network experiments, the
+equal-tuning controls and the test suite run without it (the two ROM tests are skipped).
 
----
+## A PAL dump is rejected
 
-## Revision matters — verified failure
-
-A PAL dump was tested here and **rejected**:
+A PAL dump was tested here and rejected:
 
 ```
 Super Mario Bros. (Europe).nes
@@ -46,28 +43,26 @@ Super Mario Bros. (Europe).nes
 
 `python -m retro.import roms/` reports `Imported 0 games`, and `retro.make`
 then raises `FileNotFoundError: Game not found`. stable-retro matches the ROM
-against `rom.sha`, so a different revision is simply not seen.
+against `rom.sha`, so it does not see a different revision at all.
 
 Even if it were accepted, PAL would break the project downstream:
 
-- PAL runs at **50 Hz**, NTSC at 60 Hz, so every frame-timing figure shifts.
+- PAL runs at 50 Hz and NTSC at 60 Hz, so every frame-timing figure shifts.
 - The shipped savestates (`Level1-1.state` … `Level8-1.state`) were recorded on
   the NTSC ROM and will not load.
-- Essentially every SMB TAS on TASVideos is NTSC, so the deterministic-replay
+- Nearly every SMB TAS on TASVideos is NTSC, so the deterministic-replay
   gate would fail for reasons unrelated to any model.
 
-You need the **US / World** revision. Verify before anything else:
+You need the US / World revision. Verify it before anything else:
 
 ```bash
 sha1sum roms/*.nes    # must be facee9c577a5262dbe33ac4930bb0b58c8c037f7
 ```
 
----
+## Two import problems, both verified here
 
-## Two gotchas, both verified here
-
-**1. The sha1 you compute will not match `rom.sha`.** stable-retro hashes the
-ROM *without* its 16-byte iNES header:
+First, the sha1 you compute will not match `rom.sha`, because stable-retro hashes
+the ROM without its 16-byte iNES header:
 
 ```
 Super Mario Bros. (World).nes
@@ -75,11 +70,11 @@ Super Mario Bros. (World).nes
   sha1 of body (skip 16)  facee9c577a5262dbe33ac4930bb0b58c8c037f7   ← matches
 ```
 
-**2. `retro.import` does not put the ROM where our integration looks.** It
+Second, `retro.import` does not put the ROM where our integration looks. It
 copies into the packaged directory (`site-packages/.../SuperMarioBros-Nes-v0/`),
 while our extended integration lives in `integrations/SuperMarioBros-Nes/`.
 Without a link you get `FileNotFoundError: No romfiles found`.
 
 `make import-rom` handles both: it unzips, checks the headerless sha1, imports,
-and symlinks. Verified working — 700 frames of `RIGHT+B` at 2737 FPS, Mario
+and symlinks. It was verified on 700 frames of `RIGHT+B` at 2737 FPS, with Mario
 reaching x=312 before dying on the first obstacle.

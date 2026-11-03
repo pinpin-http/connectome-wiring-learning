@@ -2,8 +2,8 @@
 
 Every table and figure of the manuscript is computed from small aggregated files (JSON). They sit
 at the paths the manuscript and the dated audits cite (`artifacts/runs/study_s/`,
-`artifacts/runs/mission/`), so those citations stay valid; this folder holds the **SHA-256 records**
-that say which bytes the published numbers were computed from, and nothing else.
+`artifacts/runs/mission/`), so those citations stay valid. This folder holds only the SHA-256 records
+that state which bytes the published numbers were computed from.
 
 ```bash
 python tools/verify_results.py            # standard library only; no GPU, no venv, no data needed

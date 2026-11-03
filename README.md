@@ -14,11 +14,10 @@ with rewired null graphs that keep neurons, degrees, signs, weights, sensorimoto
 family, the out-strength (family S) or the in-strength (family E) of every neuron. The graph is the unit of
 analysis. Tasks: two reward-learned visual tasks, and a control in *Super Mario Bros.*
 
-- **How the experiments and protocols are organised: [ARCHITECTURE.md](ARCHITECTURE.md).**
-- **Which script and file produce each table and figure: [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).**
-
-> Every table and figure of the manuscript is computed from files committed here
-> ([docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)); their SHA-256 records are in [results/](results/README.md).
+[ARCHITECTURE.md](ARCHITECTURE.md) describes how the experiments and protocols are organised. Every table and
+figure of the manuscript is computed from files committed here: [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)
+names the script and file that produce each one, and their SHA-256 records are in [results/](results/README.md).
+Open questions, with the code to start from and the computing cost: [docs/EXTENDING.md](docs/EXTENDING.md).
 
 ## Check the numbers without a GPU (minutes)
 
@@ -57,7 +56,7 @@ Total before the equal-tuning controls: about 55 GPU hours on one rented card (m
 | PyTorch | 2.9.1+rocm6.4 | 2.9.1+cu128 |
 | Emulator | stable-retro 1.0.1 (FCEUX core), gymnasium 1.0.0 | same |
 
-Every other package is pinned in [`requirements.txt`](requirements.txt) (no torch inside, so it is portable).
+Every other package is pinned in [`requirements.txt`](requirements.txt) (it leaves out torch, so it is portable).
 The full freeze of the reference workstation is `deployment/manifest/reference_env_freeze.txt`.
 
 ```bash
@@ -73,9 +72,9 @@ A CPU-only container that reproduces the tables, figures and tests from the aggr
 `docker build -t flymario . && docker run --rm flymario` ([`Dockerfile`](Dockerfile)). A remote NVIDIA
 server is set up with [`deployment/README.md`](deployment/README.md).
 
-**GPU non-determinism.** A re-run gives an equivalent distribution, not the same numbers bit for bit:
-learning amplifies rounding differences between cards and between batch compositions. Every training run is
-treated as one draw and the unit of evidence is a distribution over graphs. Details in
+GPU runs are not deterministic. A re-run gives an equivalent distribution of results but not the same numbers
+bit for bit, because learning amplifies rounding differences between cards and between batch compositions. Each
+training run is therefore treated as one draw, and the unit of evidence is a distribution over graphs. Details are in
 [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md#gpu-non-determinism-what-reproduce-means-here) and §3.11 of
 the manuscript.
 
@@ -141,11 +140,11 @@ simulated spike  ≠  measured fly activity
 Mario action     ≠  natural fly motor behaviour
 ```
 
-One model, one individual, two null families, two visual tasks.
+The results rest on one model, one individual, two null families and two visual tasks.
 
 ## Licence and citation
 
 Code: MIT ([`LICENSE`](LICENSE)). Results, figures and manuscript: CC BY 4.0
 ([`LICENSE-CC-BY-4.0.txt`](LICENSE-CC-BY-4.0.txt)). Connectome data: CC BY 4.0, from their authors (not
 redistributed). Game ROM: not distributed. To cite: [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this
-repository" button); the Zenodo DOI is added at release.
+repository" button). Archive: Zenodo, DOI [10.5281/zenodo.23898968](https://doi.org/10.5281/zenodo.23898968) (all versions).

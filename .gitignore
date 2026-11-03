@@ -94,5 +94,6 @@ artifacts/revision48/tuning/*
 # local state of the ClaudePrism editor (build folder, edit history)
 paper/.prism/
 paper/.claudeprism/
+paper/.venv/
 # figures written by make figures (scripts/figures/)
 artifacts/figures/

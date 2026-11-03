@@ -5,36 +5,32 @@ server (target: a Vast.ai instance with an RTX 3090 24 GB, ~24 vCPU, ~40 GB RAM,
 Runpod works the same way), checks that it works there, and runs declared experiments
 detached from any SSH session.
 
-**What it does not do.** It never rents, starts, stops or destroys an instance and never
-launches a long campaign by itself. **Stopping a run, closing SSH or stopping Python does
+It never rents, starts, stops or destroys an instance, and it never launches a long
+campaign by itself. **Stopping a run, closing SSH or stopping Python does
 not stop the provider's billing: stop or destroy the instance from the provider's
-console.** It has not yet been run on an NVIDIA machine: until `doctor`, `smoke`, `bench`
-and the comparisons of step 8 have passed there, the deployment is *prepared, not
-validated*.
+console.** The deployment was run on a rented RTX 3090 (Vast.ai): `doctor`, `smoke` and `bench` passed there, and the coherence check against the ROCm workstation failed as declared (step 4), because runs are not bit-identical across platforms. Every run compared in the preprint therefore ran on that one card.
 
-One tool, `deployment/flydeploy` (see `deployment/flydeploy --help`), does everything:
+A single tool, `deployment/flydeploy` (see `deployment/flydeploy --help`), runs every step:
 
 | on your PC | on the server |
 |---|---|
 | `inventory` `pack` `push` `push-rom` `pull` `remote` `reference` | `install` `verify` `fetch-data` `import-rom` `doctor` `smoke` `bench` `run` `status` `summary` `wait` `stop` `logs` `compare` |
 
-The path: **prepare locally → transfer → install → data/ROM → diagnose → short test →
-benchmark → one explicitly chosen experiment → save results → stop the instance.**
-
----
+The steps, in order: prepare locally, transfer, install, data and ROM, diagnose, short test,
+benchmark, one explicitly chosen experiment, save results, stop the instance.
 
 ## 0. Requirements
 
-- **Your PC**: this repository with its data (the reference copies), `git`, `ssh`,
+- Your PC: this repository with its data (the reference copies), `git`, `ssh`,
   `rsync`, Python 3.11 venv (`.venv`). The ROM is yours (`roms/`, see `docs/ROM.md`).
-- **The server**: Linux x86_64, glibc ≥ 2.28 (Ubuntu ≥ 20.04), an NVIDIA driver ≥ 525
+- The server: Linux x86_64, glibc ≥ 2.28 (Ubuntu ≥ 20.04), an NVIDIA driver ≥ 525
   (≥ 570 selects CUDA 12.8 wheels, else 12.6), ≥ 30 GB free disk (15 GB minimum),
   outbound internet (PyPI, download.pytorch.org, astral.sh). Root is convenient (`apt`
   for rsync/tmux) but not required. Docker-in-Docker and systemd are not used.
-- **On Vast.ai**: pick an image with CUDA 12 (for example a PyTorch or CUDA 12 Ubuntu
+- On Vast.ai: pick an image with CUDA 12 (for example a PyTorch or CUDA 12 Ubuntu
   22.04 template; the venv brings its own PyTorch), a disk of ≥ 30 GB, and add your SSH
   public key to the account. The instance card shows `ssh -p PORT root@HOST`.
-- **On Runpod**: same; use the persistent volume (`/workspace`) as `REMOTE_DIR` and the
+- On Runpod: same; use the persistent volume (`/workspace`) as `REMOTE_DIR` and the
   pod's exposed TCP port for SSH.
 
 ## 1. Prepare locally (your PC)
@@ -72,18 +68,18 @@ Data sets (`TRANSFER_SETS` in `deploy.env`; sizes from the current manifest):
 | `rocm-stageD` | ROCm Stage D checkpoints | 481 MB | frozen competence evaluations only |
 | `public-raw` | MaleCNS v1.0 raw tables (downloaded on the server, not sent) | 566 MB | graph rebuild check only |
 
-Default: `core,reference,rocm-reference` ≈ **530 MB** with the code (23 MB); everything ≈
+Default: `core,reference,rocm-reference` ≈ 530 MB with the code (23 MB); everything ≈
 1.46 GB. Each file goes with its own `rsync --partial` (an interrupted push resumes; scp is
 used, not resumable, when the server has no rsync yet), then `verify` compares sha256 with
 the manifest and lists anything missing or different with its fix. ROCm-made files land
 under `artifacts/rocm_reference/` on the server, so no NVIDIA output can overwrite them and
 no trainer can silently resume from them.
 
-**Two data routes.** (a) Transfer (default): the graph and null caches above are the exact
+There are two data routes. (a) Transfer (default): the graph and null caches above are the exact
 files every result so far was computed on. (b) Public: `deployment/flydeploy fetch-data`
 downloads the raw MaleCNS tables from the public bucket (pinned by sha256, resumable with
 `curl -C -`, disk space checked first, valid files never fetched twice);
-`fetch-data --rebuild-graph` rebuilds `malecns.npz` only if it is absent and **refuses**
+`fetch-data --rebuild-graph` rebuilds `malecns.npz` only if it is absent and refuses
 a rebuild whose sha256 differs from the reference (the null caches are keyed to the
 graph's hash: a different graph would not find them, and no null is ever rebuilt
 silently).
@@ -100,7 +96,7 @@ deployment/flydeploy import-rom
 
 `install` (`deployment/install_remote.sh`): checks glibc and the driver (read only, never
 changed), installs only missing `rsync tmux git curl unzip` when apt and root are
-available, installs `uv`, a standalone Python 3.11 and a fresh `.venv`, then **torch 2.9.1**
+available, installs `uv`, a standalone Python 3.11 and a fresh `.venv`, then torch 2.9.1
 (the reference version) from the CUDA 12.6 or 12.8 index, the pinned `requirements.txt` and
 the project (`-e .`). The ROCm installer (`scripts/install_gpu.sh`) is not used; no venv is
 copied. Differences from the reference environment, by design: the CUDA build of torch
@@ -123,14 +119,14 @@ numbers of the workstation are in `deployment/manifest/platform_reference.json` 
 `bench_reference_rocm.json` (RX 9060 XT: ~22 sweeps/s for 3 brains, ~6-7 for 11; ~600
 emulator steps/s; 0.3-0.7 GB VRAM and ~6.8 GB RAM per process).
 
-**Three levels of agreement, not to be confused.**
-1. *Functional compatibility* — `doctor` and `smoke` pass.
-2. *Numerical proximity* — `doctor` / `compare platform`: noise-free sweeps of fixed frames
+Agreement between platforms is checked at three levels, which should be kept apart:
+1. *Functional compatibility*: `doctor` and `smoke` pass.
+2. *Numerical proximity*: `doctor` / `compare platform`: noise-free sweeps of fixed frames
    (motor spike counts, P(jump) of a ROCm checkpoint) and the GPU generator's first draws,
    against the workstation's values. On the workstation itself they match exactly; on
    NVIDIA, small differences are expected (sparse sums in another order, other random
-   kernels). **Trajectories are not expected to be bit-identical across platforms.**
-3. *Coherence of the scientific measures* — a same-procedure rerun on NVIDIA against the
+   kernels). Trajectories are not expected to be bit-identical across platforms.
+3. *Coherence of the scientific measures*: a same-procedure rerun on NVIDIA against the
    ROCm result: `run cs-scripted` then `compare common-stream` (declared tolerance ±0.02 AUC
    at every scoring point, RL_STUDY §12.2), and `run harness-check` then
    `compare harness --file artifacts/runs/harness_v2/validation-rerun-20261009.json`
@@ -149,7 +145,7 @@ deployment/flydeploy run cs-scripted --param graph=connectome --resume   # conti
 ```
 
 `run` starts only experiments of `deployment/experiments.json`, each tied to its
-declaration in the study documents. It runs under a supervisor in **tmux** (or `setsid`
+declaration in the study documents. It runs under a supervisor in tmux (or `setsid`
 when tmux is absent), so it survives SSH disconnection. Each run
 gets `artifacts/deploy_runs/<experiment>[-graph]-<UTC>-<commit>/` with:
 `manifest.json` (commit and uncommitted files, Python/torch/CUDA/GPU/driver, seeds,
@@ -164,7 +160,7 @@ and resumes bit for bit (`tests/unit/test_common_stream_resume.py`); the trainer
 (`train_mario_sweep.py`) is stopped through its STOP file and resumes from its checkpoint;
 frozen play saves after every start and skips finished starts on resume.
 
-**Parallelism.** `MAX_PARALLEL_GPU=1` by default: start with one GPU experiment, look at
+By default `MAX_PARALLEL_GPU=1`. Start with one GPU experiment, look at
 `bench` and at the decisions per second of that run, then try two and compare the total
 throughput before going further. Each process needs ~7 GB RAM and spawns one emulator
 process per brain; 24 vCPU do not mean 24 experiments.
@@ -192,11 +188,11 @@ Weights are platform-independent data: a ROCm checkpoint loads on NVIDIA
 (`map_location="cpu"`) and can initialise a new run (`--init-from`, `--eval-from`,
 `frozen_play_probe.py --smoke`). Random-generator states are not a reliable bridge: their
 byte format may load, but the streams drawn from them on another platform are not
-guaranteed equal (`compare platform` reports whether the first draws match). **A ROCm run
+guaranteed equal (`compare platform` reports whether the first draws match). A ROCm run
 resumed on NVIDIA is therefore a new run initialised from weights, never an exact
-continuation**, which is why ROCm checkpoints are kept under `artifacts/rocm_reference/`,
-where the trainer does not look for its own checkpoints. **Every arm of a new comparison
-(connectome vs nulls, expert vs scripted stream, …) must run on the same platform**: on
+continuation, which is why ROCm checkpoints are kept under `artifacts/rocm_reference/`,
+where the trainer does not look for its own checkpoints. Every arm of a new comparison
+(connectome vs nulls, expert vs scripted stream, …) must run on the same platform: on
 NVIDIA, rerun the comparison arms there (e.g. `cs-scripted` and `cs-expert` for §14; all
 graphs of `stageD` for §21) and use the ROCm results only for the coherence checks.
 
@@ -209,14 +205,14 @@ deployment/flydeploy pull --run <run_id> --state
 
 `pull` never writes into your `artifacts/runs/`. Then **stop or destroy the instance in the
 provider's console**: on Vast.ai a stopped instance still bills its disk; destroying it
-ends all charges (and deletes its data — pull first). On Runpod, stopping a pod keeps
+ends all charges (and deletes its data, so pull first). On Runpod, stopping a pod keeps
 billing the volume; terminate it to end all charges.
 
 ## 8. Disk and time estimates
 
 - Server disk: venv with CUDA torch ≈ 6-7 GB, uv cache ≈ 4-5 GB (`uv cache clean` after
   install), data 0.5-2 GB, outputs of the planned §14 sequence ≈ 1-3 GB (runs also copy
-  their outputs into their run folder): **≥ 30 GB recommended, 15 GB minimum.**
+  their outputs into their run folder). At least 30 GB is recommended, 15 GB minimum.
 - Transfer: ≈ 530 MB by default, ≈ 1.46 GB with every set; the ROM 40 kB.
 - Time: install 5-15 min (downloads), `smoke` ~6 min, `bench` ~1 min. Throughput on the
   3090 is unknown until `bench` runs (the sweeps are memory-bound sparse products; a faster
@@ -234,21 +230,19 @@ difference 0); `smoke` (passed, 5.7 min); `bench`; `run` / `status` / `logs` / `
 max duration / overwrite refusal with `selftest`, with and without tmux; the
 `common_stream.py` resume test (interrupted + resumed = uninterrupted, bit for bit).
 
-To do on the NVIDIA server, in this order: `install`; `verify`; `import-rom`; `doctor`
-(blocking checks, numerical proximity); `smoke`; `bench`; `run cs-scripted --param
-graph=connectome` and `compare common-stream`; `run harness-check` and `compare harness`;
-only then the declared experiments.
+On the NVIDIA server (RTX 3090), in this order: `install`; `verify`; `import-rom`; `doctor` (blocking checks, numerical proximity); `smoke`; `bench`; `run cs-scripted --param graph=connectome` and `compare common-stream`; `run harness-check` and `compare harness`; then the declared experiments. The checks passed; the cross-platform coherence check failed as declared, so no result mixes platforms. On a new server, follow the same order.
 
 ## 10. Troubleshooting
 
-- `REMOTE_HOST is not set` — fill `deployment/deploy.env`.
-- `verify`: MISSING / MISMATCH — rerun `push` (resumes) or `fetch-data`; a mismatch after a
-  complete transfer means the local file changed since `inventory`: rerun `inventory`.
-- `fetch-data`: interrupted — rerun it (resumes the `.part` file); sha256 differs — the
-  public file changed: use the transfer route.
-- `doctor`: no CUDA device — wrong image or `CUDA_VISIBLE_DEVICES`; driver < 525 — choose
-  another host (drivers are the provider's).
-- `run`: outputs exist — `--resume` (resumable) or `--force`; another GPU run active — wait,
-  or raise `MAX_PARALLEL_GPU` after `bench`; supervisor did not start — `--no-tmux`.
-- A run shows `DEAD (supervisor gone)` — the instance restarted or the process was killed:
-  rerun with `--resume` (resumable experiments continue from their last save).
+- `REMOTE_HOST is not set`: fill in `deployment/deploy.env`.
+- `verify` reports MISSING / MISMATCH: rerun `push` (it resumes) or `fetch-data`. A mismatch
+  after a complete transfer means the local file changed since `inventory`; rerun `inventory`.
+- `fetch-data` was interrupted: rerun it (it resumes the `.part` file). If its sha256 differs,
+  the public file changed; use the transfer route.
+- `doctor` finds no CUDA device: wrong image or `CUDA_VISIBLE_DEVICES`. If the driver is
+  < 525, choose another host (drivers are the provider's).
+- `run` says its outputs exist: use `--resume` (resumable) or `--force`. If another GPU run is
+  active, wait, or raise `MAX_PARALLEL_GPU` after `bench`. If the supervisor did not start,
+  use `--no-tmux`.
+- A run shows `DEAD (supervisor gone)`: the instance restarted or the process was killed.
+  Rerun with `--resume` (resumable experiments continue from their last save).

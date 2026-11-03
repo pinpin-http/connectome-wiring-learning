@@ -16,12 +16,13 @@ separate file). Experiment numbers follow [ARCHITECTURE.md](../ARCHITECTURE.md).
 | 4, post hoc ceiling sensitivity | [REVISION_UNSATURATED.md](REVISION_UNSATURATED.md) | fixed before reading the measures it uses; labelled post hoc |
 | 5. Eye-map permutation | [retino_align/PROTOCOL_FROZEN.md](retino_align/PROTOCOL_FROZEN.md) | |
 | 6. Equalized activity, frozen network | [activity_match/PROTOCOL_FROZEN.md](activity_match/PROTOCOL_FROZEN.md), [V2](activity_match/PROTOCOL_FROZEN_V2.md) (family E), [V2B](activity_match/PROTOCOL_FROZEN_V2B.md) (family S) | |
-| 7. *Super Mario Bros.* | [RL_STUDY.md](RL_STUDY.md) §17-§30, [PERCEPTION_CREDIT_STUDY.md](PERCEPTION_CREDIT_STUDY.md), [GENERALISATION_STUDY.md](GENERALISATION_STUDY.md), [MARIO_PILOT_PLAN.md](MARIO_PILOT_PLAN.md) | declarations appended section by section as the study went |
+| 7. *Super Mario Bros.* | [RL_STUDY.md](RL_STUDY.md) §17-§30, [PERCEPTION_CREDIT_STUDY.md](PERCEPTION_CREDIT_STUDY.md), [GENERALISATION_STUDY.md](GENERALISATION_STUDY.md), [MARIO_PILOT_PLAN.md](MARIO_PILOT_PLAN.md) | declarations appended section by section as the study progressed |
 
 ## Guides
 
 - [REPRODUCIBILITY.md](REPRODUCIBILITY.md): every table and figure of the preprint, the script and the file it comes from.
 - [ROM.md](ROM.md): supplying your own copy of the game (never distributed).
+- [EXTENDING.md](EXTENDING.md): seven open questions, with the code to start from and the computing cost.
 
 ## Development record
 

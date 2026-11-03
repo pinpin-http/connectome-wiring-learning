@@ -27,7 +27,7 @@ averaged into one value; the connectome is then placed in the distribution of it
 |---|---|---|
 | Data | MaleCNS v1.0 tables (Janelia, CC BY), SHA-256-checked on download | `src/flymario/connectome/download.py`, `make download` |
 | Graph | neurons, signed synapse counts, sensorimotor depth from the lamina, sides, output neurons | `src/flymario/connectome/{malecns,schema,strata,datasets}.py`, `scripts/build_graph.py` |
-| Null graphs | depth-stratified rewiring that keeps degrees, signs, weight multiset, depth classes and laterality; family **S** keeps every neuron's out-strength (`nulllat:<seed>`), family **E** its in-strength (`nullin:<seed>`) | `src/flymario/connectome/randomize.py`, `nullcache.py`, `scripts/diagnostics/build_nulls.py` |
+| Null graphs | depth-stratified rewiring that keeps degrees, signs, weight multiset, depth classes and laterality; family S keeps every neuron's out-strength (`nulllat:<seed>`), family E its in-strength (`nullin:<seed>`) | `src/flymario/connectome/randomize.py`, `nullcache.py`, `scripts/diagnostics/build_nulls.py` |
 | Null checks | every realisation is validated before use (degrees, signs, strata, sides, strength) | `scripts/diagnostics/{null_validate,instrength_validate}.py`, `scripts/revision48/checks.py` |
 | Network | leaky integrate-and-fire neurons on the whole graph, batched on the GPU; the *sweep regime*: one fresh look per decision, from rest | `src/flymario/models/torch_lif.py`, `src/flymario/training/sweep.py` |
 | Eye | image → injected current on retinotopically mapped lamina neurons | `src/flymario/env/vision.py`, `src/flymario/retino_align/retina.py` |
@@ -36,8 +36,8 @@ averaged into one value; the connectome is then placed in the distribution of it
 | Tasks | two 8-way visual discriminations (*where?*, *approach or recede?*), and *Super Mario Bros.* | `scripts/diagnostics/study_s.py`, `src/flymario/env/retro_env.py` |
 | Statistics | rank, z score, empirical p with max-\|z\| adjustment; paired bootstrap over blocks and graphs with declared margins | `scripts/diagnostics/study_s_reading.py`, `src/flymario/{experience_commune,revision48,activity_match,retino_align}/analysis.py` |
 
-Model parameters (gain, time constants, operating point) and what constrains each one: `docs/CALIBRATION.md`. The
-general protocol (null ladder, unit of analysis, decision rules): `docs/PROTOCOL.md`.
+`docs/CALIBRATION.md` lists the model parameters (gain, time constants, operating point) and what constrains each
+one. `docs/PROTOCOL.md` holds the general protocol (null ladder, unit of analysis, decision rules).
 
 ## 3. The experiments
 
@@ -61,16 +61,16 @@ declared in `docs/PROTOCOL.md`; their scripts are in `scripts/gates/`.
 
 ## 4. Declared criteria
 
-1. **Declaration before data.** Each experiment's question, primary measure, null families, number of graphs, seeds,
+1. Each experiment's question, primary measure, null families, number of graphs, seeds,
    intervals, margins and reading rule are written down before any run on an analysed graph (`docs/`).
-2. **References before reading.** Every criterion is first tested on references that must pass and references that
+2. Every criterion is first tested on references that must pass and references that
    must fail (scripted players, permuted labels, identical graphs, synthetic curves with a known answer). A criterion
    that fails its references is not used.
-3. **Development graphs only.** Pilots, calibrations and timing use reserved development nulls (`nulllat:100`,
+3. Pilots, calibrations and timing use reserved development nulls (`nulllat:100`,
    `nulllat:101`), never an analysed graph.
-4. **Frozen protocols.** The larger campaigns (2, 4, 5, 6) fix their protocol in a `PROTOCOL_FROZEN.md`; their SHA-256,
+4. The larger campaigns (2, 4, 5, 6) fix their protocol in a `PROTOCOL_FROZEN.md`; their SHA-256,
    and that of REVISION48's tuning selection, are in `results/`.
-5. **Exploratory analyses.** An analysis decided after seeing a result is labelled exploratory (or post hoc) and never
+5. An analysis decided after seeing a result is labelled exploratory (or post hoc) and never
    replaces the declared reading.
 
 ## 5. Repository layout

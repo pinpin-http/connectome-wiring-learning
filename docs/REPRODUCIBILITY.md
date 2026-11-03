@@ -1,12 +1,13 @@
 # Reproducing the preprint: every table and figure, and what produces it
 
 The manuscript is not in this repository. Figures are listed by the file name `make figures` writes to
-`artifacts/figures/`, tables by the manuscript's LaTeX label. How the experiments fit together: `ARCHITECTURE.md`.
+`artifacts/figures/`, tables by the manuscript's LaTeX label. `ARCHITECTURE.md` explains how the experiments fit
+together.
 
-**Status column.** ✅ the script and its input are in this repository. `make figures` rebuilds every
+In the status column, ✅ means the script and its input are in this repository. `make figures` rebuilds every
 computed figure from these inputs; `python tools/verify_results.py --strict` checks the recorded hashes.
 
-Recomputing a table or figure from its aggregated input takes seconds on a CPU; the "re-run" cost is that of
+Recomputing a table or figure from its aggregated input takes seconds on a CPU. A "re-run" costs as much as
 recomputing the input itself.
 
 ## Figures (`make figures` -> `artifacts/figures/`)
@@ -51,7 +52,7 @@ recomputing the input itself.
 | `tab-mario` | Mario: supervised learning speed vs 40 nulls | `scripts/diagnostics/{mission_readings,null_distribution}.py` | `artifacts/runs/mission/readings-{24,26,27}.json` | ✅ |
 | `tab-speedrun` | distance on the route levels | `scripts/diagnostics/speedrun_ceiling.py` | `artifacts/runs/mission/speedrun_ceiling.json` | ✅ |
 
-## The pieces a reviewer will look for
+## Where the methods are implemented
 
 | item | where |
 |---|---|
@@ -72,11 +73,11 @@ the same dynamics to about 1e-6, but learning amplifies rounding differences: a 
 10^5 within some thirty updates, and changing only the order of summation moves the final result. On one card a
 run is bit-identical as long as the batch of learners simulated together is unchanged; otherwise trajectories
 diverge as with another noise seed. Every training run is therefore treated as one draw, and the unit of
-evidence is a distribution over graphs. A re-run will **not** give the published numbers bit for bit; it gives
+evidence is a distribution over graphs. A re-run will not give the published numbers bit for bit; it gives
 an equivalent distribution. All runs compared with each other in the manuscript ran on the same card.
 Manuscript §3.11 (*Calcul et reproductibilité*) states the same thing.
 
-What *is* exact: recomputing every table and figure from the committed aggregated files, and the statistical
+Two things are exact: recomputing every table and figure from the committed aggregated files, and the statistical
 calibration (`tools/audits/statistical_20261019.py`, fixed master seed 2026101902).
 
 ## Equal-activity decoding (ACTIVITY_MATCH V2 and V2B)
